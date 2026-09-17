@@ -1,0 +1,1655 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <!-- =====================================================
+         BASIC META
+    ====================================================== -->
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <meta
+        name="description"
+        content="Stackly Finance - Professional accounting, financial planning, tax consulting and business finance solutions."
+    >
+
+    <meta
+        name="keywords"
+        content="Stackly Finance, accounting, finance, tax planning, financial consulting, business finance"
+    >
+
+    <meta
+        name="author"
+        content="Stackly"
+    >
+
+    <title>
+        Stackly | Finance & Accounting Solutions
+    </title>
+
+
+    <!-- =====================================================
+         GOOGLE FONTS
+    ====================================================== -->
+
+    <link
+        rel="preconnect"
+        href="https://fonts.googleapis.com"
+    >
+
+    <link
+        rel="preconnect"
+        href="https://fonts.gstatic.com"
+        crossorigin
+    >
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap"
+        rel="stylesheet"
+    >
+
+
+    <!-- =====================================================
+         FONT AWESOME
+    ====================================================== -->
+
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+    >
+
+
+    <!-- =====================================================
+         AOS ANIMATION
+    ====================================================== -->
+
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css"
+    >
+
+
+    <!-- =====================================================
+         MAIN CSS
+    ====================================================== -->
+
+    <link
+        rel="stylesheet"
+        href="index.css"
+    >
+
+    <link
+        rel="stylesheet"
+        href="style.css"
+    >
+
+</head>
+
+
+<body>
+
+
+<!-- =========================================================
+     STACKLY FINANCE FIXED HEADER
+     
+     IMPORTANT:
+     Header is OUTSIDE the hero section so that it remains
+     above every section while scrolling.
+========================================================= -->
+
+<header
+    class="stackly-finance-header"
+    id="stacklyFinanceHeader"
+>
+
+
+    <!-- =====================================================
+         LOGO
+    ====================================================== -->
+
+    <div class="stackly-finance-logo-area">
+
+        <a
+            href="index.html"
+            class="stackly-finance-logo-link"
+            aria-label="Stackly Finance Home"
+        >
+
+            <img
+                src="Stackly-logo-Blue.webp"
+                alt="Stackly Finance Logo"
+                class="stackly-finance-logo"
+            >
+
+        </a>
+
+    </div>
+
+
+    <!-- =====================================================
+         DESKTOP NAVIGATION
+    ====================================================== -->
+
+    <nav
+        class="stackly-finance-navigation"
+        aria-label="Main Navigation"
+    >
+
+        <a
+            href="index.html"
+            class="stackly-finance-nav-link stackly-finance-nav-active"
+        >
+            Home
+        </a>
+
+        <a
+            href="about.html"
+            class="stackly-finance-nav-link"
+        >
+            About
+        </a>
+
+        <a
+            href="services.html"
+            class="stackly-finance-nav-link"
+        >
+            Services
+        </a>
+
+        <a
+            href="solutions.html"
+            class="stackly-finance-nav-link"
+        >
+            Solutions
+        </a>
+
+        <a
+            href="blog.html"
+            class="stackly-finance-nav-link"
+        >
+            Blog
+        </a>
+
+        <a
+            href="contact.html"
+            class="stackly-finance-nav-link"
+        >
+            Contact
+        </a>
+
+    </nav>
+
+
+    <!-- =====================================================
+         HEADER RIGHT
+    ====================================================== -->
+
+    <div class="stackly-finance-header-right">
+
+
+        <!-- LOGIN -->
+
+        <a
+            href="login.html"
+            class="stackly-finance-login-button"
+        >
+            Login
+        </a>
+
+
+        <!-- MOBILE MENU BUTTON -->
+
+        <button
+            type="button"
+            class="stackly-finance-menu-toggle"
+            id="stacklyFinanceMenuToggle"
+            aria-label="Open Menu"
+            aria-expanded="false"
+            aria-controls="stacklyFinanceMobileMenu"
+        >
+
+            <span></span>
+            <span></span>
+            <span></span>
+
+        </button>
+
+    </div>
+
+</header>
+
+
+
+<!-- =========================================================
+     MOBILE MENU OVERLAY
+     
+     IMPORTANT:
+     Also outside hero to prevent stacking-context issues.
+========================================================= -->
+
+<div
+    class="stackly-finance-mobile-overlay"
+    id="stacklyFinanceOverlay"
+    aria-hidden="true"
+></div>
+
+
+
+<!-- =========================================================
+     MOBILE SIDEBAR
+========================================================= -->
+
+<aside
+    class="stackly-finance-mobile-menu"
+    id="stacklyFinanceMobileMenu"
+    aria-hidden="true"
+>
+
+
+    <!-- =====================================================
+         MOBILE MENU HEADER
+    ====================================================== -->
+
+    <div class="stackly-finance-mobile-menu-header">
+
+
+        <!-- MOBILE LOGO -->
+
+        <a
+            href="index.html"
+            class="stackly-finance-mobile-logo"
+            aria-label="Stackly Finance Home"
+        >
+
+            <img
+                src="Stackly-logo-Blue.webp"
+                alt="Stackly Finance"
+            >
+
+        </a>
+
+
+        <!-- CLOSE BUTTON -->
+
+        <button
+            type="button"
+            class="stackly-finance-menu-close"
+            id="stacklyFinanceMenuClose"
+            aria-label="Close Menu"
+        >
+
+            <i class="fa-solid fa-xmark"></i>
+
+        </button>
+
+    </div>
+
+
+
+    <!-- =====================================================
+         MOBILE NAVIGATION
+    ====================================================== -->
+
+    <nav
+        class="stackly-finance-mobile-navigation"
+        aria-label="Mobile Navigation"
+    >
+
+
+        <a href="index.html">
+
+            <i class="fa-solid fa-house"></i>
+
+            <span>
+                Home
+            </span>
+
+        </a>
+
+
+        <a href="about.html">
+
+            <i class="fa-solid fa-building"></i>
+
+            <span>
+                About
+            </span>
+
+        </a>
+
+
+        <a href="services.html">
+
+            <i class="fa-solid fa-chart-line"></i>
+
+            <span>
+                Services
+            </span>
+
+        </a>
+
+
+        <a href="solutions.html">
+
+            <i class="fa-solid fa-lightbulb"></i>
+
+            <span>
+                Solutions
+            </span>
+
+        </a>
+
+
+        <a href="blog.html">
+
+            <i class="fa-solid fa-newspaper"></i>
+
+            <span>
+                Blog
+            </span>
+
+        </a>
+
+
+        <a href="contact.html">
+
+            <i class="fa-solid fa-envelope"></i>
+
+            <span>
+                Contact
+            </span>
+
+        </a>
+
+
+        <!-- MOBILE LOGIN -->
+
+        <a
+            href="login.html"
+            class="stackly-finance-mobile-login"
+        >
+
+            <i class="fa-solid fa-right-to-bracket"></i>
+
+            <span>
+                Login
+            </span>
+
+        </a>
+
+    </nav>
+
+</aside>
+
+
+<!-- =========================================================
+     STACKLY FINANCE ABOUT PAGE HERO
+========================================================= -->
+
+<section class="stackly-finance-about-hero">
+
+    <div class="stackly-finance-about-hero-container">
+
+        <span class="stackly-finance-about-eyebrow">
+            ABOUT STACKLY FINANCE
+        </span>
+
+        <h1 class="stackly-finance-about-heading">
+            Building Smarter Financial Futures
+        </h1>
+
+        <p class="stackly-finance-about-description">
+            Stackly Finance provides professional accounting,
+            financial planning, tax advisory, and business
+            consulting solutions designed to help individuals
+            and businesses manage their finances with confidence.
+        </p>
+
+        <div class="stackly-finance-about-breadcrumb">
+
+            <a href="index.html">
+                Home
+            </a>
+
+            <i class="fa-solid fa-angle-right"></i>
+
+            <span>
+                About Us
+            </span>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- =========================================================
+     ABOUT COMPANY SECTION
+========================================================= -->
+
+<section class="stackly-about-company-section">
+
+    <div class="stackly-about-company-container">
+
+
+        <!-- =================================================
+             LEFT SIDE - IMAGE + STATISTICS
+        ================================================== -->
+
+        <div
+            class="stackly-about-company-image-wrapper"
+            data-aos="fade-right"
+            data-aos-duration="1000"
+            data-aos-delay="100"
+            data-aos-easing="ease-out-cubic"
+        >
+
+            <img
+                src="about-1.webp"
+                alt="Financial advisors discussing investment planning"
+                class="stackly-about-company-image"
+                data-aos="zoom-in"
+                data-aos-duration="1200"
+                data-aos-delay="150"
+                data-aos-easing="ease-out-cubic"
+            >
+
+
+            <!-- STATISTICS -->
+
+            <div class="stackly-about-company-stats">
+
+
+                <!-- STATISTIC 01 -->
+
+                <div
+                    class="stackly-about-stat-card stackly-about-stat-dark"
+                    data-aos="fade-up"
+                    data-aos-duration="850"
+                    data-aos-delay="400"
+                    data-aos-easing="ease-out-cubic"
+                >
+
+                    <h3>
+                        2,000+
+                    </h3>
+
+                    <p>
+                        Clients Served
+                    </p>
+
+                </div>
+
+
+                <!-- STATISTIC 02 -->
+
+                <div
+                    class="stackly-about-stat-card stackly-about-stat-green"
+                    data-aos="fade-up"
+                    data-aos-duration="850"
+                    data-aos-delay="550"
+                    data-aos-easing="ease-out-cubic"
+                >
+
+                    <h3>
+                        25+
+                    </h3>
+
+                    <p>
+                        Years of Experience
+                    </p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <!-- =================================================
+             RIGHT SIDE - CONTENT
+        ================================================== -->
+
+        <div class="stackly-about-company-content">
+
+
+            <!-- LABEL -->
+
+            <span
+                class="stackly-about-company-label"
+                data-aos="fade-up"
+                data-aos-duration="800"
+                data-aos-delay="150"
+                data-aos-easing="ease-out-cubic"
+            >
+                ABOUT THE COMPANY
+            </span>
+
+
+            <!-- HEADING -->
+
+            <h2
+                data-aos="fade-up"
+                data-aos-duration="900"
+                data-aos-delay="250"
+                data-aos-easing="ease-out-cubic"
+            >
+                Building stronger
+                <br>
+                financial futures
+            </h2>
+
+
+            <!-- DESCRIPTION -->
+
+            <p
+                class="stackly-about-company-description"
+                data-aos="fade-up"
+                data-aos-duration="900"
+                data-aos-delay="350"
+                data-aos-easing="ease-out-cubic"
+            >
+                At Stackly Finance, we help individuals and businesses make
+                confident financial decisions through reliable guidance,
+                smart planning, and long-term strategies. Our approach
+                combines financial expertise with a clear understanding
+                of your goals to help you build sustainable financial growth.
+            </p>
+
+
+            <!-- FEATURE POINTS -->
+
+            <div class="stackly-about-company-points">
+
+
+                <!-- POINT 01 -->
+
+                <div
+                    class="stackly-about-company-point"
+                    data-aos="fade-left"
+                    data-aos-duration="800"
+                    data-aos-delay="450"
+                    data-aos-easing="ease-out-cubic"
+                >
+
+                    <span class="stackly-about-point-icon">
+
+                        <i class="fa-solid fa-check"></i>
+
+                    </span>
+
+                    <p>
+                        Personalized financial planning designed around your goals.
+                    </p>
+
+                </div>
+
+
+                <!-- POINT 02 -->
+
+                <div
+                    class="stackly-about-company-point"
+                    data-aos="fade-left"
+                    data-aos-duration="800"
+                    data-aos-delay="550"
+                    data-aos-easing="ease-out-cubic"
+                >
+
+                    <span class="stackly-about-point-icon">
+
+                        <i class="fa-solid fa-check"></i>
+
+                    </span>
+
+                    <p>
+                        Transparent investment and wealth management solutions.
+                    </p>
+
+                </div>
+
+
+                <!-- POINT 03 -->
+
+                <div
+                    class="stackly-about-company-point"
+                    data-aos="fade-left"
+                    data-aos-duration="800"
+                    data-aos-delay="650"
+                    data-aos-easing="ease-out-cubic"
+                >
+
+                    <span class="stackly-about-point-icon">
+
+                        <i class="fa-solid fa-check"></i>
+
+                    </span>
+
+                    <p>
+                        Trusted guidance focused on long-term financial stability.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <!-- READ MORE -->
+
+            <a
+                href="404.html"
+                class="stackly-about-company-read-more"
+                data-aos="fade-up"
+                data-aos-duration="850"
+                data-aos-delay="750"
+                data-aos-easing="ease-out-cubic"
+            >
+
+                <span class="stackly-about-company-arrow">
+
+                    <i class="fa-solid fa-arrow-up-right-from-square"></i>
+
+                </span>
+
+                <span>
+                    Explore Our Services
+                </span>
+
+            </a>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- ============================================================
+     STACKLY FINANCE
+     STRATEGIC FINANCIAL PLANNING SECTION
+============================================================= -->
+
+<section class="sf-planning-section" id="financial-planning">
+
+    <div class="sf-planning-container">
+
+        <!-- ====================================================
+             SECTION HEADER
+        ===================================================== -->
+
+        <div class="sf-planning-header">
+
+            <div class="sf-planning-title-area">
+
+                <span
+                    class="sf-planning-eyebrow"
+                    data-aos="fade-right"
+                    data-aos-duration="800"
+                >
+                    WE'RE GOOD AT
+                </span>
+
+                <h2
+                    data-aos="fade-up"
+                    data-aos-duration="900"
+                    data-aos-delay="100"
+                >
+                    Strategic financial planning
+                    <br class="sf-desktop-break">
+                    and budgeting guidance
+                </h2>
+
+            </div>
+
+
+            <div
+                class="sf-planning-intro"
+                data-aos="fade-left"
+                data-aos-duration="900"
+                data-aos-delay="200"
+            >
+
+                <p>
+                    Expert guidance on financial planning and budgeting to
+                    optimize resources, control expenses, and achieve stable,
+                    long-term business growth.
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <!-- ====================================================
+             PLANNING CONTENT GRID
+        ===================================================== -->
+
+        <div class="sf-planning-grid">
+
+
+            <!-- ==================================================
+                 FINANCE MANAGEMENT CARD
+            =================================================== -->
+
+            <article
+                class="sf-management-card"
+                data-aos="fade-up"
+                data-aos-duration="900"
+                data-aos-delay="100"
+            >
+
+                <div class="sf-management-top">
+
+                    <div class="sf-management-icon">
+                        <i class="fa-solid fa-coins"></i>
+                    </div>
+
+                    <h3>
+                        Finance Management
+                    </h3>
+
+                </div>
+
+
+                <p class="sf-management-description">
+                    Start with your goals in mind and then work backwards
+                    to develop the plan. What steps are required to get you
+                    to the goals? Make the plan as detailed as possible.
+                </p>
+
+
+                <!-- ============================================
+                     CHART
+                ============================================= -->
+
+                <div class="sf-chart-box">
+
+                    <div class="sf-chart-values">
+                        <span>100</span>
+                        <span>50</span>
+                        <span>0</span>
+                    </div>
+
+
+                    <div class="sf-chart-area">
+
+                        <div class="sf-chart-line sf-line-one"></div>
+                        <div class="sf-chart-line sf-line-two"></div>
+
+                        <svg
+                            class="sf-growth-chart"
+                            viewBox="0 0 500 210"
+                            preserveAspectRatio="none"
+                            aria-hidden="true"
+                        >
+
+                            <defs>
+
+                                <linearGradient
+                                    id="sfChartGradient"
+                                    x1="0"
+                                    y1="0"
+                                    x2="1"
+                                    y2="0"
+                                >
+
+                                    <stop
+                                        offset="0%"
+                                        stop-color="#b9f28b"
+                                    />
+
+                                    <stop
+                                        offset="100%"
+                                        stop-color="#d5f8b4"
+                                    />
+
+                                </linearGradient>
+
+                            </defs>
+
+
+                            <path
+                                class="sf-chart-fill"
+                                d="M0 180
+                                   C80 168 110 155 170 145
+                                   C240 130 270 110 325 88
+                                   C390 65 425 45 500 20
+                                   L500 210
+                                   L0 210 Z"
+                            ></path>
+
+
+                            <path
+                                class="sf-chart-main-line"
+                                d="M0 180
+                                   C80 168 110 155 170 145
+                                   C240 130 270 110 325 88
+                                   C390 65 425 45 500 20"
+                            ></path>
+
+
+                            <circle
+                                class="sf-chart-point"
+                                cx="325"
+                                cy="88"
+                                r="10"
+                            ></circle>
+
+                        </svg>
+
+
+                        <!-- Amount label -->
+
+                        <div class="sf-chart-price">
+                            $23,849
+                        </div>
+
+
+                        <!-- Date labels -->
+
+                        <div class="sf-chart-dates">
+
+                            <span>10 Aug</span>
+                            <span>20 Aug</span>
+                            <span>30 Aug</span>
+                            <span>10 Nov</span>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </article>
+
+
+
+            <!-- ==================================================
+                 IMAGE / VIDEO CARD
+            =================================================== -->
+
+            <article
+                class="sf-video-card"
+                data-aos="zoom-in"
+                data-aos-duration="950"
+                data-aos-delay="200"
+            >
+
+                <img
+                    src="financial-planning.webp"
+                    alt="Financial planning consultation"
+                    class="sf-video-image"
+                    loading="lazy"
+                >
+
+
+                <div class="sf-video-overlay"></div>
+
+            </article>
+
+
+
+            <!-- ==================================================
+                 GROWTH / STAT CARD
+            =================================================== -->
+
+            <article
+                class="sf-growth-card"
+                data-aos="fade-left"
+                data-aos-duration="900"
+                data-aos-delay="300"
+            >
+
+                <div class="sf-growth-number-row">
+
+                    <span class="sf-growth-number">
+                        6k+
+                    </span>
+
+                    <span class="sf-growth-small-text">
+                        Unlock Your Business Potential
+                        <br>
+                        with Financial Solutions
+                    </span>
+
+                </div>
+
+
+                <div class="sf-growth-content">
+
+                    <h3>
+                        Scalable Solutions for Growing Businesses
+                    </h3>
+
+                    <p>
+                        Start with your goals in mind and then work backwards
+                        to develop the plan. What steps are required to get
+                        you to the goals?
+                    </p>
+
+                </div>
+
+
+                <a
+                    href="services.html"
+                    class="sf-growth-link"
+                >
+
+                    <span class="sf-growth-arrow">
+                        <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                    </span>
+
+                    <span>
+                        Learn More
+                    </span>
+
+                </a>
+
+            </article>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- =========================================================
+     STACKLY - WHAT WE DO SECTION
+========================================================= -->
+
+<section class="stackly-what-we-do-section">
+
+    <div class="stackly-what-we-do-container">
+
+        <!-- =================================================
+             LEFT CONTENT
+        ================================================== -->
+
+        <div
+            class="stackly-what-we-do-content"
+            data-aos="fade-right"
+            data-aos-duration="1000"
+        >
+
+            <span class="stackly-what-we-do-label">
+                WHAT WE DO
+            </span>
+
+            <h2 class="stackly-what-we-do-title">
+                Helping companies<br>
+                attempt possibilities
+            </h2>
+
+            <p class="stackly-what-we-do-description">
+                Supporting companies in exploring new opportunities,
+                overcoming business challenges, and transforming ideas
+                into actionable strategies that drive innovation,
+                improve performance, and create.
+            </p>
+
+        </div>
+
+
+        <!-- =================================================
+             RIGHT STATISTICS / SERVICES
+        ================================================== -->
+
+        <div class="stackly-what-we-do-cards">
+
+            <!-- CARD 1 -->
+            <div
+                class="stackly-what-we-do-card"
+                data-aos="fade-up"
+                data-aos-duration="900"
+                data-aos-delay="100"
+            >
+
+                <h3>130<span>+</span></h3>
+
+                <h4>Financial advices</h4>
+
+                <p>
+                    Smart money management for your future
+                </p>
+
+            </div>
+
+
+            <!-- CARD 2 -->
+            <div
+                class="stackly-what-we-do-card"
+                data-aos="fade-up"
+                data-aos-duration="900"
+                data-aos-delay="200"
+            >
+
+                <h3>148<span>+</span></h3>
+
+                <h4>Projection Analysis</h4>
+
+                <p>
+                    Future trends and financial growth insights
+                </p>
+
+            </div>
+
+
+            <!-- CARD 3 -->
+            <div
+                class="stackly-what-we-do-card"
+                data-aos="fade-up"
+                data-aos-duration="900"
+                data-aos-delay="300"
+            >
+
+                <h3>95<span>%</span></h3>
+
+                <h4>Business planning</h4>
+
+                <p>
+                    Strategic roadmap for business growth success
+                </p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+ <section class="team-section">
+
+    <!-- Label -->
+    <div
+      class="team-label"
+      data-aos="fade-down"
+      data-aos-duration="700"
+    >
+      Team Members
+    </div>
+
+    <!-- Header -->
+    <div class="team-header">
+
+      <h2
+        data-aos="fade-right"
+        data-aos-duration="900"
+      >
+        Introducing our team of<br />
+        skilled financial advisors
+      </h2>
+
+      <p
+        class="team-description"
+        data-aos="fade-left"
+        data-aos-duration="900"
+        data-aos-delay="150"
+      >
+        Choose from flexible pricing plans designed to suit businesses of all
+        sizes, offering scalable solutions, transparent costs, and valuable
+        services to meet your evolving financial needs efficiently
+      </p>
+
+    </div>
+
+    <!-- Team Members -->
+    <div class="team-grid">
+
+      <!-- Member 1 -->
+      <div
+        class="team-card"
+        data-aos="fade-up"
+        data-aos-duration="800"
+        data-aos-delay="100"
+      >
+        <img
+          src="team-1.webp"
+          alt="Aaron Sharp"
+        />
+
+        <div class="team-info">
+          <h3>Aaron Sharp</h3>
+          <p>Consultant</p>
+        </div>
+
+        <a href="404.html"><button class="share-btn" aria-label="Share Aaron Sharp">
+          <svg viewBox="0 0 24 24">
+            <circle cx="18" cy="5" r="2.5"></circle>
+            <circle cx="6" cy="12" r="2.5"></circle>
+            <circle cx="18" cy="19" r="2.5"></circle>
+            <line x1="8.2" y1="10.8" x2="15.8" y2="6.2"></line>
+            <line x1="8.2" y1="13.2" x2="15.8" y2="17.8"></line>
+          </svg>
+        </button></a>
+      </div>
+
+
+      <!-- Member 2 -->
+      <div
+        class="team-card"
+        data-aos="fade-up"
+        data-aos-duration="800"
+        data-aos-delay="200"
+      >
+        <img
+          src="team-2.webp"
+          alt="Felica Queen"
+        />
+
+        <div class="team-info">
+          <h3>Felica Queen</h3>
+          <p>Accountant</p>
+        </div>
+
+        <a href="404.html"><button class="share-btn" aria-label="Share Felica Queen">
+          <svg viewBox="0 0 24 24">
+            <circle cx="18" cy="5" r="2.5"></circle>
+            <circle cx="6" cy="12" r="2.5"></circle>
+            <circle cx="18" cy="19" r="2.5"></circle>
+            <line x1="8.2" y1="10.8" x2="15.8" y2="6.2"></line>
+            <line x1="8.2" y1="13.2" x2="15.8" y2="17.8"></line>
+          </svg>
+        </button></a>
+      </div>
+
+
+      <!-- Member 3 -->
+      <div
+        class="team-card"
+        data-aos="fade-up"
+        data-aos-duration="800"
+        data-aos-delay="300"
+      >
+        <img
+          src="team-3.webp"
+          alt="Kevin Lee"
+        />
+
+        <div class="team-info">
+          <h3>Kevin Lee</h3>
+          <p>Internal Auditor</p>
+        </div>
+
+        <a href="404.html"><button class="share-btn" aria-label="Share Kevin Lee">
+          <svg viewBox="0 0 24 24">
+            <circle cx="18" cy="5" r="2.5"></circle>
+            <circle cx="6" cy="12" r="2.5"></circle>
+            <circle cx="18" cy="19" r="2.5"></circle>
+            <line x1="8.2" y1="10.8" x2="15.8" y2="6.2"></line>
+            <line x1="8.2" y1="13.2" x2="15.8" y2="17.8"></line>
+          </svg>
+        </button></a>
+      </div>
+
+    </div>
+  </section>
+
+
+<!-- =========================================================
+     STACKLY FINANCE PROFESSIONAL FOOTER
+========================================================= -->
+
+<footer class="stackly-finance-footer">
+
+    <!-- =====================================================
+         FOOTER MAIN
+    ====================================================== -->
+
+    <div class="stackly-finance-footer-main">
+
+        <div class="stackly-finance-footer-container">
+
+            <!-- =================================================
+                 BRAND COLUMN
+            ================================================== -->
+
+            <div class="stackly-finance-footer-brand">
+
+                <a
+                    href="index.html"
+                    class="stackly-finance-footer-logo-link"
+                    aria-label="Stackly Finance Home"
+                >
+                    <img
+                        src="Stackly-logo-Blue.webp"
+                        alt="Stackly Finance"
+                        class="stackly-finance-footer-logo"
+                    >
+                </a>
+
+                <p class="stackly-finance-footer-description">
+                    Professional accounting, financial planning,
+                    tax consulting, and strategic business solutions
+                    designed to help you build a stronger financial future.
+                </p>
+
+                <!-- SOCIAL LINKS -->
+
+                <div class="stackly-finance-footer-socials">
+
+                    <a
+                        href="404.html"
+                        class="stackly-finance-footer-social"
+                        aria-label="Facebook"
+                    >
+                        <i class="fa-brands fa-facebook-f"></i>
+                    </a>
+
+                    <a
+                        href="404.html"
+                        class="stackly-finance-footer-social"
+                        aria-label="Instagram"
+                    >
+                        <i class="fa-brands fa-instagram"></i>
+                    </a>
+
+                    <a
+                        href="404.html"
+                        class="stackly-finance-footer-social"
+                        aria-label="LinkedIn"
+                    >
+                        <i class="fa-brands fa-linkedin-in"></i>
+                    </a>
+
+                    <a
+                        href="404.html"
+                        class="stackly-finance-footer-social"
+                        aria-label="X"
+                    >
+                        <i class="fa-brands fa-x-twitter"></i>
+                    </a>
+
+                </div>
+
+            </div>
+
+
+            <!-- =================================================
+                 QUICK LINKS
+            ================================================== -->
+
+            <div class="stackly-finance-footer-column">
+
+                <h3 class="stackly-finance-footer-title">
+                    Quick Links
+                </h3>
+
+                <ul class="stackly-finance-footer-links">
+
+                    <li>
+                        <a href="index.html">
+                            <i class="fa-solid fa-angle-right"></i>
+                            Home
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="about.html">
+                            <i class="fa-solid fa-angle-right"></i>
+                            About Us
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="services.html">
+                            <i class="fa-solid fa-angle-right"></i>
+                            Services
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="solutions.html">
+                            <i class="fa-solid fa-angle-right"></i>
+                            Solutions
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="blog.html">
+                            <i class="fa-solid fa-angle-right"></i>
+                            Finance Blog
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="contact.html">
+                            <i class="fa-solid fa-angle-right"></i>
+                            Contact Us
+                        </a>
+                    </li>
+
+                </ul>
+
+            </div>
+
+
+            <!-- =================================================
+                 FINANCIAL SERVICES
+            ================================================== -->
+
+            <div class="stackly-finance-footer-column">
+
+                <h3 class="stackly-finance-footer-title">
+                    Our Services
+                </h3>
+
+                <ul class="stackly-finance-footer-links">
+
+                    <li>
+                        <a href="404.html">
+                            <i class="fa-solid fa-angle-right"></i>
+                            Accounting & Bookkeeping
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="404.html">
+                            <i class="fa-solid fa-angle-right"></i>
+                            Tax Planning & Advisory
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="404.html">
+                            <i class="fa-solid fa-angle-right"></i>
+                            Financial Planning
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="404.html">
+                            <i class="fa-solid fa-angle-right"></i>
+                            Wealth Management
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="404.html">
+                            <i class="fa-solid fa-angle-right"></i>
+                            Business Consulting
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="404.html">
+                            <i class="fa-solid fa-angle-right"></i>
+                            Risk Management
+                        </a>
+                    </li>
+
+                </ul>
+
+            </div>
+
+
+            <!-- =================================================
+                 CONTACT COLUMN
+            ================================================== -->
+
+            <div class="stackly-finance-footer-column stackly-finance-footer-contact">
+
+                <h3 class="stackly-finance-footer-title">
+                    Get In Touch
+                </h3>
+
+                <!-- ADDRESS -->
+
+                <div class="stackly-finance-footer-contact-item">
+
+                    <span class="stackly-finance-footer-contact-icon">
+                        <i class="fa-solid fa-location-dot"></i>
+                    </span>
+
+                    <div>
+                        <strong>
+                            Our Office
+                        </strong>
+
+                        <p>
+                            Chennai, Tamil Nadu,
+                            India
+                        </p>
+                    </div>
+
+                </div>
+
+
+                <!-- PHONE -->
+
+                <div class="stackly-finance-footer-contact-item">
+
+                    <span class="stackly-finance-footer-contact-icon">
+                        <i class="fa-solid fa-phone"></i>
+                    </span>
+
+                    <div>
+                        <strong>
+                            Call Us
+                        </strong>
+
+                        <a href="tel:+919876543210">
+                            +91 98765 43210
+                        </a>
+                    </div>
+
+                </div>
+
+
+                <!-- EMAIL -->
+
+                <div class="stackly-finance-footer-contact-item">
+
+                    <span class="stackly-finance-footer-contact-icon">
+                        <i class="fa-solid fa-envelope"></i>
+                    </span>
+
+                    <div>
+                        <strong>
+                            Email Us
+                        </strong>
+
+                        <a href="mailto:info@stackly.com">
+                            info@stackly.com
+                        </a>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <!-- =====================================================
+         NEWSLETTER STRIP
+    ====================================================== -->
+
+    <div class="stackly-finance-footer-newsletter">
+
+        <div class="stackly-finance-footer-newsletter-container">
+
+            <div class="stackly-finance-footer-newsletter-content">
+
+                <span class="stackly-finance-footer-newsletter-label">
+                    FINANCIAL INSIGHTS
+                </span>
+
+                <h3>
+                    Stay informed. Plan smarter.
+                </h3>
+
+                <p>
+                    Get useful financial insights, business updates,
+                    and planning tips delivered to your inbox.
+                </p>
+
+            </div>
+
+
+            <!-- NEWSLETTER FORM -->
+
+            <!-- =====================================================
+     NEWSLETTER FORM
+====================================================== -->
+
+<div class="stackly-finance-footer-newsletter-form-wrap">
+
+    <form
+        class="stackly-finance-footer-newsletter-form"
+        id="financeNewsletterForm"
+        novalidate
+    >
+
+        <!-- EMAIL INPUT -->
+
+        <div class="stackly-finance-footer-input-wrap">
+
+            <i class="fa-regular fa-envelope"></i>
+
+            <input
+                type="email"
+                id="financeNewsletterEmail"
+                name="email"
+                placeholder="Enter your email address"
+                autocomplete="email"
+                aria-label="Email address"
+                required
+            >
+
+        </div>
+
+
+        <!-- SUBSCRIBE BUTTON -->
+
+        <button
+            type="submit"
+            class="stackly-finance-footer-newsletter-button"
+        >
+
+            <span>
+                Subscribe
+            </span>
+
+            <i class="fa-solid fa-arrow-right"></i>
+
+        </button>
+
+    </form>
+
+
+    <!-- =================================================
+         NEWSLETTER VALIDATION MESSAGE
+         Appears BELOW input + button
+    ================================================== -->
+
+    <div
+        class="stackly-finance-newsletter-message"
+        id="financeNewsletterMessage"
+        role="status"
+        aria-live="polite"
+    ></div>
+
+</div>
+
+        </div>
+
+    </div>
+
+
+    <!-- =====================================================
+         FOOTER BOTTOM
+    ====================================================== -->
+
+    <div class="stackly-finance-footer-bottom">
+
+        <div class="stackly-finance-footer-bottom-container">
+
+            <!-- COPYRIGHT -->
+
+            <p class="stackly-finance-footer-copyright">
+
+                ©
+                <span id="financeFooterYear">
+                    2026
+                </span>
+                Stackly Finance.
+                All Rights Reserved.
+
+            </p>
+
+
+            <!-- LEGAL LINKS -->
+
+            <div class="stackly-finance-footer-legal">
+
+                <a href="404.html">
+                    Privacy Policy
+                </a>
+
+                <span class="stackly-finance-footer-legal-divider">
+                    |
+                </span>
+
+                <a href="404.html">
+                    Terms & Conditions
+                </a>
+
+                <span class="stackly-finance-footer-legal-divider">
+                    |
+                </span>
+
+                <a href="404.html">
+                    Cookie Policy
+                </a>
+
+            </div>
+
+
+            <!-- BACK TO TOP -->
+
+            <a
+                href="#home"
+                class="stackly-finance-footer-top"
+                aria-label="Back to top"
+            >
+
+                <i class="fa-solid fa-arrow-up"></i>
+
+            </a>
+
+        </div>
+
+    </div>
+
+</footer>
+
+<!-- =========================================================
+     AOS JAVASCRIPT
+========================================================= -->
+
+<script
+    src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"
+    defer
+></script>
+
+
+<!-- =========================================================
+     STACKLY FINANCE JAVASCRIPT
+========================================================= -->
+
+<script
+    src="index.js"
+    defer
+></script>
+
+
+</body>
+
+</html>

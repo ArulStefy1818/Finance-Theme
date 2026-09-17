@@ -1,0 +1,1981 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <!-- =========================================================
+         STACKLY FINANCE CLIENT DASHBOARD
+    ========================================================== -->
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <meta
+        name="description"
+        content="Stackly Finance Client Dashboard - Manage accounts, transactions, investments and financial goals."
+    >
+
+    <meta
+        name="theme-color"
+        content="#061713"
+    >
+
+    <title>Stackly Finance | Client Dashboard</title>
+
+
+    <!-- =========================================================
+         GOOGLE FONTS
+    ========================================================== -->
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+
+    <link
+        rel="preconnect"
+        href="https://fonts.gstatic.com"
+        crossorigin
+    >
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap"
+        rel="stylesheet"
+    >
+
+
+    <!-- =========================================================
+         FONT AWESOME
+    ========================================================== -->
+
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+    >
+
+
+    <!-- =========================================================
+         AOS ANIMATION
+    ========================================================== -->
+
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css"
+    >
+
+
+    <!-- =========================================================
+         CLIENT DASHBOARD CSS
+    ========================================================== -->
+
+    <link
+        rel="stylesheet"
+        href="client.css"
+    >
+
+</head>
+
+
+<body>
+
+
+    <!-- =========================================================
+         CLIENT DASHBOARD WRAPPER
+    ========================================================== -->
+
+    <div class="stackly-finance-client-dashboard">
+
+
+        <!-- =====================================================
+             MOBILE SIDEBAR OVERLAY
+        ====================================================== -->
+
+        <div
+            class="stackly-finance-client-overlay"
+            id="stacklyFinanceClientOverlay"
+            aria-hidden="true"
+        ></div>
+
+
+        <!-- =====================================================
+             SIDEBAR
+        ====================================================== -->
+
+        <aside
+            class="stackly-finance-client-sidebar"
+            id="stacklyFinanceClientSidebar"
+            aria-label="Client dashboard sidebar"
+        >
+
+
+            <!-- =================================================
+                 SIDEBAR BRAND
+            ================================================== -->
+
+            <div class="stackly-finance-client-brand">
+
+                <a
+                    href="client.html"
+                    class="stackly-finance-client-logo"
+                    aria-label="Stackly Finance Home"
+                >
+
+                    <img
+                        src="Stackly-logo-Blue.webp"
+                        alt="Stackly Finance"
+                    >
+
+                </a>
+
+
+                <!-- MOBILE CLOSE BUTTON -->
+
+                <button
+                    type="button"
+                    class="stackly-finance-client-sidebar-close"
+                    id="stacklyFinanceClientSidebarClose"
+                    aria-label="Close navigation"
+                    aria-controls="stacklyFinanceClientSidebar"
+                >
+
+                    <i class="fa-solid fa-xmark"></i>
+
+                </button>
+
+            </div>
+
+
+            <!-- =================================================
+                 CLIENT PROFILE
+            ================================================== -->
+
+            <div
+                class="stackly-finance-client-sidebar-profile"
+                data-aos="fade-right"
+            >
+
+                <div
+                    class="stackly-finance-client-avatar"
+                    aria-hidden="true"
+                >
+
+                    <i class="fa-solid fa-user"></i>
+
+                </div>
+
+
+                <div class="stackly-finance-client-profile-info">
+
+                    <strong id="stacklyFinanceClientSidebarName">
+                        Client
+                    </strong>
+
+                    <span>
+                        Finance Client
+                    </span>
+
+                </div>
+
+            </div>
+
+
+            <!-- =================================================
+                 SIDEBAR NAVIGATION
+            ================================================== -->
+
+            <nav
+                class="stackly-finance-client-navigation"
+                aria-label="Client Dashboard Navigation"
+            >
+
+                <!-- DASHBOARD -->
+
+                <a
+                    href="client.html"
+                    class="stackly-finance-client-nav-link active"
+                    aria-current="page"
+                >
+
+                    <span
+                        class="stackly-finance-client-nav-icon"
+                        aria-hidden="true"
+                    >
+
+                        <i class="fa-solid fa-chart-pie"></i>
+
+                    </span>
+
+                    <span>
+                        Dashboard
+                    </span>
+
+                </a>
+
+
+                <!-- MY ACCOUNTS -->
+
+                <a
+                    href="client-accounts.html"
+                    class="stackly-finance-client-nav-link"
+                >
+
+                    <span
+                        class="stackly-finance-client-nav-icon"
+                        aria-hidden="true"
+                    >
+
+                        <i class="fa-solid fa-wallet"></i>
+
+                    </span>
+
+                    <span>
+                        My Accounts
+                    </span>
+
+                </a>
+
+
+                <!-- TRANSACTIONS -->
+
+                <a
+                    href="client-transactions.html"
+                    class="stackly-finance-client-nav-link"
+                >
+
+                    <span
+                        class="stackly-finance-client-nav-icon"
+                        aria-hidden="true"
+                    >
+
+                        <i class="fa-solid fa-arrow-right-arrow-left"></i>
+
+                    </span>
+
+                    <span>
+                        Transactions
+                    </span>
+
+                </a>
+
+
+                <!-- PAYMENTS -->
+
+                <a
+                    href="client-payments.html"
+                    class="stackly-finance-client-nav-link"
+                >
+
+                    <span
+                        class="stackly-finance-client-nav-icon"
+                        aria-hidden="true"
+                    >
+
+                        <i class="fa-solid fa-credit-card"></i>
+
+                    </span>
+
+                    <span>
+                        Payments
+                    </span>
+
+                </a>
+
+
+                <!-- INVESTMENTS -->
+
+                <a
+                    href="client-investments.html"
+                    class="stackly-finance-client-nav-link"
+                >
+
+                    <span
+                        class="stackly-finance-client-nav-icon"
+                        aria-hidden="true"
+                    >
+
+                        <i class="fa-solid fa-chart-line"></i>
+
+                    </span>
+
+                    <span>
+                        Investments
+                    </span>
+
+                </a>
+
+
+                <!-- FINANCIAL PLANNING -->
+
+                <a
+                    href="client-planning.html"
+                    class="stackly-finance-client-nav-link"
+                >
+
+                    <span
+                        class="stackly-finance-client-nav-icon"
+                        aria-hidden="true"
+                    >
+
+                        <i class="fa-solid fa-bullseye"></i>
+
+                    </span>
+
+                    <span>
+                        Financial Planning
+                    </span>
+
+                </a>
+
+
+                <!-- MY PROFILE -->
+
+                <a
+                    href="client-profile.html"
+                    class="stackly-finance-client-nav-link"
+                >
+
+                    <span
+                        class="stackly-finance-client-nav-icon"
+                        aria-hidden="true"
+                    >
+
+                        <i class="fa-solid fa-user"></i>
+
+                    </span>
+
+                    <span>
+                        My Profile
+                    </span>
+
+                </a>
+
+            </nav>
+
+
+            <!-- =================================================
+                 SIDEBAR BOTTOM
+            ================================================== -->
+
+            <div class="stackly-finance-client-sidebar-bottom">
+
+                <a
+                    href="index.html"
+                    class="stackly-finance-client-logout"
+                    id="stacklyFinanceClientLogout"
+                >
+
+                    <i
+                        class="fa-solid fa-right-from-bracket"
+                        aria-hidden="true"
+                    ></i>
+
+                    <span>
+                        Logout
+                    </span>
+
+                </a>
+
+            </div>
+
+        </aside>
+
+
+        <!-- =====================================================
+             MAIN AREA
+        ====================================================== -->
+
+        <main class="stackly-finance-client-main">
+
+
+            <!-- =================================================
+                 TOP HEADER
+            ================================================== -->
+
+            <header class="stackly-finance-client-header">
+
+
+                <!-- MOBILE MENU BUTTON -->
+
+                <button
+                    type="button"
+                    class="stackly-finance-client-menu-toggle"
+                    id="stacklyFinanceClientMenuToggle"
+                    aria-label="Open navigation"
+                    aria-controls="stacklyFinanceClientSidebar"
+                    aria-expanded="false"
+                >
+
+                    <span></span>
+                    <span></span>
+                    <span></span>
+
+                </button>
+
+
+                <!-- HEADER TITLE -->
+
+                <div
+                    class="stackly-finance-client-header-title"
+                    data-aos="fade-down"
+                >
+
+                    <span class="stackly-finance-client-header-label">
+                        CLIENT PORTAL
+                    </span>
+
+                    <h1>
+                        Financial Dashboard
+                    </h1>
+
+                </div>
+
+
+                <!-- HEADER ACTIONS -->
+
+                <div class="stackly-finance-client-header-actions">
+
+
+                    <!-- NOTIFICATION -->
+
+                    <a
+                        href="404-client.html"
+                        class="stackly-finance-client-notification"
+                        aria-label="View notifications, 4 unread"
+                    >
+
+                        <i
+                            class="fa-regular fa-bell"
+                            aria-hidden="true"
+                        ></i>
+
+                        <span>
+                            4
+                        </span>
+
+                    </a>
+
+
+                    <!-- EMAIL / USER -->
+
+                    <div class="stackly-finance-client-email-box">
+
+                        <div
+                            class="stackly-finance-client-email-icon"
+                            aria-hidden="true"
+                        >
+
+                            <i class="fa-solid fa-user"></i>
+
+                        </div>
+
+
+                        <div class="stackly-finance-client-email-content">
+
+                            <span>
+                                Signed in as
+                            </span>
+
+                            <strong id="stacklyFinanceClientEmail">
+                                client@example.com
+                            </strong>
+
+                        </div>
+
+
+                        <i
+                            class="fa-solid fa-chevron-down stackly-finance-client-email-arrow"
+                            aria-hidden="true"
+                        ></i>
+
+                    </div>
+
+                </div>
+
+            </header>
+
+
+            <!-- =================================================
+                 DASHBOARD CONTENT
+            ================================================== -->
+
+            <section class="stackly-finance-client-content">
+
+
+                <!-- =================================================
+                     WELCOME BANNER
+                ================================================== -->
+
+                <div
+                    class="stackly-finance-client-welcome"
+                    data-aos="fade-up"
+                >
+
+                    <div class="stackly-finance-client-welcome-content">
+
+                        <span class="stackly-finance-client-welcome-tag">
+                            WELCOME BACK
+                        </span>
+
+                        <h2>
+                            Hello,
+                            <span id="stacklyFinanceClientWelcomeName">
+                                Client
+                            </span>
+                            <span aria-hidden="true">👋</span>
+                        </h2>
+
+                        <p>
+                            Here's an overview of your financial activity
+                            and account performance.
+                        </p>
+
+                    </div>
+
+
+                    <div
+                        class="stackly-finance-client-welcome-icon"
+                        aria-hidden="true"
+                    >
+
+                        <i class="fa-solid fa-chart-pie"></i>
+
+                    </div>
+
+                </div>
+
+
+                <!-- =================================================
+                     OVERVIEW CARDS
+                ================================================== -->
+
+                <div class="stackly-finance-client-overview-grid">
+
+
+                    <!-- TOTAL BALANCE -->
+
+                    <article
+                        class="stackly-finance-client-stat-card"
+                        data-aos="fade-up"
+                        data-aos-delay="100"
+                    >
+
+                        <div class="stackly-finance-client-stat-top">
+
+                            <div
+                                class="stackly-finance-client-stat-icon"
+                                aria-hidden="true"
+                            >
+
+                                <i class="fa-solid fa-wallet"></i>
+
+                            </div>
+
+                            <span class="stackly-finance-client-stat-growth positive">
+
+                                <i
+                                    class="fa-solid fa-arrow-up"
+                                    aria-hidden="true"
+                                ></i>
+
+                                8.4%
+
+                            </span>
+
+                        </div>
+
+
+                        <span class="stackly-finance-client-stat-label">
+                            Total Balance
+                        </span>
+
+                        <h3>
+                            ₹12,84,650
+                        </h3>
+
+                        <p>
+                            Compared with last month
+                        </p>
+
+                    </article>
+
+
+                    <!-- INVESTMENTS -->
+
+                    <article
+                        class="stackly-finance-client-stat-card"
+                        data-aos="fade-up"
+                        data-aos-delay="150"
+                    >
+
+                        <div class="stackly-finance-client-stat-top">
+
+                            <div
+                                class="stackly-finance-client-stat-icon investment"
+                                aria-hidden="true"
+                            >
+
+                                <i class="fa-solid fa-chart-line"></i>
+
+                            </div>
+
+                            <span class="stackly-finance-client-stat-growth positive">
+
+                                <i
+                                    class="fa-solid fa-arrow-up"
+                                    aria-hidden="true"
+                                ></i>
+
+                                12.6%
+
+                            </span>
+
+                        </div>
+
+
+                        <span class="stackly-finance-client-stat-label">
+                            Investments
+                        </span>
+
+                        <h3>
+                            ₹7,42,300
+                        </h3>
+
+                        <p>
+                            Current portfolio value
+                        </p>
+
+                    </article>
+
+
+                    <!-- MONTHLY INCOME -->
+
+                    <article
+                        class="stackly-finance-client-stat-card"
+                        data-aos="fade-up"
+                        data-aos-delay="200"
+                    >
+
+                        <div class="stackly-finance-client-stat-top">
+
+                            <div
+                                class="stackly-finance-client-stat-icon income"
+                                aria-hidden="true"
+                            >
+
+                                <i class="fa-solid fa-arrow-down"></i>
+
+                            </div>
+
+                            <span class="stackly-finance-client-stat-growth positive">
+
+                                <i
+                                    class="fa-solid fa-arrow-up"
+                                    aria-hidden="true"
+                                ></i>
+
+                                5.2%
+
+                            </span>
+
+                        </div>
+
+
+                        <span class="stackly-finance-client-stat-label">
+                            Monthly Income
+                        </span>
+
+                        <h3>
+                            ₹85,000
+                        </h3>
+
+                        <p>
+                            This month's income
+                        </p>
+
+                    </article>
+
+
+                    <!-- MONTHLY EXPENSE -->
+
+                    <article
+                        class="stackly-finance-client-stat-card"
+                        data-aos="fade-up"
+                        data-aos-delay="250"
+                    >
+
+                        <div class="stackly-finance-client-stat-top">
+
+                            <div
+                                class="stackly-finance-client-stat-icon expense"
+                                aria-hidden="true"
+                            >
+
+                                <i class="fa-solid fa-arrow-up"></i>
+
+                            </div>
+
+                            <span class="stackly-finance-client-stat-growth negative">
+
+                                <i
+                                    class="fa-solid fa-arrow-down"
+                                    aria-hidden="true"
+                                ></i>
+
+                                2.1%
+
+                            </span>
+
+                        </div>
+
+
+                        <span class="stackly-finance-client-stat-label">
+                            Monthly Expenses
+                        </span>
+
+                        <h3>
+                            ₹42,680
+                        </h3>
+
+                        <p>
+                            This month's expenses
+                        </p>
+
+                    </article>
+
+                </div>
+
+
+                <!-- =================================================
+                     MIDDLE GRID
+                ================================================== -->
+
+                <div class="stackly-finance-client-middle-grid">
+
+
+                    <!-- =================================================
+                         FINANCIAL SUMMARY
+                    ================================================== -->
+
+                    <section
+                        class="stackly-finance-client-panel stackly-finance-client-summary-panel"
+                        data-aos="fade-up"
+                    >
+
+                        <div class="stackly-finance-client-panel-header">
+
+                            <div>
+
+                                <span>
+                                    FINANCIAL OVERVIEW
+                                </span>
+
+                                <h2>
+                                    Cash Flow Summary
+                                </h2>
+
+                            </div>
+
+
+                            <label class="stackly-finance-client-period-control">
+
+                                <span class="stackly-finance-client-sr-only">
+                                    Select financial period
+                                </span>
+
+                                <div class="stackly-finance-client-period-dropdown">
+
+    <button
+        type="button"
+        class="stackly-finance-client-period-trigger"
+        id="stacklyFinanceClientPeriodTrigger"
+        aria-haspopup="listbox"
+        aria-expanded="false"
+    >
+        <span id="stacklyFinanceClientPeriodValue">This Month</span>
+
+        <i class="fa-solid fa-chevron-down"></i>
+    </button>
+
+    <div
+        class="stackly-finance-client-period-menu"
+        id="stacklyFinanceClientPeriodMenu"
+        role="listbox"
+        aria-label="Select financial period"
+    >
+
+        <button
+            type="button"
+            class="stackly-finance-client-period-option active"
+            data-value="this-month"
+            role="option"
+            aria-selected="true"
+        >
+            This Month
+        </button>
+
+        <button
+            type="button"
+            class="stackly-finance-client-period-option"
+            data-value="last-month"
+            role="option"
+            aria-selected="false"
+        >
+            Last Month
+        </button>
+
+        <button
+            type="button"
+            class="stackly-finance-client-period-option"
+            data-value="six-months"
+            role="option"
+            aria-selected="false"
+        >
+            Last 6 Months
+        </button>
+
+        <button
+            type="button"
+            class="stackly-finance-client-period-option"
+            data-value="this-year"
+            role="option"
+            aria-selected="false"
+        >
+            This Year
+        </button>
+
+    </div>
+
+</div>
+
+                            </label>
+
+                        </div>
+
+
+                        <!-- CHART -->
+
+                        <div
+                            class="stackly-finance-client-chart"
+                            role="img"
+                            aria-label="Cash flow chart showing income and expenses from January to June"
+                        >
+
+                            <!-- Y AXIS -->
+
+                            <div
+                                class="stackly-finance-client-chart-y"
+                                aria-hidden="true"
+                            >
+
+                                <span>₹1L</span>
+                                <span>₹75K</span>
+                                <span>₹50K</span>
+                                <span>₹25K</span>
+                                <span>₹0</span>
+
+                            </div>
+
+
+                            <!-- CHART AREA -->
+
+                            <div class="stackly-finance-client-chart-area">
+
+
+                                <!-- GRID -->
+
+                                <div
+                                    class="stackly-finance-client-chart-grid"
+                                    aria-hidden="true"
+                                >
+
+                                    <span></span>
+                                    <span></span>
+                                    <span></span>
+                                    <span></span>
+                                    <span></span>
+
+                                </div>
+
+
+                                <!-- BARS -->
+
+                                <div
+                                    class="stackly-finance-client-chart-bars"
+                                    aria-hidden="true"
+                                >
+
+
+                                    <!-- JAN -->
+
+                                    <div
+                                        class="stackly-finance-client-bar-group"
+                                        style="--bar-income: 72%; --bar-expense: 42%;"
+                                    >
+
+                                        <div
+                                            class="stackly-finance-client-bar income"
+                                            title="January Income"
+                                        ></div>
+
+                                        <div
+                                            class="stackly-finance-client-bar expense"
+                                            title="January Expenses"
+                                        ></div>
+
+                                    </div>
+
+
+                                    <!-- FEB -->
+
+                                    <div
+                                        class="stackly-finance-client-bar-group"
+                                        style="--bar-income: 82%; --bar-expense: 48%;"
+                                    >
+
+                                        <div
+                                            class="stackly-finance-client-bar income"
+                                            title="February Income"
+                                        ></div>
+
+                                        <div
+                                            class="stackly-finance-client-bar expense"
+                                            title="February Expenses"
+                                        ></div>
+
+                                    </div>
+
+
+                                    <!-- MAR -->
+
+                                    <div
+                                        class="stackly-finance-client-bar-group"
+                                        style="--bar-income: 64%; --bar-expense: 37%;"
+                                    >
+
+                                        <div
+                                            class="stackly-finance-client-bar income"
+                                            title="March Income"
+                                        ></div>
+
+                                        <div
+                                            class="stackly-finance-client-bar expense"
+                                            title="March Expenses"
+                                        ></div>
+
+                                    </div>
+
+
+                                    <!-- APR -->
+
+                                    <div
+                                        class="stackly-finance-client-bar-group"
+                                        style="--bar-income: 91%; --bar-expense: 54%;"
+                                    >
+
+                                        <div
+                                            class="stackly-finance-client-bar income"
+                                            title="April Income"
+                                        ></div>
+
+                                        <div
+                                            class="stackly-finance-client-bar expense"
+                                            title="April Expenses"
+                                        ></div>
+
+                                    </div>
+
+
+                                    <!-- MAY -->
+
+                                    <div
+                                        class="stackly-finance-client-bar-group"
+                                        style="--bar-income: 76%; --bar-expense: 44%;"
+                                    >
+
+                                        <div
+                                            class="stackly-finance-client-bar income"
+                                            title="May Income"
+                                        ></div>
+
+                                        <div
+                                            class="stackly-finance-client-bar expense"
+                                            title="May Expenses"
+                                        ></div>
+
+                                    </div>
+
+
+                                    <!-- JUN -->
+
+                                    <div
+                                        class="stackly-finance-client-bar-group"
+                                        style="--bar-income: 86%; --bar-expense: 51%;"
+                                    >
+
+                                        <div
+                                            class="stackly-finance-client-bar income"
+                                            title="June Income"
+                                        ></div>
+
+                                        <div
+                                            class="stackly-finance-client-bar expense"
+                                            title="June Expenses"
+                                        ></div>
+
+                                    </div>
+
+                                </div>
+
+
+                                <!-- MONTH LABELS -->
+
+                                <div
+                                    class="stackly-finance-client-chart-months"
+                                    aria-hidden="true"
+                                >
+
+                                    <span>JAN</span>
+                                    <span>FEB</span>
+                                    <span>MAR</span>
+                                    <span>APR</span>
+                                    <span>MAY</span>
+                                    <span>JUN</span>
+
+                                </div>
+
+                            </div>
+
+                        </div>
+
+
+                        <!-- CHART LEGEND -->
+
+                        <div class="stackly-finance-client-chart-legend">
+
+                            <span>
+
+                                <i
+                                    class="stackly-finance-client-legend-income"
+                                    aria-hidden="true"
+                                ></i>
+
+                                Income
+
+                            </span>
+
+
+                            <span>
+
+                                <i
+                                    class="stackly-finance-client-legend-expense"
+                                    aria-hidden="true"
+                                ></i>
+
+                                Expenses
+
+                            </span>
+
+                        </div>
+
+                    </section>
+
+
+                    <!-- =================================================
+                         QUICK ACTIONS
+                    ================================================== -->
+
+                    <section
+                        class="stackly-finance-client-panel stackly-finance-client-actions-panel"
+                        data-aos="fade-up"
+                        data-aos-delay="100"
+                    >
+
+                        <div class="stackly-finance-client-panel-header">
+
+                            <div>
+
+                                <span>
+                                    QUICK ACCESS
+                                </span>
+
+                                <h2>
+                                    Quick Actions
+                                </h2>
+
+                            </div>
+
+                        </div>
+
+
+                        <div class="stackly-finance-client-action-grid">
+
+
+                            <!-- SEND MONEY -->
+
+                            <a
+                                href="404-client.html"
+                                class="stackly-finance-client-action-card"
+                            >
+
+                                <span aria-hidden="true">
+
+                                    <i class="fa-solid fa-paper-plane"></i>
+
+                                </span>
+
+                                <strong>
+                                    Send Money
+                                </strong>
+
+                                <small>
+                                    Transfer funds
+                                </small>
+
+                            </a>
+
+
+                            <!-- MAKE PAYMENT -->
+
+                            <a
+                                href="404-client.html"
+                                class="stackly-finance-client-action-card"
+                            >
+
+                                <span aria-hidden="true">
+
+                                    <i class="fa-solid fa-credit-card"></i>
+
+                                </span>
+
+                                <strong>
+                                    Make Payment
+                                </strong>
+
+                                <small>
+                                    Pay a bill
+                                </small>
+
+                            </a>
+
+
+                            <!-- INVEST -->
+
+                            <a
+                                href="404-client.html"
+                                class="stackly-finance-client-action-card"
+                            >
+
+                                <span aria-hidden="true">
+
+                                    <i class="fa-solid fa-chart-pie"></i>
+
+                                </span>
+
+                                <strong>
+                                    Invest
+                                </strong>
+
+                                <small>
+                                    Grow your money
+                                </small>
+
+                            </a>
+
+
+                            <!-- DOCUMENTS -->
+
+                            <a
+                                href="404-client.html"
+                                class="stackly-finance-client-action-card"
+                            >
+
+                                <span aria-hidden="true">
+
+                                    <i class="fa-solid fa-file-arrow-down"></i>
+
+                                </span>
+
+                                <strong>
+                                    Documents
+                                </strong>
+
+                                <small>
+                                    View statements
+                                </small>
+
+                            </a>
+
+                        </div>
+
+                    </section>
+
+                </div>
+
+
+                <!-- =================================================
+                     BOTTOM GRID
+                ================================================== -->
+
+                <div class="stackly-finance-client-bottom-grid">
+
+
+                    <!-- =================================================
+                         RECENT TRANSACTIONS
+                    ================================================== -->
+
+                    <section
+                        class="stackly-finance-client-panel stackly-finance-client-transactions-panel"
+                        data-aos="fade-up"
+                    >
+
+                        <div class="stackly-finance-client-panel-header">
+
+                            <div>
+
+                                <span>
+                                    TRANSACTION HISTORY
+                                </span>
+
+                                <h2>
+                                    Recent Transactions
+                                </h2>
+
+                            </div>
+
+
+                            <a
+                                href="404-client.html"
+                                class="stackly-finance-client-view-all"
+                            >
+
+                                <span>
+                                    View All
+                                </span>
+
+                                <i
+                                    class="fa-solid fa-arrow-right"
+                                    aria-hidden="true"
+                                ></i>
+
+                            </a>
+
+                        </div>
+
+
+                        <!-- TABLE -->
+
+                        <div class="stackly-finance-client-table-wrapper">
+
+                            <table class="stackly-finance-client-transactions-table">
+
+                                <caption class="stackly-finance-client-sr-only">
+                                    Recent financial transactions
+                                </caption>
+
+                                <thead>
+
+                                    <tr>
+
+                                        <th scope="col">
+                                            Transaction
+                                        </th>
+
+                                        <th scope="col">
+                                            Date
+                                        </th>
+
+                                        <th scope="col">
+                                            Category
+                                        </th>
+
+                                        <th scope="col">
+                                            Amount
+                                        </th>
+
+                                        <th scope="col">
+                                            Status
+                                        </th>
+
+                                    </tr>
+
+                                </thead>
+
+
+                                <tbody>
+
+
+                                    <!-- SALARY -->
+
+                                    <tr>
+
+                                        <td>
+
+                                            <div class="stackly-finance-client-transaction-name">
+
+                                                <span
+                                                    class="income-icon"
+                                                    aria-hidden="true"
+                                                >
+
+                                                    <i class="fa-solid fa-arrow-down"></i>
+
+                                                </span>
+
+                                                <div>
+
+                                                    <strong>
+                                                        Salary Credit
+                                                    </strong>
+
+                                                    <small>
+                                                        HDFC Bank
+                                                    </small>
+
+                                                </div>
+
+                                            </div>
+
+                                        </td>
+
+
+                                        <td>
+                                            17 Sep 2026
+                                        </td>
+
+
+                                        <td>
+                                            Income
+                                        </td>
+
+
+                                        <td class="amount-positive">
+                                            +₹85,000
+                                        </td>
+
+
+                                        <td>
+
+                                            <span class="stackly-finance-client-status completed">
+                                                Completed
+                                            </span>
+
+                                        </td>
+
+                                    </tr>
+
+
+                                    <!-- ONLINE PURCHASE -->
+
+                                    <tr>
+
+                                        <td>
+
+                                            <div class="stackly-finance-client-transaction-name">
+
+                                                <span
+                                                    class="expense-icon"
+                                                    aria-hidden="true"
+                                                >
+
+                                                    <i class="fa-solid fa-cart-shopping"></i>
+
+                                                </span>
+
+                                                <div>
+
+                                                    <strong>
+                                                        Online Purchase
+                                                    </strong>
+
+                                                    <small>
+                                                        Shopping
+                                                    </small>
+
+                                                </div>
+
+                                            </div>
+
+                                        </td>
+
+
+                                        <td>
+                                            16 Sep 2026
+                                        </td>
+
+
+                                        <td>
+                                            Shopping
+                                        </td>
+
+
+                                        <td class="amount-negative">
+                                            -₹4,250
+                                        </td>
+
+
+                                        <td>
+
+                                            <span class="stackly-finance-client-status completed">
+                                                Completed
+                                            </span>
+
+                                        </td>
+
+                                    </tr>
+
+
+                                    <!-- ELECTRICITY -->
+
+                                    <tr>
+
+                                        <td>
+
+                                            <div class="stackly-finance-client-transaction-name">
+
+                                                <span
+                                                    class="expense-icon"
+                                                    aria-hidden="true"
+                                                >
+
+                                                    <i class="fa-solid fa-bolt"></i>
+
+                                                </span>
+
+                                                <div>
+
+                                                    <strong>
+                                                        Electricity Bill
+                                                    </strong>
+
+                                                    <small>
+                                                        Utilities
+                                                    </small>
+
+                                                </div>
+
+                                            </div>
+
+                                        </td>
+
+
+                                        <td>
+                                            14 Sep 2026
+                                        </td>
+
+
+                                        <td>
+                                            Utilities
+                                        </td>
+
+
+                                        <td class="amount-negative">
+                                            -₹2,840
+                                        </td>
+
+
+                                        <td>
+
+                                            <span class="stackly-finance-client-status completed">
+                                                Completed
+                                            </span>
+
+                                        </td>
+
+                                    </tr>
+
+
+                                    <!-- MUTUAL FUND -->
+
+                                    <tr>
+
+                                        <td>
+
+                                            <div class="stackly-finance-client-transaction-name">
+
+                                                <span
+                                                    class="investment-icon"
+                                                    aria-hidden="true"
+                                                >
+
+                                                    <i class="fa-solid fa-chart-line"></i>
+
+                                                </span>
+
+                                                <div>
+
+                                                    <strong>
+                                                        Mutual Fund
+                                                    </strong>
+
+                                                    <small>
+                                                        Investment
+                                                    </small>
+
+                                                </div>
+
+                                            </div>
+
+                                        </td>
+
+
+                                        <td>
+                                            12 Sep 2026
+                                        </td>
+
+
+                                        <td>
+                                            Investment
+                                        </td>
+
+
+                                        <td class="amount-negative">
+                                            -₹10,000
+                                        </td>
+
+
+                                        <td>
+
+                                            <span class="stackly-finance-client-status pending">
+                                                Processing
+                                            </span>
+
+                                        </td>
+
+                                    </tr>
+
+                                </tbody>
+
+                            </table>
+
+                        </div>
+
+                    </section>
+
+
+                    <!-- =================================================
+                         ACCOUNT SUMMARY
+                    ================================================== -->
+
+                    <section
+                        class="stackly-finance-client-panel stackly-finance-client-account-panel"
+                        data-aos="fade-up"
+                        data-aos-delay="100"
+                    >
+
+                        <div class="stackly-finance-client-panel-header">
+
+                            <div>
+
+                                <span>
+                                    MY ACCOUNTS
+                                </span>
+
+                                <h2>
+                                    Account Summary
+                                </h2>
+
+                            </div>
+
+
+                            <a
+                                href="404-client.html"
+                                class="stackly-finance-client-small-link"
+                                aria-label="View all accounts"
+                            >
+
+                                <i
+                                    class="fa-solid fa-arrow-up-right-from-square"
+                                    aria-hidden="true"
+                                ></i>
+
+                            </a>
+
+                        </div>
+
+
+                        <div class="stackly-finance-client-account-list">
+
+
+                            <!-- SAVINGS ACCOUNT -->
+
+                            <div class="stackly-finance-client-account-item">
+
+                                <div
+                                    class="stackly-finance-client-account-icon savings"
+                                    aria-hidden="true"
+                                >
+
+                                    <i class="fa-solid fa-building-columns"></i>
+
+                                </div>
+
+
+                                <div class="stackly-finance-client-account-details">
+
+                                    <strong>
+                                        Savings Account
+                                    </strong>
+
+                                    <span>
+                                        **** 4821
+                                    </span>
+
+                                </div>
+
+
+                                <div class="stackly-finance-client-account-balance">
+
+                                    <strong>
+                                        ₹5,42,350
+                                    </strong>
+
+                                    <span>
+                                        Available
+                                    </span>
+
+                                </div>
+
+                            </div>
+
+
+                            <!-- CURRENT ACCOUNT -->
+
+                            <div class="stackly-finance-client-account-item">
+
+                                <div
+                                    class="stackly-finance-client-account-icon current"
+                                    aria-hidden="true"
+                                >
+
+                                    <i class="fa-solid fa-wallet"></i>
+
+                                </div>
+
+
+                                <div class="stackly-finance-client-account-details">
+
+                                    <strong>
+                                        Current Account
+                                    </strong>
+
+                                    <span>
+                                        **** 7294
+                                    </span>
+
+                                </div>
+
+
+                                <div class="stackly-finance-client-account-balance">
+
+                                    <strong>
+                                        ₹3,18,000
+                                    </strong>
+
+                                    <span>
+                                        Available
+                                    </span>
+
+                                </div>
+
+                            </div>
+
+
+                            <!-- INVESTMENT PORTFOLIO -->
+
+                            <div class="stackly-finance-client-account-item">
+
+                                <div
+                                    class="stackly-finance-client-account-icon portfolio"
+                                    aria-hidden="true"
+                                >
+
+                                    <i class="fa-solid fa-chart-pie"></i>
+
+                                </div>
+
+
+                                <div class="stackly-finance-client-account-details">
+
+                                    <strong>
+                                        Investment Portfolio
+                                    </strong>
+
+                                    <span>
+                                        8 Assets
+                                    </span>
+
+                                </div>
+
+
+                                <div class="stackly-finance-client-account-balance">
+
+                                    <strong>
+                                        ₹7,42,300
+                                    </strong>
+
+                                    <span>
+                                        Current Value
+                                    </span>
+
+                                </div>
+
+                            </div>
+
+                        </div>
+
+
+                        <!-- MANAGE ACCOUNTS -->
+
+                        <a
+                            href="404-client.html"
+                            class="stackly-finance-client-manage-account"
+                        >
+
+                            <span>
+                                Manage Accounts
+                            </span>
+
+                            <i
+                                class="fa-solid fa-arrow-right"
+                                aria-hidden="true"
+                            ></i>
+
+                        </a>
+
+                    </section>
+
+                </div>
+
+
+                <!-- =================================================
+                     FINANCIAL GOALS
+                ================================================== -->
+
+                <section
+                    class="stackly-finance-client-panel stackly-finance-client-goals-panel"
+                    data-aos="fade-up"
+                >
+
+                    <div class="stackly-finance-client-panel-header">
+
+                        <div>
+
+                            <span>
+                                FINANCIAL PLANNING
+                            </span>
+
+                            <h2>
+                                Your Financial Goals
+                            </h2>
+
+                        </div>
+
+
+                        <a
+                            href="404-client.html"
+                            class="stackly-finance-client-view-all"
+                        >
+
+                            <span>
+                                Manage Goals
+                            </span>
+
+                            <i
+                                class="fa-solid fa-arrow-right"
+                                aria-hidden="true"
+                            ></i>
+
+                        </a>
+
+                    </div>
+
+
+                    <div class="stackly-finance-client-goals-grid">
+
+
+                        <!-- =================================================
+                             GOAL 1
+                        ================================================== -->
+
+                        <article class="stackly-finance-client-goal-card">
+
+                            <div class="stackly-finance-client-goal-top">
+
+                                <div
+                                    class="stackly-finance-client-goal-icon"
+                                    aria-hidden="true"
+                                >
+
+                                    <i class="fa-solid fa-house"></i>
+
+                                </div>
+
+                                <span>
+                                    68%
+                                </span>
+
+                            </div>
+
+
+                            <h3>
+                                Home Purchase
+                            </h3>
+
+                            <p>
+                                ₹13.6L of ₹20L
+                            </p>
+
+
+                            <div
+                                class="stackly-finance-client-progress"
+                                role="progressbar"
+                                aria-label="Home Purchase progress"
+                                aria-valuemin="0"
+                                aria-valuemax="100"
+                                aria-valuenow="68"
+                            >
+
+                                <span
+                                    style="width: 68%;"
+                                    aria-hidden="true"
+                                ></span>
+
+                            </div>
+
+                        </article>
+
+
+                        <!-- =================================================
+                             GOAL 2
+                        ================================================== -->
+
+                        <article class="stackly-finance-client-goal-card">
+
+                            <div class="stackly-finance-client-goal-top">
+
+                                <div
+                                    class="stackly-finance-client-goal-icon"
+                                    aria-hidden="true"
+                                >
+
+                                    <i class="fa-solid fa-plane"></i>
+
+                                </div>
+
+                                <span>
+                                    45%
+                                </span>
+
+                            </div>
+
+
+                            <h3>
+                                Travel Fund
+                            </h3>
+
+                            <p>
+                                ₹90K of ₹2L
+                            </p>
+
+
+                            <div
+                                class="stackly-finance-client-progress"
+                                role="progressbar"
+                                aria-label="Travel Fund progress"
+                                aria-valuemin="0"
+                                aria-valuemax="100"
+                                aria-valuenow="45"
+                            >
+
+                                <span
+                                    style="width: 45%;"
+                                    aria-hidden="true"
+                                ></span>
+
+                            </div>
+
+                        </article>
+
+
+                        <!-- =================================================
+                             GOAL 3
+                        ================================================== -->
+
+                        <article class="stackly-finance-client-goal-card">
+
+                            <div class="stackly-finance-client-goal-top">
+
+                                <div
+                                    class="stackly-finance-client-goal-icon"
+                                    aria-hidden="true"
+                                >
+
+                                    <i class="fa-solid fa-shield-heart"></i>
+
+                                </div>
+
+                                <span>
+                                    82%
+                                </span>
+
+                            </div>
+
+
+                            <h3>
+                                Emergency Fund
+                            </h3>
+
+                            <p>
+                                ₹4.1L of ₹5L
+                            </p>
+
+
+                            <div
+                                class="stackly-finance-client-progress"
+                                role="progressbar"
+                                aria-label="Emergency Fund progress"
+                                aria-valuemin="0"
+                                aria-valuemax="100"
+                                aria-valuenow="82"
+                            >
+
+                                <span
+                                    style="width: 82%;"
+                                    aria-hidden="true"
+                                ></span>
+
+                            </div>
+
+                        </article>
+
+                    </div>
+
+                </section>
+
+            </section>
+
+        </main>
+
+    </div>
+
+
+    <!-- =========================================================
+         AOS JS
+    ========================================================== -->
+
+    <script
+        src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"
+    ></script>
+
+
+    <!-- =========================================================
+         CLIENT DASHBOARD JS
+    ========================================================== -->
+
+    <script src="client.js"></script>
+
+
+</body>
+
+</html>

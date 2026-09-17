@@ -1,0 +1,1659 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <!-- =========================================================
+         STACKLY FINANCE ADMIN DASHBOARD
+    ========================================================== -->
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <meta
+        name="description"
+        content="Stackly Finance Admin Dashboard"
+    >
+
+    <title>Stackly Finance | Admin Dashboard</title>
+
+
+    <!-- =========================================================
+         GOOGLE FONTS
+    ========================================================== -->
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+
+    <link
+        rel="preconnect"
+        href="https://fonts.gstatic.com"
+        crossorigin
+    >
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap"
+        rel="stylesheet"
+    >
+
+
+    <!-- =========================================================
+         FONT AWESOME
+    ========================================================== -->
+
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+    >
+
+
+    <!-- =========================================================
+         AOS
+    ========================================================== -->
+
+    <link
+        rel="stylesheet"
+        href="https://unpkg.com/aos@2.3.4/dist/aos.css"
+    >
+
+
+    <!-- =========================================================
+         ADMIN CSS
+    ========================================================== -->
+
+    <link
+        rel="stylesheet"
+        href="admin.css"
+    >
+
+</head>
+
+
+<body>
+
+
+    <!-- =========================================================
+         MOBILE SIDEBAR OVERLAY
+    ========================================================== -->
+
+    <div
+        class="stackly-finance-admin-overlay"
+        id="stacklyFinanceAdminOverlay"
+    ></div>
+
+
+    <!-- =========================================================
+         SIDEBAR
+    ========================================================== -->
+
+    <aside
+        class="stackly-finance-admin-sidebar"
+        id="stacklyFinanceAdminSidebar"
+    >
+
+
+        <!-- =====================================================
+             SIDEBAR TOP
+        ====================================================== -->
+
+        <div class="stackly-finance-admin-sidebar-top">
+
+
+            <!-- =================================================
+                 LOGO
+            ================================================== -->
+
+            <a
+                href="admin.html"
+                class="stackly-finance-admin-logo"
+                aria-label="Stackly Finance Home"
+            >
+
+                <img
+                    src="Stackly-logo-Blue.webp"
+                    alt="Stackly Finance Logo"
+                >
+
+            </a>
+
+
+            <!-- =================================================
+                 MOBILE CLOSE BUTTON
+            ================================================== -->
+
+            <button
+                type="button"
+                class="stackly-finance-admin-close"
+                id="stacklyFinanceAdminClose"
+                aria-label="Close menu"
+            >
+
+                <i class="fa-solid fa-xmark"></i>
+
+            </button>
+
+        </div>
+
+
+        <!-- =====================================================
+             ADMIN PROFILE
+        ====================================================== -->
+
+        <div class="stackly-finance-admin-profile">
+
+            <div class="stackly-finance-admin-profile-icon">
+
+                <i class="fa-solid fa-user-shield"></i>
+
+            </div>
+
+            <div class="stackly-finance-admin-profile-info">
+
+               
+                <span
+    class="stackly-finance-admin-profile-label"
+    id="stacklyFinanceAdminProfileLabel"
+>
+    Dashboard
+</span>
+
+                <strong>
+                    Administrator
+                </strong>
+
+            </div>
+
+        </div>
+
+
+        <!-- =====================================================
+             SIDEBAR NAVIGATION
+        ====================================================== -->
+
+        <nav
+            class="stackly-finance-admin-navigation"
+            aria-label="Admin Navigation"
+        >
+
+
+            <!-- Dashboard -->
+
+            <a
+                href="admin.html"
+                class="stackly-finance-admin-nav-link"
+            >
+
+                <span class="stackly-finance-admin-nav-icon">
+
+                    <i class="fa-solid fa-chart-pie"></i>
+
+                </span>
+
+                <span>
+                    Dashboard
+                </span>
+
+            </a>
+
+
+            <!-- Users -->
+
+            <a
+                href="admin-users.html"
+                class="stackly-finance-admin-nav-link"
+            >
+
+                <span class="stackly-finance-admin-nav-icon">
+
+                    <i class="fa-solid fa-users"></i>
+
+                </span>
+
+                <span>
+                    Users
+                </span>
+
+            </a>
+
+
+            <!-- Transactions -->
+
+            <a
+                href="admin-transactions.html"
+                class="stackly-finance-admin-nav-link"
+            >
+
+                <span class="stackly-finance-admin-nav-icon">
+
+                    <i class="fa-solid fa-arrow-right-arrow-left"></i>
+
+                </span>
+
+                <span>
+                    Transactions
+                </span>
+
+            </a>
+
+
+            <!-- Investments -->
+
+            <a
+                href="admin-investments.html"
+                class="stackly-finance-admin-nav-link active"
+            >
+
+                <span class="stackly-finance-admin-nav-icon">
+
+                    <i class="fa-solid fa-chart-line"></i>
+
+                </span>
+
+                <span>
+                    Investments
+                </span>
+
+            </a>
+
+
+            <!-- Accounts -->
+
+            <a
+                href="admin-accounts.html"
+                class="stackly-finance-admin-nav-link"
+            >
+
+                <span class="stackly-finance-admin-nav-icon">
+
+                    <i class="fa-solid fa-wallet"></i>
+
+                </span>
+
+                <span>
+                    Accounts
+                </span>
+
+            </a>
+
+
+
+            <!-- Messages -->
+
+            <a
+                href="admin-messages.html"
+                class="stackly-finance-admin-nav-link"
+            >
+
+                <span class="stackly-finance-admin-nav-icon">
+
+                    <i class="fa-solid fa-envelope"></i>
+
+                </span>
+
+                <span>
+                    Messages
+                </span>
+
+                <span class="stackly-finance-admin-nav-badge">
+                    4
+                </span>
+
+            </a>
+
+
+            <!-- Settings -->
+
+            <a
+                href="admin-settings.html"
+                class="stackly-finance-admin-nav-link"
+            >
+
+                <span class="stackly-finance-admin-nav-icon">
+
+                    <i class="fa-solid fa-gear"></i>
+
+                </span>
+
+                <span>
+                    Settings
+                </span>
+
+            </a>
+
+        </nav>
+
+
+        <!-- =====================================================
+             SIDEBAR BOTTOM
+        ====================================================== -->
+
+        <div class="stackly-finance-admin-sidebar-bottom">
+
+
+            <!-- Logout -->
+
+            <a
+                href="index.html"
+                class="stackly-finance-admin-logout"
+                id="stacklyFinanceAdminLogout"
+            >
+
+                <i class="fa-solid fa-right-from-bracket"></i>
+
+                <span>
+                    Logout
+                </span>
+
+            </a>
+
+        </div>
+
+    </aside>
+
+
+    <!-- =========================================================
+         MAIN AREA
+    ========================================================== -->
+
+    <main class="stackly-finance-admin-main">
+
+
+        <!-- =====================================================
+             TOP HEADER
+        ====================================================== -->
+
+        <header class="stackly-finance-admin-header">
+
+
+            <!-- =================================================
+                 MOBILE HAMBURGER
+            ================================================== -->
+
+            <button
+                type="button"
+                class="stackly-finance-admin-menu"
+                id="stacklyFinanceAdminMenu"
+                aria-label="Open menu"
+                aria-expanded="false"
+            >
+
+                <i class="fa-solid fa-bars"></i>
+
+            </button>
+
+
+            <!-- =================================================
+                 PAGE TITLE
+            ================================================== -->
+
+            <div class="stackly-finance-admin-header-title">
+
+                <span>
+                    FINANCE ADMIN
+                </span>
+
+                <h1>
+                    Admin Dashboard
+                </h1>
+
+            </div>
+
+
+            <!-- =================================================
+                 HEADER RIGHT
+            ================================================== -->
+
+            <div class="stackly-finance-admin-header-right">
+
+
+                <!-- Notification -->
+
+                <a href="404-admin.html"><button
+                    type="button"
+                    class="stackly-finance-admin-notification"
+                    aria-label="Notifications"
+                >
+
+                    <i class="fa-regular fa-bell"></i>
+
+                    <span>
+                        3
+                    </span>
+
+                </button></a>
+
+
+                <!-- Divider -->
+
+                <div class="stackly-finance-admin-header-divider"></div>
+
+
+                <!-- User Email -->
+
+                <div class="stackly-finance-admin-user">
+
+                    <div class="stackly-finance-admin-user-avatar">
+
+                        <i class="fa-solid fa-user"></i>
+
+                    </div>
+
+                    <div class="stackly-finance-admin-user-details">
+
+                        <span>
+                            Signed in as
+                        </span>
+
+                        <strong
+                            id="stacklyFinanceAdminEmail"
+                        >
+                            admin@stackly.com
+                        </strong>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </header>
+
+
+<!-- =========================================================
+     STACKLY FINANCE INVESTMENTS PAGE
+========================================================== -->
+
+<section class="stackly-finance-investments-content">
+
+
+    <!-- =====================================================
+         INVESTMENT HERO / COMMAND CENTER
+    ====================================================== -->
+
+    <section
+        class="stackly-finance-investments-hero"
+        data-aos="fade-up"
+    >
+
+        <div class="stackly-finance-investments-hero-content">
+
+            <span class="stackly-finance-investments-eyebrow">
+                INVESTMENT COMMAND CENTER
+            </span>
+
+            <h2>
+                Grow Capital With
+                <strong>Strategic Investments</strong>
+            </h2>
+
+            <p>
+                Monitor portfolio performance, asset allocation,
+                investment maturity and capital growth from one
+                centralized investment workspace.
+            </p>
+
+        </div>
+
+
+        <div class="stackly-finance-investments-hero-actions">
+
+            <a
+                href="404-admin.html"
+                class="stackly-finance-investments-primary-btn"
+            >
+
+                <i class="fa-solid fa-plus"></i>
+
+                Add Investment
+
+            </a>
+
+            <a
+                href="404-admin.html"
+                class="stackly-finance-investments-secondary-btn"
+            >
+
+                <i class="fa-solid fa-file-export"></i>
+
+                Export Portfolio
+
+            </a>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =====================================================
+         PORTFOLIO OVERVIEW
+    ====================================================== -->
+
+    <section
+        class="stackly-finance-investments-overview"
+        data-aos="fade-up"
+        data-aos-delay="100"
+    >
+
+
+        <!-- Total Portfolio -->
+
+        <article
+            class="stackly-finance-investments-overview-card portfolio"
+        >
+
+            <div class="stackly-finance-investments-card-top">
+
+                <div class="stackly-finance-investments-card-icon">
+
+                    <i class="fa-solid fa-chart-pie"></i>
+
+                </div>
+
+                <span class="stackly-finance-investments-trend positive">
+
+                    <i class="fa-solid fa-arrow-up"></i>
+
+                    18.2%
+
+                </span>
+
+            </div>
+
+            <span class="stackly-finance-investments-card-label">
+                Total Portfolio
+            </span>
+
+            <strong class="stackly-finance-investments-card-value">
+                ₹18.42 Cr
+            </strong>
+
+            <small>
+                Current investment value
+            </small>
+
+        </article>
+
+
+
+        <!-- Invested Capital -->
+
+        <article
+            class="stackly-finance-investments-overview-card invested"
+        >
+
+            <div class="stackly-finance-investments-card-top">
+
+                <div class="stackly-finance-investments-card-icon">
+
+                    <i class="fa-solid fa-coins"></i>
+
+                </div>
+
+                <span class="stackly-finance-investments-trend positive">
+
+                    <i class="fa-solid fa-arrow-up"></i>
+
+                    12.8%
+
+                </span>
+
+            </div>
+
+            <span class="stackly-finance-investments-card-label">
+                Invested Capital
+            </span>
+
+            <strong class="stackly-finance-investments-card-value">
+                ₹15.68 Cr
+            </strong>
+
+            <small>
+                Capital deployed
+            </small>
+
+        </article>
+
+
+
+        <!-- Returns -->
+
+        <article
+            class="stackly-finance-investments-overview-card returns"
+        >
+
+            <div class="stackly-finance-investments-card-top">
+
+                <div class="stackly-finance-investments-card-icon">
+
+                    <i class="fa-solid fa-arrow-trend-up"></i>
+
+                </div>
+
+                <span class="stackly-finance-investments-trend positive">
+
+                    <i class="fa-solid fa-arrow-up"></i>
+
+                    16.4%
+
+                </span>
+
+            </div>
+
+            <span class="stackly-finance-investments-card-label">
+                Total Returns
+            </span>
+
+            <strong class="stackly-finance-investments-card-value">
+                ₹2.74 Cr
+            </strong>
+
+            <small>
+                Unrealized + realized gains
+            </small>
+
+        </article>
+
+
+
+        <!-- Maturity -->
+
+        <article
+            class="stackly-finance-investments-overview-card maturity"
+        >
+
+            <div class="stackly-finance-investments-card-top">
+
+                <div class="stackly-finance-investments-card-icon">
+
+                    <i class="fa-solid fa-calendar-check"></i>
+
+                </div>
+
+                <span class="stackly-finance-investments-trend warning">
+                    12
+                </span>
+
+            </div>
+
+            <span class="stackly-finance-investments-card-label">
+                Upcoming Maturity
+            </span>
+
+            <strong class="stackly-finance-investments-card-value">
+                12
+            </strong>
+
+            <small>
+                Investments due this quarter
+            </small>
+
+        </article>
+
+    </section>
+
+
+
+    <!-- =====================================================
+         PORTFOLIO PERFORMANCE + ALLOCATION
+    ====================================================== -->
+
+    <section
+        class="stackly-finance-investments-analysis"
+        data-aos="fade-up"
+        data-aos-delay="150"
+    >
+
+
+        <!-- =================================================
+             PERFORMANCE PANEL
+        ================================================== -->
+
+        <div class="stackly-finance-investments-performance-panel">
+
+            <div class="stackly-finance-investments-panel-heading">
+
+                <div>
+
+                    <span>
+                        PORTFOLIO PERFORMANCE
+                    </span>
+
+                    <h3>
+                        Growth Overview
+                    </h3>
+
+                </div>
+
+
+                <div class="stackly-finance-investments-period">
+
+                    <button type="button">
+                        1M
+                    </button>
+
+                    <button type="button">
+                        6M
+                    </button>
+
+                    <button
+                        type="button"
+                        class="active"
+                    >
+                        1Y
+                    </button>
+
+                    <button type="button">
+                        5Y
+                    </button>
+
+                </div>
+
+            </div>
+
+
+            <div class="stackly-finance-investments-performance-summary">
+
+                <div>
+
+                    <span>
+                        Portfolio Value
+                    </span>
+
+                    <strong>
+                        ₹18.42 Cr
+                    </strong>
+
+                </div>
+
+                <div class="positive">
+
+                    <i class="fa-solid fa-arrow-up"></i>
+
+                    ₹2.74 Cr
+
+                    <span>
+                        +17.5% annual growth
+                    </span>
+
+                </div>
+
+            </div>
+
+
+            <!-- Chart -->
+
+            <div class="stackly-finance-investments-performance-chart">
+
+                <div class="stackly-finance-investments-chart-grid">
+
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+
+                </div>
+
+
+                <div class="stackly-finance-investments-chart-line">
+
+                    <span style="height:32%;"></span>
+                    <span style="height:40%;"></span>
+                    <span style="height:37%;"></span>
+                    <span style="height:48%;"></span>
+                    <span style="height:55%;"></span>
+                    <span style="height:51%;"></span>
+                    <span style="height:64%;"></span>
+                    <span style="height:61%;"></span>
+                    <span style="height:72%;"></span>
+                    <span style="height:78%;"></span>
+                    <span style="height:73%;"></span>
+                    <span style="height:91%;"></span>
+
+                </div>
+
+            </div>
+
+
+            <div class="stackly-finance-investments-chart-labels">
+
+                <span>Jan</span>
+                <span>Mar</span>
+                <span>May</span>
+                <span>Jul</span>
+                <span>Sep</span>
+                <span>Dec</span>
+
+            </div>
+
+        </div>
+
+
+
+        <!-- =================================================
+             ASSET ALLOCATION
+        ================================================== -->
+
+        <div class="stackly-finance-investments-allocation-panel">
+
+            <div class="stackly-finance-investments-panel-heading">
+
+                <div>
+
+                    <span>
+                        ASSET ALLOCATION
+                    </span>
+
+                    <h3>
+                        Portfolio Mix
+                    </h3>
+
+                </div>
+
+                <i class="fa-solid fa-layer-group"></i>
+
+            </div>
+
+
+            <div class="stackly-finance-investments-allocation-visual">
+
+                <div class="stackly-finance-investments-donut">
+
+                    <div>
+
+                        <strong>
+                            ₹18.42
+                        </strong>
+
+                        <span>
+                            Crore
+                        </span>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <div class="stackly-finance-investments-allocation-list">
+
+
+                <div class="stackly-finance-investments-allocation-item">
+
+                    <span class="equity"></span>
+
+                    <div>
+
+                        <strong>
+                            Equity
+                        </strong>
+
+                        <small>
+                            ₹7.37 Cr
+                        </small>
+
+                    </div>
+
+                    <b>
+                        40%
+                    </b>
+
+                </div>
+
+
+                <div class="stackly-finance-investments-allocation-item">
+
+                    <span class="debt"></span>
+
+                    <div>
+
+                        <strong>
+                            Debt Funds
+                        </strong>
+
+                        <small>
+                            ₹4.60 Cr
+                        </small>
+
+                    </div>
+
+                    <b>
+                        25%
+                    </b>
+
+                </div>
+
+
+                <div class="stackly-finance-investments-allocation-item">
+
+                    <span class="fixed"></span>
+
+                    <div>
+
+                        <strong>
+                            Fixed Income
+                        </strong>
+
+                        <small>
+                            ₹3.68 Cr
+                        </small>
+
+                    </div>
+
+                    <b>
+                        20%
+                    </b>
+
+                </div>
+
+
+                <div class="stackly-finance-investments-allocation-item">
+
+                    <span class="alternative"></span>
+
+                    <div>
+
+                        <strong>
+                            Alternatives
+                        </strong>
+
+                        <small>
+                            ₹2.77 Cr
+                        </small>
+
+                    </div>
+
+                    <b>
+                        15%
+                    </b>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =====================================================
+         ACTIVE INVESTMENTS
+    ====================================================== -->
+
+    <section
+        class="stackly-finance-investments-active"
+        data-aos="fade-up"
+    >
+
+        <div class="stackly-finance-investments-section-header">
+
+            <div>
+
+                <span>
+                    ACTIVE PORTFOLIO
+                </span>
+
+                <h3>
+                    Investment Holdings
+                </h3>
+
+                <p>
+                    Monitor current investments and their performance.
+                </p>
+
+            </div>
+
+
+            <a
+                href="404-admin.html"
+                class="stackly-finance-investments-view-all"
+            >
+
+                View All
+
+                <i class="fa-solid fa-arrow-right"></i>
+
+            </a>
+
+        </div>
+
+
+
+        <div class="stackly-finance-investments-table-wrapper">
+
+            <table class="stackly-finance-investments-table">
+
+                <thead>
+
+                    <tr>
+
+                        <th>
+                            Investment
+                        </th>
+
+                        <th>
+                            Category
+                        </th>
+
+                        <th>
+                            Invested
+                        </th>
+
+                        <th>
+                            Current Value
+                        </th>
+
+                        <th>
+                            Return
+                        </th>
+
+                        <th>
+                            Maturity
+                        </th>
+
+                        <th>
+                            Status
+                        </th>
+
+                        <th>
+                            Action
+                        </th>
+
+                    </tr>
+
+                </thead>
+
+
+                <tbody>
+
+
+                    <!-- Investment 01 -->
+
+                    <tr>
+
+                        <td>
+
+                            <div class="stackly-finance-investments-name">
+
+                                <div class="equity-icon">
+
+                                    <i class="fa-solid fa-chart-line"></i>
+
+                                </div>
+
+                                <div>
+
+                                    <strong>
+                                        Growth Equity Fund
+                                    </strong>
+
+                                    <span>
+                                        INV-28451
+                                    </span>
+
+                                </div>
+
+                            </div>
+
+                        </td>
+
+                        <td>
+                            Equity
+                        </td>
+
+                        <td>
+                            ₹3,20,000
+                        </td>
+
+                        <td>
+                            ₹4,08,000
+                        </td>
+
+                        <td class="positive">
+                            +27.5%
+                        </td>
+
+                        <td>
+                            Open
+                        </td>
+
+                        <td>
+
+                            <span class="stackly-finance-investments-status active">
+                                Active
+                            </span>
+
+                        </td>
+
+                        <td>
+
+                            <a
+                                href="404-admin.html"
+                                class="stackly-finance-investments-action"
+                            >
+
+                                <i class="fa-solid fa-arrow-up-right-from-square"></i>
+
+                            </a>
+
+                        </td>
+
+                    </tr>
+
+
+
+                    <!-- Investment 02 -->
+
+                    <tr>
+
+                        <td>
+
+                            <div class="stackly-finance-investments-name">
+
+                                <div class="debt-icon">
+
+                                    <i class="fa-solid fa-building-columns"></i>
+
+                                </div>
+
+                                <div>
+
+                                    <strong>
+                                        Corporate Debt Fund
+                                    </strong>
+
+                                    <span>
+                                        INV-28391
+                                    </span>
+
+                                </div>
+
+                            </div>
+
+                        </td>
+
+                        <td>
+                            Debt
+                        </td>
+
+                        <td>
+                            ₹2,50,000
+                        </td>
+
+                        <td>
+                            ₹2,72,500
+                        </td>
+
+                        <td class="positive">
+                            +9.0%
+                        </td>
+
+                        <td>
+                            Dec 2026
+                        </td>
+
+                        <td>
+
+                            <span class="stackly-finance-investments-status active">
+                                Active
+                            </span>
+
+                        </td>
+
+                        <td>
+
+                            <a
+                                href="404-admin.html"
+                                class="stackly-finance-investments-action"
+                            >
+
+                                <i class="fa-solid fa-arrow-up-right-from-square"></i>
+
+                            </a>
+
+                        </td>
+
+                    </tr>
+
+
+
+                    <!-- Investment 03 -->
+
+                    <tr>
+
+                        <td>
+
+                            <div class="stackly-finance-investments-name">
+
+                                <div class="fixed-icon">
+
+                                    <i class="fa-solid fa-landmark"></i>
+
+                                </div>
+
+                                <div>
+
+                                    <strong>
+                                        Government Bonds
+                                    </strong>
+
+                                    <span>
+                                        INV-28174
+                                    </span>
+
+                                </div>
+
+                            </div>
+
+                        </td>
+
+                        <td>
+                            Fixed Income
+                        </td>
+
+                        <td>
+                            ₹1,80,000
+                        </td>
+
+                        <td>
+                            ₹1,92,600
+                        </td>
+
+                        <td class="positive">
+                            +7.0%
+                        </td>
+
+                        <td>
+                            Jan 2027
+                        </td>
+
+                        <td>
+
+                            <span class="stackly-finance-investments-status active">
+                                Active
+                            </span>
+
+                        </td>
+
+                        <td>
+
+                            <a
+                                href="404-admin.html"
+                                class="stackly-finance-investments-action"
+                            >
+
+                                <i class="fa-solid fa-arrow-up-right-from-square"></i>
+
+                            </a>
+
+                        </td>
+
+                    </tr>
+
+
+
+                    <!-- Investment 04 -->
+
+                    <tr>
+
+                        <td>
+
+                            <div class="stackly-finance-investments-name">
+
+                                <div class="alternative-icon">
+
+                                    <i class="fa-solid fa-building"></i>
+
+                                </div>
+
+                                <div>
+
+                                    <strong>
+                                        Real Estate Fund
+                                    </strong>
+
+                                    <span>
+                                        INV-27982
+                                    </span>
+
+                                </div>
+
+                            </div>
+
+                        </td>
+
+                        <td>
+                            Alternative
+                        </td>
+
+                        <td>
+                            ₹4,10,000
+                        </td>
+
+                        <td>
+                            ₹4,64,000
+                        </td>
+
+                        <td class="positive">
+                            +13.2%
+                        </td>
+
+                        <td>
+                            Mar 2027
+                        </td>
+
+                        <td>
+
+                            <span class="stackly-finance-investments-status active">
+                                Active
+                            </span>
+
+                        </td>
+
+                        <td>
+
+                            <a
+                                href="404-admin.html"
+                                class="stackly-finance-investments-action"
+                            >
+
+                                <i class="fa-solid fa-arrow-up-right-from-square"></i>
+
+                            </a>
+
+                        </td>
+
+                    </tr>
+
+                </tbody>
+
+            </table>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =====================================================
+         MATURITY + QUICK ACTIONS
+    ====================================================== -->
+
+    <section
+        class="stackly-finance-investments-bottom-grid"
+        data-aos="fade-up"
+    >
+
+
+        <!-- =================================================
+             MATURITY TIMELINE
+        ================================================== -->
+
+        <div class="stackly-finance-investments-maturity-panel">
+
+            <div class="stackly-finance-investments-section-header">
+
+                <div>
+
+                    <span>
+                        UPCOMING EVENTS
+                    </span>
+
+                    <h3>
+                        Maturity Timeline
+                    </h3>
+
+                </div>
+
+                <i class="fa-solid fa-calendar-days"></i>
+
+            </div>
+
+
+            <div class="stackly-finance-investments-timeline">
+
+
+                <div class="stackly-finance-investments-timeline-item">
+
+                    <div class="timeline-marker green"></div>
+
+                    <div>
+
+                        <strong>
+                            Corporate Debt Fund
+                        </strong>
+
+                        <span>
+                            Matures in 3 months
+                        </span>
+
+                    </div>
+
+                    <time>
+                        Dec 2026
+                    </time>
+
+                </div>
+
+
+                <div class="stackly-finance-investments-timeline-item">
+
+                    <div class="timeline-marker blue"></div>
+
+                    <div>
+
+                        <strong>
+                            Government Bonds
+                        </strong>
+
+                        <span>
+                            Maturity approaching
+                        </span>
+
+                    </div>
+
+                    <time>
+                        Jan 2027
+                    </time>
+
+                </div>
+
+
+                <div class="stackly-finance-investments-timeline-item">
+
+                    <div class="timeline-marker orange"></div>
+
+                    <div>
+
+                        <strong>
+                            Real Estate Fund
+                        </strong>
+
+                        <span>
+                            Long-term holding
+                        </span>
+
+                    </div>
+
+                    <time>
+                        Mar 2027
+                    </time>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+
+        <!-- =================================================
+             QUICK ACTIONS
+        ================================================== -->
+
+        <div class="stackly-finance-investments-actions-panel">
+
+            <div class="stackly-finance-investments-section-header">
+
+                <div>
+
+                    <span>
+                        PORTFOLIO TOOLS
+                    </span>
+
+                    <h3>
+                        Quick Actions
+                    </h3>
+
+                </div>
+
+                <i class="fa-solid fa-bolt"></i>
+
+            </div>
+
+
+            <div class="stackly-finance-investments-actions-grid">
+
+
+                <a
+                    href="404-admin.html"
+                    class="stackly-finance-investments-action-card"
+                >
+
+                    <div>
+                        <i class="fa-solid fa-plus"></i>
+                    </div>
+
+                    <span>
+                        Add Investment
+                    </span>
+
+                </a>
+
+
+                <a
+                    href="404-admin.html"
+                    class="stackly-finance-investments-action-card"
+                >
+
+                    <div>
+                        <i class="fa-solid fa-arrows-rotate"></i>
+                    </div>
+
+                    <span>
+                        Rebalance
+                    </span>
+
+                </a>
+
+
+                <a
+                    href="404-admin.html"
+                    class="stackly-finance-investments-action-card"
+                >
+
+                    <div>
+                        <i class="fa-solid fa-file-lines"></i>
+                    </div>
+
+                    <span>
+                        Reports
+                    </span>
+
+                </a>
+
+
+                <a
+                    href="404-admin.html"
+                    class="stackly-finance-investments-action-card"
+                >
+
+                    <div>
+                        <i class="fa-solid fa-magnifying-glass-chart"></i>
+                    </div>
+
+                    <span>
+                        Analyze
+                    </span>
+
+                </a>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =====================================================
+         INVESTMENT SECURITY NOTICE
+    ====================================================== -->
+
+    <section
+        class="stackly-finance-investments-security"
+        data-aos="fade-up"
+    >
+
+        <div class="stackly-finance-investments-security-icon">
+
+            <i class="fa-solid fa-shield-halved"></i>
+
+        </div>
+
+
+        <div>
+
+            <strong>
+                Investment monitoring is active
+            </strong>
+
+            <p>
+                Portfolio performance, maturity dates,
+                allocation changes and investment activity
+                are continuously monitored by the finance
+                administration system.
+            </p>
+
+        </div>
+
+
+        <a href="404-admin.html">
+
+            Open Investment Monitor
+
+            <i class="fa-solid fa-arrow-right"></i>
+
+        </a>
+
+    </section>
+
+
+</section>
+
+
+
+    </main>
+
+
+    <!-- =========================================================
+         AOS JS
+    ========================================================== -->
+
+    <script
+        src="https://unpkg.com/aos@2.3.4/dist/aos.js"
+    ></script>
+
+
+    <!-- =========================================================
+         ADMIN DASHBOARD JS
+    ========================================================== -->
+
+    <script src="admin.js"></script>
+
+</body>
+</html>

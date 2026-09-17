@@ -1,0 +1,1755 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <!-- =========================================================
+         STACKLY FINANCE ADMIN DASHBOARD
+    ========================================================== -->
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <meta
+        name="description"
+        content="Stackly Finance Admin Dashboard"
+    >
+
+    <title>Stackly Finance | Admin Dashboard</title>
+
+
+    <!-- =========================================================
+         GOOGLE FONTS
+    ========================================================== -->
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+
+    <link
+        rel="preconnect"
+        href="https://fonts.gstatic.com"
+        crossorigin
+    >
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap"
+        rel="stylesheet"
+    >
+
+
+    <!-- =========================================================
+         FONT AWESOME
+    ========================================================== -->
+
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+    >
+
+
+    <!-- =========================================================
+         AOS
+    ========================================================== -->
+
+    <link
+        rel="stylesheet"
+        href="https://unpkg.com/aos@2.3.4/dist/aos.css"
+    >
+
+
+    <!-- =========================================================
+         ADMIN CSS
+    ========================================================== -->
+
+    <link
+        rel="stylesheet"
+        href="admin.css"
+    >
+
+</head>
+
+
+<body>
+
+
+    <!-- =========================================================
+         MOBILE SIDEBAR OVERLAY
+    ========================================================== -->
+
+    <div
+        class="stackly-finance-admin-overlay"
+        id="stacklyFinanceAdminOverlay"
+    ></div>
+
+
+    <!-- =========================================================
+         SIDEBAR
+    ========================================================== -->
+
+    <aside
+        class="stackly-finance-admin-sidebar"
+        id="stacklyFinanceAdminSidebar"
+    >
+
+
+        <!-- =====================================================
+             SIDEBAR TOP
+        ====================================================== -->
+
+        <div class="stackly-finance-admin-sidebar-top">
+
+
+            <!-- =================================================
+                 LOGO
+            ================================================== -->
+
+            <a
+                href="admin.html"
+                class="stackly-finance-admin-logo"
+                aria-label="Stackly Finance Home"
+            >
+
+                <img
+                    src="Stackly-logo-Blue.webp"
+                    alt="Stackly Finance Logo"
+                >
+
+            </a>
+
+
+            <!-- =================================================
+                 MOBILE CLOSE BUTTON
+            ================================================== -->
+
+            <button
+                type="button"
+                class="stackly-finance-admin-close"
+                id="stacklyFinanceAdminClose"
+                aria-label="Close menu"
+            >
+
+                <i class="fa-solid fa-xmark"></i>
+
+            </button>
+
+        </div>
+
+
+        <!-- =====================================================
+             ADMIN PROFILE
+        ====================================================== -->
+
+        <div class="stackly-finance-admin-profile">
+
+            <div class="stackly-finance-admin-profile-icon">
+
+                <i class="fa-solid fa-user-shield"></i>
+
+            </div>
+
+            <div class="stackly-finance-admin-profile-info">
+
+                
+                <span
+    class="stackly-finance-admin-profile-label"
+    id="stacklyFinanceAdminProfileLabel"
+>
+    Dashboard
+</span>
+
+                <strong>
+                    Administrator
+                </strong>
+
+            </div>
+
+        </div>
+
+
+        <!-- =====================================================
+             SIDEBAR NAVIGATION
+        ====================================================== -->
+
+        <nav
+            class="stackly-finance-admin-navigation"
+            aria-label="Admin Navigation"
+        >
+
+
+            <!-- Dashboard -->
+
+            <a
+                href="admin.html"
+                class="stackly-finance-admin-nav-link"
+            >
+
+                <span class="stackly-finance-admin-nav-icon">
+
+                    <i class="fa-solid fa-chart-pie"></i>
+
+                </span>
+
+                <span>
+                    Dashboard
+                </span>
+
+            </a>
+
+
+            <!-- Users -->
+
+            <a
+                href="admin-users.html"
+                class="stackly-finance-admin-nav-link"
+            >
+
+                <span class="stackly-finance-admin-nav-icon">
+
+                    <i class="fa-solid fa-users"></i>
+
+                </span>
+
+                <span>
+                    Users
+                </span>
+
+            </a>
+
+
+            <!-- Transactions -->
+
+            <a
+                href="admin-transactions.html"
+                class="stackly-finance-admin-nav-link active"
+            >
+
+                <span class="stackly-finance-admin-nav-icon">
+
+                    <i class="fa-solid fa-arrow-right-arrow-left"></i>
+
+                </span>
+
+                <span>
+                    Transactions
+                </span>
+
+            </a>
+
+
+            <!-- Investments -->
+
+            <a
+                href="admin-investments.html"
+                class="stackly-finance-admin-nav-link"
+            >
+
+                <span class="stackly-finance-admin-nav-icon">
+
+                    <i class="fa-solid fa-chart-line"></i>
+
+                </span>
+
+                <span>
+                    Investments
+                </span>
+
+            </a>
+
+
+            <!-- Accounts -->
+
+            <a
+                href="admin-accounts.html"
+                class="stackly-finance-admin-nav-link"
+            >
+
+                <span class="stackly-finance-admin-nav-icon">
+
+                    <i class="fa-solid fa-wallet"></i>
+
+                </span>
+
+                <span>
+                    Accounts
+                </span>
+
+            </a>
+
+
+
+            <!-- Messages -->
+
+            <a
+                href="admin-messages.html"
+                class="stackly-finance-admin-nav-link"
+            >
+
+                <span class="stackly-finance-admin-nav-icon">
+
+                    <i class="fa-solid fa-envelope"></i>
+
+                </span>
+
+                <span>
+                    Messages
+                </span>
+
+                <span class="stackly-finance-admin-nav-badge">
+                    4
+                </span>
+
+            </a>
+
+
+            <!-- Settings -->
+
+            <a
+                href="admin-settings.html"
+                class="stackly-finance-admin-nav-link"
+            >
+
+                <span class="stackly-finance-admin-nav-icon">
+
+                    <i class="fa-solid fa-gear"></i>
+
+                </span>
+
+                <span>
+                    Settings
+                </span>
+
+            </a>
+
+        </nav>
+
+
+        <!-- =====================================================
+             SIDEBAR BOTTOM
+        ====================================================== -->
+
+        <div class="stackly-finance-admin-sidebar-bottom">
+
+
+            <!-- Logout -->
+
+            <a
+                href="index.html"
+                class="stackly-finance-admin-logout"
+                id="stacklyFinanceAdminLogout"
+            >
+
+                <i class="fa-solid fa-right-from-bracket"></i>
+
+                <span>
+                    Logout
+                </span>
+
+            </a>
+
+        </div>
+
+    </aside>
+
+
+    <!-- =========================================================
+         MAIN AREA
+    ========================================================== -->
+
+    <main class="stackly-finance-admin-main">
+
+
+        <!-- =====================================================
+             TOP HEADER
+        ====================================================== -->
+
+        <header class="stackly-finance-admin-header">
+
+
+            <!-- =================================================
+                 MOBILE HAMBURGER
+            ================================================== -->
+
+            <button
+                type="button"
+                class="stackly-finance-admin-menu"
+                id="stacklyFinanceAdminMenu"
+                aria-label="Open menu"
+                aria-expanded="false"
+            >
+
+                <i class="fa-solid fa-bars"></i>
+
+            </button>
+
+
+            <!-- =================================================
+                 PAGE TITLE
+            ================================================== -->
+
+            <div class="stackly-finance-admin-header-title">
+
+                <span>
+                    FINANCE ADMIN
+                </span>
+
+                <h1>
+                    Admin Dashboard
+                </h1>
+
+            </div>
+
+
+            <!-- =================================================
+                 HEADER RIGHT
+            ================================================== -->
+
+            <div class="stackly-finance-admin-header-right">
+
+
+                <!-- Notification -->
+
+                <a href="404-admin.html"><button
+                    type="button"
+                    class="stackly-finance-admin-notification"
+                    aria-label="Notifications"
+                >
+
+                    <i class="fa-regular fa-bell"></i>
+
+                    <span>
+                        3
+                    </span>
+
+                </button></a>
+
+
+                <!-- Divider -->
+
+                <div class="stackly-finance-admin-header-divider"></div>
+
+
+                <!-- User Email -->
+
+                <div class="stackly-finance-admin-user">
+
+                    <div class="stackly-finance-admin-user-avatar">
+
+                        <i class="fa-solid fa-user"></i>
+
+                    </div>
+
+                    <div class="stackly-finance-admin-user-details">
+
+                        <span>
+                            Signed in as
+                        </span>
+
+                        <strong
+                            id="stacklyFinanceAdminEmail"
+                        >
+                            admin@stackly.com
+                        </strong>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </header>
+
+<!-- =========================================================
+     STACKLY FINANCE TRANSACTIONS PAGE CONTENT
+========================================================== -->
+
+<section class="stackly-finance-transactions-content">
+
+
+    <!-- =====================================================
+         TRANSACTIONS INTRO
+    ====================================================== -->
+
+    <div
+        class="stackly-finance-transactions-intro"
+        data-aos="fade-up"
+    >
+
+        <div class="stackly-finance-transactions-intro-content">
+
+            <span class="stackly-finance-transactions-eyebrow">
+                TRANSACTION CENTER
+            </span>
+
+            <h2>
+                Monitor Every
+                <strong>Financial Movement</strong>
+            </h2>
+
+            <p>
+                Track deposits, withdrawals, transfers and investment
+                activity with a complete view of your financial
+                transaction flow.
+            </p>
+
+        </div>
+
+
+        <div class="stackly-finance-transactions-intro-side">
+
+             
+
+            <a
+                href="404-admin.html"
+                class="stackly-finance-transactions-report-btn"
+            >
+
+                <i class="fa-solid fa-file-export"></i>
+
+                Generate Report
+
+            </a>
+
+        </div>
+
+    </div>
+
+
+    <!-- =====================================================
+         TRANSACTION ANALYTICS
+    ====================================================== -->
+
+    <div class="stackly-finance-transactions-analytics">
+
+
+        <!-- =================================================
+             MONEY FLOW PANEL
+        ================================================== -->
+
+        <section
+            class="stackly-finance-transactions-flow-panel"
+            data-aos="fade-right"
+        >
+
+            <div class="stackly-finance-transactions-panel-heading">
+
+                <div>
+
+                    <span>
+                        MONEY FLOW
+                    </span>
+
+                    <h3>
+                        Transaction Activity
+                    </h3>
+
+                </div>
+
+
+                <div class="stackly-finance-transactions-period">
+
+                    <button type="button" class="active">
+                        30D
+                    </button>
+
+                    <button type="button">
+                        90D
+                    </button>
+
+                    <button type="button">
+                        1Y
+                    </button>
+
+                </div>
+
+            </div>
+
+
+            <div class="stackly-finance-transactions-flow-total">
+
+                <strong>
+                    ₹8.64 Cr
+                </strong>
+
+                <span>
+                    Processed transaction value
+                </span>
+
+            </div>
+
+
+            <!-- Visual chart -->
+
+            <div class="stackly-finance-transactions-chart">
+
+                <div class="stackly-finance-transactions-chart-lines">
+
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+
+                </div>
+
+
+                <div class="stackly-finance-transactions-bars">
+
+                    <span style="height:42%;"></span>
+                    <span style="height:58%;"></span>
+                    <span style="height:48%;"></span>
+                    <span style="height:72%;"></span>
+                    <span style="height:62%;"></span>
+                    <span style="height:80%;"></span>
+                    <span style="height:67%;"></span>
+                    <span style="height:91%;"></span>
+                    <span style="height:74%;"></span>
+                    <span style="height:86%;"></span>
+                    <span style="height:78%;"></span>
+                    <span style="height:96%;"></span>
+
+                </div>
+
+            </div>
+
+
+            <div class="stackly-finance-transactions-chart-labels">
+
+                <span>01</span>
+                <span>05</span>
+                <span>10</span>
+                <span>15</span>
+                <span>20</span>
+                <span>25</span>
+                <span>30</span>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =================================================
+             PAYMENT METHODS
+        ================================================== -->
+
+        <section
+            class="stackly-finance-transactions-method-panel"
+            data-aos="fade-left"
+        >
+
+            <div class="stackly-finance-transactions-panel-heading">
+
+                <div>
+
+                    <span>
+                        PAYMENT CHANNELS
+                    </span>
+
+                    <h3>
+                        Payment Methods
+                    </h3>
+
+                </div>
+
+                <i class="fa-solid fa-credit-card"></i>
+
+            </div>
+
+
+            <div class="stackly-finance-transactions-method-list">
+
+
+                <!-- Bank -->
+
+                <div class="stackly-finance-transactions-method">
+
+                    <div class="stackly-finance-transactions-method-icon bank">
+
+                        <i class="fa-solid fa-building-columns"></i>
+
+                    </div>
+
+                    <div class="stackly-finance-transactions-method-info">
+
+                        <strong>
+                            Bank Transfer
+                        </strong>
+
+                        <span>
+                            4,286 transactions
+                        </span>
+
+                    </div>
+
+                    <strong>
+                        48%
+                    </strong>
+
+                </div>
+
+
+
+                <!-- UPI -->
+
+                <div class="stackly-finance-transactions-method">
+
+                    <div class="stackly-finance-transactions-method-icon upi">
+
+                        <i class="fa-solid fa-mobile-screen-button"></i>
+
+                    </div>
+
+                    <div class="stackly-finance-transactions-method-info">
+
+                        <strong>
+                            UPI Payments
+                        </strong>
+
+                        <span>
+                            3,842 transactions
+                        </span>
+
+                    </div>
+
+                    <strong>
+                        31%
+                    </strong>
+
+                </div>
+
+
+
+                <!-- Card -->
+
+                <div class="stackly-finance-transactions-method">
+
+                    <div class="stackly-finance-transactions-method-icon card">
+
+                        <i class="fa-solid fa-credit-card"></i>
+
+                    </div>
+
+                    <div class="stackly-finance-transactions-method-info">
+
+                        <strong>
+                            Cards
+                        </strong>
+
+                        <span>
+                            1,926 transactions
+                        </span>
+
+                    </div>
+
+                    <strong>
+                        14%
+                    </strong>
+
+                </div>
+
+
+
+                <!-- Other -->
+
+                <div class="stackly-finance-transactions-method">
+
+                    <div class="stackly-finance-transactions-method-icon other">
+
+                        <i class="fa-solid fa-wallet"></i>
+
+                    </div>
+
+                    <div class="stackly-finance-transactions-method-info">
+
+                        <strong>
+                            Other Methods
+                        </strong>
+
+                        <span>
+                            842 transactions
+                        </span>
+
+                    </div>
+
+                    <strong>
+                        7%
+                    </strong>
+
+                </div>
+
+            </div>
+
+
+            <div class="stackly-finance-transactions-method-progress">
+
+                <span style="width:48%;"></span>
+                <span style="width:31%;"></span>
+                <span style="width:14%;"></span>
+                <span style="width:7%;"></span>
+
+            </div>
+
+        </section>
+
+    </div>
+
+
+
+    <!-- =====================================================
+         TRANSACTION LEDGER
+    ====================================================== -->
+
+    <section
+        class="stackly-finance-transactions-ledger"
+        data-aos="fade-up"
+    >
+
+        <div class="stackly-finance-transactions-ledger-header">
+
+            <div>
+
+                <span>
+                    TRANSACTION LEDGER
+                </span>
+
+                <h3>
+                    Recent Transactions
+                </h3>
+
+                <p>
+                    Review and monitor the latest financial movements.
+                </p>
+
+            </div>
+
+
+            <a
+                href="404-admin.html"
+                class="stackly-finance-transactions-view-all"
+            >
+
+                View Full Ledger
+
+                <i class="fa-solid fa-arrow-right"></i>
+
+            </a>
+
+        </div>
+
+
+        <!-- =================================================
+             TRANSACTION TABLE
+        ================================================== -->
+
+        <div class="stackly-finance-transactions-table-wrapper">
+
+            <table class="stackly-finance-transactions-table">
+
+                <thead>
+
+                    <tr>
+
+                        <th>
+                            Transaction
+                        </th>
+
+                        <th>
+                            User
+                        </th>
+
+                        <th>
+                            Type
+                        </th>
+
+                        <th>
+                            Date
+                        </th>
+
+                        <th>
+                            Method
+                        </th>
+
+                        <th>
+                            Amount
+                        </th>
+
+                        <th>
+                            Status
+                        </th>
+
+                        <th>
+                            Action
+                        </th>
+
+                    </tr>
+
+                </thead>
+
+
+                <tbody>
+
+
+                    <!-- Transaction 01 -->
+
+                    <tr>
+
+                        <td>
+
+                            <div class="stackly-finance-transactions-id">
+
+                                <div class="stackly-finance-transactions-type-icon deposit">
+
+                                    <i class="fa-solid fa-arrow-down"></i>
+
+                                </div>
+
+                                <div>
+
+                                    <strong>
+                                        TXN-984521
+                                    </strong>
+
+                                    <span>
+                                        Deposit
+                                    </span>
+
+                                </div>
+
+                            </div>
+
+                        </td>
+
+
+                        <td>
+
+                            <div class="stackly-finance-transactions-user">
+
+                                <div>
+                                    AR
+                                </div>
+
+                                <span>
+                                    Arjun Rao
+                                </span>
+
+                            </div>
+
+                        </td>
+
+
+                        <td>
+                            Deposit
+                        </td>
+
+
+                        <td>
+                            Sep 17, 2026
+                        </td>
+
+
+                        <td>
+                            Bank Transfer
+                        </td>
+
+
+                        <td class="amount positive">
+                            +₹4,80,000
+                        </td>
+
+
+                        <td>
+
+                            <span class="stackly-finance-transactions-status completed">
+                                Completed
+                            </span>
+
+                        </td>
+
+
+                        <td>
+
+                            <a
+                                href="404-admin.html"
+                                class="stackly-finance-transactions-action"
+                                aria-label="View transaction TXN-984521"
+                            >
+
+                                <i class="fa-solid fa-arrow-up-right-from-square"></i>
+
+                            </a>
+
+                        </td>
+
+                    </tr>
+
+
+
+                    <!-- Transaction 02 -->
+
+                    <tr>
+
+                        <td>
+
+                            <div class="stackly-finance-transactions-id">
+
+                                <div class="stackly-finance-transactions-type-icon investment">
+
+                                    <i class="fa-solid fa-chart-line"></i>
+
+                                </div>
+
+                                <div>
+
+                                    <strong>
+                                        TXN-984487
+                                    </strong>
+
+                                    <span>
+                                        Investment
+                                    </span>
+
+                                </div>
+
+                            </div>
+
+                        </td>
+
+
+                        <td>
+
+                            <div class="stackly-finance-transactions-user">
+
+                                <div>
+                                    PK
+                                </div>
+
+                                <span>
+                                    Priya Kumar
+                                </span>
+
+                            </div>
+
+                        </td>
+
+
+                        <td>
+                            Investment
+                        </td>
+
+
+                        <td>
+                            Sep 17, 2026
+                        </td>
+
+
+                        <td>
+                            UPI
+                        </td>
+
+
+                        <td class="amount positive">
+                            +₹2,25,000
+                        </td>
+
+
+                        <td>
+
+                            <span class="stackly-finance-transactions-status completed">
+                                Completed
+                            </span>
+
+                        </td>
+
+
+                        <td>
+
+                            <a
+                                href="404-admin.html"
+                                class="stackly-finance-transactions-action"
+                                aria-label="View transaction TXN-984487"
+                            >
+
+                                <i class="fa-solid fa-arrow-up-right-from-square"></i>
+
+                            </a>
+
+                        </td>
+
+                    </tr>
+
+
+
+                    <!-- Transaction 03 -->
+
+                    <tr>
+
+                        <td>
+
+                            <div class="stackly-finance-transactions-id">
+
+                                <div class="stackly-finance-transactions-type-icon withdrawal">
+
+                                    <i class="fa-solid fa-arrow-up"></i>
+
+                                </div>
+
+                                <div>
+
+                                    <strong>
+                                        TXN-984312
+                                    </strong>
+
+                                    <span>
+                                        Withdrawal
+                                    </span>
+
+                                </div>
+
+                            </div>
+
+                        </td>
+
+
+                        <td>
+
+                            <div class="stackly-finance-transactions-user">
+
+                                <div>
+                                    RS
+                                </div>
+
+                                <span>
+                                    Rahul Sharma
+                                </span>
+
+                            </div>
+
+                        </td>
+
+
+                        <td>
+                            Withdrawal
+                        </td>
+
+
+                        <td>
+                            Sep 16, 2026
+                        </td>
+
+
+                        <td>
+                            Bank Transfer
+                        </td>
+
+
+                        <td class="amount negative">
+                            -₹1,20,000
+                        </td>
+
+
+                        <td>
+
+                            <span class="stackly-finance-transactions-status pending">
+                                Pending
+                            </span>
+
+                        </td>
+
+
+                        <td>
+
+                            <a
+                                href="404-admin.html"
+                                class="stackly-finance-transactions-action"
+                                aria-label="View transaction TXN-984312"
+                            >
+
+                                <i class="fa-solid fa-arrow-up-right-from-square"></i>
+
+                            </a>
+
+                        </td>
+
+                    </tr>
+
+
+
+                    <!-- Transaction 04 -->
+
+                    <tr>
+
+                        <td>
+
+                            <div class="stackly-finance-transactions-id">
+
+                                <div class="stackly-finance-transactions-type-icon transfer">
+
+                                    <i class="fa-solid fa-arrow-right-arrow-left"></i>
+
+                                </div>
+
+                                <div>
+
+                                    <strong>
+                                        TXN-983954
+                                    </strong>
+
+                                    <span>
+                                        Transfer
+                                    </span>
+
+                                </div>
+
+                            </div>
+
+                        </td>
+
+
+                        <td>
+
+                            <div class="stackly-finance-transactions-user">
+
+                                <div>
+                                    SM
+                                </div>
+
+                                <span>
+                                    Sneha Menon
+                                </span>
+
+                            </div>
+
+                        </td>
+
+
+                        <td>
+                            Transfer
+                        </td>
+
+
+                        <td>
+                            Sep 15, 2026
+                        </td>
+
+
+                        <td>
+                            Card
+                        </td>
+
+
+                        <td class="amount negative">
+                            -₹86,500
+                        </td>
+
+
+                        <td>
+
+                            <span class="stackly-finance-transactions-status completed">
+                                Completed
+                            </span>
+
+                        </td>
+
+
+                        <td>
+
+                            <a
+                                href="404-admin.html"
+                                class="stackly-finance-transactions-action"
+                                aria-label="View transaction TXN-983954"
+                            >
+
+                                <i class="fa-solid fa-arrow-up-right-from-square"></i>
+
+                            </a>
+
+                        </td>
+
+                    </tr>
+
+
+
+                    <!-- Transaction 05 -->
+
+                    <tr>
+
+                        <td>
+
+                            <div class="stackly-finance-transactions-id">
+
+                                <div class="stackly-finance-transactions-type-icon failed">
+
+                                    <i class="fa-solid fa-xmark"></i>
+
+                                </div>
+
+                                <div>
+
+                                    <strong>
+                                        TXN-983721
+                                    </strong>
+
+                                    <span>
+                                        Withdrawal
+                                    </span>
+
+                                </div>
+
+                            </div>
+
+                        </td>
+
+
+                        <td>
+
+                            <div class="stackly-finance-transactions-user">
+
+                                <div>
+                                    VK
+                                </div>
+
+                                <span>
+                                    Vikram Krishnan
+                                </span>
+
+                            </div>
+
+                        </td>
+
+
+                        <td>
+                            Withdrawal
+                        </td>
+
+
+                        <td>
+                            Sep 14, 2026
+                        </td>
+
+
+                        <td>
+                            UPI
+                        </td>
+
+
+                        <td class="amount negative">
+                            -₹45,000
+                        </td>
+
+
+                        <td>
+
+                            <span class="stackly-finance-transactions-status failed">
+                                Failed
+                            </span>
+
+                        </td>
+
+
+                        <td>
+
+                            <a
+                                href="404-admin.html"
+                                class="stackly-finance-transactions-action"
+                                aria-label="View transaction TXN-983721"
+                            >
+
+                                <i class="fa-solid fa-arrow-up-right-from-square"></i>
+
+                            </a>
+
+                        </td>
+
+                    </tr>
+
+
+
+                    <!-- Transaction 06 -->
+
+                    <tr>
+
+                        <td>
+
+                            <div class="stackly-finance-transactions-id">
+
+                                <div class="stackly-finance-transactions-type-icon deposit">
+
+                                    <i class="fa-solid fa-arrow-down"></i>
+
+                                </div>
+
+                                <div>
+
+                                    <strong>
+                                        TXN-983498
+                                    </strong>
+
+                                    <span>
+                                        Deposit
+                                    </span>
+
+                                </div>
+
+                            </div>
+
+                        </td>
+
+
+                        <td>
+
+                            <div class="stackly-finance-transactions-user">
+
+                                <div>
+                                    MJ
+                                </div>
+
+                                <span>
+                                    Meera Joseph
+                                </span>
+
+                            </div>
+
+                        </td>
+
+
+                        <td>
+                            Deposit
+                        </td>
+
+
+                        <td>
+                            Sep 13, 2026
+                        </td>
+
+
+                        <td>
+                            Bank Transfer
+                        </td>
+
+
+                        <td class="amount positive">
+                            +₹3,10,000
+                        </td>
+
+
+                        <td>
+
+                            <span class="stackly-finance-transactions-status completed">
+                                Completed
+                            </span>
+
+                        </td>
+
+
+                        <td>
+
+                            <a
+                                href="404-admin.html"
+                                class="stackly-finance-transactions-action"
+                                aria-label="View transaction TXN-983498"
+                            >
+
+                                <i class="fa-solid fa-arrow-up-right-from-square"></i>
+
+                            </a>
+
+                        </td>
+
+                    </tr>
+
+                </tbody>
+
+            </table>
+
+        </div>
+
+
+
+         
+    </section>
+
+
+
+    <!-- =====================================================
+         TRANSACTION INSIGHTS
+    ====================================================== -->
+
+    <div class="stackly-finance-transactions-insights">
+
+
+        <!-- =================================================
+             DAILY ACTIVITY
+        ================================================== -->
+
+        <section
+            class="stackly-finance-transactions-insight-card"
+            data-aos="fade-up"
+        >
+
+            <div class="stackly-finance-transactions-insight-heading">
+
+                <div>
+
+                    <span>
+                        DAILY ACTIVITY
+                    </span>
+
+                    <h3>
+                        Processing Overview
+                    </h3>
+
+                </div>
+
+                <i class="fa-solid fa-bolt"></i>
+
+            </div>
+
+
+            <div class="stackly-finance-transactions-processing">
+
+
+                <div>
+
+                    <strong>
+                        1,284
+                    </strong>
+
+                    <span>
+                        Transactions today
+                    </span>
+
+                </div>
+
+
+                <div>
+
+                    <strong>
+                        98.7%
+                    </strong>
+
+                    <span>
+                        Success rate
+                    </span>
+
+                </div>
+
+
+                <div>
+
+                    <strong>
+                        1.8 sec
+                    </strong>
+
+                    <span>
+                        Avg. processing time
+                    </span>
+
+                </div>
+
+            </div>
+
+
+            <div class="stackly-finance-transactions-success-bar">
+
+                <span style="width:98.7%;"></span>
+
+            </div>
+
+            <small>
+                Transaction processing performance is within the normal operating range.
+            </small>
+
+        </section>
+
+
+
+        <!-- =================================================
+             LATEST SYSTEM EVENT
+        ================================================== -->
+
+        <section
+            class="stackly-finance-transactions-insight-card"
+            data-aos="fade-up"
+            data-aos-delay="150"
+        >
+
+            <div class="stackly-finance-transactions-insight-heading">
+
+                <div>
+
+                    <span>
+                        SYSTEM ACTIVITY
+                    </span>
+
+                    <h3>
+                        Latest Events
+                    </h3>
+
+                </div>
+
+                <a
+                    href="404-admin.html"
+                    class="stackly-finance-transactions-view-all"
+                >
+                    View Logs
+                </a>
+
+            </div>
+
+
+            <div class="stackly-finance-transactions-events">
+
+
+                <div class="stackly-finance-transactions-event">
+
+                    <div class="stackly-finance-transactions-event-icon green">
+
+                        <i class="fa-solid fa-circle-check"></i>
+
+                    </div>
+
+                    <div>
+
+                        <strong>
+                            Settlement completed
+                        </strong>
+
+                        <span>
+                            Batch #ST-28491 successfully processed
+                        </span>
+
+                    </div>
+
+                    <time>
+                        5 min
+                    </time>
+
+                </div>
+
+
+
+                <div class="stackly-finance-transactions-event">
+
+                    <div class="stackly-finance-transactions-event-icon blue">
+
+                        <i class="fa-solid fa-arrows-rotate"></i>
+
+                    </div>
+
+                    <div>
+
+                        <strong>
+                            Payment gateway synced
+                        </strong>
+
+                        <span>
+                            Transaction records updated
+                        </span>
+
+                    </div>
+
+                    <time>
+                        18 min
+                    </time>
+
+                </div>
+
+
+
+                <div class="stackly-finance-transactions-event">
+
+                    <div class="stackly-finance-transactions-event-icon orange">
+
+                        <i class="fa-solid fa-triangle-exclamation"></i>
+
+                    </div>
+
+                    <div>
+
+                        <strong>
+                            Transaction requires review
+                        </strong>
+
+                        <span>
+                            TXN-984312 flagged for verification
+                        </span>
+
+                    </div>
+
+                    <time>
+                        42 min
+                    </time>
+
+                </div>
+
+            </div>
+
+        </section>
+
+    </div>
+
+
+
+    <!-- =====================================================
+         TRANSACTION SECURITY NOTICE
+    ====================================================== -->
+
+    <div
+        class="stackly-finance-transactions-security"
+        data-aos="fade-up"
+    >
+
+        <div class="stackly-finance-transactions-security-icon">
+
+            <i class="fa-solid fa-shield-halved"></i>
+
+        </div>
+
+        <div>
+
+            <strong>
+                Transaction monitoring is active
+            </strong>
+
+            <p>
+                All financial movements are monitored for
+                suspicious activity, failed payments and
+                unusual transaction patterns.
+            </p>
+
+        </div>
+
+        <a href="404-admin.html">
+
+            Open Monitoring Center
+
+            <i class="fa-solid fa-arrow-right"></i>
+
+        </a>
+
+    </div>
+
+
+</section>
+
+    </main>
+
+
+    <!-- =========================================================
+         AOS JS
+    ========================================================== -->
+
+    <script
+        src="https://unpkg.com/aos@2.3.4/dist/aos.js"
+    ></script>
+
+
+    <!-- =========================================================
+         ADMIN DASHBOARD JS
+    ========================================================== -->
+
+    <script src="admin.js"></script>
+
+</body>
+</html>

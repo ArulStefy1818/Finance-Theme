@@ -1,0 +1,1520 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <!-- =========================================================
+         STACKLY FINANCE CLIENT DASHBOARD
+    ========================================================== -->
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <meta
+        name="description"
+        content="Stackly Finance Client Dashboard - Manage accounts, transactions, investments and financial goals."
+    >
+
+    <meta
+        name="theme-color"
+        content="#061713"
+    >
+
+    <title>Stackly Finance | Client Dashboard</title>
+
+
+    <!-- =========================================================
+         GOOGLE FONTS
+    ========================================================== -->
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+
+    <link
+        rel="preconnect"
+        href="https://fonts.gstatic.com"
+        crossorigin
+    >
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap"
+        rel="stylesheet"
+    >
+
+
+    <!-- =========================================================
+         FONT AWESOME
+    ========================================================== -->
+
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+    >
+
+
+    <!-- =========================================================
+         AOS ANIMATION
+    ========================================================== -->
+
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css"
+    >
+
+
+    <!-- =========================================================
+         CLIENT DASHBOARD CSS
+    ========================================================== -->
+
+    <link
+        rel="stylesheet"
+        href="client.css"
+    >
+
+</head>
+
+
+<body>
+
+
+    <!-- =========================================================
+         CLIENT DASHBOARD WRAPPER
+    ========================================================== -->
+
+    <div class="stackly-finance-client-dashboard">
+
+
+        <!-- =====================================================
+             MOBILE SIDEBAR OVERLAY
+        ====================================================== -->
+
+        <div
+            class="stackly-finance-client-overlay"
+            id="stacklyFinanceClientOverlay"
+            aria-hidden="true"
+        ></div>
+
+
+        <!-- =====================================================
+             SIDEBAR
+        ====================================================== -->
+
+        <aside
+            class="stackly-finance-client-sidebar"
+            id="stacklyFinanceClientSidebar"
+            aria-label="Client dashboard sidebar"
+        >
+
+
+            <!-- =================================================
+                 SIDEBAR BRAND
+            ================================================== -->
+
+            <div class="stackly-finance-client-brand">
+
+                <a
+                    href="client.html"
+                    class="stackly-finance-client-logo"
+                    aria-label="Stackly Finance Home"
+                >
+
+                    <img
+                        src="Stackly-logo-Blue.webp"
+                        alt="Stackly Finance"
+                    >
+
+                </a>
+
+
+                <!-- MOBILE CLOSE BUTTON -->
+
+                <button
+                    type="button"
+                    class="stackly-finance-client-sidebar-close"
+                    id="stacklyFinanceClientSidebarClose"
+                    aria-label="Close navigation"
+                    aria-controls="stacklyFinanceClientSidebar"
+                >
+
+                    <i class="fa-solid fa-xmark"></i>
+
+                </button>
+
+            </div>
+
+
+            <!-- =================================================
+                 CLIENT PROFILE
+            ================================================== -->
+
+            <div
+                class="stackly-finance-client-sidebar-profile"
+                data-aos="fade-right"
+            >
+
+                <div
+                    class="stackly-finance-client-avatar"
+                    aria-hidden="true"
+                >
+
+                    <i class="fa-solid fa-user"></i>
+
+                </div>
+
+
+                <div class="stackly-finance-client-profile-info">
+
+                    <strong id="stacklyFinanceClientSidebarName">
+                        Client
+                    </strong>
+
+                    <span>
+                        Finance Client
+                    </span>
+
+                </div>
+
+            </div>
+
+
+            <!-- =================================================
+                 SIDEBAR NAVIGATION
+            ================================================== -->
+
+            <nav
+                class="stackly-finance-client-navigation"
+                aria-label="Client Dashboard Navigation"
+            >
+
+                <!-- DASHBOARD -->
+
+                <a
+                    href="client.html"
+                    class="stackly-finance-client-nav-link active"
+                    aria-current="page"
+                >
+
+                    <span
+                        class="stackly-finance-client-nav-icon"
+                        aria-hidden="true"
+                    >
+
+                        <i class="fa-solid fa-chart-pie"></i>
+
+                    </span>
+
+                    <span>
+                        Dashboard
+                    </span>
+
+                </a>
+
+
+                <!-- MY ACCOUNTS -->
+
+                <a
+                    href="client-accounts.html"
+                    class="stackly-finance-client-nav-link"
+                >
+
+                    <span
+                        class="stackly-finance-client-nav-icon"
+                        aria-hidden="true"
+                    >
+
+                        <i class="fa-solid fa-wallet"></i>
+
+                    </span>
+
+                    <span>
+                        My Accounts
+                    </span>
+
+                </a>
+
+
+                <!-- TRANSACTIONS -->
+
+                <a
+                    href="client-transactions.html"
+                    class="stackly-finance-client-nav-link"
+                >
+
+                    <span
+                        class="stackly-finance-client-nav-icon"
+                        aria-hidden="true"
+                    >
+
+                        <i class="fa-solid fa-arrow-right-arrow-left"></i>
+
+                    </span>
+
+                    <span>
+                        Transactions
+                    </span>
+
+                </a>
+
+
+                <!-- PAYMENTS -->
+
+                <a
+                    href="client-payments.html"
+                    class="stackly-finance-client-nav-link"
+                >
+
+                    <span
+                        class="stackly-finance-client-nav-icon"
+                        aria-hidden="true"
+                    >
+
+                        <i class="fa-solid fa-credit-card"></i>
+
+                    </span>
+
+                    <span>
+                        Payments
+                    </span>
+
+                </a>
+
+
+                <!-- INVESTMENTS -->
+
+                <a
+                    href="client-investments.html"
+                    class="stackly-finance-client-nav-link"
+                >
+
+                    <span
+                        class="stackly-finance-client-nav-icon"
+                        aria-hidden="true"
+                    >
+
+                        <i class="fa-solid fa-chart-line"></i>
+
+                    </span>
+
+                    <span>
+                        Investments
+                    </span>
+
+                </a>
+
+
+                <!-- FINANCIAL PLANNING -->
+
+                <a
+                    href="client-planning.html"
+                    class="stackly-finance-client-nav-link"
+                >
+
+                    <span
+                        class="stackly-finance-client-nav-icon"
+                        aria-hidden="true"
+                    >
+
+                        <i class="fa-solid fa-bullseye"></i>
+
+                    </span>
+
+                    <span>
+                        Financial Planning
+                    </span>
+
+                </a>
+
+
+                <!-- MY PROFILE -->
+
+                <a
+                    href="client-profile.html"
+                    class="stackly-finance-client-nav-link"
+                >
+
+                    <span
+                        class="stackly-finance-client-nav-icon"
+                        aria-hidden="true"
+                    >
+
+                        <i class="fa-solid fa-user"></i>
+
+                    </span>
+
+                    <span>
+                        My Profile
+                    </span>
+
+                </a>
+
+            </nav>
+
+
+            <!-- =================================================
+                 SIDEBAR BOTTOM
+            ================================================== -->
+
+            <div class="stackly-finance-client-sidebar-bottom">
+
+                <a
+                    href="index.html"
+                    class="stackly-finance-client-logout"
+                    id="stacklyFinanceClientLogout"
+                >
+
+                    <i
+                        class="fa-solid fa-right-from-bracket"
+                        aria-hidden="true"
+                    ></i>
+
+                    <span>
+                        Logout
+                    </span>
+
+                </a>
+
+            </div>
+
+        </aside>
+
+
+        <!-- =====================================================
+             MAIN AREA
+        ====================================================== -->
+
+        <main class="stackly-finance-client-main">
+
+
+            <!-- =================================================
+                 TOP HEADER
+            ================================================== -->
+
+            <header class="stackly-finance-client-header">
+
+
+                <!-- MOBILE MENU BUTTON -->
+
+                <button
+                    type="button"
+                    class="stackly-finance-client-menu-toggle"
+                    id="stacklyFinanceClientMenuToggle"
+                    aria-label="Open navigation"
+                    aria-controls="stacklyFinanceClientSidebar"
+                    aria-expanded="false"
+                >
+
+                    <span></span>
+                    <span></span>
+                    <span></span>
+
+                </button>
+
+
+                <!-- HEADER TITLE -->
+
+                <div
+                    class="stackly-finance-client-header-title"
+                    data-aos="fade-down"
+                >
+
+                    <span class="stackly-finance-client-header-label">
+                        CLIENT PORTAL
+                    </span>
+
+                    <h1>
+                        Financial Dashboard
+                    </h1>
+
+                </div>
+
+
+                <!-- HEADER ACTIONS -->
+
+                <div class="stackly-finance-client-header-actions">
+
+
+                    <!-- NOTIFICATION -->
+
+                    <a
+                        href="404-client.html"
+                        class="stackly-finance-client-notification"
+                        aria-label="View notifications, 4 unread"
+                    >
+
+                        <i
+                            class="fa-regular fa-bell"
+                            aria-hidden="true"
+                        ></i>
+
+                        <span>
+                            4
+                        </span>
+
+                    </a>
+
+
+                    <!-- EMAIL / USER -->
+
+                    <div class="stackly-finance-client-email-box">
+
+                        <div
+                            class="stackly-finance-client-email-icon"
+                            aria-hidden="true"
+                        >
+
+                            <i class="fa-solid fa-user"></i>
+
+                        </div>
+
+
+                        <div class="stackly-finance-client-email-content">
+
+                            <span>
+                                Signed in as
+                            </span>
+
+                            <strong id="stacklyFinanceClientEmail">
+                                client@example.com
+                            </strong>
+
+                        </div>
+
+
+                        <i
+                            class="fa-solid fa-chevron-down stackly-finance-client-email-arrow"
+                            aria-hidden="true"
+                        ></i>
+
+                    </div>
+
+                </div>
+
+            </header>
+
+<!-- =========================================================
+     TRANSACTIONS PAGE CONTENT
+========================================================== -->
+
+<!-- ============================================================
+     STACKLY FINANCE CLIENT
+     TRANSACTIONS PAGE
+     UNIQUE CLASS VERSION
+============================================================= -->
+
+<section
+    class="sfctx-transactions-page"
+    data-aos="fade-up"
+>
+
+
+    <!-- ========================================================
+         TRANSACTION HERO
+    ========================================================= -->
+
+    <div
+        class="sfctx-hero"
+        data-aos="fade-up"
+    >
+
+        <div class="sfctx-hero-content">
+
+            <span class="sfctx-section-label">
+                TRANSACTION CENTER
+            </span>
+
+            <h2>
+                Track Every
+                <span>Financial Transaction</span>
+            </h2>
+
+            <p>
+                Review your recent payments, transfers, deposits,
+                withdrawals and account activity in one secure
+                transaction center.
+            </p>
+
+        </div>
+
+
+        <div class="sfctx-hero-action">
+
+            <a
+                href="client-payments.html"
+                class="sfctx-primary-btn"
+            >
+
+                <i class="fa-solid fa-paper-plane"></i>
+
+                Make a Payment
+
+            </a>
+
+        </div>
+
+    </div>
+
+
+
+    <!-- ========================================================
+         TRANSACTION HISTORY
+    ========================================================= -->
+
+    <section
+        class="sfctx-history-panel"
+        data-aos="fade-up"
+    >
+
+        <div class="sfctx-panel-header">
+
+            <div>
+
+                <span>
+                    TRANSACTION HISTORY
+                </span>
+
+                <h2>
+                    Recent Transactions
+                </h2>
+
+            </div>
+
+
+            <a
+                href="404-client.html"
+                class="sfctx-export-link"
+            >
+
+                Export
+
+                <i class="fa-solid fa-download"></i>
+
+            </a>
+
+        </div>
+
+
+
+        <!-- TABLE -->
+
+        <div class="sfctx-table-container">
+
+            <table class="sfctx-table">
+
+                <thead>
+
+                    <tr>
+
+                        <th>
+                            Transaction
+                        </th>
+
+                        <th>
+                            Account
+                        </th>
+
+                        <th>
+                            Date
+                        </th>
+
+                        <th>
+                            Status
+                        </th>
+
+                        <th>
+                            Amount
+                        </th>
+
+                        <th>
+                            Action
+                        </th>
+
+                    </tr>
+
+                </thead>
+
+
+                <tbody>
+
+
+                    <!-- =================================================
+                         TRANSACTION 1
+                    ================================================== -->
+
+                    <tr>
+
+                        <td>
+
+                            <div class="sfctx-transaction-name">
+
+                                <div class="sfctx-transaction-icon sfctx-received">
+
+                                    <i class="fa-solid fa-arrow-down"></i>
+
+                                </div>
+
+                                <div>
+
+                                    <strong>
+                                        Salary Credit
+                                    </strong>
+
+                                    <span>
+                                        TXN-842915
+                                    </span>
+
+                                </div>
+
+                            </div>
+
+                        </td>
+
+
+                        <td>
+                            Premium Savings
+                        </td>
+
+
+                        <td>
+                            Sep 17, 2026
+                        </td>
+
+
+                        <td>
+
+                            <span class="sfctx-status sfctx-completed">
+
+                                <i class="fa-solid fa-circle"></i>
+
+                                Completed
+
+                            </span>
+
+                        </td>
+
+
+                        <td>
+
+                            <strong class="sfctx-amount sfctx-received-amount">
+                                +₹85,000
+                            </strong>
+
+                        </td>
+
+
+                        <td>
+
+                            <a
+                                href="404-client.html"
+                                class="sfctx-action"
+                                aria-label="View salary credit"
+                            >
+
+                                <i class="fa-solid fa-eye"></i>
+
+                            </a>
+
+                        </td>
+
+                    </tr>
+
+
+
+                    <!-- =================================================
+                         TRANSACTION 2
+                    ================================================== -->
+
+                    <tr>
+
+                        <td>
+
+                            <div class="sfctx-transaction-name">
+
+                                <div class="sfctx-transaction-icon sfctx-payment">
+
+                                    <i class="fa-solid fa-bolt"></i>
+
+                                </div>
+
+                                <div>
+
+                                    <strong>
+                                        Electricity Bill
+                                    </strong>
+
+                                    <span>
+                                        TXN-842761
+                                    </span>
+
+                                </div>
+
+                            </div>
+
+                        </td>
+
+
+                        <td>
+                            Business Current
+                        </td>
+
+
+                        <td>
+                            Sep 16, 2026
+                        </td>
+
+
+                        <td>
+
+                            <span class="sfctx-status sfctx-completed">
+
+                                <i class="fa-solid fa-circle"></i>
+
+                                Completed
+
+                            </span>
+
+                        </td>
+
+
+                        <td>
+
+                            <strong class="sfctx-amount sfctx-spent-amount">
+                                -₹4,850
+                            </strong>
+
+                        </td>
+
+
+                        <td>
+
+                            <a
+                                href="404-client.html"
+                                class="sfctx-action"
+                                aria-label="View electricity payment"
+                            >
+
+                                <i class="fa-solid fa-eye"></i>
+
+                            </a>
+
+                        </td>
+
+                    </tr>
+
+
+
+                    <!-- =================================================
+                         TRANSACTION 3
+                    ================================================== -->
+
+                    <tr>
+
+                        <td>
+
+                            <div class="sfctx-transaction-name">
+
+                                <div class="sfctx-transaction-icon sfctx-transfer">
+
+                                    <i class="fa-solid fa-arrow-right-arrow-left"></i>
+
+                                </div>
+
+                                <div>
+
+                                    <strong>
+                                        Bank Transfer
+                                    </strong>
+
+                                    <span>
+                                        TXN-842524
+                                    </span>
+
+                                </div>
+
+                            </div>
+
+                        </td>
+
+
+                        <td>
+                            Premium Savings
+                        </td>
+
+
+                        <td>
+                            Sep 15, 2026
+                        </td>
+
+
+                        <td>
+
+                            <span class="sfctx-status sfctx-completed">
+
+                                <i class="fa-solid fa-circle"></i>
+
+                                Completed
+
+                            </span>
+
+                        </td>
+
+
+                        <td>
+
+                            <strong class="sfctx-amount sfctx-received-amount">
+                                +₹25,000
+                            </strong>
+
+                        </td>
+
+
+                        <td>
+
+                            <a
+                                href="404-client.html"
+                                class="sfctx-action"
+                                aria-label="View bank transfer"
+                            >
+
+                                <i class="fa-solid fa-eye"></i>
+
+                            </a>
+
+                        </td>
+
+                    </tr>
+
+
+
+                    <!-- =================================================
+                         TRANSACTION 4
+                    ================================================== -->
+
+                    <tr>
+
+                        <td>
+
+                            <div class="sfctx-transaction-name">
+
+                                <div class="sfctx-transaction-icon sfctx-investment">
+
+                                    <i class="fa-solid fa-chart-line"></i>
+
+                                </div>
+
+                                <div>
+
+                                    <strong>
+                                        Mutual Fund Investment
+                                    </strong>
+
+                                    <span>
+                                        TXN-842310
+                                    </span>
+
+                                </div>
+
+                            </div>
+
+                        </td>
+
+
+                        <td>
+                            Wealth Portfolio
+                        </td>
+
+
+                        <td>
+                            Sep 14, 2026
+                        </td>
+
+
+                        <td>
+
+                            <span class="sfctx-status sfctx-completed">
+
+                                <i class="fa-solid fa-circle"></i>
+
+                                Completed
+
+                            </span>
+
+                        </td>
+
+
+                        <td>
+
+                            <strong class="sfctx-amount sfctx-spent-amount">
+                                -₹15,000
+                            </strong>
+
+                        </td>
+
+
+                        <td>
+
+                            <a
+                                href="404-client.html"
+                                class="sfctx-action"
+                                aria-label="View mutual fund investment"
+                            >
+
+                                <i class="fa-solid fa-eye"></i>
+
+                            </a>
+
+                        </td>
+
+                    </tr>
+
+
+
+                    <!-- =================================================
+                         TRANSACTION 5
+                    ================================================== -->
+
+                    <tr>
+
+                        <td>
+
+                            <div class="sfctx-transaction-name">
+
+                                <div class="sfctx-transaction-icon sfctx-payment">
+
+                                    <i class="fa-solid fa-cart-shopping"></i>
+
+                                </div>
+
+                                <div>
+
+                                    <strong>
+                                        Online Shopping
+                                    </strong>
+
+                                    <span>
+                                        TXN-841998
+                                    </span>
+
+                                </div>
+
+                            </div>
+
+                        </td>
+
+
+                        <td>
+                            Business Current
+                        </td>
+
+
+                        <td>
+                            Sep 12, 2026
+                        </td>
+
+
+                        <td>
+
+                            <span class="sfctx-status sfctx-pending-status">
+
+                                <i class="fa-solid fa-circle"></i>
+
+                                Pending
+
+                            </span>
+
+                        </td>
+
+
+                        <td>
+
+                            <strong class="sfctx-amount sfctx-spent-amount">
+                                -₹7,250
+                            </strong>
+
+                        </td>
+
+
+                        <td>
+
+                            <a
+                                href="404-client.html"
+                                class="sfctx-action"
+                                aria-label="View online shopping transaction"
+                            >
+
+                                <i class="fa-solid fa-eye"></i>
+
+                            </a>
+
+                        </td>
+
+                    </tr>
+
+
+
+                    <!-- =================================================
+                         TRANSACTION 6
+                    ================================================== -->
+
+                    <tr>
+
+                        <td>
+
+                            <div class="sfctx-transaction-name">
+
+                                <div class="sfctx-transaction-icon sfctx-received">
+
+                                    <i class="fa-solid fa-arrow-down"></i>
+
+                                </div>
+
+                                <div>
+
+                                    <strong>
+                                        Account Deposit
+                                    </strong>
+
+                                    <span>
+                                        TXN-841762
+                                    </span>
+
+                                </div>
+
+                            </div>
+
+                        </td>
+
+
+                        <td>
+                            Premium Savings
+                        </td>
+
+
+                        <td>
+                            Sep 10, 2026
+                        </td>
+
+
+                        <td>
+
+                            <span class="sfctx-status sfctx-completed">
+
+                                <i class="fa-solid fa-circle"></i>
+
+                                Completed
+
+                            </span>
+
+                        </td>
+
+
+                        <td>
+
+                            <strong class="sfctx-amount sfctx-received-amount">
+                                +₹35,000
+                            </strong>
+
+                        </td>
+
+
+                        <td>
+
+                            <a
+                                href="404-client.html"
+                                class="sfctx-action"
+                                aria-label="View account deposit"
+                            >
+
+                                <i class="fa-solid fa-eye"></i>
+
+                            </a>
+
+                        </td>
+
+                    </tr>
+
+
+                </tbody>
+
+            </table>
+
+        </div>
+
+
+    </section>
+
+
+
+    <!-- ========================================================
+         LOWER TRANSACTION GRID
+    ========================================================= -->
+
+    <div class="sfctx-lower-grid">
+
+
+        <!-- =====================================================
+             PENDING TRANSACTIONS
+        ====================================================== -->
+
+        <section
+            class="sfctx-pending-panel"
+            data-aos="fade-right"
+        >
+
+            <div class="sfctx-panel-header">
+
+                <div>
+
+                    <span>
+                        AWAITING ACTION
+                    </span>
+
+                    <h2>
+                        Pending Transactions
+                    </h2>
+
+                </div>
+
+            </div>
+
+
+            <div class="sfctx-pending-list">
+
+
+                <!-- PENDING 1 -->
+
+                <div class="sfctx-pending-item">
+
+                    <div class="sfctx-pending-icon">
+
+                        <i class="fa-solid fa-clock"></i>
+
+                    </div>
+
+
+                    <div class="sfctx-pending-content">
+
+                        <strong>
+                            Online Shopping
+                        </strong>
+
+                        <span>
+                            Business Current • Sep 12
+                        </span>
+
+                    </div>
+
+
+                    <strong class="sfctx-pending-amount">
+                        ₹7,250
+                    </strong>
+
+                </div>
+
+
+
+                <!-- PENDING 2 -->
+
+                <div class="sfctx-pending-item">
+
+                    <div class="sfctx-pending-icon">
+
+                        <i class="fa-solid fa-clock"></i>
+
+                    </div>
+
+
+                    <div class="sfctx-pending-content">
+
+                        <strong>
+                            Insurance Premium
+                        </strong>
+
+                        <span>
+                            Premium Savings • Sep 11
+                        </span>
+
+                    </div>
+
+
+                    <strong class="sfctx-pending-amount">
+                        ₹3,850
+                    </strong>
+
+                </div>
+
+
+
+                <!-- PENDING 3 -->
+
+                <div class="sfctx-pending-item">
+
+                    <div class="sfctx-pending-icon">
+
+                        <i class="fa-solid fa-clock"></i>
+
+                    </div>
+
+
+                    <div class="sfctx-pending-content">
+
+                        <strong>
+                            Bank Transfer
+                        </strong>
+
+                        <span>
+                            Business Current • Sep 10
+                        </span>
+
+                    </div>
+
+
+                    <strong class="sfctx-pending-amount">
+                        ₹12,000
+                    </strong>
+
+                </div>
+
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =====================================================
+             SPENDING OVERVIEW
+        ====================================================== -->
+
+        <section
+            class="sfctx-spending-panel"
+            data-aos="fade-left"
+        >
+
+            <div class="sfctx-panel-header">
+
+                <div>
+
+                    <span>
+                        SPENDING ANALYSIS
+                    </span>
+
+                    <h2>
+                        Monthly Spending
+                    </h2>
+
+                </div>
+
+            </div>
+
+
+            <div class="sfctx-spending-total">
+
+                <span>
+                    TOTAL SPENDING
+                </span>
+
+                <h3>
+                    ₹64,850
+                </h3>
+
+                <small>
+                    September 2026
+                </small>
+
+            </div>
+
+
+            <div class="sfctx-spending-bars">
+
+
+                <!-- UTILITIES -->
+
+                <div class="sfctx-spending-row">
+
+                    <div>
+
+                        <span>
+                            Utilities
+                        </span>
+
+                        <strong>
+                            ₹18,400
+                        </strong>
+
+                    </div>
+
+                    <div class="sfctx-spending-track">
+
+                        <span style="width: 72%;"></span>
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- SHOPPING -->
+
+                <div class="sfctx-spending-row">
+
+                    <div>
+
+                        <span>
+                            Shopping
+                        </span>
+
+                        <strong>
+                            ₹15,250
+                        </strong>
+
+                    </div>
+
+                    <div class="sfctx-spending-track">
+
+                        <span style="width: 60%;"></span>
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- INVESTMENTS -->
+
+                <div class="sfctx-spending-row">
+
+                    <div>
+
+                        <span>
+                            Investments
+                        </span>
+
+                        <strong>
+                            ₹15,000
+                        </strong>
+
+                    </div>
+
+                    <div class="sfctx-spending-track">
+
+                        <span style="width: 58%;"></span>
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- OTHER -->
+
+                <div class="sfctx-spending-row">
+
+                    <div>
+
+                        <span>
+                            Other
+                        </span>
+
+                        <strong>
+                            ₹16,200
+                        </strong>
+
+                    </div>
+
+                    <div class="sfctx-spending-track">
+
+                        <span style="width: 63%;"></span>
+
+                    </div>
+
+                </div>
+
+
+            </div>
+
+        </section>
+
+
+    </div>
+
+
+
+    <!-- ========================================================
+         TRANSACTION SECURITY
+    ========================================================= -->
+
+    <section
+        class="sfctx-security-banner"
+        data-aos="zoom-in"
+    >
+
+        <div class="sfctx-security-icon">
+
+            <i class="fa-solid fa-shield-halved"></i>
+
+        </div>
+
+
+        <div class="sfctx-security-content">
+
+            <span>
+                SECURE TRANSACTIONS
+            </span>
+
+            <h2>
+                Your transaction history is protected
+            </h2>
+
+            <p>
+                Stackly Finance uses secure account controls
+                to help protect your financial activity and
+                transaction information.
+            </p>
+
+        </div>
+
+
+        <a
+            href="404-client.html"
+            class="sfctx-security-btn"
+        >
+
+            Security Settings
+
+            <i class="fa-solid fa-arrow-right"></i>
+
+        </a>
+
+    </section>
+
+
+</section>
+
+
+</main>
+
+    </div>
+
+
+    <!-- =========================================================
+         AOS JS
+    ========================================================== -->
+
+    <script
+        src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"
+    ></script>
+
+
+    <!-- =========================================================
+         CLIENT DASHBOARD JS
+    ========================================================== -->
+
+    <script src="client.js"></script>
+
+
+</body>
+
+</html>

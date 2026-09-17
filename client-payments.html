@@ -1,0 +1,1682 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <!-- =========================================================
+         STACKLY FINANCE CLIENT DASHBOARD
+    ========================================================== -->
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <meta
+        name="description"
+        content="Stackly Finance Client Dashboard - Manage accounts, transactions, investments and financial goals."
+    >
+
+    <meta
+        name="theme-color"
+        content="#061713"
+    >
+
+    <title>Stackly Finance | Client Dashboard</title>
+
+
+    <!-- =========================================================
+         GOOGLE FONTS
+    ========================================================== -->
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+
+    <link
+        rel="preconnect"
+        href="https://fonts.gstatic.com"
+        crossorigin
+    >
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap"
+        rel="stylesheet"
+    >
+
+
+    <!-- =========================================================
+         FONT AWESOME
+    ========================================================== -->
+
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+    >
+
+
+    <!-- =========================================================
+         AOS ANIMATION
+    ========================================================== -->
+
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css"
+    >
+
+
+    <!-- =========================================================
+         CLIENT DASHBOARD CSS
+    ========================================================== -->
+
+    <link
+        rel="stylesheet"
+        href="client.css"
+    >
+
+</head>
+
+
+<body>
+
+
+    <!-- =========================================================
+         CLIENT DASHBOARD WRAPPER
+    ========================================================== -->
+
+    <div class="stackly-finance-client-dashboard">
+
+
+        <!-- =====================================================
+             MOBILE SIDEBAR OVERLAY
+        ====================================================== -->
+
+        <div
+            class="stackly-finance-client-overlay"
+            id="stacklyFinanceClientOverlay"
+            aria-hidden="true"
+        ></div>
+
+
+        <!-- =====================================================
+             SIDEBAR
+        ====================================================== -->
+
+        <aside
+            class="stackly-finance-client-sidebar"
+            id="stacklyFinanceClientSidebar"
+            aria-label="Client dashboard sidebar"
+        >
+
+
+            <!-- =================================================
+                 SIDEBAR BRAND
+            ================================================== -->
+
+            <div class="stackly-finance-client-brand">
+
+                <a
+                    href="client.html"
+                    class="stackly-finance-client-logo"
+                    aria-label="Stackly Finance Home"
+                >
+
+                    <img
+                        src="Stackly-logo-Blue.webp"
+                        alt="Stackly Finance"
+                    >
+
+                </a>
+
+
+                <!-- MOBILE CLOSE BUTTON -->
+
+                <button
+                    type="button"
+                    class="stackly-finance-client-sidebar-close"
+                    id="stacklyFinanceClientSidebarClose"
+                    aria-label="Close navigation"
+                    aria-controls="stacklyFinanceClientSidebar"
+                >
+
+                    <i class="fa-solid fa-xmark"></i>
+
+                </button>
+
+            </div>
+
+
+            <!-- =================================================
+                 CLIENT PROFILE
+            ================================================== -->
+
+            <div
+                class="stackly-finance-client-sidebar-profile"
+                data-aos="fade-right"
+            >
+
+                <div
+                    class="stackly-finance-client-avatar"
+                    aria-hidden="true"
+                >
+
+                    <i class="fa-solid fa-user"></i>
+
+                </div>
+
+
+                <div class="stackly-finance-client-profile-info">
+
+                    <strong id="stacklyFinanceClientSidebarName">
+                        Client
+                    </strong>
+
+                    <span>
+                        Finance Client
+                    </span>
+
+                </div>
+
+            </div>
+
+
+            <!-- =================================================
+                 SIDEBAR NAVIGATION
+            ================================================== -->
+
+            <nav
+                class="stackly-finance-client-navigation"
+                aria-label="Client Dashboard Navigation"
+            >
+
+                <!-- DASHBOARD -->
+
+                <a
+                    href="client.html"
+                    class="stackly-finance-client-nav-link active"
+                    aria-current="page"
+                >
+
+                    <span
+                        class="stackly-finance-client-nav-icon"
+                        aria-hidden="true"
+                    >
+
+                        <i class="fa-solid fa-chart-pie"></i>
+
+                    </span>
+
+                    <span>
+                        Dashboard
+                    </span>
+
+                </a>
+
+
+                <!-- MY ACCOUNTS -->
+
+                <a
+                    href="client-accounts.html"
+                    class="stackly-finance-client-nav-link"
+                >
+
+                    <span
+                        class="stackly-finance-client-nav-icon"
+                        aria-hidden="true"
+                    >
+
+                        <i class="fa-solid fa-wallet"></i>
+
+                    </span>
+
+                    <span>
+                        My Accounts
+                    </span>
+
+                </a>
+
+
+                <!-- TRANSACTIONS -->
+
+                <a
+                    href="client-transactions.html"
+                    class="stackly-finance-client-nav-link"
+                >
+
+                    <span
+                        class="stackly-finance-client-nav-icon"
+                        aria-hidden="true"
+                    >
+
+                        <i class="fa-solid fa-arrow-right-arrow-left"></i>
+
+                    </span>
+
+                    <span>
+                        Transactions
+                    </span>
+
+                </a>
+
+
+                <!-- PAYMENTS -->
+
+                <a
+                    href="client-payments.html"
+                    class="stackly-finance-client-nav-link"
+                >
+
+                    <span
+                        class="stackly-finance-client-nav-icon"
+                        aria-hidden="true"
+                    >
+
+                        <i class="fa-solid fa-credit-card"></i>
+
+                    </span>
+
+                    <span>
+                        Payments
+                    </span>
+
+                </a>
+
+
+                <!-- INVESTMENTS -->
+
+                <a
+                    href="client-investments.html"
+                    class="stackly-finance-client-nav-link"
+                >
+
+                    <span
+                        class="stackly-finance-client-nav-icon"
+                        aria-hidden="true"
+                    >
+
+                        <i class="fa-solid fa-chart-line"></i>
+
+                    </span>
+
+                    <span>
+                        Investments
+                    </span>
+
+                </a>
+
+
+                <!-- FINANCIAL PLANNING -->
+
+                <a
+                    href="client-planning.html"
+                    class="stackly-finance-client-nav-link"
+                >
+
+                    <span
+                        class="stackly-finance-client-nav-icon"
+                        aria-hidden="true"
+                    >
+
+                        <i class="fa-solid fa-bullseye"></i>
+
+                    </span>
+
+                    <span>
+                        Financial Planning
+                    </span>
+
+                </a>
+
+
+                <!-- MY PROFILE -->
+
+                <a
+                    href="client-profile.html"
+                    class="stackly-finance-client-nav-link"
+                >
+
+                    <span
+                        class="stackly-finance-client-nav-icon"
+                        aria-hidden="true"
+                    >
+
+                        <i class="fa-solid fa-user"></i>
+
+                    </span>
+
+                    <span>
+                        My Profile
+                    </span>
+
+                </a>
+
+            </nav>
+
+
+            <!-- =================================================
+                 SIDEBAR BOTTOM
+            ================================================== -->
+
+            <div class="stackly-finance-client-sidebar-bottom">
+
+                <a
+                    href="index.html"
+                    class="stackly-finance-client-logout"
+                    id="stacklyFinanceClientLogout"
+                >
+
+                    <i
+                        class="fa-solid fa-right-from-bracket"
+                        aria-hidden="true"
+                    ></i>
+
+                    <span>
+                        Logout
+                    </span>
+
+                </a>
+
+            </div>
+
+        </aside>
+
+
+        <!-- =====================================================
+             MAIN AREA
+        ====================================================== -->
+
+        <main class="stackly-finance-client-main">
+
+
+            <!-- =================================================
+                 TOP HEADER
+            ================================================== -->
+
+            <header class="stackly-finance-client-header">
+
+
+                <!-- MOBILE MENU BUTTON -->
+
+                <button
+                    type="button"
+                    class="stackly-finance-client-menu-toggle"
+                    id="stacklyFinanceClientMenuToggle"
+                    aria-label="Open navigation"
+                    aria-controls="stacklyFinanceClientSidebar"
+                    aria-expanded="false"
+                >
+
+                    <span></span>
+                    <span></span>
+                    <span></span>
+
+                </button>
+
+
+                <!-- HEADER TITLE -->
+
+                <div
+                    class="stackly-finance-client-header-title"
+                    data-aos="fade-down"
+                >
+
+                    <span class="stackly-finance-client-header-label">
+                        CLIENT PORTAL
+                    </span>
+
+                    <h1>
+                        Financial Dashboard
+                    </h1>
+
+                </div>
+
+
+                <!-- HEADER ACTIONS -->
+
+                <div class="stackly-finance-client-header-actions">
+
+
+                    <!-- NOTIFICATION -->
+
+                    <a
+                        href="404-client.html"
+                        class="stackly-finance-client-notification"
+                        aria-label="View notifications, 4 unread"
+                    >
+
+                        <i
+                            class="fa-regular fa-bell"
+                            aria-hidden="true"
+                        ></i>
+
+                        <span>
+                            4
+                        </span>
+
+                    </a>
+
+
+                    <!-- EMAIL / USER -->
+
+                    <div class="stackly-finance-client-email-box">
+
+                        <div
+                            class="stackly-finance-client-email-icon"
+                            aria-hidden="true"
+                        >
+
+                            <i class="fa-solid fa-user"></i>
+
+                        </div>
+
+
+                        <div class="stackly-finance-client-email-content">
+
+                            <span>
+                                Signed in as
+                            </span>
+
+                            <strong id="stacklyFinanceClientEmail">
+                                client@example.com
+                            </strong>
+
+                        </div>
+
+
+                        <i
+                            class="fa-solid fa-chevron-down stackly-finance-client-email-arrow"
+                            aria-hidden="true"
+                        ></i>
+
+                    </div>
+
+                </div>
+
+            </header>
+
+<!-- =========================================================
+     STACKLY FINANCE CLIENT PAYMENTS PAGE
+========================================================== -->
+
+<!-- ============================================================
+     STACKLY FINANCE CLIENT PAYMENTS PAGE
+     UNIQUE CLASS PREFIX: stkpay-
+============================================================= -->
+
+<section class="stkpay-client-payments-page" data-aos="fade-up">
+
+
+    <!-- ========================================================
+         PAYMENT HERO
+    ========================================================= -->
+
+    <section class="stkpay-hero-section" data-aos="fade-up">
+
+        <div class="stkpay-hero-content">
+
+            <span class="stkpay-hero-label">
+                PAYMENT CENTER
+            </span>
+
+            <h2>
+                Move Your Money
+                <span>With Confidence</span>
+            </h2>
+
+            <p>
+                Send payments, manage beneficiaries, schedule
+                recurring transfers and monitor your payment
+                activity from one secure financial workspace.
+            </p>
+
+        </div>
+
+
+        <div class="stkpay-hero-actions">
+
+            <a
+                href="404-client.html"
+                class="stkpay-primary-action"
+            >
+
+                <i class="fa-solid fa-paper-plane"></i>
+
+                <span>
+                    Send Money
+                </span>
+
+            </a>
+
+
+            <a
+                href="404-client.html"
+                class="stkpay-secondary-action"
+            >
+
+                <i class="fa-solid fa-calendar-plus"></i>
+
+                <span>
+                    Schedule Payment
+                </span>
+
+            </a>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- ========================================================
+         QUICK PAYMENT ACTIONS
+    ========================================================= -->
+
+    <section
+        class="stkpay-quick-section"
+        data-aos="fade-up"
+    >
+
+        <div class="stkpay-section-heading">
+
+            <div>
+
+                <span class="stkpay-section-label">
+                    QUICK PAYMENT
+                </span>
+
+                <h2>
+                    What would you like to do?
+                </h2>
+
+            </div>
+
+        </div>
+
+
+        <div class="stkpay-action-grid">
+
+
+            <!-- SEND MONEY -->
+
+            <a
+                href="404-client.html"
+                class="stkpay-action-card"
+                data-aos="fade-up"
+                data-aos-delay="100"
+            >
+
+                <div class="stkpay-action-icon">
+
+                    <i class="fa-solid fa-arrow-up-right-from-square"></i>
+
+                </div>
+
+
+                <div class="stkpay-action-content">
+
+                    <h3>
+                        Send Money
+                    </h3>
+
+                    <p>
+                        Transfer funds to another account.
+                    </p>
+
+                </div>
+
+
+                <i
+                    class="fa-solid fa-arrow-right stkpay-action-arrow"
+                    aria-hidden="true"
+                ></i>
+
+            </a>
+
+
+
+            <!-- ADD BENEFICIARY -->
+
+            <a
+                href="404-client.html"
+                class="stkpay-action-card"
+                data-aos="fade-up"
+                data-aos-delay="180"
+            >
+
+                <div class="stkpay-action-icon">
+
+                    <i class="fa-solid fa-user-plus"></i>
+
+                </div>
+
+
+                <div class="stkpay-action-content">
+
+                    <h3>
+                        Add Beneficiary
+                    </h3>
+
+                    <p>
+                        Save a recipient for future payments.
+                    </p>
+
+                </div>
+
+
+                <i
+                    class="fa-solid fa-arrow-right stkpay-action-arrow"
+                    aria-hidden="true"
+                ></i>
+
+            </a>
+
+
+
+            <!-- PAY BILLS -->
+
+            <a
+                href="404-client.html"
+                class="stkpay-action-card"
+                data-aos="fade-up"
+                data-aos-delay="260"
+            >
+
+                <div class="stkpay-action-icon">
+
+                    <i class="fa-solid fa-file-invoice-dollar"></i>
+
+                </div>
+
+
+                <div class="stkpay-action-content">
+
+                    <h3>
+                        Pay a Bill
+                    </h3>
+
+                    <p>
+                        Manage your utility and monthly bills.
+                    </p>
+
+                </div>
+
+
+                <i
+                    class="fa-solid fa-arrow-right stkpay-action-arrow"
+                    aria-hidden="true"
+                ></i>
+
+            </a>
+
+
+
+            <!-- REQUEST MONEY -->
+
+            <a
+                href="404-client.html"
+                class="stkpay-action-card"
+                data-aos="fade-up"
+                data-aos-delay="340"
+            >
+
+                <div class="stkpay-action-icon">
+
+                    <i class="fa-solid fa-hand-holding-dollar"></i>
+
+                </div>
+
+
+                <div class="stkpay-action-content">
+
+                    <h3>
+                        Request Money
+                    </h3>
+
+                    <p>
+                        Create a secure payment request.
+                    </p>
+
+                </div>
+
+
+                <i
+                    class="fa-solid fa-arrow-right stkpay-action-arrow"
+                    aria-hidden="true"
+                ></i>
+
+            </a>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- ========================================================
+         PAYMENT OVERVIEW
+    ========================================================= -->
+
+    <section
+        class="stkpay-overview-section"
+        data-aos="fade-up"
+    >
+
+        <div class="stkpay-section-heading stkpay-overview-heading">
+
+            <div>
+
+                <span class="stkpay-section-label">
+                    PAYMENT OVERVIEW
+                </span>
+
+                <h2>
+                    Payment Activity
+                </h2>
+
+            </div>
+
+
+            <a
+                href="404-client.html"
+                class="stkpay-view-transactions"
+            >
+
+                <span>
+                    View Transactions
+                </span>
+
+                <i class="fa-solid fa-arrow-right"></i>
+
+            </a>
+
+        </div>
+
+
+        <div class="stkpay-stat-grid">
+
+
+            <!-- TOTAL PAID -->
+
+            <article
+                class="stkpay-stat-card"
+                data-aos="zoom-in"
+                data-aos-delay="100"
+            >
+
+                <div class="stkpay-stat-header">
+
+                    <div class="stkpay-stat-icon">
+
+                        <i class="fa-solid fa-credit-card"></i>
+
+                    </div>
+
+                    <span class="stkpay-stat-badge">
+                        THIS MONTH
+                    </span>
+
+                </div>
+
+
+                <span class="stkpay-stat-label">
+                    TOTAL PAID
+                </span>
+
+                <h3>
+                    ₹64,850
+                </h3>
+
+                <p>
+                    Across 42 payments
+                </p>
+
+            </article>
+
+
+
+            <!-- SUCCESSFUL PAYMENTS -->
+
+            <article
+                class="stkpay-stat-card"
+                data-aos="zoom-in"
+                data-aos-delay="180"
+            >
+
+                <div class="stkpay-stat-header">
+
+                    <div class="stkpay-stat-icon stkpay-success-stat">
+
+                        <i class="fa-solid fa-check"></i>
+
+                    </div>
+
+                    <span class="stkpay-stat-badge stkpay-success-badge">
+                        98.2%
+                    </span>
+
+                </div>
+
+
+                <span class="stkpay-stat-label">
+                    SUCCESSFUL PAYMENTS
+                </span>
+
+                <h3>
+                    41
+                </h3>
+
+                <p>
+                    1 payment needs attention
+                </p>
+
+            </article>
+
+
+
+            <!-- SCHEDULED PAYMENTS -->
+
+            <article
+                class="stkpay-stat-card"
+                data-aos="zoom-in"
+                data-aos-delay="260"
+            >
+
+                <div class="stkpay-stat-header">
+
+                    <div class="stkpay-stat-icon stkpay-schedule-stat">
+
+                        <i class="fa-solid fa-calendar-days"></i>
+
+                    </div>
+
+                    <span class="stkpay-stat-badge">
+                        UPCOMING
+                    </span>
+
+                </div>
+
+
+                <span class="stkpay-stat-label">
+                    SCHEDULED PAYMENTS
+                </span>
+
+                <h3>
+                    08
+                </h3>
+
+                <p>
+                    Next payment Sep 20
+                </p>
+
+            </article>
+
+
+
+            <!-- BENEFICIARIES -->
+
+            <article
+                class="stkpay-stat-card"
+                data-aos="zoom-in"
+                data-aos-delay="340"
+            >
+
+                <div class="stkpay-stat-header">
+
+                    <div class="stkpay-stat-icon stkpay-beneficiary-stat">
+
+                        <i class="fa-solid fa-users"></i>
+
+                    </div>
+
+                    <span class="stkpay-stat-badge">
+                        ACTIVE
+                    </span>
+
+                </div>
+
+
+                <span class="stkpay-stat-label">
+                    BENEFICIARIES
+                </span>
+
+                <h3>
+                    12
+                </h3>
+
+                <p>
+                    3 added this month
+                </p>
+
+            </article>
+
+
+        </div>
+
+    </section>
+
+
+
+    <!-- ========================================================
+         PAYMENT TWO COLUMN AREA
+    ========================================================= -->
+
+    <div class="stkpay-payment-columns">
+
+
+        <!-- ====================================================
+             RECENT PAYMENTS
+        ===================================================== -->
+
+        <section
+            class="stkpay-history-panel"
+            data-aos="fade-right"
+        >
+
+            <div class="stkpay-panel-heading">
+
+                <div>
+
+                    <span>
+                        PAYMENT HISTORY
+                    </span>
+
+                    <h2>
+                        Recent Payments
+                    </h2>
+
+                </div>
+
+
+                <a href="404-client.html">
+                    View All
+                </a>
+
+            </div>
+
+
+            <div class="stkpay-history-list">
+
+
+                <!-- PAYMENT 1 -->
+
+                <div class="stkpay-history-item">
+
+                    <div class="stkpay-history-icon stkpay-electricity-icon">
+
+                        <i class="fa-solid fa-bolt"></i>
+
+                    </div>
+
+
+                    <div class="stkpay-history-details">
+
+                        <strong>
+                            Electricity Bill
+                        </strong>
+
+                        <span>
+                            Business Current • Sep 16
+                        </span>
+
+                    </div>
+
+
+                    <div class="stkpay-history-amount">
+
+                        <strong>
+                            -₹4,850
+                        </strong>
+
+                        <span class="stkpay-paid">
+                            <i class="fa-solid fa-circle"></i>
+                            Paid
+                        </span>
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- PAYMENT 2 -->
+
+                <div class="stkpay-history-item">
+
+                    <div class="stkpay-history-icon stkpay-shopping-icon">
+
+                        <i class="fa-solid fa-cart-shopping"></i>
+
+                    </div>
+
+
+                    <div class="stkpay-history-details">
+
+                        <strong>
+                            Online Shopping
+                        </strong>
+
+                        <span>
+                            Business Current • Sep 12
+                        </span>
+
+                    </div>
+
+
+                    <div class="stkpay-history-amount">
+
+                        <strong>
+                            -₹7,250
+                        </strong>
+
+                        <span class="stkpay-processing">
+                            <i class="fa-solid fa-circle"></i>
+                            Processing
+                        </span>
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- PAYMENT 3 -->
+
+                <div class="stkpay-history-item">
+
+                    <div class="stkpay-history-icon stkpay-insurance-icon">
+
+                        <i class="fa-solid fa-shield-heart"></i>
+
+                    </div>
+
+
+                    <div class="stkpay-history-details">
+
+                        <strong>
+                            Insurance Premium
+                        </strong>
+
+                        <span>
+                            Premium Savings • Sep 11
+                        </span>
+
+                    </div>
+
+
+                    <div class="stkpay-history-amount">
+
+                        <strong>
+                            -₹3,850
+                        </strong>
+
+                        <span class="stkpay-paid">
+                            <i class="fa-solid fa-circle"></i>
+                            Paid
+                        </span>
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- PAYMENT 4 -->
+
+                <div class="stkpay-history-item">
+
+                    <div class="stkpay-history-icon stkpay-transfer-icon">
+
+                        <i class="fa-solid fa-building-columns"></i>
+
+                    </div>
+
+
+                    <div class="stkpay-history-details">
+
+                        <strong>
+                            Bank Transfer
+                        </strong>
+
+                        <span>
+                            Premium Savings • Sep 10
+                        </span>
+
+                    </div>
+
+
+                    <div class="stkpay-history-amount">
+
+                        <strong>
+                            ₹12,000
+                        </strong>
+
+                        <span class="stkpay-paid">
+                            <i class="fa-solid fa-circle"></i>
+                            Completed
+                        </span>
+
+                    </div>
+
+                </div>
+
+
+            </div>
+
+        </section>
+
+
+
+        <!-- ====================================================
+             SCHEDULED PAYMENTS
+        ===================================================== -->
+
+        <section
+            class="stkpay-scheduled-panel"
+            data-aos="fade-left"
+        >
+
+            <div class="stkpay-panel-heading">
+
+                <div>
+
+                    <span>
+                        UPCOMING
+                    </span>
+
+                    <h2>
+                        Scheduled Payments
+                    </h2>
+
+                </div>
+
+
+                <a href="404-client.html">
+                    Manage
+                </a>
+
+            </div>
+
+
+            <div class="stkpay-scheduled-list">
+
+
+                <!-- SCHEDULE 1 -->
+
+                <div class="stkpay-scheduled-item">
+
+                    <div class="stkpay-date-card">
+
+                        <strong>
+                            20
+                        </strong>
+
+                        <span>
+                            SEP
+                        </span>
+
+                    </div>
+
+
+                    <div class="stkpay-scheduled-details">
+
+                        <strong>
+                            Home Loan EMI
+                        </strong>
+
+                        <span>
+                            Premium Savings
+                        </span>
+
+                    </div>
+
+
+                    <strong class="stkpay-scheduled-amount">
+                        ₹18,500
+                    </strong>
+
+                </div>
+
+
+
+                <!-- SCHEDULE 2 -->
+
+                <div class="stkpay-scheduled-item">
+
+                    <div class="stkpay-date-card">
+
+                        <strong>
+                            22
+                        </strong>
+
+                        <span>
+                            SEP
+                        </span>
+
+                    </div>
+
+
+                    <div class="stkpay-scheduled-details">
+
+                        <strong>
+                            Internet Bill
+                        </strong>
+
+                        <span>
+                            Business Current
+                        </span>
+
+                    </div>
+
+
+                    <strong class="stkpay-scheduled-amount">
+                        ₹1,499
+                    </strong>
+
+                </div>
+
+
+
+                <!-- SCHEDULE 3 -->
+
+                <div class="stkpay-scheduled-item">
+
+                    <div class="stkpay-date-card">
+
+                        <strong>
+                            25
+                        </strong>
+
+                        <span>
+                            SEP
+                        </span>
+
+                    </div>
+
+
+                    <div class="stkpay-scheduled-details">
+
+                        <strong>
+                            Insurance Premium
+                        </strong>
+
+                        <span>
+                            Premium Savings
+                        </span>
+
+                    </div>
+
+
+                    <strong class="stkpay-scheduled-amount">
+                        ₹3,850
+                    </strong>
+
+                </div>
+
+
+
+                <!-- SCHEDULE 4 -->
+
+                <div class="stkpay-scheduled-item">
+
+                    <div class="stkpay-date-card">
+
+                        <strong>
+                            28
+                        </strong>
+
+                        <span>
+                            SEP
+                        </span>
+
+                    </div>
+
+
+                    <div class="stkpay-scheduled-details">
+
+                        <strong>
+                            SIP Investment
+                        </strong>
+
+                        <span>
+                            Wealth Portfolio
+                        </span>
+
+                    </div>
+
+
+                    <strong class="stkpay-scheduled-amount">
+                        ₹10,000
+                    </strong>
+
+                </div>
+
+
+            </div>
+
+
+            <a
+                href="404-client.html"
+                class="stkpay-new-schedule-button"
+            >
+
+                <i class="fa-solid fa-plus"></i>
+
+                <span>
+                    Schedule New Payment
+                </span>
+
+            </a>
+
+        </section>
+
+    </div>
+
+
+
+    <!-- ========================================================
+         BENEFICIARIES
+    ========================================================= -->
+
+    <section
+        class="stkpay-beneficiaries-section"
+        data-aos="fade-up"
+    >
+
+        <div class="stkpay-section-heading">
+
+            <div>
+
+                <span class="stkpay-section-label">
+                    SAVED RECIPIENTS
+                </span>
+
+                <h2>
+                    Your Beneficiaries
+                </h2>
+
+            </div>
+
+
+            <a
+                href="404-client.html"
+                class="stkpay-add-beneficiary-button"
+            >
+
+                <i class="fa-solid fa-user-plus"></i>
+
+                <span>
+                    Add Beneficiary
+                </span>
+
+            </a>
+
+        </div>
+
+
+        <div class="stkpay-beneficiary-grid">
+
+
+            <!-- BENEFICIARY 1 -->
+
+            <article class="stkpay-beneficiary-card">
+
+                <div class="stkpay-beneficiary-avatar">
+                    RS
+                </div>
+
+
+                <div class="stkpay-beneficiary-details">
+
+                    <strong>
+                        Rahul Sharma
+                    </strong>
+
+                    <span>
+                        HDFC Bank •••• 4821
+                    </span>
+
+                </div>
+
+
+                <a
+                    href="404-client.html"
+                    class="stkpay-beneficiary-pay"
+                    aria-label="Pay Rahul Sharma"
+                >
+
+                    <i class="fa-solid fa-paper-plane"></i>
+
+                </a>
+
+            </article>
+
+
+
+            <!-- BENEFICIARY 2 -->
+
+            <article class="stkpay-beneficiary-card">
+
+                <div class="stkpay-beneficiary-avatar stkpay-avatar-ananya">
+                    AP
+                </div>
+
+
+                <div class="stkpay-beneficiary-details">
+
+                    <strong>
+                        Ananya Prasad
+                    </strong>
+
+                    <span>
+                        ICICI Bank •••• 7514
+                    </span>
+
+                </div>
+
+
+                <a
+                    href="404-client.html"
+                    class="stkpay-beneficiary-pay"
+                    aria-label="Pay Ananya Prasad"
+                >
+
+                    <i class="fa-solid fa-paper-plane"></i>
+
+                </a>
+
+            </article>
+
+
+
+            <!-- BENEFICIARY 3 -->
+
+            <article class="stkpay-beneficiary-card">
+
+                <div class="stkpay-beneficiary-avatar stkpay-avatar-vikram">
+                    VK
+                </div>
+
+
+                <div class="stkpay-beneficiary-details">
+
+                    <strong>
+                        Vikram Kumar
+                    </strong>
+
+                    <span>
+                        SBI •••• 1938
+                    </span>
+
+                </div>
+
+
+                <a
+                    href="404-client.html"
+                    class="stkpay-beneficiary-pay"
+                    aria-label="Pay Vikram Kumar"
+                >
+
+                    <i class="fa-solid fa-paper-plane"></i>
+
+                </a>
+
+            </article>
+
+
+
+            <!-- ADD NEW RECIPIENT -->
+
+            <a
+                href="404-client.html"
+                class="stkpay-beneficiary-card stkpay-add-recipient-card"
+            >
+
+                <div class="stkpay-beneficiary-avatar">
+
+                    <i class="fa-solid fa-plus"></i>
+
+                </div>
+
+
+                <div class="stkpay-beneficiary-details">
+
+                    <strong>
+                        Add New Recipient
+                    </strong>
+
+                    <span>
+                        Create a new beneficiary
+                    </span>
+
+                </div>
+
+
+                <i
+                    class="fa-solid fa-arrow-right stkpay-recipient-arrow"
+                    aria-hidden="true"
+                ></i>
+
+            </a>
+
+
+        </div>
+
+    </section>
+
+
+
+    <!-- ========================================================
+         PAYMENT INSIGHTS
+    ========================================================= -->
+
+    <section
+        class="stkpay-insights-section"
+        data-aos="fade-up"
+    >
+
+        <div class="stkpay-insights-content">
+
+            <span class="stkpay-insights-label">
+                PAYMENT INSIGHTS
+            </span>
+
+            <h2>
+                Keep Your Payment Routine Organized
+            </h2>
+
+            <p>
+                Review upcoming payments, monitor recurring
+                expenses and keep your saved recipients
+                organized from one secure dashboard.
+            </p>
+
+
+            <div class="stkpay-insight-points">
+
+
+                <div class="stkpay-insight-point">
+
+                    <i class="fa-solid fa-circle-check"></i>
+
+                    <span>
+                        8 scheduled payments
+                    </span>
+
+                </div>
+
+
+                <div class="stkpay-insight-point">
+
+                    <i class="fa-solid fa-circle-check"></i>
+
+                    <span>
+                        12 active beneficiaries
+                    </span>
+
+                </div>
+
+
+                <div class="stkpay-insight-point">
+
+                    <i class="fa-solid fa-circle-check"></i>
+
+                    <span>
+                        Secure payment controls
+                    </span>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <div class="stkpay-insights-visual">
+
+            <div class="stkpay-success-ring">
+
+                <i class="fa-solid fa-credit-card"></i>
+
+            </div>
+
+            <strong>
+                98.2%
+            </strong>
+
+            <span>
+                Payment Success Rate
+            </span>
+
+        </div>
+
+    </section>
+
+ 
+
+
+</section>
+
+</main>
+
+    </div>
+
+
+    <!-- =========================================================
+         AOS JS
+    ========================================================== -->
+
+    <script
+        src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"
+    ></script>
+
+
+    <!-- =========================================================
+         CLIENT DASHBOARD JS
+    ========================================================== -->
+
+    <script src="client.js"></script>
+
+
+</body>
+
+</html>

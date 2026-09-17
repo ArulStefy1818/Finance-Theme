@@ -1,0 +1,1773 @@
+/* ============================================================
+   STACKLY FINANCE
+   COMPACT PREMIUM 404 PAGE
+   SAME FINANCE THEME COLOR SYSTEM
+   No Scroll + Responsive + Professional UI
+============================================================= */
+
+
+/* ============================================================
+   ROOT VARIABLES
+============================================================= */
+
+:root {
+
+    --finance-404-bg: #061713;
+
+    --finance-404-bg-two: #0b2520;
+
+    --finance-404-primary: #b8f25a;
+
+    --finance-404-primary-dark: #8dcc32;
+
+    --finance-404-primary-light: #d7ff91;
+
+    --finance-404-white: #ffffff;
+
+    --finance-404-text: #f5f8f6;
+
+    --finance-404-muted: rgba(255, 255, 255, 0.76);
+
+    --finance-404-border: rgba(255, 255, 255, 0.18);
+
+    --finance-404-glow: rgba(184, 242, 90, 0.25);
+
+    --finance-404-glow-strong: rgba(184, 242, 90, 0.40);
+
+    --finance-404-heading: "Space Grotesk", sans-serif;
+
+    --finance-404-body: "DM Sans", sans-serif;
+
+}
+
+
+/* ============================================================
+   RESET
+============================================================= */
+
+* {
+
+    margin: 0;
+
+    padding: 0;
+
+    box-sizing: border-box;
+
+}
+
+
+html {
+
+    width: 100%;
+
+    min-height: 100%;
+
+    scroll-behavior: smooth;
+
+}
+
+
+body {
+
+    width: 100%;
+
+    min-height: 100vh;
+
+    margin: 0;
+
+    padding: 0;
+
+    overflow-x: hidden;
+
+    overflow-y: hidden;
+
+    font-family: var(--finance-404-body);
+
+    background:
+
+        radial-gradient(
+
+            circle at 50% 35%,
+
+            rgba(184, 242, 90, 0.08),
+
+            transparent 38%
+
+        ),
+
+        radial-gradient(
+
+            circle at 15% 85%,
+
+            rgba(141, 204, 50, 0.05),
+
+            transparent 32%
+
+        ),
+
+        linear-gradient(
+
+            135deg,
+
+            var(--finance-404-bg),
+
+            var(--finance-404-bg-two)
+
+        );
+
+    color: var(--finance-404-white);
+
+}
+
+
+/* ============================================================
+   MAIN 404 PAGE
+============================================================= */
+
+.stackly-finance-404-page {
+
+    position: relative;
+
+    width: 100%;
+
+    height: 100vh;
+
+    min-height: 600px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    padding: 35px 25px;
+
+    overflow: hidden;
+
+}
+
+
+/* ============================================================
+   BACKGROUND GRID
+============================================================= */
+
+.stackly-finance-404-grid {
+
+    position: absolute;
+
+    inset: 0;
+
+    z-index: 0;
+
+    pointer-events: none;
+
+    opacity: 0.30;
+
+    background-image:
+
+        linear-gradient(
+
+            rgba(255, 255, 255, 0.035) 1px,
+
+            transparent 1px
+
+        ),
+
+        linear-gradient(
+
+            90deg,
+
+            rgba(255, 255, 255, 0.035) 1px,
+
+            transparent 1px
+
+        );
+
+    background-size: 55px 55px;
+
+    mask-image:
+
+        radial-gradient(
+
+            circle at center,
+
+            black 0%,
+
+            transparent 75%
+
+        );
+
+    -webkit-mask-image:
+
+        radial-gradient(
+
+            circle at center,
+
+            black 0%,
+
+            transparent 75%
+
+        );
+
+}
+
+
+/* ============================================================
+   DECORATIVE BACKGROUND SHAPES
+============================================================= */
+
+.stackly-finance-404-shape {
+
+    position: absolute;
+
+    border-radius: 50%;
+
+    pointer-events: none;
+
+    filter: blur(2px);
+
+    z-index: 0;
+
+}
+
+
+/* ============================================================
+   SHAPE ONE
+============================================================= */
+
+.stackly-finance-404-shape-one {
+
+    width: 360px;
+
+    height: 360px;
+
+    top: -190px;
+
+    right: -120px;
+
+    background:
+
+        radial-gradient(
+
+            circle,
+
+            rgba(184, 242, 90, 0.18),
+
+            rgba(184, 242, 90, 0)
+
+        );
+
+    animation:
+
+        finance404FloatOne 8s ease-in-out infinite;
+
+}
+
+
+/* ============================================================
+   SHAPE TWO
+============================================================= */
+
+.stackly-finance-404-shape-two {
+
+    width: 400px;
+
+    height: 400px;
+
+    bottom: -230px;
+
+    left: -150px;
+
+    background:
+
+        radial-gradient(
+
+            circle,
+
+            rgba(141, 204, 50, 0.18),
+
+            rgba(141, 204, 50, 0)
+
+        );
+
+    animation:
+
+        finance404FloatTwo 10s ease-in-out infinite;
+
+}
+
+
+/* ============================================================
+   CONTENT WRAPPER
+============================================================= */
+
+.stackly-finance-404-content {
+
+    position: relative;
+
+    z-index: 5;
+
+    width: 100%;
+
+    max-width: 900px;
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+
+    justify-content: center;
+
+    text-align: center;
+
+}
+
+
+/* ============================================================
+   LOGO
+============================================================= */
+
+.stackly-finance-404-logo {
+
+    display: inline-flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    margin-bottom: 20px;
+
+    transition:
+
+        transform 0.4s ease,
+
+        filter 0.4s ease;
+
+}
+
+
+.stackly-finance-404-logo img {
+
+    display: block;
+
+    width: auto;
+
+    max-width: 145px;
+
+    height: auto;
+
+}
+
+
+.stackly-finance-404-logo:hover {
+
+    transform:
+
+        translateY(-3px)
+
+        scale(1.03);
+
+    filter:
+
+        drop-shadow(
+
+            0 8px 20px
+
+            rgba(184, 242, 90, 0.22)
+
+        );
+
+}
+
+
+/* ============================================================
+   404 NUMBER
+============================================================= */
+
+.stackly-finance-404-number {
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 16px;
+
+    margin-bottom: 16px;
+
+    font-family: var(--finance-404-heading);
+
+    font-size: clamp(6rem, 13vw, 10rem);
+
+    font-weight: 700;
+
+    line-height: 0.78;
+
+    letter-spacing: -8px;
+
+    color: var(--finance-404-white);
+
+    user-select: none;
+
+}
+
+
+/* ============================================================
+   NUMBER GRADIENT
+============================================================= */
+
+.stackly-finance-404-number > span {
+
+    display: inline-block;
+
+    background:
+
+        linear-gradient(
+
+            135deg,
+
+            #ffffff 10%,
+
+            #e6ffc0 42%,
+
+            var(--finance-404-primary) 75%,
+
+            var(--finance-404-primary-dark) 100%
+
+        );
+
+    -webkit-background-clip: text;
+
+    background-clip: text;
+
+    -webkit-text-fill-color: transparent;
+
+    text-shadow:
+
+        0 15px 35px
+
+        rgba(184, 242, 90, 0.10);
+
+    animation:
+
+        finance404NumberGlow 4s ease-in-out infinite;
+
+}
+
+
+/* ============================================================
+   CENTER CIRCLE
+============================================================= */
+
+.stackly-finance-404-circle {
+
+    width: clamp(85px, 9vw, 125px);
+
+    height: clamp(85px, 9vw, 125px);
+
+    flex-shrink: 0;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    border-radius: 50%;
+
+    border: 2px solid
+
+        rgba(184, 242, 90, 0.55);
+
+    background:
+
+        radial-gradient(
+
+            circle at 35% 30%,
+
+            rgba(184, 242, 90, 0.22),
+
+            rgba(11, 37, 32, 0.96) 65%
+
+        );
+
+    box-shadow:
+
+        0 0 0 8px
+
+            rgba(184, 242, 90, 0.035),
+
+        0 0 35px
+
+            rgba(184, 242, 90, 0.18),
+
+        inset 0 0 25px
+
+            rgba(184, 242, 90, 0.07);
+
+    letter-spacing: 0;
+
+    animation:
+
+        finance404CircleFloat 4s ease-in-out infinite;
+
+}
+
+
+/* ============================================================
+   CIRCLE ICON
+============================================================= */
+
+.stackly-finance-404-circle i {
+
+    font-size: clamp(2rem, 3.5vw, 3.2rem);
+
+    color: var(--finance-404-primary);
+
+    filter:
+
+        drop-shadow(
+
+            0 0 12px
+
+            rgba(184, 242, 90, 0.40)
+
+        );
+
+    animation:
+
+        finance404ChartPulse 2.5s ease-in-out infinite;
+
+}
+
+
+/* ============================================================
+   LABEL
+============================================================= */
+
+.stackly-finance-404-label {
+
+    display: inline-flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    min-height: 32px;
+
+    padding: 5px 15px;
+
+    margin-bottom: 12px;
+
+    border: 1px solid
+
+        rgba(184, 242, 90, 0.28);
+
+    border-radius: 50px;
+
+    background:
+
+        rgba(184, 242, 90, 0.06);
+
+    color:
+
+        var(--finance-404-primary-light);
+
+    font-size: 12px;
+
+    font-weight: 700;
+
+    letter-spacing: 2px;
+
+    box-shadow:
+
+        0 6px 20px
+
+        rgba(184, 242, 90, 0.03);
+
+}
+
+
+/* ============================================================
+   MAIN HEADING
+============================================================= */
+
+.stackly-finance-404-content h1 {
+
+    max-width: 760px;
+
+    margin: 0 auto 12px;
+
+    font-family: var(--finance-404-heading);
+
+    font-size: clamp(2rem, 4vw, 3.8rem);
+
+    font-weight: 700;
+
+    line-height: 1.08;
+
+    letter-spacing: -1.5px;
+
+    color: var(--finance-404-white);
+
+}
+
+
+.stackly-finance-404-content h1 span {
+
+    color: var(--finance-404-primary);
+
+}
+
+
+/* ============================================================
+   DESCRIPTION
+============================================================= */
+
+.stackly-finance-404-description {
+
+    max-width: 600px;
+
+    margin: 0 auto;
+
+    color: var(--finance-404-muted);
+
+    font-size: 15px;
+
+    line-height: 1.65;
+
+    font-weight: 400;
+
+}
+
+
+/* ============================================================
+   ACTION BUTTONS
+============================================================= */
+
+.stackly-finance-404-actions {
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 12px;
+
+    margin-top: 24px;
+
+}
+
+
+/* ============================================================
+   COMMON BUTTON
+============================================================= */
+
+.stackly-finance-404-home-btn,
+
+.stackly-finance-404-back-btn {
+
+    min-width: 145px;
+
+    min-height: 48px;
+
+    padding: 11px 20px;
+
+    display: inline-flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 8px;
+
+    border-radius: 50px;
+
+    font-family: var(--finance-404-body);
+
+    font-size: 14px;
+
+    font-weight: 700;
+
+    text-decoration: none;
+
+    cursor: pointer;
+
+    transition:
+
+        transform 0.35s ease,
+
+        box-shadow 0.35s ease,
+
+        background 0.35s ease,
+
+        color 0.35s ease,
+
+        border-color 0.35s ease;
+
+}
+
+
+/* ============================================================
+   HOME BUTTON
+============================================================= */
+
+.stackly-finance-404-home-btn {
+
+    border: 1px solid
+
+        var(--finance-404-primary);
+
+    background:
+
+        var(--finance-404-primary);
+
+    color: #061713;
+
+    box-shadow:
+
+        0 8px 22px
+
+        rgba(184, 242, 90, 0.14);
+
+}
+
+
+.stackly-finance-404-home-btn i {
+
+    font-size: 14px;
+
+}
+
+
+/* ============================================================
+   HOME HOVER
+============================================================= */
+
+.stackly-finance-404-home-btn:hover {
+
+    transform: translateY(-4px);
+
+    background:
+
+        var(--finance-404-primary-light);
+
+    border-color:
+
+        var(--finance-404-primary-light);
+
+    box-shadow:
+
+        0 14px 30px
+
+        rgba(184, 242, 90, 0.25);
+
+}
+
+
+/* ============================================================
+   BACK BUTTON
+============================================================= */
+
+.stackly-finance-404-back-btn {
+
+    border: 1px solid
+
+        var(--finance-404-border);
+
+    background:
+
+        rgba(255, 255, 255, 0.04);
+
+    color:
+
+        var(--finance-404-white);
+
+    backdrop-filter: blur(10px);
+
+    -webkit-backdrop-filter: blur(10px);
+
+}
+
+
+.stackly-finance-404-back-btn i {
+
+    transition:
+
+        transform 0.35s ease;
+
+}
+
+
+/* ============================================================
+   BACK HOVER
+============================================================= */
+
+.stackly-finance-404-back-btn:hover {
+
+    transform: translateY(-4px);
+
+    border-color:
+
+        rgba(184, 242, 90, 0.50);
+
+    background:
+
+        rgba(184, 242, 90, 0.09);
+
+    color:
+
+        var(--finance-404-primary-light);
+
+    box-shadow:
+
+        0 14px 30px
+
+        rgba(0, 0, 0, 0.22);
+
+}
+
+
+.stackly-finance-404-back-btn:hover i {
+
+    transform: translateX(-4px);
+
+}
+
+
+/* ============================================================
+   BUTTON ACTIVE
+============================================================= */
+
+.stackly-finance-404-home-btn:active,
+
+.stackly-finance-404-back-btn:active {
+
+    transform:
+
+        translateY(-1px)
+
+        scale(0.98);
+
+}
+
+
+/* ============================================================
+   BOTTOM MESSAGE
+============================================================= */
+
+.stackly-finance-404-bottom {
+
+    width: 100%;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 14px;
+
+    margin-top: 28px;
+
+}
+
+
+.stackly-finance-404-bottom p {
+
+    color:
+
+        rgba(255, 255, 255, 0.42);
+
+    font-size: 12px;
+
+    line-height: 1.4;
+
+}
+
+
+.stackly-finance-404-line {
+
+    width: 45px;
+
+    height: 1px;
+
+    background:
+
+        linear-gradient(
+
+            90deg,
+
+            transparent,
+
+            rgba(184, 242, 90, 0.45)
+
+        );
+
+}
+
+
+.stackly-finance-404-line:last-child {
+
+    background:
+
+        linear-gradient(
+
+            90deg,
+
+            rgba(184, 242, 90, 0.45),
+
+            transparent
+
+        );
+
+}
+
+
+/* ============================================================
+   FLOAT ANIMATION ONE
+============================================================= */
+
+@keyframes finance404FloatOne {
+
+    0%,
+
+    100% {
+
+        transform:
+
+            translate3d(0, 0, 0)
+
+            scale(1);
+
+    }
+
+    50% {
+
+        transform:
+
+            translate3d(-25px, 20px, 0)
+
+            scale(1.06);
+
+    }
+
+}
+
+
+/* ============================================================
+   FLOAT ANIMATION TWO
+============================================================= */
+
+@keyframes finance404FloatTwo {
+
+    0%,
+
+    100% {
+
+        transform:
+
+            translate3d(0, 0, 0)
+
+            scale(1);
+
+    }
+
+    50% {
+
+        transform:
+
+            translate3d(25px, -20px, 0)
+
+            scale(1.05);
+
+    }
+
+}
+
+
+/* ============================================================
+   CIRCLE FLOAT
+============================================================= */
+
+@keyframes finance404CircleFloat {
+
+    0%,
+
+    100% {
+
+        transform:
+
+            translateY(0);
+
+    }
+
+    50% {
+
+        transform:
+
+            translateY(-7px);
+
+    }
+
+}
+
+
+/* ============================================================
+   CHART PULSE
+============================================================= */
+
+@keyframes finance404ChartPulse {
+
+    0%,
+
+    100% {
+
+        transform:
+
+            scale(1);
+
+    }
+
+    50% {
+
+        transform:
+
+            scale(1.08);
+
+    }
+
+}
+
+
+/* ============================================================
+   NUMBER GLOW
+============================================================= */
+
+@keyframes finance404NumberGlow {
+
+    0%,
+
+    100% {
+
+        filter:
+
+            drop-shadow(
+
+                0 0 0
+
+                rgba(184, 242, 90, 0)
+
+            );
+
+    }
+
+    50% {
+
+        filter:
+
+            drop-shadow(
+
+                0 0 16px
+
+                rgba(184, 242, 90, 0.12)
+
+            );
+
+    }
+
+}
+
+
+/* ============================================================
+   TABLET
+============================================================= */
+
+@media (max-width: 991px) {
+
+    .stackly-finance-404-page {
+
+        min-height: 100vh;
+
+        padding:
+
+            30px 22px;
+
+    }
+
+
+    .stackly-finance-404-logo {
+
+        margin-bottom: 18px;
+
+    }
+
+
+    .stackly-finance-404-logo img {
+
+        max-width: 135px;
+
+    }
+
+
+    .stackly-finance-404-number {
+
+        gap: 12px;
+
+        margin-bottom: 14px;
+
+        font-size:
+
+            clamp(5.5rem, 14vw, 8.5rem);
+
+        letter-spacing: -7px;
+
+    }
+
+
+    .stackly-finance-404-circle {
+
+        width: 105px;
+
+        height: 105px;
+
+    }
+
+
+    .stackly-finance-404-circle i {
+
+        font-size: 2.6rem;
+
+    }
+
+
+    .stackly-finance-404-content h1 {
+
+        font-size:
+
+            clamp(2rem, 5vw, 3.2rem);
+
+        margin-bottom: 10px;
+
+    }
+
+
+    .stackly-finance-404-description {
+
+        max-width: 560px;
+
+        font-size: 14px;
+
+    }
+
+
+    .stackly-finance-404-actions {
+
+        margin-top: 21px;
+
+    }
+
+
+    .stackly-finance-404-bottom {
+
+        margin-top: 24px;
+
+    }
+
+}
+
+
+/* ============================================================
+   MOBILE
+============================================================= */
+
+@media (max-width: 767px) {
+
+    body {
+
+        overflow-y: hidden;
+
+    }
+
+
+    .stackly-finance-404-page {
+
+        width: 100%;
+
+        height: 100svh;
+
+        min-height: 520px;
+
+        padding:
+
+            24px 18px;
+
+    }
+
+
+    .stackly-finance-404-content {
+
+        max-width: 100%;
+
+    }
+
+
+    /* Logo */
+
+    .stackly-finance-404-logo {
+
+        margin-bottom: 15px;
+
+    }
+
+
+    .stackly-finance-404-logo img {
+
+        max-width: 120px;
+
+    }
+
+
+    /* 404 Number */
+
+    .stackly-finance-404-number {
+
+        gap: 6px;
+
+        margin-bottom: 17px;
+
+        font-size:
+
+            clamp(5rem, 24vw, 7rem);
+
+        letter-spacing: -6px;
+
+    }
+
+
+    .stackly-finance-404-circle {
+
+        width: 72px;
+
+        height: 72px;
+
+        border-width: 1px;
+
+        box-shadow:
+
+            0 0 0 6px
+
+                rgba(184, 242, 90, 0.035),
+
+            0 0 25px
+
+                rgba(184, 242, 90, 0.16),
+
+            inset 0 0 18px
+
+                rgba(184, 242, 90, 0.06);
+
+    }
+
+
+    .stackly-finance-404-circle i {
+
+        font-size: 1.7rem;
+
+    }
+
+
+    /* Label */
+
+    .stackly-finance-404-label {
+
+        min-height: 29px;
+
+        padding:
+
+            5px 12px;
+
+        margin-bottom: 10px;
+
+        font-size: 10px;
+
+        letter-spacing: 1.5px;
+
+    }
+
+
+    /* Heading */
+
+    .stackly-finance-404-content h1 {
+
+        max-width: 100%;
+
+        margin-bottom: 10px;
+
+        font-size:
+
+            clamp(1.8rem, 8vw, 2.7rem);
+
+        line-height: 1.08;
+
+        letter-spacing: -0.8px;
+
+    }
+
+
+    /* Description */
+
+    .stackly-finance-404-description {
+
+        max-width: 430px;
+
+        font-size: 13px;
+
+        line-height: 1.55;
+
+    }
+
+
+    /* Buttons */
+
+    .stackly-finance-404-actions {
+
+        width: 100%;
+
+        flex-direction: row;
+
+        gap: 9px;
+
+        margin-top: 20px;
+
+    }
+
+
+    .stackly-finance-404-home-btn,
+
+    .stackly-finance-404-back-btn {
+
+        width: auto;
+
+        flex: 1;
+
+        max-width: 170px;
+
+        min-width: 0;
+
+        min-height: 46px;
+
+        padding:
+
+            10px 14px;
+
+        font-size: 13px;
+
+    }
+
+
+    /* Bottom */
+
+    .stackly-finance-404-bottom {
+
+        gap: 8px;
+
+        margin-top: 22px;
+
+    }
+
+
+    .stackly-finance-404-bottom p {
+
+        max-width: 210px;
+
+        font-size: 10px;
+
+    }
+
+
+    .stackly-finance-404-line {
+
+        width: 20px;
+
+    }
+
+
+    /* Background */
+
+    .stackly-finance-404-shape-one {
+
+        width: 230px;
+
+        height: 230px;
+
+        top: -110px;
+
+        right: -120px;
+
+    }
+
+
+    .stackly-finance-404-shape-two {
+
+        width: 250px;
+
+        height: 250px;
+
+        bottom: -140px;
+
+        left: -140px;
+
+    }
+
+
+    .stackly-finance-404-grid {
+
+        background-size: 38px 38px;
+
+    }
+
+}
+
+
+/* ============================================================
+   SMALL MOBILE
+============================================================= */
+
+@media (max-width: 420px) {
+
+    .stackly-finance-404-page {
+
+        height: 100svh;
+
+        min-height: 480px;
+
+        padding:
+
+            18px 14px;
+
+    }
+
+
+    /* Logo */
+
+    .stackly-finance-404-logo {
+
+        margin-bottom: 11px;
+
+    }
+
+
+    .stackly-finance-404-logo img {
+
+        max-width: 105px;
+
+    }
+
+
+    /* 404 */
+
+    .stackly-finance-404-number {
+
+        gap: 4px;
+
+        margin-bottom: 14px;
+
+        font-size: 4.6rem;
+
+        letter-spacing: -5px;
+
+    }
+
+
+    .stackly-finance-404-circle {
+
+        width: 60px;
+
+        height: 60px;
+
+    }
+
+
+    .stackly-finance-404-circle i {
+
+        font-size: 1.45rem;
+
+    }
+
+
+    /* Label */
+
+    .stackly-finance-404-label {
+
+        min-height: 27px;
+
+        padding:
+
+            4px 10px;
+
+        margin-bottom: 8px;
+
+        font-size: 9px;
+
+        letter-spacing: 1.3px;
+
+    }
+
+
+    /* Heading */
+
+    .stackly-finance-404-content h1 {
+
+        font-size: 1.75rem;
+
+        line-height: 1.08;
+
+        letter-spacing: -0.6px;
+
+    }
+
+
+    /* Description */
+
+    .stackly-finance-404-description {
+
+        font-size: 12px;
+
+        line-height: 1.5;
+
+    }
+
+
+    /* Buttons */
+
+    .stackly-finance-404-actions {
+
+        margin-top: 17px;
+
+        gap: 7px;
+
+    }
+
+
+    .stackly-finance-404-home-btn,
+
+    .stackly-finance-404-back-btn {
+
+        max-width: none;
+
+        min-height: 43px;
+
+        padding:
+
+            9px 10px;
+
+        font-size: 12px;
+
+        gap: 6px;
+
+    }
+
+
+    .stackly-finance-404-home-btn i,
+
+    .stackly-finance-404-back-btn i {
+
+        font-size: 12px;
+
+    }
+
+
+    /* Bottom */
+
+    .stackly-finance-404-bottom {
+
+        margin-top: 18px;
+
+    }
+
+
+    .stackly-finance-404-bottom p {
+
+        font-size: 9px;
+
+    }
+
+
+    .stackly-finance-404-line {
+
+        width: 15px;
+
+    }
+
+}
+
+
+/* ============================================================
+   VERY SHORT LAPTOP / DESKTOP SCREEN
+   Prevents vertical overflow on 1366x600 etc.
+============================================================= */
+
+@media (min-width: 768px) and (max-height: 700px) {
+
+    .stackly-finance-404-page {
+
+        padding-top: 18px;
+
+        padding-bottom: 18px;
+
+    }
+
+
+    .stackly-finance-404-logo {
+
+        margin-bottom: 10px;
+
+    }
+
+
+    .stackly-finance-404-logo img {
+
+        max-width: 115px;
+
+    }
+
+
+    .stackly-finance-404-number {
+
+        font-size: 6.5rem;
+
+        margin-bottom: 10px;
+
+    }
+
+
+    .stackly-finance-404-circle {
+
+        width: 82px;
+
+        height: 82px;
+
+    }
+
+
+    .stackly-finance-404-circle i {
+
+        font-size: 2rem;
+
+    }
+
+
+    .stackly-finance-404-label {
+
+        margin-bottom: 7px;
+
+        min-height: 27px;
+
+        padding: 4px 12px;
+
+        font-size: 10px;
+
+    }
+
+
+    .stackly-finance-404-content h1 {
+
+        font-size: 2.4rem;
+
+        margin-bottom: 7px;
+
+    }
+
+
+    .stackly-finance-404-description {
+
+        font-size: 13px;
+
+        line-height: 1.45;
+
+    }
+
+
+    .stackly-finance-404-actions {
+
+        margin-top: 15px;
+
+    }
+
+
+    .stackly-finance-404-home-btn,
+
+    .stackly-finance-404-back-btn {
+
+        min-height: 43px;
+
+        font-size: 13px;
+
+    }
+
+
+    .stackly-finance-404-bottom {
+
+        margin-top: 16px;
+
+    }
+
+}
+
+
+/* ============================================================
+   ACCESSIBILITY
+============================================================= */
+
+.stackly-finance-404-home-btn:focus-visible,
+
+.stackly-finance-404-back-btn:focus-visible,
+
+.stackly-finance-404-logo:focus-visible {
+
+    outline:
+
+        3px solid
+
+        rgba(215, 255, 145, 0.65);
+
+    outline-offset: 3px;
+
+}
+
+
+/* ============================================================
+   REDUCE MOTION
+============================================================= */
+
+@media (prefers-reduced-motion: reduce) {
+
+    *,
+
+    *::before,
+
+    *::after {
+
+        animation-duration:
+
+            0.01ms !important;
+
+        animation-iteration-count:
+
+            1 !important;
+
+        scroll-behavior:
+
+            auto !important;
+
+        transition-duration:
+
+            0.01ms !important;
+
+    }
+
+}

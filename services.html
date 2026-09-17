@@ -1,0 +1,1854 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <!-- =====================================================
+         BASIC META
+    ====================================================== -->
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <meta
+        name="description"
+        content="Stackly Finance - Professional accounting, financial planning, tax consulting and business finance solutions."
+    >
+
+    <meta
+        name="keywords"
+        content="Stackly Finance, accounting, finance, tax planning, financial consulting, business finance"
+    >
+
+    <meta
+        name="author"
+        content="Stackly"
+    >
+
+    <title>
+        Stackly | Finance & Accounting Solutions
+    </title>
+
+
+    <!-- =====================================================
+         GOOGLE FONTS
+    ====================================================== -->
+
+    <link
+        rel="preconnect"
+        href="https://fonts.googleapis.com"
+    >
+
+    <link
+        rel="preconnect"
+        href="https://fonts.gstatic.com"
+        crossorigin
+    >
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap"
+        rel="stylesheet"
+    >
+
+
+    <!-- =====================================================
+         FONT AWESOME
+    ====================================================== -->
+
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+    >
+
+
+    <!-- =====================================================
+         AOS ANIMATION
+    ====================================================== -->
+
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css"
+    >
+
+
+    <!-- =====================================================
+         MAIN CSS
+    ====================================================== -->
+
+    <link
+        rel="stylesheet"
+        href="index.css"
+    >
+
+    <link
+        rel="stylesheet"
+        href="style.css"
+    >
+
+</head>
+
+
+<body>
+
+
+<!-- =========================================================
+     STACKLY FINANCE FIXED HEADER
+     
+     IMPORTANT:
+     Header is OUTSIDE the hero section so that it remains
+     above every section while scrolling.
+========================================================= -->
+
+<header
+    class="stackly-finance-header"
+    id="stacklyFinanceHeader"
+>
+
+
+    <!-- =====================================================
+         LOGO
+    ====================================================== -->
+
+    <div class="stackly-finance-logo-area">
+
+        <a
+            href="index.html"
+            class="stackly-finance-logo-link"
+            aria-label="Stackly Finance Home"
+        >
+
+            <img
+                src="Stackly-logo-Blue.webp"
+                alt="Stackly Finance Logo"
+                class="stackly-finance-logo"
+            >
+
+        </a>
+
+    </div>
+
+
+    <!-- =====================================================
+         DESKTOP NAVIGATION
+    ====================================================== -->
+
+    <nav
+        class="stackly-finance-navigation"
+        aria-label="Main Navigation"
+    >
+
+        <a
+            href="index.html"
+            class="stackly-finance-nav-link stackly-finance-nav-active"
+        >
+            Home
+        </a>
+
+        <a
+            href="about.html"
+            class="stackly-finance-nav-link"
+        >
+            About
+        </a>
+
+        <a
+            href="services.html"
+            class="stackly-finance-nav-link"
+        >
+            Services
+        </a>
+
+        <a
+            href="solutions.html"
+            class="stackly-finance-nav-link"
+        >
+            Solutions
+        </a>
+
+        <a
+            href="blog.html"
+            class="stackly-finance-nav-link"
+        >
+            Blog
+        </a>
+
+        <a
+            href="contact.html"
+            class="stackly-finance-nav-link"
+        >
+            Contact
+        </a>
+
+    </nav>
+
+
+    <!-- =====================================================
+         HEADER RIGHT
+    ====================================================== -->
+
+    <div class="stackly-finance-header-right">
+
+
+        <!-- LOGIN -->
+
+        <a
+            href="login.html"
+            class="stackly-finance-login-button"
+        >
+            Login
+        </a>
+
+
+        <!-- MOBILE MENU BUTTON -->
+
+        <button
+            type="button"
+            class="stackly-finance-menu-toggle"
+            id="stacklyFinanceMenuToggle"
+            aria-label="Open Menu"
+            aria-expanded="false"
+            aria-controls="stacklyFinanceMobileMenu"
+        >
+
+            <span></span>
+            <span></span>
+            <span></span>
+
+        </button>
+
+    </div>
+
+</header>
+
+
+
+<!-- =========================================================
+     MOBILE MENU OVERLAY
+     
+     IMPORTANT:
+     Also outside hero to prevent stacking-context issues.
+========================================================= -->
+
+<div
+    class="stackly-finance-mobile-overlay"
+    id="stacklyFinanceOverlay"
+    aria-hidden="true"
+></div>
+
+
+
+<!-- =========================================================
+     MOBILE SIDEBAR
+========================================================= -->
+
+<aside
+    class="stackly-finance-mobile-menu"
+    id="stacklyFinanceMobileMenu"
+    aria-hidden="true"
+>
+
+
+    <!-- =====================================================
+         MOBILE MENU HEADER
+    ====================================================== -->
+
+    <div class="stackly-finance-mobile-menu-header">
+
+
+        <!-- MOBILE LOGO -->
+
+        <a
+            href="index.html"
+            class="stackly-finance-mobile-logo"
+            aria-label="Stackly Finance Home"
+        >
+
+            <img
+                src="Stackly-logo-Blue.webp"
+                alt="Stackly Finance"
+            >
+
+        </a>
+
+
+        <!-- CLOSE BUTTON -->
+
+        <button
+            type="button"
+            class="stackly-finance-menu-close"
+            id="stacklyFinanceMenuClose"
+            aria-label="Close Menu"
+        >
+
+            <i class="fa-solid fa-xmark"></i>
+
+        </button>
+
+    </div>
+
+
+
+    <!-- =====================================================
+         MOBILE NAVIGATION
+    ====================================================== -->
+
+    <nav
+        class="stackly-finance-mobile-navigation"
+        aria-label="Mobile Navigation"
+    >
+
+
+        <a href="index.html">
+
+            <i class="fa-solid fa-house"></i>
+
+            <span>
+                Home
+            </span>
+
+        </a>
+
+
+        <a href="about.html">
+
+            <i class="fa-solid fa-building"></i>
+
+            <span>
+                About
+            </span>
+
+        </a>
+
+
+        <a href="services.html">
+
+            <i class="fa-solid fa-chart-line"></i>
+
+            <span>
+                Services
+            </span>
+
+        </a>
+
+
+        <a href="solutions.html">
+
+            <i class="fa-solid fa-lightbulb"></i>
+
+            <span>
+                Solutions
+            </span>
+
+        </a>
+
+
+        <a href="blog.html">
+
+            <i class="fa-solid fa-newspaper"></i>
+
+            <span>
+                Blog
+            </span>
+
+        </a>
+
+
+        <a href="contact.html">
+
+            <i class="fa-solid fa-envelope"></i>
+
+            <span>
+                Contact
+            </span>
+
+        </a>
+
+
+        <!-- MOBILE LOGIN -->
+
+        <a
+            href="login.html"
+            class="stackly-finance-mobile-login"
+        >
+
+            <i class="fa-solid fa-right-to-bracket"></i>
+
+            <span>
+                Login
+            </span>
+
+        </a>
+
+    </nav>
+
+</aside>
+
+<!-- =========================================================
+     STACKLY FINANCE SERVICES PAGE HEADING
+========================================================= -->
+
+<section class="stackly-finance-services-heading-section">
+
+    <div class="stackly-finance-services-heading-container">
+
+        <!-- PAGE LABEL -->
+
+        <div
+            class="stackly-finance-services-heading-label"
+            data-aos="fade-up"
+            data-aos-duration="700"
+        >
+            <span></span>
+            OUR SERVICES
+            <span></span>
+        </div>
+
+
+        <!-- MAIN HEADING -->
+
+        <h1
+            class="stackly-finance-services-heading-title"
+            data-aos="fade-up"
+            data-aos-delay="100"
+            data-aos-duration="800"
+        >
+            Financial Services
+            <strong>That Move Your Business Forward</strong>
+        </h1>
+
+
+        <!-- DESCRIPTION -->
+
+        <p
+            class="stackly-finance-services-heading-text"
+            data-aos="fade-up"
+            data-aos-delay="200"
+            data-aos-duration="800"
+        >
+            Practical financial solutions for individuals and businesses,
+            from everyday accounting and tax support to planning,
+            consulting, and long-term financial strategy.
+        </p>
+
+
+        <!-- SIMPLE BREADCRUMB -->
+
+        <div
+            class="stackly-finance-services-heading-breadcrumb"
+            data-aos="fade-up"
+            data-aos-delay="300"
+            data-aos-duration="700"
+        >
+
+            <a href="index.html">
+                Home
+            </a>
+
+            <i class="fa-solid fa-chevron-right"></i>
+
+            <span>
+                Services
+            </span>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- =========================================================
+     STACKLY - SERVICES / OUR SERVICE SECTION
+========================================================= -->
+
+<section class="stackly-services-section">
+
+    <div class="stackly-services-container">
+
+        <!-- =================================================
+             SERVICES HEADER
+        ================================================== -->
+
+        <div class="stackly-services-header">
+
+            <!-- LEFT HEADING -->
+            <div
+                class="stackly-services-heading"
+                data-aos="fade-right"
+                data-aos-duration="1000"
+            >
+
+                <span class="stackly-services-label">
+                    OUR SERVICE
+                </span>
+
+                <h2 class="stackly-services-title">
+                    Initial financial consultation<br>
+                    to assess needs and goals
+                </h2>
+
+            </div>
+
+
+            <!-- RIGHT DESCRIPTION -->
+            <div
+                class="stackly-services-intro"
+                data-aos="fade-left"
+                data-aos-duration="1000"
+                data-aos-delay="150"
+            >
+
+                <p>
+                    Start with an initial financial consultation to understand your needs,
+                    evaluate current situation, and define clear goals for a structured
+                    and successful financial plan.
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <!-- =================================================
+             SERVICES LIST
+        ================================================== -->
+
+        <div class="stackly-services-list">
+
+
+            <!-- =================================================
+                 SERVICE 01 - FINANCE MANAGEMENT
+            ================================================== -->
+
+            <article
+                class="stackly-service-item"
+                data-aos="fade-up"
+                data-aos-duration="900"
+                data-aos-delay="100"
+            >
+
+                <!-- ICON -->
+                <div class="stackly-service-icon">
+
+                    <i class="fa-solid fa-coins"></i>
+
+                </div>
+
+
+                <!-- SERVICE NAME -->
+                <div class="stackly-service-name">
+
+                    <h3>
+                        Finance Management
+                    </h3>
+
+                </div>
+
+
+                <!-- SERVICE DESCRIPTION -->
+                <div class="stackly-service-description">
+
+                    <p>
+                        Efficient management of finances through smart budgeting,
+                        investment planning, expense tracking, and resource allocation
+                        for sustainable growth and long-term stability.
+                    </p>
+
+                </div>
+
+
+                <!-- ARROW BUTTON -->
+                <a
+                    href="404.html"
+                    class="stackly-service-arrow"
+                    aria-label="Learn more about Finance Management"
+                >
+
+                    <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                </a>
+
+            </article>
+
+
+            <!-- =================================================
+                 SERVICE 02 - TAX PLANNING
+            ================================================== -->
+
+            <article
+                class="stackly-service-item"
+                data-aos="fade-up"
+                data-aos-duration="900"
+                data-aos-delay="200"
+            >
+
+                <!-- ICON -->
+                <div class="stackly-service-icon">
+
+                    <i class="fa-solid fa-file-invoice-dollar"></i>
+
+                </div>
+
+
+                <!-- SERVICE NAME -->
+                <div class="stackly-service-name">
+
+                    <h3>
+                        Tax Planning Solutions
+                    </h3>
+
+                </div>
+
+
+                <!-- SERVICE DESCRIPTION -->
+                <div class="stackly-service-description">
+
+                    <p>
+                        Smart tax planning strategies to minimize liabilities,
+                        maximize savings, ensure compliance, and optimize financial
+                        growth for individuals and businesses effectively.
+                    </p>
+
+                </div>
+
+
+                <!-- ARROW BUTTON -->
+                <a
+                    href="404.html"
+                    class="stackly-service-arrow"
+                    aria-label="Learn more about Tax Planning Solutions"
+                >
+
+                    <i class="fa-solid fa-arrow-up-right-from-square"></i>
+
+                </a>
+
+            </article>
+
+
+            <!-- =================================================
+                 SERVICE 03 - CREDIT COUNSELING
+            ================================================== -->
+
+            <article
+                class="stackly-service-item"
+                data-aos="fade-up"
+                data-aos-duration="900"
+                data-aos-delay="300"
+            >
+
+                <!-- ICON -->
+                <div class="stackly-service-icon">
+
+                    <i class="fa-solid fa-credit-card"></i>
+
+                </div>
+
+
+                <!-- SERVICE NAME -->
+                <div class="stackly-service-name">
+
+                    <h3>
+                        Credit Counseling
+                    </h3>
+
+                </div>
+
+
+                <!-- SERVICE DESCRIPTION -->
+                <div class="stackly-service-description">
+
+                    <p>
+                        Professional support to manage debt, improve credit scores,
+                        create repayment plans, and build healthier financial habits
+                        for long-term financial stability and growth.
+                    </p>
+
+                </div>
+
+
+                <!-- ARROW BUTTON -->
+                <a
+                    href="404.html"
+                    class="stackly-service-arrow"
+                    aria-label="Learn more about Credit Counseling"
+                >
+
+                    <i class="fa-solid fa-arrow-up-right-from-square"></i>
+
+                </a>
+
+            </article>
+
+
+            <!-- =================================================
+                 SERVICE 04 - ACCOUNTING SERVICES
+            ================================================== -->
+
+            <article
+                class="stackly-service-item"
+                data-aos="fade-up"
+                data-aos-duration="900"
+                data-aos-delay="400"
+            >
+
+                <!-- ICON -->
+                <div class="stackly-service-icon">
+
+                    <i class="fa-solid fa-hand-holding-dollar"></i>
+
+                </div>
+
+
+                <!-- SERVICE NAME -->
+                <div class="stackly-service-name">
+
+                    <h3>
+                        Accounting Services
+                    </h3>
+
+                </div>
+
+
+                <!-- SERVICE DESCRIPTION -->
+                <div class="stackly-service-description">
+
+                    <p>
+                        Comprehensive accounting services including bookkeeping,
+                        financial reporting, tax preparation, payroll management,
+                        and compliance support to ensure accurate records.
+                    </p>
+
+                </div>
+
+
+                <!-- ARROW BUTTON -->
+                <a
+                    href="404.html"
+                    class="stackly-service-arrow"
+                    aria-label="Learn more about Accounting Services"
+                >
+
+                    <i class="fa-solid fa-arrow-up-right-from-square"></i>
+
+                </a>
+
+            </article>
+
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================================================
+     FINANCE KEY FEATURES SECTION
+========================================================= -->
+
+<section class="finance-features">
+
+    <div class="finance-features__wrap">
+
+
+        <!-- =================================================
+             LEFT SIDE
+        ================================================== -->
+
+        <div
+            class="finance-features__intro"
+            data-aos="fade-right"
+        >
+
+
+            <!-- CUSTOMER AVATARS -->
+
+            <div class="finance-features__avatars">
+
+
+                <div class="avatar">
+
+                    <img
+                        src="avatar-1.webp"
+                        alt="Customer"
+                    >
+
+                </div>
+
+
+                <div class="avatar">
+
+                    <img
+                        src="avatar-2.webp"
+                        alt="Customer"
+                    >
+
+                </div>
+
+
+                <div class="avatar">
+
+                    <img
+                        src="avatar-3.webp"
+                        alt="Customer"
+                    >
+
+                </div>
+
+
+                <div class="avatar avatar-more">
+                    +1
+                </div>
+
+            </div>
+
+
+            <!-- CUSTOMER TEXT -->
+
+            <div class="customer-text">
+
+                <strong>
+                    We have approx 20k+
+                </strong>
+
+                <small>
+                    Customers Worldwide
+                </small>
+
+            </div>
+
+
+            <!-- DECORATIVE BACKGROUND -->
+
+            <div class="finance-features__shape shape-one"></div>
+
+            <div class="finance-features__shape shape-two"></div>
+
+            <div class="finance-features__shape shape-three"></div>
+
+        </div>
+
+
+
+        <!-- =================================================
+             RIGHT SIDE
+        ================================================== -->
+
+        <div class="finance-features__content">
+
+
+            <!-- LABEL -->
+
+            <span
+                class="finance-features__tag"
+                data-aos="fade-up"
+            >
+                KEY FEATURES
+            </span>
+
+
+            <!-- HEADING -->
+
+            <h2
+                data-aos="fade-up"
+                data-aos-delay="100"
+            >
+                Strategic financial planning for<br>
+                long-term success
+            </h2>
+
+
+            <!-- DESCRIPTION -->
+
+            <p
+                class="finance-features__desc"
+                data-aos="fade-up"
+                data-aos-delay="200"
+            >
+                Expert strategies to align financial goals, optimize resources,
+                manage risks, and ensure sustainable growth for long-term
+                business success and stability.
+            </p>
+
+
+            <!-- FEATURE CARDS -->
+
+            <div class="finance-features__cards">
+
+
+                <!-- CARD 01 -->
+
+                <div
+                    class="finance-card"
+                    data-aos="fade-up"
+                    data-aos-delay="300"
+                >
+
+                    <div class="finance-card__icon">
+
+                        <svg
+                            viewBox="0 0 24 24"
+                            aria-hidden="true"
+                        >
+
+                            <path d="M4 19V5"></path>
+
+                            <path d="M4 19h16"></path>
+
+                            <path d="M7 15l3-3 3 2 5-6"></path>
+
+                            <path d="M15 8h3v3"></path>
+
+                        </svg>
+
+                    </div>
+
+
+                    <h3>
+                        Building Strategy
+                    </h3>
+
+
+                    <p>
+                        Crafting tailored financial strategies that drive growth,
+                        reduce risks, and secure long-term success.
+                    </p>
+
+                </div>
+
+
+
+                <!-- CARD 02 -->
+
+                <div
+                    class="finance-card"
+                    data-aos="fade-up"
+                    data-aos-delay="400"
+                >
+
+                    <div class="finance-card__icon">
+
+                        <svg
+                            viewBox="0 0 24 24"
+                            aria-hidden="true"
+                        >
+
+                            <path d="M5 19V9"></path>
+
+                            <path d="M12 19V5"></path>
+
+                            <path d="M19 19v-7"></path>
+
+                            <path d="M3 19h18"></path>
+
+                        </svg>
+
+                    </div>
+
+
+                    <h3>
+                        Execution
+                    </h3>
+
+
+                    <p>
+                        Executing strategies with precision, efficiency, and expertise
+                        to deliver clear, impactful results.
+                    </p>
+
+                </div>
+
+
+
+                <!-- CARD 03 -->
+
+                <div
+                    class="finance-card"
+                    data-aos="fade-up"
+                    data-aos-delay="500"
+                >
+
+                    <div class="finance-card__icon">
+
+                        <svg
+                            viewBox="0 0 24 24"
+                            aria-hidden="true"
+                        >
+
+                            <rect
+                                x="5"
+                                y="3"
+                                width="14"
+                                height="18"
+                                rx="2"
+                            ></rect>
+
+                            <path d="M9 7h6"></path>
+
+                            <path d="M8 12h2"></path>
+
+                            <path d="M14 12h2"></path>
+
+                            <path d="M8 16h2"></path>
+
+                            <path d="M14 16h2"></path>
+
+                        </svg>
+
+                    </div>
+
+
+                    <h3>
+                        Analysis and Goal
+                    </h3>
+
+
+                    <p>
+                        We analyse your financial situation and set clear,
+                        achievable goals to guide you toward lasting success.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- =========================================================
+     PRICING SECTION
+========================================================= -->
+
+<section class="pricing-section">
+
+    <div class="pricing-container">
+
+
+        <!-- =================================================
+             PRICING HEADER
+        ================================================== -->
+
+        <div class="pricing-header">
+
+
+            <!-- LEFT -->
+
+            <div
+                data-aos="fade-right"
+                data-aos-duration="900"
+            >
+
+                <span class="eyebrow">
+                    Pricing Plans
+                </span>
+
+
+                <h2>
+                    Flexible pricing plans for all
+                    your financial needs
+                </h2>
+
+            </div>
+
+
+            <!-- RIGHT -->
+
+            <div
+                class="pricing-intro"
+                data-aos="fade-left"
+                data-aos-duration="900"
+                data-aos-delay="150"
+            >
+
+                <p>
+                    Choose from flexible pricing plans designed to suit
+                    businesses of all sizes, offering scalable solutions,
+                    transparent costs, and valuable services to meet your
+                    evolving financial needs efficiently.
+                </p>
+
+            </div>
+
+        </div>
+
+
+
+        <!-- =================================================
+             PRICING CONTENT
+        ================================================== -->
+
+        <div class="pricing-content">
+
+
+            <!-- =================================================
+                 PRICING IMAGE
+            ================================================== -->
+
+            <div
+                class="pricing-image"
+                data-aos="zoom-in"
+                data-aos-duration="1000"
+            >
+
+                <div class="image-message">
+
+                    <strong>
+                        Just Getting Started?
+                    </strong>
+
+                    <span>
+                        Try For A Month For More Conversions
+                    </span>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- =================================================
+                 PLANS
+            ================================================== -->
+
+            <div class="plans">
+
+
+                <!-- =================================================
+                     BASIC PLAN
+                ================================================== -->
+
+                <div
+                    class="plan"
+                    data-aos="fade-up"
+                    data-aos-duration="700"
+                    data-aos-delay="100"
+                >
+
+                    <div class="plan-price">
+
+                        <span class="price">
+                            ₹1,439
+                        </span>
+
+                        <span class="per-month">
+                            /mo
+                        </span>
+
+                        <span class="plan-name">
+                            Basic Plan
+                        </span>
+
+                    </div>
+
+
+                    <div class="features">
+
+                        <div class="feature">
+
+                            <i class="fa-solid fa-circle-check"></i>
+
+                            <span>
+                                Unlimited Bookkeeping Transactions
+                            </span>
+
+                        </div>
+
+
+                        <div class="feature">
+
+                            <i class="fa-solid fa-circle-check"></i>
+
+                            <span>
+                                No Inventory Management
+                            </span>
+
+                        </div>
+
+
+                        <div class="feature">
+
+                            <i class="fa-solid fa-circle-check"></i>
+
+                            <span>
+                                CFO Advisory (1 hour/month)
+                            </span>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="plan-action">
+
+                        <a
+                            href="404.html"
+                            class="start-btn"
+                            aria-label="Get started with Basic Plan"
+                        >
+
+                            <i class="fa-solid fa-arrow-up-right-from-square"></i>
+
+                        </a>
+
+
+                        <span class="start-text">
+                            Get Started
+                        </span>
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- =================================================
+                     STANDARD PLAN
+                ================================================== -->
+
+                <div
+                    class="plan"
+                    data-aos="fade-up"
+                    data-aos-duration="700"
+                    data-aos-delay="200"
+                >
+
+                    <div class="plan-price">
+
+                        <span class="price">
+                            ₹2,800
+                        </span>
+
+                        <span class="per-month">
+                            /mo
+                        </span>
+
+                        <span class="plan-name">
+                            Standard Plan
+                        </span>
+
+                    </div>
+
+
+                    <div class="features">
+
+                        <div class="feature">
+
+                            <i class="fa-solid fa-circle-check"></i>
+
+                            <span>
+                                Unlimited Bookkeeping Transactions
+                            </span>
+
+                        </div>
+
+
+                        <div class="feature">
+
+                            <i class="fa-solid fa-circle-check"></i>
+
+                            <span>
+                                Inventory Management
+                            </span>
+
+                        </div>
+
+
+                        <div class="feature">
+
+                            <i class="fa-solid fa-circle-check"></i>
+
+                            <span>
+                                CFO Advisory (1 hour/month)
+                            </span>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="plan-action">
+
+                        <a
+                            href="404.html"
+                            class="start-btn"
+                            aria-label="Get started with Standard Plan"
+                        >
+
+                            <i class="fa-solid fa-arrow-up-right-from-square"></i>
+
+                        </a>
+
+
+                        <span class="start-text">
+                            Get Started
+                        </span>
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- =================================================
+                     PREMIUM PLAN
+                ================================================== -->
+
+                <div
+                    class="plan"
+                    data-aos="fade-up"
+                    data-aos-duration="700"
+                    data-aos-delay="300"
+                >
+
+                    <div class="plan-price">
+
+                        <span class="price">
+                            ₹9,500
+                        </span>
+
+                        <span class="per-month">
+                            /mo
+                        </span>
+
+                        <span class="plan-name">
+                            Premium Plan
+                        </span>
+
+                    </div>
+
+
+                    <div class="features">
+
+                        <div class="feature">
+
+                            <i class="fa-solid fa-circle-check"></i>
+
+                            <span>
+                                Unlimited Bookkeeping Transactions
+                            </span>
+
+                        </div>
+
+
+                        <div class="feature">
+
+                            <i class="fa-solid fa-circle-check"></i>
+
+                            <span>
+                                Inventory Management
+                            </span>
+
+                        </div>
+
+
+                        <div class="feature">
+
+                            <i class="fa-solid fa-circle-check"></i>
+
+                            <span>
+                                CFO Advisory (1 hour/month)
+                            </span>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="plan-action">
+
+                        <a
+                            href="404.html"
+                            class="start-btn"
+                            aria-label="Get started with Premium Plan"
+                        >
+
+                            <i class="fa-solid fa-arrow-up-right-from-square"></i>
+
+                        </a>
+
+
+                        <span class="start-text">
+                            Get Started
+                        </span>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- =========================================================
+     STACKLY FINANCE PROFESSIONAL FOOTER
+========================================================= -->
+
+<footer class="stackly-finance-footer">
+
+    <!-- =====================================================
+         FOOTER MAIN
+    ====================================================== -->
+
+    <div class="stackly-finance-footer-main">
+
+        <div class="stackly-finance-footer-container">
+
+            <!-- =================================================
+                 BRAND COLUMN
+            ================================================== -->
+
+            <div class="stackly-finance-footer-brand">
+
+                <a
+                    href="index.html"
+                    class="stackly-finance-footer-logo-link"
+                    aria-label="Stackly Finance Home"
+                >
+                    <img
+                        src="Stackly-logo-Blue.webp"
+                        alt="Stackly Finance"
+                        class="stackly-finance-footer-logo"
+                    >
+                </a>
+
+                <p class="stackly-finance-footer-description">
+                    Professional accounting, financial planning,
+                    tax consulting, and strategic business solutions
+                    designed to help you build a stronger financial future.
+                </p>
+
+                <!-- SOCIAL LINKS -->
+
+                <div class="stackly-finance-footer-socials">
+
+                    <a
+                        href="404.html"
+                        class="stackly-finance-footer-social"
+                        aria-label="Facebook"
+                    >
+                        <i class="fa-brands fa-facebook-f"></i>
+                    </a>
+
+                    <a
+                        href="404.html"
+                        class="stackly-finance-footer-social"
+                        aria-label="Instagram"
+                    >
+                        <i class="fa-brands fa-instagram"></i>
+                    </a>
+
+                    <a
+                        href="404.html"
+                        class="stackly-finance-footer-social"
+                        aria-label="LinkedIn"
+                    >
+                        <i class="fa-brands fa-linkedin-in"></i>
+                    </a>
+
+                    <a
+                        href="404.html"
+                        class="stackly-finance-footer-social"
+                        aria-label="X"
+                    >
+                        <i class="fa-brands fa-x-twitter"></i>
+                    </a>
+
+                </div>
+
+            </div>
+
+
+            <!-- =================================================
+                 QUICK LINKS
+            ================================================== -->
+
+            <div class="stackly-finance-footer-column">
+
+                <h3 class="stackly-finance-footer-title">
+                    Quick Links
+                </h3>
+
+                <ul class="stackly-finance-footer-links">
+
+                    <li>
+                        <a href="index.html">
+                            <i class="fa-solid fa-angle-right"></i>
+                            Home
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="about.html">
+                            <i class="fa-solid fa-angle-right"></i>
+                            About Us
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="services.html">
+                            <i class="fa-solid fa-angle-right"></i>
+                            Services
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="solutions.html">
+                            <i class="fa-solid fa-angle-right"></i>
+                            Solutions
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="blog.html">
+                            <i class="fa-solid fa-angle-right"></i>
+                            Finance Blog
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="contact.html">
+                            <i class="fa-solid fa-angle-right"></i>
+                            Contact Us
+                        </a>
+                    </li>
+
+                </ul>
+
+            </div>
+
+
+            <!-- =================================================
+                 FINANCIAL SERVICES
+            ================================================== -->
+
+            <div class="stackly-finance-footer-column">
+
+                <h3 class="stackly-finance-footer-title">
+                    Our Services
+                </h3>
+
+                <ul class="stackly-finance-footer-links">
+
+                    <li>
+                        <a href="404.html">
+                            <i class="fa-solid fa-angle-right"></i>
+                            Accounting & Bookkeeping
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="404.html">
+                            <i class="fa-solid fa-angle-right"></i>
+                            Tax Planning & Advisory
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="404.html">
+                            <i class="fa-solid fa-angle-right"></i>
+                            Financial Planning
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="404.html">
+                            <i class="fa-solid fa-angle-right"></i>
+                            Wealth Management
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="404.html">
+                            <i class="fa-solid fa-angle-right"></i>
+                            Business Consulting
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="404.html">
+                            <i class="fa-solid fa-angle-right"></i>
+                            Risk Management
+                        </a>
+                    </li>
+
+                </ul>
+
+            </div>
+
+
+            <!-- =================================================
+                 CONTACT COLUMN
+            ================================================== -->
+
+            <div class="stackly-finance-footer-column stackly-finance-footer-contact">
+
+                <h3 class="stackly-finance-footer-title">
+                    Get In Touch
+                </h3>
+
+                <!-- ADDRESS -->
+
+                <div class="stackly-finance-footer-contact-item">
+
+                    <span class="stackly-finance-footer-contact-icon">
+                        <i class="fa-solid fa-location-dot"></i>
+                    </span>
+
+                    <div>
+                        <strong>
+                            Our Office
+                        </strong>
+
+                        <p>
+                            Chennai, Tamil Nadu,
+                            India
+                        </p>
+                    </div>
+
+                </div>
+
+
+                <!-- PHONE -->
+
+                <div class="stackly-finance-footer-contact-item">
+
+                    <span class="stackly-finance-footer-contact-icon">
+                        <i class="fa-solid fa-phone"></i>
+                    </span>
+
+                    <div>
+                        <strong>
+                            Call Us
+                        </strong>
+
+                        <a href="tel:+919876543210">
+                            +91 98765 43210
+                        </a>
+                    </div>
+
+                </div>
+
+
+                <!-- EMAIL -->
+
+                <div class="stackly-finance-footer-contact-item">
+
+                    <span class="stackly-finance-footer-contact-icon">
+                        <i class="fa-solid fa-envelope"></i>
+                    </span>
+
+                    <div>
+                        <strong>
+                            Email Us
+                        </strong>
+
+                        <a href="mailto:info@stackly.com">
+                            info@stackly.com
+                        </a>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <!-- =====================================================
+         NEWSLETTER STRIP
+    ====================================================== -->
+
+    <div class="stackly-finance-footer-newsletter">
+
+        <div class="stackly-finance-footer-newsletter-container">
+
+            <div class="stackly-finance-footer-newsletter-content">
+
+                <span class="stackly-finance-footer-newsletter-label">
+                    FINANCIAL INSIGHTS
+                </span>
+
+                <h3>
+                    Stay informed. Plan smarter.
+                </h3>
+
+                <p>
+                    Get useful financial insights, business updates,
+                    and planning tips delivered to your inbox.
+                </p>
+
+            </div>
+
+
+            <!-- NEWSLETTER FORM -->
+
+            <!-- =====================================================
+     NEWSLETTER FORM
+====================================================== -->
+
+<div class="stackly-finance-footer-newsletter-form-wrap">
+
+    <form
+        class="stackly-finance-footer-newsletter-form"
+        id="financeNewsletterForm"
+        novalidate
+    >
+
+        <!-- EMAIL INPUT -->
+
+        <div class="stackly-finance-footer-input-wrap">
+
+            <i class="fa-regular fa-envelope"></i>
+
+            <input
+                type="email"
+                id="financeNewsletterEmail"
+                name="email"
+                placeholder="Enter your email address"
+                autocomplete="email"
+                aria-label="Email address"
+                required
+            >
+
+        </div>
+
+
+        <!-- SUBSCRIBE BUTTON -->
+
+        <button
+            type="submit"
+            class="stackly-finance-footer-newsletter-button"
+        >
+
+            <span>
+                Subscribe
+            </span>
+
+            <i class="fa-solid fa-arrow-right"></i>
+
+        </button>
+
+    </form>
+
+
+    <!-- =================================================
+         NEWSLETTER VALIDATION MESSAGE
+         Appears BELOW input + button
+    ================================================== -->
+
+    <div
+        class="stackly-finance-newsletter-message"
+        id="financeNewsletterMessage"
+        role="status"
+        aria-live="polite"
+    ></div>
+
+</div>
+
+        </div>
+
+    </div>
+
+
+    <!-- =====================================================
+         FOOTER BOTTOM
+    ====================================================== -->
+
+    <div class="stackly-finance-footer-bottom">
+
+        <div class="stackly-finance-footer-bottom-container">
+
+            <!-- COPYRIGHT -->
+
+            <p class="stackly-finance-footer-copyright">
+
+                ©
+                <span id="financeFooterYear">
+                    2026
+                </span>
+                Stackly Finance.
+                All Rights Reserved.
+
+            </p>
+
+
+            <!-- LEGAL LINKS -->
+
+            <div class="stackly-finance-footer-legal">
+
+                <a href="404.html">
+                    Privacy Policy
+                </a>
+
+                <span class="stackly-finance-footer-legal-divider">
+                    |
+                </span>
+
+                <a href="404.html">
+                    Terms & Conditions
+                </a>
+
+                <span class="stackly-finance-footer-legal-divider">
+                    |
+                </span>
+
+                <a href="404.html">
+                    Cookie Policy
+                </a>
+
+            </div>
+
+
+            <!-- BACK TO TOP -->
+
+            <a
+                href="#home"
+                class="stackly-finance-footer-top"
+                aria-label="Back to top"
+            >
+
+                <i class="fa-solid fa-arrow-up"></i>
+
+            </a>
+
+        </div>
+
+    </div>
+
+</footer>
+
+<!-- =========================================================
+     AOS JAVASCRIPT
+========================================================= -->
+
+<script
+    src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"
+    defer
+></script>
+
+
+<!-- =========================================================
+     STACKLY FINANCE JAVASCRIPT
+========================================================= -->
+
+<script
+    src="index.js"
+    defer
+></script>
+
+
+</body>
+
+</html>

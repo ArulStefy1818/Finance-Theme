@@ -1,0 +1,1465 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <!-- =========================================================
+         STACKLY FINANCE ADMIN DASHBOARD
+    ========================================================== -->
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <meta
+        name="description"
+        content="Stackly Finance Admin Dashboard"
+    >
+
+    <title>Stackly Finance | Admin Dashboard</title>
+
+
+    <!-- =========================================================
+         GOOGLE FONTS
+    ========================================================== -->
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+
+    <link
+        rel="preconnect"
+        href="https://fonts.gstatic.com"
+        crossorigin
+    >
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap"
+        rel="stylesheet"
+    >
+
+
+    <!-- =========================================================
+         FONT AWESOME
+    ========================================================== -->
+
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+    >
+
+
+    <!-- =========================================================
+         AOS
+    ========================================================== -->
+
+    <link
+        rel="stylesheet"
+        href="https://unpkg.com/aos@2.3.4/dist/aos.css"
+    >
+
+
+    <!-- =========================================================
+         ADMIN CSS
+    ========================================================== -->
+
+    <link
+        rel="stylesheet"
+        href="admin.css"
+    >
+
+</head>
+
+
+<body>
+
+
+    <!-- =========================================================
+         MOBILE SIDEBAR OVERLAY
+    ========================================================== -->
+
+    <div
+        class="stackly-finance-admin-overlay"
+        id="stacklyFinanceAdminOverlay"
+    ></div>
+
+
+    <!-- =========================================================
+         SIDEBAR
+    ========================================================== -->
+
+    <aside
+        class="stackly-finance-admin-sidebar"
+        id="stacklyFinanceAdminSidebar"
+    >
+
+
+        <!-- =====================================================
+             SIDEBAR TOP
+        ====================================================== -->
+
+        <div class="stackly-finance-admin-sidebar-top">
+
+
+            <!-- =================================================
+                 LOGO
+            ================================================== -->
+
+            <a
+                href="admin.html"
+                class="stackly-finance-admin-logo"
+                aria-label="Stackly Finance Home"
+            >
+
+                <img
+                    src="Stackly-logo-Blue.webp"
+                    alt="Stackly Finance Logo"
+                >
+
+            </a>
+
+
+            <!-- =================================================
+                 MOBILE CLOSE BUTTON
+            ================================================== -->
+
+            <button
+                type="button"
+                class="stackly-finance-admin-close"
+                id="stacklyFinanceAdminClose"
+                aria-label="Close menu"
+            >
+
+                <i class="fa-solid fa-xmark"></i>
+
+            </button>
+
+        </div>
+
+
+        <!-- =====================================================
+             ADMIN PROFILE
+        ====================================================== -->
+
+        <div class="stackly-finance-admin-profile">
+
+            <div class="stackly-finance-admin-profile-icon">
+
+                <i class="fa-solid fa-user-shield"></i>
+
+            </div>
+
+            <div class="stackly-finance-admin-profile-info">
+
+                <span
+    class="stackly-finance-admin-profile-label"
+    id="stacklyFinanceAdminProfileLabel"
+>
+    Dashboard
+</span>
+
+                <strong>
+                    Administrator
+                </strong>
+
+            </div>
+
+        </div>
+
+
+        <!-- =====================================================
+             SIDEBAR NAVIGATION
+        ====================================================== -->
+
+        <nav
+            class="stackly-finance-admin-navigation"
+            aria-label="Admin Navigation"
+        >
+
+
+            <!-- Dashboard -->
+
+            <a
+                href="admin.html"
+                class="stackly-finance-admin-nav-link"
+            >
+
+                <span class="stackly-finance-admin-nav-icon">
+
+                    <i class="fa-solid fa-chart-pie"></i>
+
+                </span>
+
+                <span>
+                    Dashboard
+                </span>
+
+            </a>
+
+
+            <!-- Users -->
+
+            <a
+                href="admin-users.html"
+                class="stackly-finance-admin-nav-link active"
+            >
+
+                <span class="stackly-finance-admin-nav-icon">
+
+                    <i class="fa-solid fa-users"></i>
+
+                </span>
+
+                <span>
+                    Users
+                </span>
+
+            </a>
+
+
+            <!-- Transactions -->
+
+            <a
+                href="admin-transactions.html"
+                class="stackly-finance-admin-nav-link"
+            >
+
+                <span class="stackly-finance-admin-nav-icon">
+
+                    <i class="fa-solid fa-arrow-right-arrow-left"></i>
+
+                </span>
+
+                <span>
+                    Transactions
+                </span>
+
+            </a>
+
+
+            <!-- Investments -->
+
+            <a
+                href="admin-investments.html"
+                class="stackly-finance-admin-nav-link"
+            >
+
+                <span class="stackly-finance-admin-nav-icon">
+
+                    <i class="fa-solid fa-chart-line"></i>
+
+                </span>
+
+                <span>
+                    Investments
+                </span>
+
+            </a>
+
+
+            <!-- Accounts -->
+
+            <a
+                href="admin-accounts.html"
+                class="stackly-finance-admin-nav-link"
+            >
+
+                <span class="stackly-finance-admin-nav-icon">
+
+                    <i class="fa-solid fa-wallet"></i>
+
+                </span>
+
+                <span>
+                    Accounts
+                </span>
+
+            </a>
+
+
+
+            <!-- Messages -->
+
+            <a
+                href="admin-messages.html"
+                class="stackly-finance-admin-nav-link"
+            >
+
+                <span class="stackly-finance-admin-nav-icon">
+
+                    <i class="fa-solid fa-envelope"></i>
+
+                </span>
+
+                <span>
+                    Messages
+                </span>
+
+                <span class="stackly-finance-admin-nav-badge">
+                    4
+                </span>
+
+            </a>
+
+
+            <!-- Settings -->
+
+            <a
+                href="admin-settings.html"
+                class="stackly-finance-admin-nav-link"
+            >
+
+                <span class="stackly-finance-admin-nav-icon">
+
+                    <i class="fa-solid fa-gear"></i>
+
+                </span>
+
+                <span>
+                    Settings
+                </span>
+
+            </a>
+
+        </nav>
+
+
+        <!-- =====================================================
+             SIDEBAR BOTTOM
+        ====================================================== -->
+
+        <div class="stackly-finance-admin-sidebar-bottom">
+
+
+            <!-- Logout -->
+
+            <a
+                href="index.html"
+                class="stackly-finance-admin-logout"
+                id="stacklyFinanceAdminLogout"
+            >
+
+                <i class="fa-solid fa-right-from-bracket"></i>
+
+                <span>
+                    Logout
+                </span>
+
+            </a>
+
+        </div>
+
+    </aside>
+
+
+    <!-- =========================================================
+         MAIN AREA
+    ========================================================== -->
+
+    <main class="stackly-finance-admin-main">
+
+
+        <!-- =====================================================
+             TOP HEADER
+        ====================================================== -->
+
+        <header class="stackly-finance-admin-header">
+
+
+            <!-- =================================================
+                 MOBILE HAMBURGER
+            ================================================== -->
+
+            <button
+                type="button"
+                class="stackly-finance-admin-menu"
+                id="stacklyFinanceAdminMenu"
+                aria-label="Open menu"
+                aria-expanded="false"
+            >
+
+                <i class="fa-solid fa-bars"></i>
+
+            </button>
+
+
+            <!-- =================================================
+                 PAGE TITLE
+            ================================================== -->
+
+            <div class="stackly-finance-admin-header-title">
+
+                <span>
+                    FINANCE ADMIN
+                </span>
+
+                <h1>
+                    Admin Dashboard
+                </h1>
+
+            </div>
+
+
+            <!-- =================================================
+                 HEADER RIGHT
+            ================================================== -->
+
+            <div class="stackly-finance-admin-header-right">
+
+
+                <!-- Notification -->
+
+                <a href="404-admin.html"><button
+                    type="button"
+                    class="stackly-finance-admin-notification"
+                    aria-label="Notifications"
+                >
+
+                    <i class="fa-regular fa-bell"></i>
+
+                    <span>
+                        3
+                    </span>
+
+                </button></a>
+
+
+                <!-- Divider -->
+
+                <div class="stackly-finance-admin-header-divider"></div>
+
+
+                <!-- User Email -->
+
+                <div class="stackly-finance-admin-user">
+
+                    <div class="stackly-finance-admin-user-avatar">
+
+                        <i class="fa-solid fa-user"></i>
+
+                    </div>
+
+                    <div class="stackly-finance-admin-user-details">
+
+                        <span>
+                            Signed in as
+                        </span>
+
+                        <strong
+                            id="stacklyFinanceAdminEmail"
+                        >
+                            admin@stackly.com
+                        </strong>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </header>
+
+<!-- =========================================================
+     STACKLY FINANCE USERS PAGE CONTENT
+========================================================== -->
+
+<section class="stackly-finance-users-content">
+
+
+    <!-- =====================================================
+         USERS PAGE HERO
+    ====================================================== -->
+
+    <div
+        class="stackly-finance-users-hero"
+        data-aos="fade-up"
+    >
+
+        <div class="stackly-finance-users-hero-text">
+
+            <span class="stackly-finance-users-eyebrow">
+                USER MANAGEMENT
+            </span>
+
+            <h2>
+                Manage Your
+                <strong>Finance Community</strong>
+            </h2>
+
+            <p>
+                View, monitor and manage all registered users,
+                account activity and financial access from one place.
+            </p>
+
+        </div>
+
+
+        <div class="stackly-finance-users-hero-action">
+
+            <a
+                href="404-admin.html"
+                class="stackly-finance-users-add-btn"
+            >
+
+                <i class="fa-solid fa-user-plus"></i>
+
+                Add New User
+
+            </a>
+
+        </div>
+
+    </div>
+
+
+
+    <!-- =====================================================
+         USER OVERVIEW CARDS
+    ====================================================== -->
+
+    <div class="stackly-finance-users-overview">
+
+
+        <!-- Total Users -->
+
+        <div
+            class="stackly-finance-users-overview-card"
+            data-aos="fade-up"
+            data-aos-delay="100"
+        >
+
+            <div class="stackly-finance-users-card-top">
+
+                <div class="stackly-finance-users-card-icon users">
+                    <i class="fa-solid fa-users"></i>
+                </div>
+
+                <span class="stackly-finance-users-card-growth positive">
+                    +12.8%
+                </span>
+
+            </div>
+
+            <span class="stackly-finance-users-card-label">
+                Total Users
+            </span>
+
+            <strong class="stackly-finance-users-card-value">
+                12,486
+            </strong>
+
+            <small>
+                Compared with last month
+            </small>
+
+        </div>
+
+
+
+        <!-- Active Users -->
+
+        <div
+            class="stackly-finance-users-overview-card"
+            data-aos="fade-up"
+            data-aos-delay="150"
+        >
+
+            <div class="stackly-finance-users-card-top">
+
+                <div class="stackly-finance-users-card-icon active">
+                    <i class="fa-solid fa-user-check"></i>
+                </div>
+
+                <span class="stackly-finance-users-card-growth positive">
+                    +8.4%
+                </span>
+
+            </div>
+
+            <span class="stackly-finance-users-card-label">
+                Active Users
+            </span>
+
+            <strong class="stackly-finance-users-card-value">
+                9,842
+            </strong>
+
+            <small>
+                Active in the last 30 days
+            </small>
+
+        </div>
+
+
+
+        <!-- New Users -->
+
+        <div
+            class="stackly-finance-users-overview-card"
+            data-aos="fade-up"
+            data-aos-delay="200"
+        >
+
+            <div class="stackly-finance-users-card-top">
+
+                <div class="stackly-finance-users-card-icon new">
+                    <i class="fa-solid fa-user-plus"></i>
+                </div>
+
+                <span class="stackly-finance-users-card-growth positive">
+                    +16.2%
+                </span>
+
+            </div>
+
+            <span class="stackly-finance-users-card-label">
+                New This Month
+            </span>
+
+            <strong class="stackly-finance-users-card-value">
+                684
+            </strong>
+
+            <small>
+                Newly registered users
+            </small>
+
+        </div>
+
+
+
+        <!-- Pending Users -->
+
+        <div
+            class="stackly-finance-users-overview-card"
+            data-aos="fade-up"
+            data-aos-delay="250"
+        >
+
+            <div class="stackly-finance-users-card-top">
+
+                <div class="stackly-finance-users-card-icon pending">
+                    <i class="fa-solid fa-user-clock"></i>
+                </div>
+
+                <span class="stackly-finance-users-card-growth neutral">
+                    24
+                </span>
+
+            </div>
+
+            <span class="stackly-finance-users-card-label">
+                Pending Review
+            </span>
+
+            <strong class="stackly-finance-users-card-value">
+                124
+            </strong>
+
+            <small>
+                Require admin attention
+            </small>
+
+        </div>
+
+    </div>
+
+
+
+    <!-- =====================================================
+         USER MANAGEMENT TOOLBAR
+    ====================================================== -->
+
+    <section
+        class="stackly-finance-users-management"
+        data-aos="fade-up"
+        data-aos-delay="100"
+    >
+
+        <div class="stackly-finance-users-management-header">
+
+            <div>
+
+                <span class="stackly-finance-users-section-label">
+                    DIRECTORY
+                </span>
+
+                <h3>
+                    All Users
+                </h3>
+
+                <p>
+                    Search and manage registered finance users.
+                </p>
+
+            </div>
+
+        </div>
+
+
+         
+
+
+
+        <!-- =================================================
+             USERS TABLE
+        ================================================== -->
+
+        <div class="stackly-finance-users-table-wrapper">
+
+            <table class="stackly-finance-users-table">
+
+                <thead>
+
+                    <tr>
+
+                        <th>
+                            User
+                        </th>
+
+                        <th>
+                            Role
+                        </th>
+
+                        <th>
+                            Joined
+                        </th>
+
+                        <th>
+                            Portfolio
+                        </th>
+
+                        <th>
+                            Status
+                        </th>
+
+                        <th>
+                            Last Active
+                        </th>
+
+                        <th>
+                            Action
+                        </th>
+
+                    </tr>
+
+                </thead>
+
+
+                <tbody>
+
+
+                    <!-- User 01 -->
+
+                    <tr>
+
+                        <td>
+
+                            <div class="stackly-finance-users-person">
+
+                                <div class="stackly-finance-users-avatar avatar-one">
+                                    AR
+                                </div>
+
+                                <div>
+
+                                    <strong>
+                                        Arjun Rao
+                                    </strong>
+
+                                    <span>
+                                        arjun.rao@example.com
+                                    </span>
+
+                                </div>
+
+                            </div>
+
+                        </td>
+
+                        <td>
+                            <span class="stackly-finance-users-role">
+                                Investor
+                            </span>
+                        </td>
+
+                        <td>
+                            Sep 12, 2026
+                        </td>
+
+                        <td>
+                            <strong>
+                                ₹42.8 L
+                            </strong>
+                        </td>
+
+                        <td>
+                            <span class="stackly-finance-users-status active">
+                                Active
+                            </span>
+                        </td>
+
+                        <td>
+                            12 min ago
+                        </td>
+
+                        <td>
+
+                            <a
+                                href="404-admin.html"
+                                class="stackly-finance-users-action"
+                                aria-label="View Arjun Rao"
+                            >
+                                <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                            </a>
+
+                        </td>
+
+                    </tr>
+
+
+
+                    <!-- User 02 -->
+
+                    <tr>
+
+                        <td>
+
+                            <div class="stackly-finance-users-person">
+
+                                <div class="stackly-finance-users-avatar avatar-two">
+                                    PK
+                                </div>
+
+                                <div>
+
+                                    <strong>
+                                        Priya Kumar
+                                    </strong>
+
+                                    <span>
+                                        priya.kumar@example.com
+                                    </span>
+
+                                </div>
+
+                            </div>
+
+                        </td>
+
+                        <td>
+                            <span class="stackly-finance-users-role">
+                                Advisor
+                            </span>
+                        </td>
+
+                        <td>
+                            Sep 08, 2026
+                        </td>
+
+                        <td>
+                            <strong>
+                                ₹68.4 L
+                            </strong>
+                        </td>
+
+                        <td>
+                            <span class="stackly-finance-users-status active">
+                                Active
+                            </span>
+                        </td>
+
+                        <td>
+                            28 min ago
+                        </td>
+
+                        <td>
+
+                            <a
+                                href="404-admin.html"
+                                class="stackly-finance-users-action"
+                                aria-label="View Priya Kumar"
+                            >
+                                <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                            </a>
+
+                        </td>
+
+                    </tr>
+
+
+
+                    <!-- User 03 -->
+
+                    <tr>
+
+                        <td>
+
+                            <div class="stackly-finance-users-person">
+
+                                <div class="stackly-finance-users-avatar avatar-three">
+                                    RS
+                                </div>
+
+                                <div>
+
+                                    <strong>
+                                        Rahul Sharma
+                                    </strong>
+
+                                    <span>
+                                        rahul.sharma@example.com
+                                    </span>
+
+                                </div>
+
+                            </div>
+
+                        </td>
+
+                        <td>
+                            <span class="stackly-finance-users-role">
+                                Client
+                            </span>
+                        </td>
+
+                        <td>
+                            Sep 05, 2026
+                        </td>
+
+                        <td>
+                            <strong>
+                                ₹24.7 L
+                            </strong>
+                        </td>
+
+                        <td>
+                            <span class="stackly-finance-users-status pending">
+                                Pending
+                            </span>
+                        </td>
+
+                        <td>
+                            2 hrs ago
+                        </td>
+
+                        <td>
+
+                            <a
+                                href="404-admin.html"
+                                class="stackly-finance-users-action"
+                                aria-label="View Rahul Sharma"
+                            >
+                                <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                            </a>
+
+                        </td>
+
+                    </tr>
+
+
+
+                    <!-- User 04 -->
+
+                    <tr>
+
+                        <td>
+
+                            <div class="stackly-finance-users-person">
+
+                                <div class="stackly-finance-users-avatar avatar-four">
+                                    SM
+                                </div>
+
+                                <div>
+
+                                    <strong>
+                                        Sneha Menon
+                                    </strong>
+
+                                    <span>
+                                        sneha.menon@example.com
+                                    </span>
+
+                                </div>
+
+                            </div>
+
+                        </td>
+
+                        <td>
+                            <span class="stackly-finance-users-role">
+                                Investor
+                            </span>
+                        </td>
+
+                        <td>
+                            Aug 29, 2026
+                        </td>
+
+                        <td>
+                            <strong>
+                                ₹91.2 L
+                            </strong>
+                        </td>
+
+                        <td>
+                            <span class="stackly-finance-users-status active">
+                                Active
+                            </span>
+                        </td>
+
+                        <td>
+                            4 hrs ago
+                        </td>
+
+                        <td>
+
+                            <a
+                                href="404-admin.html"
+                                class="stackly-finance-users-action"
+                                aria-label="View Sneha Menon"
+                            >
+                                <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                            </a>
+
+                        </td>
+
+                    </tr>
+
+
+
+                    <!-- User 05 -->
+
+                    <tr>
+
+                        <td>
+
+                            <div class="stackly-finance-users-person">
+
+                                <div class="stackly-finance-users-avatar avatar-five">
+                                    VK
+                                </div>
+
+                                <div>
+
+                                    <strong>
+                                        Vikram Krishnan
+                                    </strong>
+
+                                    <span>
+                                        vikram.k@example.com
+                                    </span>
+
+                                </div>
+
+                            </div>
+
+                        </td>
+
+                        <td>
+                            <span class="stackly-finance-users-role">
+                                Client
+                            </span>
+                        </td>
+
+                        <td>
+                            Aug 22, 2026
+                        </td>
+
+                        <td>
+                            <strong>
+                                ₹15.6 L
+                            </strong>
+                        </td>
+
+                        <td>
+                            <span class="stackly-finance-users-status suspended">
+                                Suspended
+                            </span>
+                        </td>
+
+                        <td>
+                            3 days ago
+                        </td>
+
+                        <td>
+
+                            <a
+                                href="404-admin.html"
+                                class="stackly-finance-users-action"
+                                aria-label="View Vikram Krishnan"
+                            >
+                                <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                            </a>
+
+                        </td>
+
+                    </tr>
+
+                </tbody>
+
+            </table>
+
+        </div>
+
+
+         
+
+        
+    </section>
+
+
+
+    <!-- =====================================================
+         LOWER USER INSIGHTS
+    ====================================================== -->
+
+    <div class="stackly-finance-users-insights">
+
+
+        <!-- =================================================
+             USER DISTRIBUTION
+        ================================================== -->
+
+        <section
+            class="stackly-finance-users-insight-card"
+            data-aos="fade-up"
+        >
+
+            <div class="stackly-finance-users-insight-header">
+
+                <div>
+
+                    <span>
+                        USER DISTRIBUTION
+                    </span>
+
+                    <h3>
+                        Account Roles
+                    </h3>
+
+                </div>
+
+                <i class="fa-solid fa-users-gear"></i>
+
+            </div>
+
+
+            <div class="stackly-finance-users-role-list">
+
+
+                <div class="stackly-finance-users-role-item">
+
+                    <div class="stackly-finance-users-role-title">
+
+                        <span>
+                            Investors
+                        </span>
+
+                        <strong>
+                            5,284
+                        </strong>
+
+                    </div>
+
+                    <div class="stackly-finance-users-progress">
+
+                        <span style="width:72%;"></span>
+
+                    </div>
+
+                </div>
+
+
+
+                <div class="stackly-finance-users-role-item">
+
+                    <div class="stackly-finance-users-role-title">
+
+                        <span>
+                            Clients
+                        </span>
+
+                        <strong>
+                            3,842
+                        </strong>
+
+                    </div>
+
+                    <div class="stackly-finance-users-progress">
+
+                        <span style="width:58%;"></span>
+
+                    </div>
+
+                </div>
+
+
+
+                <div class="stackly-finance-users-role-item">
+
+                    <div class="stackly-finance-users-role-title">
+
+                        <span>
+                            Advisors
+                        </span>
+
+                        <strong>
+                            2,164
+                        </strong>
+
+                    </div>
+
+                    <div class="stackly-finance-users-progress">
+
+                        <span style="width:39%;"></span>
+
+                    </div>
+
+                </div>
+
+
+
+                <div class="stackly-finance-users-role-item">
+
+                    <div class="stackly-finance-users-role-title">
+
+                        <span>
+                            Administrators
+                        </span>
+
+                        <strong>
+                            1,196
+                        </strong>
+
+                    </div>
+
+                    <div class="stackly-finance-users-progress">
+
+                        <span style="width:22%;"></span>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =================================================
+             RECENT USER ACTIVITY
+        ================================================== -->
+
+        <section
+            class="stackly-finance-users-insight-card"
+            data-aos="fade-up"
+            data-aos-delay="150"
+        >
+
+            <div class="stackly-finance-users-insight-header">
+
+                <div>
+
+                    <span>
+                        RECENT ACTIVITY
+                    </span>
+
+                    <h3>
+                        Latest User Actions
+                    </h3>
+
+                </div>
+
+                <a
+                    href="404-admin.html"
+                    class="stackly-finance-users-view-all"
+                >
+                    View All
+                </a>
+
+            </div>
+
+
+            <div class="stackly-finance-users-activity-list">
+
+
+                <div class="stackly-finance-users-activity-item">
+
+                    <div class="stackly-finance-users-activity-icon green">
+
+                        <i class="fa-solid fa-user-plus"></i>
+
+                    </div>
+
+                    <div>
+
+                        <strong>
+                            New user registered
+                        </strong>
+
+                        <span>
+                            Meera Joseph created an account
+                        </span>
+
+                    </div>
+
+                    <time>
+                        8 min
+                    </time>
+
+                </div>
+
+
+
+                <div class="stackly-finance-users-activity-item">
+
+                    <div class="stackly-finance-users-activity-icon blue">
+
+                        <i class="fa-solid fa-file-circle-check"></i>
+
+                    </div>
+
+                    <div>
+
+                        <strong>
+                            Profile verified
+                        </strong>
+
+                        <span>
+                            Arjun Rao completed verification
+                        </span>
+
+                    </div>
+
+                    <time>
+                        24 min
+                    </time>
+
+                </div>
+
+
+
+                <div class="stackly-finance-users-activity-item">
+
+                    <div class="stackly-finance-users-activity-icon orange">
+
+                        <i class="fa-solid fa-shield-halved"></i>
+
+                    </div>
+
+                    <div>
+
+                        <strong>
+                            Security review
+                        </strong>
+
+                        <span>
+                            A login attempt was reviewed
+                        </span>
+
+                    </div>
+
+                    <time>
+                        1 hr
+                    </time>
+
+                </div>
+
+
+
+                <div class="stackly-finance-users-activity-item">
+
+                    <div class="stackly-finance-users-activity-icon purple">
+
+                        <i class="fa-solid fa-user-pen"></i>
+
+                    </div>
+
+                    <div>
+
+                        <strong>
+                            Account updated
+                        </strong>
+
+                        <span>
+                            Priya Kumar updated her profile
+                        </span>
+
+                    </div>
+
+                    <time>
+                        2 hrs
+                    </time>
+
+                </div>
+
+            </div>
+
+        </section>
+
+    </div>
+
+
+
+    <!-- =====================================================
+         USER SECURITY NOTICE
+    ====================================================== -->
+
+    <div
+        class="stackly-finance-users-security"
+        data-aos="fade-up"
+    >
+
+        <div class="stackly-finance-users-security-icon">
+
+            <i class="fa-solid fa-shield-halved"></i>
+
+        </div>
+
+        <div class="stackly-finance-users-security-content">
+
+            <strong>
+                User security monitoring is active
+            </strong>
+
+            <p>
+                All account activity, authentication events and
+                profile changes are monitored by the finance
+                administration system.
+            </p>
+
+        </div>
+
+        <a href="404-admin.html">
+            Security Center
+            <i class="fa-solid fa-arrow-right"></i>
+        </a>
+
+    </div>
+
+
+</section>
+
+    </main>
+
+
+    <!-- =========================================================
+         AOS JS
+    ========================================================== -->
+
+    <script
+        src="https://unpkg.com/aos@2.3.4/dist/aos.js"
+    ></script>
+
+
+    <!-- =========================================================
+         ADMIN DASHBOARD JS
+    ========================================================== -->
+
+    <script src="admin.js"></script>
+
+</body>
+</html>

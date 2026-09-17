@@ -1,0 +1,976 @@
+<!-- =========================================================
+     STACKLY FINANCE
+     LOGIN + SIGN UP PAGE
+========================================================= -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>Stackly Finance | Login & Sign Up</title>
+
+    <!-- =====================================================
+         GOOGLE FONTS
+    ====================================================== -->
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+
+    <link
+        rel="preconnect"
+        href="https://fonts.gstatic.com"
+        crossorigin
+    >
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap"
+        rel="stylesheet"
+    >
+
+
+    <!-- =====================================================
+         FONT AWESOME
+    ====================================================== -->
+
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+    >
+
+
+    <!-- =====================================================
+         AOS
+    ====================================================== -->
+
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css"
+    >
+
+
+    <!-- =====================================================
+         CUSTOM CSS
+    ====================================================== -->
+
+    <link rel="stylesheet" href="login.css">
+
+</head>
+
+
+<body>
+
+
+<!-- =========================================================
+     BACKGROUND
+========================================================= -->
+
+<div class="stackly-finance-auth-background">
+
+    <div class="stackly-finance-auth-glow stackly-finance-auth-glow-one"></div>
+
+    <div class="stackly-finance-auth-glow stackly-finance-auth-glow-two"></div>
+
+</div>
+
+
+
+<!-- =========================================================
+     AUTH PAGE
+========================================================= -->
+
+<main class="stackly-finance-auth-page">
+
+
+    <!-- =====================================================
+         TOP NAV
+    ====================================================== -->
+
+    <div class="stackly-finance-auth-topbar">
+
+        <a
+            href="index.html"
+            class="stackly-finance-auth-logo-link"
+            aria-label="Stackly Finance Home"
+        >
+
+            <img
+                src="Stackly-logo-Blue.webp"
+                alt="Stackly Finance"
+                class="stackly-finance-auth-logo"
+            >
+
+        </a>
+
+
+        <a
+            href="index.html"
+            class="stackly-finance-auth-home-button"
+        >
+
+            <i class="fa-solid fa-arrow-left"></i>
+
+            <span>Back to Home</span>
+
+        </a>
+
+    </div>
+
+
+
+    <!-- =====================================================
+         AUTH CONTAINER
+    ====================================================== -->
+
+    <section
+        class="stackly-finance-auth-container"
+        data-aos="fade-up"
+        data-aos-duration="900"
+    >
+
+
+        <!-- =================================================
+             LEFT PANEL
+        ================================================== -->
+
+        <div class="stackly-finance-auth-intro">
+
+
+            <div class="stackly-finance-auth-intro-content">
+
+                <span class="stackly-finance-auth-label">
+
+                    <i class="fa-solid fa-shield-halved"></i>
+
+                    SECURE FINANCE PORTAL
+
+                </span>
+
+
+                <h1 class="stackly-finance-auth-heading">
+
+                    Manage your
+                    <span>financial future.</span>
+
+                </h1>
+
+
+                <p class="stackly-finance-auth-description">
+
+                    Access your Stackly Finance account to
+                    manage financial services, planning,
+                    business solutions, and personalized
+                    financial support.
+
+                </p>
+
+
+                <!-- BENEFITS -->
+
+                <div class="stackly-finance-auth-benefits">
+
+                    <div class="stackly-finance-auth-benefit">
+
+                        <span class="stackly-finance-auth-benefit-icon">
+
+                            <i class="fa-solid fa-lock"></i>
+
+                        </span>
+
+                        <div>
+
+                            <strong>
+                                Secure Access
+                            </strong>
+
+                            <p>
+                                Your account information is protected.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="stackly-finance-auth-benefit">
+
+                        <span class="stackly-finance-auth-benefit-icon">
+
+                            <i class="fa-solid fa-chart-line"></i>
+
+                        </span>
+
+                        <div>
+
+                            <strong>
+                                Smart Financial Tools
+                            </strong>
+
+                            <p>
+                                Manage your financial activities easily.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="stackly-finance-auth-benefit">
+
+                        <span class="stackly-finance-auth-benefit-icon">
+
+                            <i class="fa-solid fa-headset"></i>
+
+                        </span>
+
+                        <div>
+
+                            <strong>
+                                Dedicated Support
+                            </strong>
+
+                            <p>
+                                Get assistance from our finance team.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+
+        <!-- =================================================
+             FORM PANEL
+        ================================================== -->
+
+        <div class="stackly-finance-auth-form-panel">
+
+
+            <!-- =============================================
+                 FORM HEADER
+            ============================================== -->
+
+            <div class="stackly-finance-auth-form-header">
+
+                <span
+                    class="stackly-finance-auth-form-icon"
+                    id="stacklyFinanceAuthFormIcon"
+                >
+
+                    <i class="fa-solid fa-right-to-bracket"></i>
+
+                </span>
+
+
+                <div>
+
+                    <span
+                        class="stackly-finance-auth-form-label"
+                        id="stacklyFinanceAuthLabel"
+                    >
+                        WELCOME BACK
+                    </span>
+
+                    <h2 id="stacklyFinanceAuthTitle">
+                        Sign in to your account
+                    </h2>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- =================================================
+                 FORM SWITCH
+            ================================================== -->
+
+            <div class="stackly-finance-auth-switch">
+
+                <button
+                    type="button"
+                    class="stackly-finance-auth-switch-button active"
+                    id="stacklyFinanceLoginTab"
+                >
+
+                    Login
+
+                </button>
+
+
+                <button
+                    type="button"
+                    class="stackly-finance-auth-switch-button"
+                    id="stacklyFinanceSignupTab"
+                >
+
+                    Sign Up
+
+                </button>
+
+
+                <span
+                    class="stackly-finance-auth-switch-slider"
+                    id="stacklyFinanceAuthSlider"
+                ></span>
+
+            </div>
+
+
+
+            <!-- =================================================
+                 LOGIN FORM
+            ================================================== -->
+
+            <form
+                class="stackly-finance-auth-form stackly-finance-login-form active"
+                id="stacklyFinanceLoginForm"
+                novalidate
+            >
+
+
+                <!-- EMAIL -->
+
+                <div class="stackly-finance-auth-field">
+
+                    <label for="stacklyFinanceLoginEmail">
+
+                        Email Address
+
+                        <span>*</span>
+
+                    </label>
+
+
+                    <div class="stackly-finance-auth-input">
+
+                        <i class="fa-regular fa-envelope"></i>
+
+                        <input
+                            type="email"
+                            id="stacklyFinanceLoginEmail"
+                            name="loginEmail"
+                            placeholder="Enter your email address"
+                            autocomplete="email"
+                            required
+                        >
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- ROLE -->
+
+                <div class="stackly-finance-auth-field">
+
+                    <label>
+
+                        Login As
+
+                        <span>*</span>
+
+                    </label>
+
+
+                    <div
+                        class="stackly-finance-role-dropdown"
+                        id="stacklyFinanceLoginRoleDropdown"
+                    >
+
+                        <button
+                            type="button"
+                            class="stackly-finance-role-trigger"
+                            id="stacklyFinanceLoginRoleTrigger"
+                            aria-expanded="false"
+                        >
+
+                            <span class="stackly-finance-role-selected">
+
+                                <i class="fa-solid fa-user-tie"></i>
+
+                                <span id="stacklyFinanceLoginRoleText">
+                                    Select your role
+                                </span>
+
+                            </span>
+
+
+                            <i class="fa-solid fa-chevron-down"></i>
+
+                        </button>
+
+
+                        <div
+                            class="stackly-finance-role-menu"
+                            id="stacklyFinanceLoginRoleMenu"
+                        >
+
+                            <button
+                                type="button"
+                                class="stackly-finance-role-option"
+                                data-role="admin"
+                            >
+
+                                <i class="fa-solid fa-user-shield"></i>
+
+                                <span>
+
+                                    <strong>Admin</strong>
+
+                                    <small>Administrator access</small>
+
+                                </span>
+
+                            </button>
+
+
+                            <button
+                                type="button"
+                                class="stackly-finance-role-option"
+                                data-role="client"
+                            >
+
+                                <i class="fa-solid fa-user"></i>
+
+                                <span>
+
+                                    <strong>Client</strong>
+
+                                    <small>Client account access</small>
+
+                                </span>
+
+                            </button>
+
+                        </div>
+
+                    </div>
+
+
+                    <input
+                        type="hidden"
+                        id="stacklyFinanceLoginRole"
+                        name="loginRole"
+                        value=""
+                    >
+
+                </div>
+
+
+
+                <!-- PASSWORD -->
+
+                <div class="stackly-finance-auth-field">
+
+                    <label for="stacklyFinanceLoginPassword">
+
+                        Password
+
+                        <span>*</span>
+
+                    </label>
+
+
+                    <div class="stackly-finance-auth-input">
+
+                        <i class="fa-solid fa-lock"></i>
+
+                        <input
+                            type="password"
+                            id="stacklyFinanceLoginPassword"
+                            name="loginPassword"
+                            placeholder="Enter your password"
+                            autocomplete="current-password"
+                            required
+                        >
+
+
+                        <button
+                            type="button"
+                            class="stackly-finance-password-toggle"
+                            data-target="stacklyFinanceLoginPassword"
+                            aria-label="Show password"
+                        >
+
+                            <i class="fa-regular fa-eye"></i>
+
+                        </button>
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- LOGIN OPTIONS -->
+
+                <div class="stackly-finance-auth-options">
+
+                    <label class="stackly-finance-remember">
+
+                        <input
+                            type="checkbox"
+                            id="stacklyFinanceRemember"
+                        >
+
+                        <span class="stackly-finance-custom-check">
+                            <i class="fa-solid fa-check"></i>
+                        </span>
+
+                        <span>
+                            Remember me
+                        </span>
+
+                    </label>
+
+
+                    <a
+                        href="404.html"
+                        class="stackly-finance-forgot-password"
+                    >
+
+                        Forgot Password?
+
+                    </a>
+
+                </div>
+
+
+
+                <!-- LOGIN BUTTON -->
+
+                <button
+                    type="submit"
+                    class="stackly-finance-auth-submit"
+                >
+
+                    <span>Login to Account</span>
+
+                    <i class="fa-solid fa-arrow-right"></i>
+
+                </button>
+
+
+                <!-- MESSAGE -->
+
+                <div
+                    class="stackly-finance-auth-message"
+                    id="stacklyFinanceLoginMessage"
+                    role="status"
+                    aria-live="polite"
+                ></div>
+
+
+                <!-- SWITCH -->
+
+                <p class="stackly-finance-auth-bottom-text">
+
+                    Don't have an account?
+
+                    <button
+                        type="button"
+                        id="stacklyFinanceGoSignup"
+                    >
+                        Create an account
+                    </button>
+
+                </p>
+
+            </form>
+
+
+
+            <!-- =================================================
+                 SIGN UP FORM
+            ================================================== -->
+
+            <form
+                class="stackly-finance-auth-form stackly-finance-signup-form"
+                id="stacklyFinanceSignupForm"
+                novalidate
+            >
+
+
+                <!-- NAME -->
+
+                <div class="stackly-finance-auth-field">
+
+                    <label for="stacklyFinanceSignupName">
+
+                        Full Name
+
+                        <span>*</span>
+
+                    </label>
+
+
+                    <div class="stackly-finance-auth-input">
+
+                        <i class="fa-regular fa-user"></i>
+
+                        <input
+                            type="text"
+                            id="stacklyFinanceSignupName"
+                            name="signupName"
+                            placeholder="Enter your full name"
+                            autocomplete="name"
+                            required
+                        >
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- EMAIL -->
+
+                <div class="stackly-finance-auth-field">
+
+                    <label for="stacklyFinanceSignupEmail">
+
+                        Email Address
+
+                        <span>*</span>
+
+                    </label>
+
+
+                    <div class="stackly-finance-auth-input">
+
+                        <i class="fa-regular fa-envelope"></i>
+
+                        <input
+                            type="email"
+                            id="stacklyFinanceSignupEmail"
+                            name="signupEmail"
+                            placeholder="Enter your email address"
+                            autocomplete="email"
+                            required
+                        >
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- ROLE -->
+
+                <div class="stackly-finance-auth-field">
+
+                    <label>
+
+                        Register As
+
+                        <span>*</span>
+
+                    </label>
+
+
+                    <div
+                        class="stackly-finance-role-dropdown"
+                        id="stacklyFinanceSignupRoleDropdown"
+                    >
+
+                        <button
+                            type="button"
+                            class="stackly-finance-role-trigger"
+                            id="stacklyFinanceSignupRoleTrigger"
+                            aria-expanded="false"
+                        >
+
+                            <span class="stackly-finance-role-selected">
+
+                                <i class="fa-solid fa-user-tie"></i>
+
+                                <span id="stacklyFinanceSignupRoleText">
+                                    Select your role
+                                </span>
+
+                            </span>
+
+
+                            <i class="fa-solid fa-chevron-down"></i>
+
+                        </button>
+
+
+                        <div
+                            class="stackly-finance-role-menu"
+                            id="stacklyFinanceSignupRoleMenu"
+                        >
+
+                            <button
+                                type="button"
+                                class="stackly-finance-role-option"
+                                data-role="admin"
+                            >
+
+                                <i class="fa-solid fa-user-shield"></i>
+
+                                <span>
+
+                                    <strong>Admin</strong>
+
+                                    <small>Administrator account</small>
+
+                                </span>
+
+                            </button>
+
+
+                            <button
+                                type="button"
+                                class="stackly-finance-role-option"
+                                data-role="client"
+                            >
+
+                                <i class="fa-solid fa-user"></i>
+
+                                <span>
+
+                                    <strong>Client</strong>
+
+                                    <small>Client account</small>
+
+                                </span>
+
+                            </button>
+
+                        </div>
+
+                    </div>
+
+
+                    <input
+                        type="hidden"
+                        id="stacklyFinanceSignupRole"
+                        name="signupRole"
+                        value=""
+                    >
+
+                </div>
+
+
+
+                <!-- PASSWORD -->
+
+                <div class="stackly-finance-auth-field">
+
+                    <label for="stacklyFinanceSignupPassword">
+
+                        Password
+
+                        <span>*</span>
+
+                    </label>
+
+
+                    <div class="stackly-finance-auth-input">
+
+                        <i class="fa-solid fa-lock"></i>
+
+                        <input
+                            type="password"
+                            id="stacklyFinanceSignupPassword"
+                            name="signupPassword"
+                            placeholder="Create a password"
+                            autocomplete="new-password"
+                            required
+                        >
+
+
+                        <button
+                            type="button"
+                            class="stackly-finance-password-toggle"
+                            data-target="stacklyFinanceSignupPassword"
+                            aria-label="Show password"
+                        >
+
+                            <i class="fa-regular fa-eye"></i>
+
+                        </button>
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- CONFIRM PASSWORD -->
+
+                <div class="stackly-finance-auth-field">
+
+                    <label for="stacklyFinanceSignupConfirmPassword">
+
+                        Confirm Password
+
+                        <span>*</span>
+
+                    </label>
+
+
+                    <div class="stackly-finance-auth-input">
+
+                        <i class="fa-solid fa-lock"></i>
+
+                        <input
+                            type="password"
+                            id="stacklyFinanceSignupConfirmPassword"
+                            name="signupConfirmPassword"
+                            placeholder="Confirm your password"
+                            autocomplete="new-password"
+                            required
+                        >
+
+
+                        <button
+                            type="button"
+                            class="stackly-finance-password-toggle"
+                            data-target="stacklyFinanceSignupConfirmPassword"
+                            aria-label="Show password"
+                        >
+
+                            <i class="fa-regular fa-eye"></i>
+
+                        </button>
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- TERMS -->
+
+                <label class="stackly-finance-terms">
+
+                    <input
+                        type="checkbox"
+                        id="stacklyFinanceTerms"
+                        required
+                    >
+
+                    <span class="stackly-finance-custom-check">
+
+                        <i class="fa-solid fa-check"></i>
+
+                    </span>
+
+
+                    <span>
+
+                        I accept the
+
+                        <a href="404.html">
+                            Terms & Conditions
+                        </a>
+
+                        and
+
+                        <a href="404.html">
+                            Privacy Policy
+                        </a>
+
+                    </span>
+
+                </label>
+
+
+
+                <!-- SIGN UP BUTTON -->
+
+                <button
+                    type="submit"
+                    class="stackly-finance-auth-submit"
+                >
+
+                    <span>Create Account</span>
+
+                    <i class="fa-solid fa-arrow-right"></i>
+
+                </button>
+
+
+                <!-- MESSAGE -->
+
+                <div
+                    class="stackly-finance-auth-message"
+                    id="stacklyFinanceSignupMessage"
+                    role="status"
+                    aria-live="polite"
+                ></div>
+
+
+                <!-- SWITCH -->
+
+                <p class="stackly-finance-auth-bottom-text">
+
+                    Already have an account?
+
+                    <button
+                        type="button"
+                        id="stacklyFinanceGoLogin"
+                    >
+                        Login here
+                    </button>
+
+                </p>
+
+            </form>
+
+
+        </div>
+
+    </section>
+
+
+    <!-- =====================================================
+         COPYRIGHT
+    ====================================================== -->
+
+    <p class="stackly-finance-auth-copyright">
+
+        © 2026 Stackly Finance. All Rights Reserved.
+
+    </p>
+
+
+</main>
+
+
+
+<!-- =========================================================
+     AOS
+========================================================= -->
+
+<script
+    src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"
+></script>
+
+
+<!-- =========================================================
+     CUSTOM JS
+========================================================= -->
+
+<script src="login.js"></script>
+
+
+</body>
+
+</html>

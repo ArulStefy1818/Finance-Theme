@@ -1,0 +1,1863 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <!-- =========================================================
+         STACKLY FINANCE CLIENT DASHBOARD
+    ========================================================== -->
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <meta
+        name="description"
+        content="Stackly Finance Client Dashboard - Manage accounts, transactions, investments and financial goals."
+    >
+
+    <meta
+        name="theme-color"
+        content="#061713"
+    >
+
+    <title>Stackly Finance | Client Dashboard</title>
+
+
+    <!-- =========================================================
+         GOOGLE FONTS
+    ========================================================== -->
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+
+    <link
+        rel="preconnect"
+        href="https://fonts.gstatic.com"
+        crossorigin
+    >
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap"
+        rel="stylesheet"
+    >
+
+
+    <!-- =========================================================
+         FONT AWESOME
+    ========================================================== -->
+
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+    >
+
+
+    <!-- =========================================================
+         AOS ANIMATION
+    ========================================================== -->
+
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css"
+    >
+
+
+    <!-- =========================================================
+         CLIENT DASHBOARD CSS
+    ========================================================== -->
+
+    <link
+        rel="stylesheet"
+        href="client.css"
+    >
+
+</head>
+
+
+<body>
+
+
+    <!-- =========================================================
+         CLIENT DASHBOARD WRAPPER
+    ========================================================== -->
+
+    <div class="stackly-finance-client-dashboard">
+
+
+        <!-- =====================================================
+             MOBILE SIDEBAR OVERLAY
+        ====================================================== -->
+
+        <div
+            class="stackly-finance-client-overlay"
+            id="stacklyFinanceClientOverlay"
+            aria-hidden="true"
+        ></div>
+
+
+        <!-- =====================================================
+             SIDEBAR
+        ====================================================== -->
+
+        <aside
+            class="stackly-finance-client-sidebar"
+            id="stacklyFinanceClientSidebar"
+            aria-label="Client dashboard sidebar"
+        >
+
+
+            <!-- =================================================
+                 SIDEBAR BRAND
+            ================================================== -->
+
+            <div class="stackly-finance-client-brand">
+
+                <a
+                    href="client.html"
+                    class="stackly-finance-client-logo"
+                    aria-label="Stackly Finance Home"
+                >
+
+                    <img
+                        src="Stackly-logo-Blue.webp"
+                        alt="Stackly Finance"
+                    >
+
+                </a>
+
+
+                <!-- MOBILE CLOSE BUTTON -->
+
+                <button
+                    type="button"
+                    class="stackly-finance-client-sidebar-close"
+                    id="stacklyFinanceClientSidebarClose"
+                    aria-label="Close navigation"
+                    aria-controls="stacklyFinanceClientSidebar"
+                >
+
+                    <i class="fa-solid fa-xmark"></i>
+
+                </button>
+
+            </div>
+
+
+            <!-- =================================================
+                 CLIENT PROFILE
+            ================================================== -->
+
+            <div
+                class="stackly-finance-client-sidebar-profile"
+                data-aos="fade-right"
+            >
+
+                <div
+                    class="stackly-finance-client-avatar"
+                    aria-hidden="true"
+                >
+
+                    <i class="fa-solid fa-user"></i>
+
+                </div>
+
+
+                <div class="stackly-finance-client-profile-info">
+
+                    <strong id="stacklyFinanceClientSidebarName">
+                        Client
+                    </strong>
+
+                    <span>
+                        Finance Client
+                    </span>
+
+                </div>
+
+            </div>
+
+
+            <!-- =================================================
+                 SIDEBAR NAVIGATION
+            ================================================== -->
+
+            <nav
+                class="stackly-finance-client-navigation"
+                aria-label="Client Dashboard Navigation"
+            >
+
+                <!-- DASHBOARD -->
+
+                <a
+                    href="client.html"
+                    class="stackly-finance-client-nav-link active"
+                    aria-current="page"
+                >
+
+                    <span
+                        class="stackly-finance-client-nav-icon"
+                        aria-hidden="true"
+                    >
+
+                        <i class="fa-solid fa-chart-pie"></i>
+
+                    </span>
+
+                    <span>
+                        Dashboard
+                    </span>
+
+                </a>
+
+
+                <!-- MY ACCOUNTS -->
+
+                <a
+                    href="client-accounts.html"
+                    class="stackly-finance-client-nav-link"
+                >
+
+                    <span
+                        class="stackly-finance-client-nav-icon"
+                        aria-hidden="true"
+                    >
+
+                        <i class="fa-solid fa-wallet"></i>
+
+                    </span>
+
+                    <span>
+                        My Accounts
+                    </span>
+
+                </a>
+
+
+                <!-- TRANSACTIONS -->
+
+                <a
+                    href="client-transactions.html"
+                    class="stackly-finance-client-nav-link"
+                >
+
+                    <span
+                        class="stackly-finance-client-nav-icon"
+                        aria-hidden="true"
+                    >
+
+                        <i class="fa-solid fa-arrow-right-arrow-left"></i>
+
+                    </span>
+
+                    <span>
+                        Transactions
+                    </span>
+
+                </a>
+
+
+                <!-- PAYMENTS -->
+
+                <a
+                    href="client-payments.html"
+                    class="stackly-finance-client-nav-link"
+                >
+
+                    <span
+                        class="stackly-finance-client-nav-icon"
+                        aria-hidden="true"
+                    >
+
+                        <i class="fa-solid fa-credit-card"></i>
+
+                    </span>
+
+                    <span>
+                        Payments
+                    </span>
+
+                </a>
+
+
+                <!-- INVESTMENTS -->
+
+                <a
+                    href="client-investments.html"
+                    class="stackly-finance-client-nav-link"
+                >
+
+                    <span
+                        class="stackly-finance-client-nav-icon"
+                        aria-hidden="true"
+                    >
+
+                        <i class="fa-solid fa-chart-line"></i>
+
+                    </span>
+
+                    <span>
+                        Investments
+                    </span>
+
+                </a>
+
+
+                <!-- FINANCIAL PLANNING -->
+
+                <a
+                    href="client-planning.html"
+                    class="stackly-finance-client-nav-link"
+                >
+
+                    <span
+                        class="stackly-finance-client-nav-icon"
+                        aria-hidden="true"
+                    >
+
+                        <i class="fa-solid fa-bullseye"></i>
+
+                    </span>
+
+                    <span>
+                        Financial Planning
+                    </span>
+
+                </a>
+
+
+                <!-- MY PROFILE -->
+
+                <a
+                    href="client-profile.html"
+                    class="stackly-finance-client-nav-link"
+                >
+
+                    <span
+                        class="stackly-finance-client-nav-icon"
+                        aria-hidden="true"
+                    >
+
+                        <i class="fa-solid fa-user"></i>
+
+                    </span>
+
+                    <span>
+                        My Profile
+                    </span>
+
+                </a>
+
+            </nav>
+
+
+            <!-- =================================================
+                 SIDEBAR BOTTOM
+            ================================================== -->
+
+            <div class="stackly-finance-client-sidebar-bottom">
+
+                <a
+                    href="index.html"
+                    class="stackly-finance-client-logout"
+                    id="stacklyFinanceClientLogout"
+                >
+
+                    <i
+                        class="fa-solid fa-right-from-bracket"
+                        aria-hidden="true"
+                    ></i>
+
+                    <span>
+                        Logout
+                    </span>
+
+                </a>
+
+            </div>
+
+        </aside>
+
+
+        <!-- =====================================================
+             MAIN AREA
+        ====================================================== -->
+
+        <main class="stackly-finance-client-main">
+
+
+            <!-- =================================================
+                 TOP HEADER
+            ================================================== -->
+
+            <header class="stackly-finance-client-header">
+
+
+                <!-- MOBILE MENU BUTTON -->
+
+                <button
+                    type="button"
+                    class="stackly-finance-client-menu-toggle"
+                    id="stacklyFinanceClientMenuToggle"
+                    aria-label="Open navigation"
+                    aria-controls="stacklyFinanceClientSidebar"
+                    aria-expanded="false"
+                >
+
+                    <span></span>
+                    <span></span>
+                    <span></span>
+
+                </button>
+
+
+                <!-- HEADER TITLE -->
+
+                <div
+                    class="stackly-finance-client-header-title"
+                    data-aos="fade-down"
+                >
+
+                    <span class="stackly-finance-client-header-label">
+                        CLIENT PORTAL
+                    </span>
+
+                    <h1>
+                        Financial Dashboard
+                    </h1>
+
+                </div>
+
+
+                <!-- HEADER ACTIONS -->
+
+                <div class="stackly-finance-client-header-actions">
+
+
+                    <!-- NOTIFICATION -->
+
+                    <a
+                        href="404-client.html"
+                        class="stackly-finance-client-notification"
+                        aria-label="View notifications, 4 unread"
+                    >
+
+                        <i
+                            class="fa-regular fa-bell"
+                            aria-hidden="true"
+                        ></i>
+
+                        <span>
+                            4
+                        </span>
+
+                    </a>
+
+
+                    <!-- EMAIL / USER -->
+
+                    <div class="stackly-finance-client-email-box">
+
+                        <div
+                            class="stackly-finance-client-email-icon"
+                            aria-hidden="true"
+                        >
+
+                            <i class="fa-solid fa-user"></i>
+
+                        </div>
+
+
+                        <div class="stackly-finance-client-email-content">
+
+                            <span>
+                                Signed in as
+                            </span>
+
+                            <strong id="stacklyFinanceClientEmail">
+                                client@example.com
+                            </strong>
+
+                        </div>
+
+
+                        <i
+                            class="fa-solid fa-chevron-down stackly-finance-client-email-arrow"
+                            aria-hidden="true"
+                        ></i>
+
+                    </div>
+
+                </div>
+
+            </header>
+
+<!-- =========================================================
+     STACKLY FINANCE
+     INVESTMENT PAGE CONTENT
+========================================================== -->
+
+<section class="stkinv-investment-page">
+
+
+    <!-- =====================================================
+         INVESTMENT HERO
+    ====================================================== -->
+
+    <section
+        class="stkinv-hero"
+        data-aos="fade-up"
+    >
+
+        <div class="stkinv-hero-content">
+
+            <span class="stkinv-eyebrow">
+                <i class="fa-solid fa-chart-line"></i>
+                INVESTMENT PORTFOLIO
+            </span>
+
+            <h1>
+                Grow Your Wealth
+                <span>With Confidence</span>
+            </h1>
+
+            <p>
+                Track your investments, monitor portfolio performance,
+                explore opportunities and stay focused on your long-term
+                financial goals.
+            </p>
+
+            <div class="stkinv-hero-actions">
+
+                <a
+                    href="404-client.html"
+                    class="stkinv-primary-button"
+                >
+                    <span>Explore Investments</span>
+                    <i class="fa-solid fa-arrow-right"></i>
+                </a>
+
+                <a
+                    href="404-client.html"
+                    class="stkinv-outline-button"
+                >
+                    <i class="fa-solid fa-plus"></i>
+                    <span>Start Investing</span>
+                </a>
+
+            </div>
+
+        </div>
+
+
+        <div
+            class="stkinv-hero-visual"
+            aria-hidden="true"
+        >
+
+            <div class="stkinv-growth-orb">
+
+                <i class="fa-solid fa-arrow-trend-up"></i>
+
+                <span>
+                    +12.6%
+                </span>
+
+                <small>
+                    Portfolio Growth
+                </small>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =====================================================
+         INVESTMENT SUMMARY
+    ====================================================== -->
+
+    <section class="stkinv-summary-section">
+
+
+        <div
+            class="stkinv-section-heading"
+            data-aos="fade-up"
+        >
+
+            <div>
+
+                <span>
+                    PORTFOLIO OVERVIEW
+                </span>
+
+                <h2>
+                    Investment Summary
+                </h2>
+
+            </div>
+
+            <a
+                href="404-client.html"
+                class="stkinv-summary-link"
+            >
+                View Portfolio
+                <i class="fa-solid fa-arrow-right"></i>
+            </a>
+
+        </div>
+
+
+        <div class="stkinv-summary-grid">
+
+
+            <!-- TOTAL INVESTED -->
+
+            <article
+                class="stkinv-summary-card"
+                data-aos="fade-up"
+                data-aos-delay="100"
+            >
+
+                <div class="stkinv-card-top">
+
+                    <div class="stkinv-summary-icon">
+
+                        <i class="fa-solid fa-wallet"></i>
+
+                    </div>
+
+                    <span class="stkinv-positive-badge">
+                        +8.4%
+                    </span>
+
+                </div>
+
+                <span class="stkinv-summary-label">
+                    Total Invested
+                </span>
+
+                <h3>
+                    ₹6,58,400
+                </h3>
+
+                <p>
+                    Total amount invested
+                </p>
+
+            </article>
+
+
+            <!-- CURRENT VALUE -->
+
+            <article
+                class="stkinv-summary-card"
+                data-aos="fade-up"
+                data-aos-delay="150"
+            >
+
+                <div class="stkinv-card-top">
+
+                    <div class="stkinv-summary-icon">
+
+                        <i class="fa-solid fa-chart-line"></i>
+
+                    </div>
+
+                    <span class="stkinv-positive-badge">
+                        +12.6%
+                    </span>
+
+                </div>
+
+                <span class="stkinv-summary-label">
+                    Current Value
+                </span>
+
+                <h3>
+                    ₹7,42,300
+                </h3>
+
+                <p>
+                    Current portfolio value
+                </p>
+
+            </article>
+
+
+            <!-- TOTAL RETURNS -->
+
+            <article
+                class="stkinv-summary-card"
+                data-aos="fade-up"
+                data-aos-delay="200"
+            >
+
+                <div class="stkinv-card-top">
+
+                    <div class="stkinv-summary-icon">
+
+                        <i class="fa-solid fa-arrow-trend-up"></i>
+
+                    </div>
+
+                    <span class="stkinv-positive-badge">
+                        +12.72%
+                    </span>
+
+                </div>
+
+                <span class="stkinv-summary-label">
+                    Total Returns
+                </span>
+
+                <h3>
+                    +₹83,900
+                </h3>
+
+                <p>
+                    Overall portfolio gains
+                </p>
+
+            </article>
+
+
+            <!-- DAY CHANGE -->
+
+            <article
+                class="stkinv-summary-card"
+                data-aos="fade-up"
+                data-aos-delay="250"
+            >
+
+                <div class="stkinv-card-top">
+
+                    <div class="stkinv-summary-icon">
+
+                        <i class="fa-solid fa-calendar-day"></i>
+
+                    </div>
+
+                    <span class="stkinv-neutral-badge">
+                        Today
+                    </span>
+
+                </div>
+
+                <span class="stkinv-summary-label">
+                    Today's Change
+                </span>
+
+                <h3>
+                    +₹4,820
+                </h3>
+
+                <p>
+                    Portfolio movement today
+                </p>
+
+            </article>
+
+        </div>
+
+    </section>
+
+
+    <!-- =====================================================
+         PERFORMANCE + ALLOCATION
+    ====================================================== -->
+
+    <section class="stkinv-analysis-section">
+
+
+        <!-- PERFORMANCE -->
+
+        <div
+            class="stkinv-performance-panel"
+            data-aos="fade-up"
+        >
+
+            <div class="stkinv-panel-header">
+
+                <div>
+
+                    <span>
+                        PORTFOLIO PERFORMANCE
+                    </span>
+
+                    <h2>
+                        Investment Growth
+                    </h2>
+
+                </div>
+
+                <div class="stkinv-custom-dropdown">
+
+    <button
+        type="button"
+        class="stkinv-dropdown-trigger"
+        aria-expanded="false"
+    >
+        <span class="stkinv-dropdown-selected">1 Year</span>
+
+        <i class="fa-solid fa-chevron-down"></i>
+    </button>
+
+
+    <div class="stkinv-dropdown-menu">
+
+        <button type="button" class="stkinv-dropdown-option">
+            1 Month
+        </button>
+
+        <button type="button" class="stkinv-dropdown-option">
+            6 Months
+        </button>
+
+        <button
+            type="button"
+            class="stkinv-dropdown-option active"
+        >
+            1 Year
+        </button>
+
+        <button type="button" class="stkinv-dropdown-option">
+            3 Years
+        </button>
+
+        <button type="button" class="stkinv-dropdown-option">
+            5 Years
+        </button>
+
+    </div>
+
+</div>
+
+            </div>
+
+
+            <div class="stkinv-performance-value">
+
+                <strong>
+                    ₹7,42,300
+                </strong>
+
+                <span>
+                    <i class="fa-solid fa-arrow-up"></i>
+                    12.72%
+                </span>
+
+            </div>
+
+
+            <div
+                class="stkinv-chart-area"
+                aria-label="Investment performance chart"
+            >
+
+                <div class="stkinv-chart-lines">
+
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+
+                </div>
+
+
+                <div class="stkinv-chart-bars">
+
+                    <div
+                        style="height:42%;"
+                        title="January"
+                    ></div>
+
+                    <div
+                        style="height:51%;"
+                        title="February"
+                    ></div>
+
+                    <div
+                        style="height:47%;"
+                        title="March"
+                    ></div>
+
+                    <div
+                        style="height:63%;"
+                        title="April"
+                    ></div>
+
+                    <div
+                        style="height:59%;"
+                        title="May"
+                    ></div>
+
+                    <div
+                        style="height:72%;"
+                        title="June"
+                    ></div>
+
+                    <div
+                        style="height:68%;"
+                        title="July"
+                    ></div>
+
+                    <div
+                        style="height:79%;"
+                        title="August"
+                    ></div>
+
+                    <div
+                        style="height:88%;"
+                        title="September"
+                    ></div>
+
+                </div>
+
+
+                <div class="stkinv-chart-months">
+
+                    <span>JAN</span>
+                    <span>FEB</span>
+                    <span>MAR</span>
+                    <span>APR</span>
+                    <span>MAY</span>
+                    <span>JUN</span>
+                    <span>JUL</span>
+                    <span>AUG</span>
+                    <span>SEP</span>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+
+        <!-- ALLOCATION -->
+
+        <div
+            class="stkinv-allocation-panel"
+            data-aos="fade-up"
+            data-aos-delay="100"
+        >
+
+            <div class="stkinv-panel-header">
+
+                <div>
+
+                    <span>
+                        ASSET ALLOCATION
+                    </span>
+
+                    <h2>
+                        Portfolio Mix
+                    </h2>
+
+                </div>
+
+            </div>
+
+
+            <div class="stkinv-donut-area">
+
+                <div class="stkinv-donut">
+
+                    <div class="stkinv-donut-center">
+
+                        <strong>
+                            ₹7.42L
+                        </strong>
+
+                        <span>
+                            Total Value
+                        </span>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <div class="stkinv-allocation-list">
+
+                <div class="stkinv-allocation-item">
+
+                    <div>
+
+                        <span class="stkinv-dot stkinv-dot-equity"></span>
+
+                        <strong>
+                            Mutual Funds
+                        </strong>
+
+                    </div>
+
+                    <span>
+                        40%
+                    </span>
+
+                </div>
+
+
+                <div class="stkinv-allocation-item">
+
+                    <div>
+
+                        <span class="stkinv-dot stkinv-dot-debt"></span>
+
+                        <strong>
+                            Bonds
+                        </strong>
+
+                    </div>
+
+                    <span>
+                        25%
+                    </span>
+
+                </div>
+
+
+                <div class="stkinv-allocation-item">
+
+                    <div>
+
+                        <span class="stkinv-dot stkinv-dot-stocks"></span>
+
+                        <strong>
+                            Stocks
+                        </strong>
+
+                    </div>
+
+                    <span>
+                        20%
+                    </span>
+
+                </div>
+
+
+                <div class="stkinv-allocation-item">
+
+                    <div>
+
+                        <span class="stkinv-dot stkinv-dot-gold"></span>
+
+                        <strong>
+                            Gold
+                        </strong>
+
+                    </div>
+
+                    <span>
+                        15%
+                    </span>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =====================================================
+         CURRENT HOLDINGS
+    ====================================================== -->
+
+    <section
+        class="stkinv-holdings-section"
+        data-aos="fade-up"
+    >
+
+        <div class="stkinv-panel-header">
+
+            <div>
+
+                <span>
+                    YOUR INVESTMENTS
+                </span>
+
+                <h2>
+                    Current Holdings
+                </h2>
+
+            </div>
+
+            <a
+                href="404-client.html"
+                class="stkinv-summary-link"
+            >
+                View All
+                <i class="fa-solid fa-arrow-right"></i>
+            </a>
+
+        </div>
+
+
+        <div class="stkinv-holdings-table">
+
+
+            <!-- TABLE HEADER -->
+
+            <div class="stkinv-holding-row stkinv-holding-header">
+
+                <span>
+                    Investment
+                </span>
+
+                <span>
+                    Invested
+                </span>
+
+                <span>
+                    Current Value
+                </span>
+
+                <span>
+                    Returns
+                </span>
+
+                <span>
+                    Status
+                </span>
+
+            </div>
+
+
+            <!-- HOLDING 1 -->
+
+            <div class="stkinv-holding-row">
+
+                <div class="stkinv-investment-name">
+
+                    <span class="stkinv-company-icon">
+                        <i class="fa-solid fa-layer-group"></i>
+                    </span>
+
+                    <div>
+
+                        <strong>
+                            HDFC Flexi Cap Fund
+                        </strong>
+
+                        <small>
+                            Mutual Fund
+                        </small>
+
+                    </div>
+
+                </div>
+
+                <span>
+                    ₹1,50,000
+                </span>
+
+                <span>
+                    ₹1,72,500
+                </span>
+
+                <strong class="stkinv-return-positive">
+                    +15.00%
+                </strong>
+
+                <span class="stkinv-holding-status">
+                    Active
+                </span>
+
+            </div>
+
+
+            <!-- HOLDING 2 -->
+
+            <div class="stkinv-holding-row">
+
+                <div class="stkinv-investment-name">
+
+                    <span class="stkinv-company-icon">
+                        <i class="fa-solid fa-building-columns"></i>
+                    </span>
+
+                    <div>
+
+                        <strong>
+                            SBI Corporate Bond
+                        </strong>
+
+                        <small>
+                            Fixed Income
+                        </small>
+
+                    </div>
+
+                </div>
+
+                <span>
+                    ₹1,25,000
+                </span>
+
+                <span>
+                    ₹1,34,250
+                </span>
+
+                <strong class="stkinv-return-positive">
+                    +7.40%
+                </strong>
+
+                <span class="stkinv-holding-status">
+                    Active
+                </span>
+
+            </div>
+
+
+            <!-- HOLDING 3 -->
+
+            <div class="stkinv-holding-row">
+
+                <div class="stkinv-investment-name">
+
+                    <span class="stkinv-company-icon">
+                        <i class="fa-solid fa-chart-simple"></i>
+                    </span>
+
+                    <div>
+
+                        <strong>
+                            Reliance Industries
+                        </strong>
+
+                        <small>
+                            Equity
+                        </small>
+
+                    </div>
+
+                </div>
+
+                <span>
+                    ₹1,00,000
+                </span>
+
+                <span>
+                    ₹1,18,500
+                </span>
+
+                <strong class="stkinv-return-positive">
+                    +18.50%
+                </strong>
+
+                <span class="stkinv-holding-status">
+                    Active
+                </span>
+
+            </div>
+
+
+            <!-- HOLDING 4 -->
+
+            <div class="stkinv-holding-row">
+
+                <div class="stkinv-investment-name">
+
+                    <span class="stkinv-company-icon">
+                        <i class="fa-solid fa-coins"></i>
+                    </span>
+
+                    <div>
+
+                        <strong>
+                            Gold ETF
+                        </strong>
+
+                        <small>
+                            Commodity
+                        </small>
+
+                    </div>
+
+                </div>
+
+                <span>
+                    ₹82,000
+                </span>
+
+                <span>
+                    ₹94,300
+                </span>
+
+                <strong class="stkinv-return-positive">
+                    +15.00%
+                </strong>
+
+                <span class="stkinv-holding-status">
+                    Active
+                </span>
+
+            </div>
+
+
+            <!-- HOLDING 5 -->
+
+            <div class="stkinv-holding-row">
+
+                <div class="stkinv-investment-name">
+
+                    <span class="stkinv-company-icon">
+                        <i class="fa-solid fa-globe"></i>
+                    </span>
+
+                    <div>
+
+                        <strong>
+                            Global Equity Fund
+                        </strong>
+
+                        <small>
+                            International Fund
+                        </small>
+
+                    </div>
+
+                </div>
+
+                <span>
+                    ₹75,000
+                </span>
+
+                <span>
+                    ₹81,250
+                </span>
+
+                <strong class="stkinv-return-positive">
+                    +8.33%
+                </strong>
+
+                <span class="stkinv-holding-status">
+                    Active
+                </span>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =====================================================
+         INVESTMENT OPPORTUNITIES
+    ====================================================== -->
+
+    <section class="stkinv-opportunities-section">
+
+
+        <div
+            class="stkinv-section-heading"
+            data-aos="fade-up"
+        >
+
+            <div>
+
+                <span>
+                    EXPLORE OPTIONS
+                </span>
+
+                <h2>
+                    Investment Opportunities
+                </h2>
+
+            </div>
+
+        </div>
+
+
+        <div class="stkinv-opportunity-grid">
+
+
+            <!-- OPPORTUNITY 1 -->
+
+            <article
+                class="stkinv-opportunity-card"
+                data-aos="fade-up"
+                data-aos-delay="100"
+            >
+
+                <div class="stkinv-opportunity-icon">
+
+                    <i class="fa-solid fa-chart-line"></i>
+
+                </div>
+
+                <span class="stkinv-risk-medium">
+                    MODERATE RISK
+                </span>
+
+                <h3>
+                    Balanced Mutual Funds
+                </h3>
+
+                <p>
+                    Diversified funds combining equity and fixed income
+                    for balanced long-term growth.
+                </p>
+
+                <div class="stkinv-opportunity-bottom">
+
+                    <strong>
+                        10–14%
+                    </strong>
+
+                    <span>
+                        Expected Range
+                    </span>
+
+                </div>
+
+                <a href="404-client.html">
+                    Explore
+                    <i class="fa-solid fa-arrow-right"></i>
+                </a>
+
+            </article>
+
+
+            <!-- OPPORTUNITY 2 -->
+
+            <article
+                class="stkinv-opportunity-card"
+                data-aos="fade-up"
+                data-aos-delay="150"
+            >
+
+                <div class="stkinv-opportunity-icon">
+
+                    <i class="fa-solid fa-building-columns"></i>
+
+                </div>
+
+                <span class="stkinv-risk-low">
+                    LOW RISK
+                </span>
+
+                <h3>
+                    Corporate Bonds
+                </h3>
+
+                <p>
+                    Fixed-income opportunities designed to provide
+                    predictable returns with lower volatility.
+                </p>
+
+                <div class="stkinv-opportunity-bottom">
+
+                    <strong>
+                        7–9%
+                    </strong>
+
+                    <span>
+                        Expected Range
+                    </span>
+
+                </div>
+
+                <a href="404-client.html">
+                    Explore
+                    <i class="fa-solid fa-arrow-right"></i>
+                </a>
+
+            </article>
+
+
+            <!-- OPPORTUNITY 3 -->
+
+            <article
+                class="stkinv-opportunity-card"
+                data-aos="fade-up"
+                data-aos-delay="200"
+            >
+
+                <div class="stkinv-opportunity-icon">
+
+                    <i class="fa-solid fa-rocket"></i>
+
+                </div>
+
+                <span class="stkinv-risk-high">
+                    HIGHER RISK
+                </span>
+
+                <h3>
+                    Growth Equity
+                </h3>
+
+                <p>
+                    Equity-focused opportunities for investors seeking
+                    higher long-term growth potential.
+                </p>
+
+                <div class="stkinv-opportunity-bottom">
+
+                    <strong>
+                        14–20%
+                    </strong>
+
+                    <span>
+                        Potential Range
+                    </span>
+
+                </div>
+
+                <a href="404-client.html">
+                    Explore
+                    <i class="fa-solid fa-arrow-right"></i>
+                </a>
+
+            </article>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =====================================================
+         UPCOMING INVESTMENTS
+    ====================================================== -->
+
+    <section
+        class="stkinv-upcoming-section"
+        data-aos="fade-up"
+    >
+
+        <div class="stkinv-panel-header">
+
+            <div>
+
+                <span>
+                    SCHEDULED INVESTMENTS
+                </span>
+
+                <h2>
+                    Upcoming Investments
+                </h2>
+
+            </div>
+
+            <a
+                href="404-client.html"
+                class="stkinv-summary-link"
+            >
+                Manage Schedule
+                <i class="fa-solid fa-arrow-right"></i>
+            </a>
+
+        </div>
+
+
+        <div class="stkinv-scheduled-list">
+
+
+            <!-- SCHEDULE 1 -->
+
+            <div class="stkinv-scheduled-card">
+
+                <div class="stkinv-scheduled-date">
+
+                    <strong>
+                        20
+                    </strong>
+
+                    <span>
+                        SEP
+                    </span>
+
+                </div>
+
+                <div class="stkinv-scheduled-info">
+
+                    <strong>
+                        Monthly SIP
+                    </strong>
+
+                    <span>
+                        HDFC Flexi Cap Fund
+                    </span>
+
+                </div>
+
+                <strong class="stkinv-scheduled-amount">
+                    ₹10,000
+                </strong>
+
+                <span class="stkinv-scheduled-status">
+                    Scheduled
+                </span>
+
+            </div>
+
+
+            <!-- SCHEDULE 2 -->
+
+            <div class="stkinv-scheduled-card">
+
+                <div class="stkinv-scheduled-date">
+
+                    <strong>
+                        05
+                    </strong>
+
+                    <span>
+                        OCT
+                    </span>
+
+                </div>
+
+                <div class="stkinv-scheduled-info">
+
+                    <strong>
+                        Monthly SIP
+                    </strong>
+
+                    <span>
+                        Global Equity Fund
+                    </span>
+
+                </div>
+
+                <strong class="stkinv-scheduled-amount">
+                    ₹7,500
+                </strong>
+
+                <span class="stkinv-scheduled-status">
+                    Scheduled
+                </span>
+
+            </div>
+
+
+            <!-- SCHEDULE 3 -->
+
+            <div class="stkinv-scheduled-card">
+
+                <div class="stkinv-scheduled-date">
+
+                    <strong>
+                        15
+                    </strong>
+
+                    <span>
+                        OCT
+                    </span>
+
+                </div>
+
+                <div class="stkinv-scheduled-info">
+
+                    <strong>
+                        Bond Investment
+                    </strong>
+
+                    <span>
+                        SBI Corporate Bond
+                    </span>
+
+                </div>
+
+                <strong class="stkinv-scheduled-amount">
+                    ₹15,000
+                </strong>
+
+                <span class="stkinv-scheduled-status">
+                    Scheduled
+                </span>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =====================================================
+         INVESTMENT INSIGHT
+    ====================================================== -->
+
+    <section
+        class="stkinv-insights-section"
+        data-aos="fade-up"
+    >
+
+        <div class="stkinv-insights-icon">
+
+            <i class="fa-solid fa-lightbulb"></i>
+
+        </div>
+
+        <div class="stkinv-insights-content">
+
+            <span>
+                PORTFOLIO INSIGHT
+            </span>
+
+            <h2>
+                Your portfolio is diversified across 4 major asset classes.
+            </h2>
+
+            <p>
+                Regularly reviewing your asset allocation can help you
+                keep your investment strategy aligned with your financial
+                goals and preferred risk level.
+            </p>
+
+        </div>
+
+        <a
+            href="404-client.html"
+            class="stkinv-insights-button"
+        >
+            Review Portfolio
+            <i class="fa-solid fa-arrow-right"></i>
+        </a>
+
+    </section>
+
+
+
+    <!-- =====================================================
+         QUICK INVESTMENT ACTIONS
+    ====================================================== -->
+
+    <section class="stkinv-actions-section">
+
+
+        <div
+            class="stkinv-section-heading"
+            data-aos="fade-up"
+        >
+
+            <div>
+
+                <span>
+                    QUICK ACCESS
+                </span>
+
+                <h2>
+                    Investment Actions
+                </h2>
+
+            </div>
+
+        </div>
+
+
+        <div class="stkinv-actions-grid">
+
+
+            <a
+                href="404-client.html"
+                class="stkinv-action-card"
+                data-aos="fade-up"
+                data-aos-delay="100"
+            >
+
+                <span class="stkinv-action-icon">
+                    <i class="fa-solid fa-plus"></i>
+                </span>
+
+                <strong>
+                    Start New Investment
+                </strong>
+
+                <small>
+                    Explore available opportunities
+                </small>
+
+            </a>
+
+
+            <a
+                href="404-client.html"
+                class="stkinv-action-card"
+                data-aos="fade-up"
+                data-aos-delay="150"
+            >
+
+                <span class="stkinv-action-icon">
+                    <i class="fa-solid fa-repeat"></i>
+                </span>
+
+                <strong>
+                    Manage SIP
+                </strong>
+
+                <small>
+                    Review your scheduled investments
+                </small>
+
+            </a>
+
+
+            <a
+                href="404-client.html"
+                class="stkinv-action-card"
+                data-aos="fade-up"
+                data-aos-delay="200"
+            >
+
+                <span class="stkinv-action-icon">
+                    <i class="fa-solid fa-file-lines"></i>
+                </span>
+
+                <strong>
+                    Investment Reports
+                </strong>
+
+                <small>
+                    Download portfolio statements
+                </small>
+
+            </a>
+
+        </div>
+
+    </section>
+
+
+</section>
+
+</main>
+
+    </div>
+
+
+    <!-- =========================================================
+         AOS JS
+    ========================================================== -->
+
+    <script
+        src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"
+    ></script>
+
+
+    <!-- =========================================================
+         CLIENT DASHBOARD JS
+    ========================================================== -->
+
+    <script src="client.js"></script>
+
+
+</body>
+
+</html>

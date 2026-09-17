@@ -1,0 +1,2720 @@
+/* =========================================================
+   STACKLY FINANCE
+   LOGIN + SIGN UP
+   PREMIUM AUTHENTICATION CSS
+========================================================= */
+
+
+/* =========================================================
+   ROOT VARIABLES
+========================================================= */
+
+:root {
+
+    --sf-auth-primary: #b8f25a;
+    --sf-auth-primary-dark: #8dcc32;
+    --sf-auth-primary-light: #d5ff91;
+
+    --sf-auth-dark: #061713;
+    --sf-auth-dark-2: #0b2520;
+    --sf-auth-dark-3: #102f28;
+
+    --sf-auth-white: #ffffff;
+    --sf-auth-text: #f5f8f6;
+    --sf-auth-muted: rgba(255, 255, 255, 0.68);
+
+    --sf-auth-border: rgba(255, 255, 255, 0.13);
+    --sf-auth-border-hover: rgba(184, 242, 90, 0.40);
+
+    --sf-auth-danger: #ff7070;
+    --sf-auth-success: #b8f25a;
+
+    --sf-auth-shadow:
+        0 30px 90px rgba(0, 0, 0, 0.38);
+
+    --sf-auth-transition:
+        all 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+
+}
+
+
+/* =========================================================
+   GLOBAL RESET
+========================================================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+html {
+    scroll-behavior: smooth;
+}
+
+
+body {
+
+    min-height: 100vh;
+
+    font-family: "DM Sans", sans-serif;
+
+    color: var(--sf-auth-text);
+
+    background: var(--sf-auth-dark);
+
+    overflow-x: hidden;
+
+}
+
+
+/* =========================================================
+   BACKGROUND
+========================================================= */
+
+.stackly-finance-auth-background {
+
+    position: fixed;
+
+    inset: 0;
+
+    width: 100%;
+    height: 100%;
+
+    overflow: hidden;
+
+    background:
+        radial-gradient(
+            circle at 10% 20%,
+            rgba(184, 242, 90, 0.07),
+            transparent 28%
+        ),
+        radial-gradient(
+            circle at 90% 80%,
+            rgba(184, 242, 90, 0.06),
+            transparent 30%
+        ),
+        linear-gradient(
+            135deg,
+            #061713 0%,
+            #081e19 50%,
+            #061713 100%
+        );
+
+    z-index: -10;
+
+}
+
+
+/* =========================================================
+   BACKGROUND GRID
+========================================================= */
+
+.stackly-finance-auth-background::before {
+
+    content: "";
+
+    position: absolute;
+
+    inset: 0;
+
+    background-image:
+        linear-gradient(
+            rgba(255, 255, 255, 0.025) 1px,
+            transparent 1px
+        ),
+        linear-gradient(
+            90deg,
+            rgba(255, 255, 255, 0.025) 1px,
+            transparent 1px
+        );
+
+    background-size: 60px 60px;
+
+    mask-image:
+        linear-gradient(
+            to bottom,
+            rgba(0, 0, 0, 0.9),
+            transparent
+        );
+
+    pointer-events: none;
+
+}
+
+
+/* =========================================================
+   BACKGROUND GLOWS
+========================================================= */
+
+.stackly-finance-auth-glow {
+
+    position: absolute;
+
+    border-radius: 50%;
+
+    pointer-events: none;
+
+    filter: blur(5px);
+
+}
+
+
+.stackly-finance-auth-glow-one {
+
+    width: 600px;
+    height: 600px;
+
+    top: -260px;
+    right: -180px;
+
+    background:
+        radial-gradient(
+            circle,
+            rgba(184, 242, 90, 0.17) 0%,
+            rgba(184, 242, 90, 0.06) 38%,
+            transparent 72%
+        );
+
+    animation:
+        stacklyAuthGlowOne 9s ease-in-out infinite;
+
+}
+
+
+.stackly-finance-auth-glow-two {
+
+    width: 500px;
+    height: 500px;
+
+    left: -240px;
+    bottom: -220px;
+
+    background:
+        radial-gradient(
+            circle,
+            rgba(184, 242, 90, 0.10) 0%,
+            rgba(184, 242, 90, 0.04) 40%,
+            transparent 72%
+        );
+
+    animation:
+        stacklyAuthGlowTwo 11s ease-in-out infinite;
+
+}
+
+
+/* =========================================================
+   MAIN AUTH PAGE
+========================================================= */
+
+.stackly-finance-auth-page {
+
+    position: relative;
+
+    width: 100%;
+    min-height: 100vh;
+
+    padding:
+        28px
+        40px
+        35px;
+
+}
+
+
+/* =========================================================
+   TOP BAR
+========================================================= */
+
+.stackly-finance-auth-topbar {
+
+    width: 100%;
+    max-width: 1400px;
+
+    margin: 0 auto 28px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+}
+
+
+/* =========================================================
+   LOGO
+========================================================= */
+
+.stackly-finance-auth-logo-link {
+
+    display: inline-flex;
+
+    align-items: center;
+
+    text-decoration: none;
+
+}
+
+
+.stackly-finance-auth-logo {
+
+    display: block;
+
+    width: 175px;
+    height: auto;
+
+    object-fit: contain;
+
+    filter:
+        brightness(0)
+        saturate(100%)
+        invert(82%)
+        sepia(55%)
+        saturate(700%)
+        hue-rotate(40deg)
+        brightness(105%)
+        contrast(102%);
+
+    transition:
+        transform 0.35s ease,
+        filter 0.35s ease;
+
+}
+
+
+.stackly-finance-auth-logo-link:hover
+.stackly-finance-auth-logo {
+
+    transform: translateY(-3px) scale(1.03);
+
+    filter:
+        brightness(0)
+        saturate(100%)
+        invert(82%)
+        sepia(55%)
+        saturate(900%)
+        hue-rotate(40deg)
+        brightness(115%)
+        contrast(105%)
+        drop-shadow(
+            0 0 5px
+            rgba(184, 242, 90, 0.9)
+        )
+        drop-shadow(
+            0 0 14px
+            rgba(184, 242, 90, 0.65)
+        )
+        drop-shadow(
+            0 0 28px
+            rgba(184, 242, 90, 0.35)
+        );
+
+}
+
+
+/* =========================================================
+   BACK HOME BUTTON
+========================================================= */
+
+.stackly-finance-auth-home-button {
+
+    display: inline-flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 10px;
+
+    min-height: 48px;
+
+    padding: 0 19px;
+
+    border: 1px solid var(--sf-auth-border);
+
+    border-radius: 12px;
+
+    color: var(--sf-auth-text);
+
+    background: rgba(255, 255, 255, 0.045);
+
+    font-family: "Space Grotesk", sans-serif;
+
+    font-size: 14px;
+
+    font-weight: 600;
+
+    text-decoration: none;
+
+    backdrop-filter: blur(12px);
+
+    transition: var(--sf-auth-transition);
+
+}
+
+
+.stackly-finance-auth-home-button i {
+
+    color: var(--sf-auth-primary);
+
+    font-size: 13px;
+
+    transition: transform 0.3s ease;
+
+}
+
+
+.stackly-finance-auth-home-button:hover {
+
+    color: var(--sf-auth-dark);
+
+    background: var(--sf-auth-primary);
+
+    border-color: var(--sf-auth-primary);
+
+    transform: translateY(-3px);
+
+    box-shadow:
+        0 12px 30px rgba(184, 242, 90, 0.18);
+
+}
+
+
+.stackly-finance-auth-home-button:hover i {
+
+    color: var(--sf-auth-dark);
+
+    transform: translateX(-4px);
+
+}
+
+
+/* =========================================================
+   AUTH CONTAINER
+========================================================= */
+
+.stackly-finance-auth-container {
+
+    position: relative;
+
+    display: grid;
+
+    grid-template-columns:
+        minmax(380px, 0.95fr)
+        minmax(480px, 1.05fr);
+
+    width: 100%;
+    max-width: 1250px;
+
+    min-height: 730px;
+
+    margin: 0 auto;
+
+    overflow: hidden;
+
+    border:
+        1px solid var(--sf-auth-border);
+
+    border-radius: 30px;
+
+    background:
+        rgba(255, 255, 255, 0.035);
+
+    box-shadow: var(--sf-auth-shadow);
+
+    backdrop-filter: blur(20px);
+
+}
+
+
+/* =========================================================
+   LEFT INTRO PANEL
+========================================================= */
+
+.stackly-finance-auth-intro {
+
+    position: relative;
+
+    display: flex;
+
+    align-items: center;
+
+    padding: 70px 65px;
+
+    background:
+        linear-gradient(
+            145deg,
+            rgba(184, 242, 90, 0.09),
+            rgba(255, 255, 255, 0.025)
+        );
+
+    border-right:
+        1px solid rgba(255, 255, 255, 0.08);
+
+    overflow: hidden;
+
+}
+
+
+/* INTRO DECORATION */
+
+.stackly-finance-auth-intro::before {
+
+    content: "";
+
+    position: absolute;
+
+    width: 360px;
+    height: 360px;
+
+    top: -180px;
+    right: -180px;
+
+    border-radius: 50%;
+
+    border:
+        1px solid rgba(184, 242, 90, 0.13);
+
+    box-shadow:
+        0 0 0 40px rgba(184, 242, 90, 0.025),
+        0 0 0 80px rgba(184, 242, 90, 0.018);
+
+    animation:
+        stacklyAuthOrbit 12s linear infinite;
+
+}
+
+
+/* =========================================================
+   INTRO CONTENT
+========================================================= */
+
+.stackly-finance-auth-intro-content {
+
+    position: relative;
+
+    width: 100%;
+
+    z-index: 2;
+
+}
+
+
+/* =========================================================
+   LABEL
+========================================================= */
+
+.stackly-finance-auth-label {
+
+    display: inline-flex;
+
+    align-items: center;
+
+    gap: 10px;
+
+    margin-bottom: 25px;
+
+    color: var(--sf-auth-primary);
+
+    font-family: "Space Grotesk", sans-serif;
+
+    font-size: 13px;
+
+    font-weight: 700;
+
+    letter-spacing: 2.2px;
+
+    text-transform: uppercase;
+
+}
+
+
+.stackly-finance-auth-label i {
+
+    display: inline-flex;
+
+    align-items: center;
+    justify-content: center;
+
+    width: 32px;
+    height: 32px;
+
+    border-radius: 10px;
+
+    color: var(--sf-auth-dark);
+
+    background: var(--sf-auth-primary);
+
+    box-shadow:
+        0 8px 25px rgba(184, 242, 90, 0.18);
+
+}
+
+
+/* =========================================================
+   INTRO HEADING
+========================================================= */
+
+.stackly-finance-auth-heading {
+
+    max-width: 560px;
+
+    margin-bottom: 25px;
+
+    color: var(--sf-auth-white);
+
+    font-family: "Space Grotesk", sans-serif;
+
+    font-size: clamp(48px, 5vw, 72px);
+
+    font-weight: 600;
+
+    line-height: 1.02;
+
+    letter-spacing: -3px;
+
+}
+
+
+.stackly-finance-auth-heading span {
+
+    display: block;
+
+    color: var(--sf-auth-primary);
+
+}
+
+
+/* =========================================================
+   INTRO DESCRIPTION
+========================================================= */
+
+.stackly-finance-auth-description {
+
+    max-width: 540px;
+
+    margin-bottom: 45px;
+
+    color: var(--sf-auth-muted);
+
+    font-size: 17px;
+
+    line-height: 1.8;
+
+}
+
+
+/* =========================================================
+   BENEFITS
+========================================================= */
+
+.stackly-finance-auth-benefits {
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 22px;
+
+}
+
+
+.stackly-finance-auth-benefit {
+
+    display: flex;
+
+    align-items: flex-start;
+
+    gap: 15px;
+
+    transition: transform 0.35s ease;
+
+}
+
+
+.stackly-finance-auth-benefit:hover {
+
+    transform: translateX(7px);
+
+}
+
+
+/* BENEFIT ICON */
+
+.stackly-finance-auth-benefit-icon {
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    width: 44px;
+    height: 44px;
+
+    flex: 0 0 44px;
+
+    border:
+        1px solid rgba(184, 242, 90, 0.16);
+
+    border-radius: 12px;
+
+    color: var(--sf-auth-primary);
+
+    background:
+        rgba(184, 242, 90, 0.07);
+
+    transition: var(--sf-auth-transition);
+
+}
+
+
+.stackly-finance-auth-benefit:hover
+.stackly-finance-auth-benefit-icon {
+
+    color: var(--sf-auth-dark);
+
+    background: var(--sf-auth-primary);
+
+    transform: rotate(-5deg) scale(1.06);
+
+}
+
+
+/* BENEFIT TEXT */
+
+.stackly-finance-auth-benefit strong {
+
+    display: block;
+
+    margin-bottom: 4px;
+
+    color: var(--sf-auth-white);
+
+    font-family: "Space Grotesk", sans-serif;
+
+    font-size: 16px;
+
+    font-weight: 600;
+
+}
+
+
+.stackly-finance-auth-benefit p {
+
+    color: rgba(255, 255, 255, 0.55);
+
+    font-size: 13px;
+
+    line-height: 1.55;
+
+}
+
+
+/* =========================================================
+   FORM PANEL
+========================================================= */
+
+.stackly-finance-auth-form-panel {
+
+    position: relative;
+
+    padding: 60px 65px;
+
+    background:
+        rgba(4, 18, 15, 0.72);
+
+    overflow: visible;
+
+}
+
+
+/* =========================================================
+   FORM HEADER
+========================================================= */
+
+.stackly-finance-auth-form-header {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 16px;
+
+    margin-bottom: 28px;
+
+}
+
+
+.stackly-finance-auth-form-icon {
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    width: 58px;
+    height: 58px;
+
+    flex: 0 0 58px;
+
+    border-radius: 16px;
+
+    color: var(--sf-auth-dark);
+
+    background: var(--sf-auth-primary);
+
+    font-size: 21px;
+
+    box-shadow:
+        0 12px 30px rgba(184, 242, 90, 0.16);
+
+    transition:
+        transform 0.35s ease,
+        box-shadow 0.35s ease;
+
+}
+
+
+.stackly-finance-auth-form-header:hover
+.stackly-finance-auth-form-icon {
+
+    transform: translateY(-4px) rotate(4deg);
+
+    box-shadow:
+        0 17px 35px rgba(184, 242, 90, 0.25);
+
+}
+
+
+.stackly-finance-auth-form-label {
+
+    display: block;
+
+    margin-bottom: 4px;
+
+    color: var(--sf-auth-primary);
+
+    font-family: "Space Grotesk", sans-serif;
+
+    font-size: 11px;
+
+    font-weight: 700;
+
+    letter-spacing: 1.8px;
+
+}
+
+
+.stackly-finance-auth-form-header h2 {
+
+    color: var(--sf-auth-white);
+
+    font-family: "Space Grotesk", sans-serif;
+
+    font-size: 28px;
+
+    font-weight: 600;
+
+    line-height: 1.25;
+
+}
+
+
+/* =========================================================
+   LOGIN / SIGNUP SWITCH
+========================================================= */
+
+.stackly-finance-auth-switch {
+
+    position: relative;
+
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    width: 100%;
+
+    height: 56px;
+
+    margin-bottom: 30px;
+
+    padding: 5px;
+
+    border:
+        1px solid rgba(255, 255, 255, 0.08);
+
+    border-radius: 15px;
+
+    background:
+        rgba(255, 255, 255, 0.045);
+
+}
+
+
+.stackly-finance-auth-switch-button {
+
+    position: relative;
+
+    z-index: 2;
+
+    border: 0;
+
+    outline: none;
+
+    color: rgba(255, 255, 255, 0.55);
+
+    background: transparent;
+
+    border-radius: 11px;
+
+    font-family: "Space Grotesk", sans-serif;
+
+    font-size: 15px;
+
+    font-weight: 600;
+
+    cursor: pointer;
+
+    transition: color 0.3s ease;
+
+}
+
+
+.stackly-finance-auth-switch-button.active {
+
+    color: var(--sf-auth-dark);
+
+}
+
+
+.stackly-finance-auth-switch-button:not(.active):hover {
+
+    color: var(--sf-auth-white);
+
+}
+
+
+.stackly-finance-auth-switch-slider {
+
+    position: absolute;
+
+    top: 5px;
+    left: 5px;
+
+    width: calc(50% - 5px);
+
+    height: calc(100% - 10px);
+
+    border-radius: 11px;
+
+    background: var(--sf-auth-primary);
+
+    box-shadow:
+        0 8px 22px rgba(184, 242, 90, 0.13);
+
+    transition:
+        transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+
+}
+
+
+.stackly-finance-auth-switch-slider.signup {
+
+    transform: translateX(100%);
+
+}
+
+
+/* =========================================================
+   FORMS
+========================================================= */
+
+.stackly-finance-auth-form {
+
+    display: none;
+
+    animation:
+        stacklyAuthFormIn 0.45s ease both;
+
+}
+
+
+.stackly-finance-auth-form.active {
+
+    display: block;
+
+}
+
+
+/* =========================================================
+   FORM FIELD
+========================================================= */
+
+.stackly-finance-auth-field {
+
+    position: relative;
+
+    margin-bottom: 20px;
+
+}
+
+
+.stackly-finance-auth-field label {
+
+    display: block;
+
+    margin-bottom: 9px;
+
+    color: rgba(255, 255, 255, 0.88);
+
+    font-family: "Space Grotesk", sans-serif;
+
+    font-size: 14px;
+
+    font-weight: 600;
+
+}
+
+
+.stackly-finance-auth-field label > span {
+
+    color: var(--sf-auth-primary);
+
+}
+
+
+/* =========================================================
+   INPUT
+========================================================= */
+
+.stackly-finance-auth-input {
+
+    position: relative;
+
+    display: flex;
+
+    align-items: center;
+
+    width: 100%;
+
+    min-height: 56px;
+
+    border:
+        1px solid rgba(255, 255, 255, 0.12);
+
+    border-radius: 13px;
+
+    background:
+        rgba(255, 255, 255, 0.045);
+
+    transition:
+        border-color 0.3s ease,
+        background 0.3s ease,
+        box-shadow 0.3s ease,
+        transform 0.3s ease;
+
+}
+
+
+.stackly-finance-auth-input > i:first-child {
+
+    width: 52px;
+
+    flex: 0 0 52px;
+
+    text-align: center;
+
+    color: rgba(255, 255, 255, 0.38);
+
+    font-size: 15px;
+
+    transition: color 0.3s ease;
+
+}
+
+
+.stackly-finance-auth-input input {
+
+    width: 100%;
+
+    height: 54px;
+
+    padding: 0 15px 0 0;
+
+    border: 0;
+
+    outline: 0;
+
+    color: var(--sf-auth-white);
+
+    background: transparent;
+
+    font-family: "DM Sans", sans-serif;
+
+    font-size: 15px;
+
+}
+
+
+.stackly-finance-auth-input input::placeholder {
+
+    color: rgba(255, 255, 255, 0.35);
+
+}
+
+
+.stackly-finance-auth-input:focus-within {
+
+    border-color: var(--sf-auth-primary);
+
+    background:
+        rgba(184, 242, 90, 0.045);
+
+    box-shadow:
+        0 0 0 4px rgba(184, 242, 90, 0.07);
+
+    transform: translateY(-1px);
+
+}
+
+
+.stackly-finance-auth-input:focus-within
+> i:first-child {
+
+    color: var(--sf-auth-primary);
+
+}
+
+
+/* =========================================================
+   PASSWORD EYE BUTTON
+========================================================= */
+
+.stackly-finance-password-toggle {
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    width: 50px;
+    height: 50px;
+
+    flex: 0 0 50px;
+
+    border: 0;
+
+    outline: none;
+
+    color: rgba(255, 255, 255, 0.40);
+
+    background: transparent;
+
+    cursor: pointer;
+
+    transition:
+        color 0.3s ease,
+        transform 0.3s ease;
+
+}
+
+
+.stackly-finance-password-toggle:hover {
+
+    color: var(--sf-auth-primary);
+
+    transform: scale(1.08);
+
+}
+
+
+/* =========================================================
+   ROLE DROPDOWN
+========================================================= */
+
+.stackly-finance-role-dropdown {
+
+    position: relative;
+
+    width: 100%;
+
+}
+
+
+.stackly-finance-role-trigger {
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    width: 100%;
+
+    min-height: 56px;
+
+    padding: 0 17px;
+
+    border:
+        1px solid rgba(255, 255, 255, 0.12);
+
+    border-radius: 13px;
+
+    outline: none;
+
+    color: var(--sf-auth-white);
+
+    background:
+        rgba(255, 255, 255, 0.045);
+
+    font-family: "DM Sans", sans-serif;
+
+    font-size: 15px;
+
+    cursor: pointer;
+
+    transition:
+        border-color 0.3s ease,
+        background 0.3s ease,
+        box-shadow 0.3s ease;
+
+}
+
+
+.stackly-finance-role-trigger:hover,
+.stackly-finance-role-dropdown.open
+.stackly-finance-role-trigger {
+
+    border-color: var(--sf-auth-primary);
+
+    background:
+        rgba(184, 242, 90, 0.045);
+
+    box-shadow:
+        0 0 0 4px rgba(184, 242, 90, 0.05);
+
+}
+
+
+.stackly-finance-role-selected {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 13px;
+
+}
+
+
+.stackly-finance-role-selected > i {
+
+    color: var(--sf-auth-primary);
+
+}
+
+
+.stackly-finance-role-trigger > i {
+
+    color: rgba(255, 255, 255, 0.45);
+
+    font-size: 12px;
+
+    transition:
+        transform 0.3s ease,
+        color 0.3s ease;
+
+}
+
+
+.stackly-finance-role-dropdown.open
+.stackly-finance-role-trigger > i {
+
+    color: var(--sf-auth-primary);
+
+    transform: rotate(180deg);
+
+}
+
+
+/* =========================================================
+   ROLE MENU
+========================================================= */
+
+.stackly-finance-role-menu {
+
+    position: absolute;
+
+    top: calc(100% + 8px);
+
+    left: 0;
+
+    width: 100%;
+
+    padding: 7px;
+
+    border:
+        1px solid rgba(184, 242, 90, 0.18);
+
+    border-radius: 14px;
+
+    background:
+        rgba(7, 27, 22, 0.98);
+
+    box-shadow:
+        0 20px 45px rgba(0, 0, 0, 0.42);
+
+    backdrop-filter: blur(20px);
+
+    opacity: 0;
+
+    visibility: hidden;
+
+    transform:
+        translateY(-8px)
+        scale(0.98);
+
+    transform-origin: top center;
+
+    transition:
+        opacity 0.25s ease,
+        visibility 0.25s ease,
+        transform 0.25s ease;
+
+    z-index: 100;
+
+}
+
+
+.stackly-finance-role-dropdown.open
+.stackly-finance-role-menu {
+
+    opacity: 1;
+
+    visibility: visible;
+
+    transform:
+        translateY(0)
+        scale(1);
+
+}
+
+
+/* ROLE OPTION */
+
+.stackly-finance-role-option {
+
+    display: flex;
+
+    align-items: center;
+
+    width: 100%;
+
+    gap: 13px;
+
+    padding: 13px 12px;
+
+    border: 0;
+
+    border-radius: 10px;
+
+    color: var(--sf-auth-white);
+
+    background: transparent;
+
+    text-align: left;
+
+    cursor: pointer;
+
+    transition:
+        background 0.3s ease,
+        transform 0.3s ease;
+
+}
+
+
+.stackly-finance-role-option > i {
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    width: 38px;
+    height: 38px;
+
+    flex: 0 0 38px;
+
+    border-radius: 9px;
+
+    color: var(--sf-auth-primary);
+
+    background:
+        rgba(184, 242, 90, 0.08);
+
+    transition:
+        color 0.3s ease,
+        background 0.3s ease;
+
+}
+
+
+.stackly-finance-role-option span {
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 3px;
+
+}
+
+
+.stackly-finance-role-option strong {
+
+    color: var(--sf-auth-white);
+
+    font-family: "Space Grotesk", sans-serif;
+
+    font-size: 14px;
+
+}
+
+
+.stackly-finance-role-option small {
+
+    color: rgba(255, 255, 255, 0.45);
+
+    font-size: 11px;
+
+}
+
+
+.stackly-finance-role-option:hover {
+
+    background:
+        rgba(184, 242, 90, 0.09);
+
+    transform: translateX(4px);
+
+}
+
+
+.stackly-finance-role-option:hover > i {
+
+    color: var(--sf-auth-dark);
+
+    background: var(--sf-auth-primary);
+
+}
+
+
+/* =========================================================
+   LOGIN OPTIONS
+========================================================= */
+
+.stackly-finance-auth-options {
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    gap: 15px;
+
+    margin: 4px 0 24px;
+
+}
+
+
+/* REMEMBER */
+
+.stackly-finance-remember {
+
+    display: inline-flex;
+
+    align-items: center;
+
+    gap: 9px;
+
+    color: rgba(255, 255, 255, 0.62);
+
+    font-size: 13px;
+
+    cursor: pointer;
+
+}
+
+
+.stackly-finance-remember input,
+.stackly-finance-terms input {
+
+    position: absolute;
+
+    opacity: 0;
+
+    pointer-events: none;
+
+}
+
+
+.stackly-finance-custom-check {
+
+    display: inline-flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    width: 19px;
+    height: 19px;
+
+    flex: 0 0 19px;
+
+    border:
+        1px solid rgba(255, 255, 255, 0.22);
+
+    border-radius: 5px;
+
+    color: var(--sf-auth-dark);
+
+    background: transparent;
+
+    font-size: 10px;
+
+    transition:
+        background 0.25s ease,
+        border-color 0.25s ease,
+        transform 0.25s ease;
+
+}
+
+
+.stackly-finance-remember
+input:checked
++ .stackly-finance-custom-check,
+
+.stackly-finance-terms
+input:checked
++ .stackly-finance-custom-check {
+
+    border-color: var(--sf-auth-primary);
+
+    background: var(--sf-auth-primary);
+
+    transform: scale(1.05);
+
+}
+
+
+.stackly-finance-custom-check i {
+
+    opacity: 0;
+
+    transform: scale(0.5);
+
+    transition:
+        opacity 0.2s ease,
+        transform 0.2s ease;
+
+}
+
+
+.stackly-finance-remember
+input:checked
++ .stackly-finance-custom-check i,
+
+.stackly-finance-terms
+input:checked
++ .stackly-finance-custom-check i {
+
+    opacity: 1;
+
+    transform: scale(1);
+
+}
+
+
+.stackly-finance-forgot-password {
+
+    color: var(--sf-auth-primary);
+
+    font-size: 13px;
+
+    font-weight: 600;
+
+    text-decoration: none;
+
+    transition:
+        color 0.3s ease;
+
+}
+
+
+.stackly-finance-forgot-password:hover {
+
+    color: var(--sf-auth-primary-light);
+
+    text-decoration: underline;
+
+}
+
+
+/* =========================================================
+   TERMS
+========================================================= */
+
+.stackly-finance-terms {
+
+    display: flex;
+
+    align-items: flex-start;
+
+    gap: 9px;
+
+    margin:
+        4px 0
+        24px;
+
+    color: rgba(255, 255, 255, 0.57);
+
+    font-size: 12px;
+
+    line-height: 1.6;
+
+    cursor: pointer;
+
+}
+
+
+.stackly-finance-terms a {
+
+    color: var(--sf-auth-primary);
+
+    font-weight: 600;
+
+    text-decoration: none;
+
+    transition: color 0.3s ease;
+
+}
+
+
+.stackly-finance-terms a:hover {
+
+    color: var(--sf-auth-primary-light);
+
+    text-decoration: underline;
+
+}
+
+
+/* =========================================================
+   SUBMIT BUTTON
+========================================================= */
+
+.stackly-finance-auth-submit {
+
+    position: relative;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    width: 100%;
+
+    min-height: 58px;
+
+    padding: 0 20px 0 23px;
+
+    border: 0;
+
+    border-radius: 13px;
+
+    outline: none;
+
+    color: var(--sf-auth-dark);
+
+    background: var(--sf-auth-primary);
+
+    font-family: "Space Grotesk", sans-serif;
+
+    font-size: 15px;
+
+    font-weight: 700;
+
+    cursor: pointer;
+
+    overflow: hidden;
+
+    box-shadow:
+        0 12px 30px rgba(184, 242, 90, 0.13);
+
+    transition:
+        transform 0.35s ease,
+        background 0.35s ease,
+        box-shadow 0.35s ease;
+
+}
+
+
+.stackly-finance-auth-submit::before {
+
+    content: "";
+
+    position: absolute;
+
+    top: 0;
+    left: -100%;
+
+    width: 100%;
+    height: 100%;
+
+    background:
+        linear-gradient(
+            90deg,
+            transparent,
+            rgba(255, 255, 255, 0.30),
+            transparent
+        );
+
+    transition: left 0.55s ease;
+
+}
+
+
+.stackly-finance-auth-submit:hover {
+
+    transform: translateY(-4px);
+
+    background: #d0f879;
+
+    box-shadow:
+        0 18px 40px rgba(184, 242, 90, 0.22);
+
+}
+
+
+.stackly-finance-auth-submit:hover::before {
+
+    left: 100%;
+
+}
+
+
+.stackly-finance-auth-submit i {
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    width: 36px;
+    height: 36px;
+
+    border-radius: 9px;
+
+    background:
+        rgba(6, 23, 19, 0.10);
+
+    transition:
+        transform 0.3s ease;
+
+}
+
+
+.stackly-finance-auth-submit:hover i {
+
+    transform: translateX(5px);
+
+}
+
+
+/* =========================================================
+   FORM MESSAGE
+========================================================= */
+
+.stackly-finance-auth-message {
+
+    display: none;
+
+    margin-top: 14px;
+
+    padding: 11px 14px;
+
+    border-radius: 9px;
+
+    font-size: 12px;
+
+    line-height: 1.5;
+
+}
+
+
+.stackly-finance-auth-message.success {
+
+    display: block;
+
+    color: var(--sf-auth-primary);
+
+    border:
+        1px solid rgba(184, 242, 90, 0.18);
+
+    background:
+        rgba(184, 242, 90, 0.07);
+
+}
+
+
+.stackly-finance-auth-message.error {
+
+    display: block;
+
+    color: var(--sf-auth-danger);
+
+    border:
+        1px solid rgba(255, 112, 112, 0.18);
+
+    background:
+        rgba(255, 112, 112, 0.06);
+
+}
+
+
+/* =========================================================
+   BOTTOM SWITCH TEXT
+========================================================= */
+
+.stackly-finance-auth-bottom-text {
+
+    margin-top: 24px;
+
+    color: rgba(255, 255, 255, 0.50);
+
+    font-size: 13px;
+
+    text-align: center;
+
+}
+
+
+.stackly-finance-auth-bottom-text button {
+
+    border: 0;
+
+    padding: 0;
+
+    color: var(--sf-auth-primary);
+
+    background: transparent;
+
+    font-family: inherit;
+
+    font-size: inherit;
+
+    font-weight: 700;
+
+    cursor: pointer;
+
+    transition:
+        color 0.3s ease;
+
+}
+
+
+.stackly-finance-auth-bottom-text button:hover {
+
+    color: var(--sf-auth-primary-light);
+
+    text-decoration: underline;
+
+}
+
+
+/* =========================================================
+   COPYRIGHT
+========================================================= */
+
+.stackly-finance-auth-copyright {
+
+    width: 100%;
+
+    margin: 25px auto 0;
+
+    color: rgba(255, 255, 255, 0.36);
+
+    font-size: 12px;
+
+    text-align: center;
+
+}
+
+
+/* =========================================================
+   ANIMATIONS
+========================================================= */
+
+@keyframes stacklyAuthGlowOne {
+
+    0%,
+    100% {
+        transform:
+            translate3d(0, 0, 0)
+            scale(1);
+    }
+
+    50% {
+        transform:
+            translate3d(-40px, 35px, 0)
+            scale(1.08);
+    }
+
+}
+
+
+@keyframes stacklyAuthGlowTwo {
+
+    0%,
+    100% {
+        transform:
+            translate3d(0, 0, 0)
+            scale(1);
+    }
+
+    50% {
+        transform:
+            translate3d(35px, -30px, 0)
+            scale(1.08);
+    }
+
+}
+
+
+@keyframes stacklyAuthOrbit {
+
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+
+}
+
+
+@keyframes stacklyAuthFormIn {
+
+    from {
+
+        opacity: 0;
+
+        transform:
+            translateY(12px);
+
+    }
+
+    to {
+
+        opacity: 1;
+
+        transform:
+            translateY(0);
+
+    }
+
+}
+
+
+/* =========================================================
+   LARGE TABLET
+========================================================= */
+
+@media (max-width: 1150px) {
+
+    .stackly-finance-auth-page {
+
+        padding-left: 25px;
+        padding-right: 25px;
+
+    }
+
+
+    .stackly-finance-auth-container {
+
+        grid-template-columns:
+            minmax(340px, 0.85fr)
+            minmax(450px, 1.15fr);
+
+    }
+
+
+    .stackly-finance-auth-intro {
+
+        padding: 55px 45px;
+
+    }
+
+
+    .stackly-finance-auth-form-panel {
+
+        padding: 50px 45px;
+
+    }
+
+
+    .stackly-finance-auth-heading {
+
+        font-size: clamp(44px, 5vw, 62px);
+
+    }
+
+}
+
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media (max-width: 992px) {
+
+    .stackly-finance-auth-page {
+
+        padding:
+            22px
+            22px
+            30px;
+
+    }
+
+
+    .stackly-finance-auth-container {
+
+        grid-template-columns: 1fr;
+
+        max-width: 650px;
+
+    }
+
+
+    .stackly-finance-auth-intro {
+
+        min-height: auto;
+
+        padding: 55px 50px;
+
+        border-right: 0;
+
+        border-bottom:
+            1px solid rgba(255, 255, 255, 0.08);
+
+    }
+
+
+    .stackly-finance-auth-heading {
+
+        max-width: 700px;
+
+        font-size: clamp(45px, 7vw, 64px);
+
+    }
+
+
+    .stackly-finance-auth-description {
+
+        max-width: 650px;
+
+    }
+
+
+    .stackly-finance-auth-benefits {
+
+        display: grid;
+
+        grid-template-columns:
+            repeat(3, 1fr);
+
+        gap: 20px;
+
+    }
+
+
+    .stackly-finance-auth-benefit {
+
+        flex-direction: column;
+
+    }
+
+
+    .stackly-finance-auth-benefit:hover {
+
+        transform: translateY(-5px);
+
+    }
+
+
+    .stackly-finance-auth-form-panel {
+
+        padding: 50px;
+
+    }
+
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 768px) {
+
+    .stackly-finance-auth-page {
+
+        padding:
+            18px
+            16px
+            25px;
+
+    }
+
+
+    .stackly-finance-auth-topbar {
+
+        margin-bottom: 20px;
+
+    }
+
+
+    .stackly-finance-auth-logo {
+
+        width: 145px;
+
+    }
+
+
+    .stackly-finance-auth-home-button {
+
+        min-height: 43px;
+
+        padding: 0 14px;
+
+        font-size: 12px;
+
+    }
+
+
+    .stackly-finance-auth-home-button span {
+
+        display: none;
+
+    }
+
+
+    .stackly-finance-auth-home-button i {
+
+        font-size: 14px;
+
+    }
+
+
+    .stackly-finance-auth-container {
+
+        border-radius: 22px;
+
+    }
+
+
+    .stackly-finance-auth-intro {
+
+        padding: 42px 28px;
+
+    }
+
+
+    .stackly-finance-auth-label {
+
+        margin-bottom: 20px;
+
+        font-size: 11px;
+
+        letter-spacing: 1.7px;
+
+    }
+
+
+    .stackly-finance-auth-label i {
+
+        width: 29px;
+        height: 29px;
+
+    }
+
+
+    .stackly-finance-auth-heading {
+
+        margin-bottom: 20px;
+
+        font-size: clamp(40px, 11vw, 54px);
+
+        letter-spacing: -2px;
+
+    }
+
+
+    .stackly-finance-auth-description {
+
+        margin-bottom: 32px;
+
+        font-size: 15px;
+
+        line-height: 1.7;
+
+    }
+
+
+    .stackly-finance-auth-benefits {
+
+        grid-template-columns: 1fr;
+
+        gap: 17px;
+
+    }
+
+
+    .stackly-finance-auth-benefit {
+
+        flex-direction: row;
+
+    }
+
+
+    .stackly-finance-auth-benefit-icon {
+
+        width: 40px;
+        height: 40px;
+
+        flex-basis: 40px;
+
+    }
+
+
+    .stackly-finance-auth-form-panel {
+
+        padding: 35px 25px 40px;
+
+    }
+
+
+    .stackly-finance-auth-form-header {
+
+        gap: 13px;
+
+        margin-bottom: 24px;
+
+    }
+
+
+    .stackly-finance-auth-form-icon {
+
+        width: 52px;
+        height: 52px;
+
+        flex-basis: 52px;
+
+    }
+
+
+    .stackly-finance-auth-form-header h2 {
+
+        font-size: 23px;
+
+    }
+
+
+    .stackly-finance-auth-switch {
+
+        height: 53px;
+
+        margin-bottom: 25px;
+
+    }
+
+
+    .stackly-finance-auth-field {
+
+        margin-bottom: 18px;
+
+    }
+
+
+    .stackly-finance-auth-input,
+    .stackly-finance-role-trigger {
+
+        min-height: 55px;
+
+    }
+
+
+    .stackly-finance-auth-input input {
+
+        height: 53px;
+
+        font-size: 14px;
+
+    }
+
+
+    .stackly-finance-auth-options {
+
+        align-items: flex-start;
+
+    }
+
+
+    .stackly-finance-auth-submit {
+
+        min-height: 56px;
+
+    }
+
+}
+
+
+/* =========================================================
+   SMALL MOBILE
+========================================================= */
+
+@media (max-width: 576px) {
+
+    .stackly-finance-auth-page {
+
+        padding:
+            14px
+            12px
+            22px;
+
+    }
+
+
+    .stackly-finance-auth-topbar {
+
+        margin-bottom: 16px;
+
+    }
+
+
+    .stackly-finance-auth-logo {
+
+        width: 125px;
+
+    }
+
+
+    .stackly-finance-auth-home-button {
+
+        width: 42px;
+        height: 42px;
+
+        min-height: 42px;
+
+        padding: 0;
+
+        border-radius: 11px;
+
+    }
+
+
+    .stackly-finance-auth-container {
+
+        border-radius: 20px;
+
+    }
+
+
+    .stackly-finance-auth-intro {
+
+        padding: 34px 21px;
+
+    }
+
+
+    .stackly-finance-auth-heading {
+
+        font-size: 38px;
+
+        line-height: 1.06;
+
+        letter-spacing: -1.5px;
+
+    }
+
+
+    .stackly-finance-auth-description {
+
+        font-size: 14px;
+
+    }
+
+
+    .stackly-finance-auth-benefit strong {
+
+        font-size: 14px;
+
+    }
+
+
+    .stackly-finance-auth-benefit p {
+
+        font-size: 12px;
+
+    }
+
+
+    .stackly-finance-auth-form-panel {
+
+        padding:
+            30px 19px
+            35px;
+
+    }
+
+
+    .stackly-finance-auth-form-header {
+
+        align-items: flex-start;
+
+    }
+
+
+    .stackly-finance-auth-form-icon {
+
+        width: 47px;
+        height: 47px;
+
+        flex-basis: 47px;
+
+        border-radius: 13px;
+
+        font-size: 18px;
+
+    }
+
+
+    .stackly-finance-auth-form-label {
+
+        font-size: 9px;
+
+    }
+
+
+    .stackly-finance-auth-form-header h2 {
+
+        font-size: 20px;
+
+    }
+
+
+    .stackly-finance-auth-switch-button {
+
+        font-size: 13px;
+
+    }
+
+
+    .stackly-finance-auth-field label {
+
+        font-size: 13px;
+
+    }
+
+
+    .stackly-finance-auth-input,
+    .stackly-finance-role-trigger {
+
+        min-height: 52px;
+
+        border-radius: 11px;
+
+    }
+
+
+    .stackly-finance-auth-input input {
+
+        height: 50px;
+
+        font-size: 13px;
+
+    }
+
+
+    .stackly-finance-auth-input > i:first-child {
+
+        width: 45px;
+
+        flex-basis: 45px;
+
+    }
+
+
+    .stackly-finance-password-toggle {
+
+        width: 45px;
+
+        flex-basis: 45px;
+
+    }
+
+
+    .stackly-finance-role-trigger {
+
+        padding: 0 13px;
+
+        font-size: 13px;
+
+    }
+
+
+    .stackly-finance-role-selected {
+
+        gap: 10px;
+
+    }
+
+
+    .stackly-finance-role-option {
+
+        padding: 12px 9px;
+
+    }
+
+
+    .stackly-finance-auth-options {
+
+        flex-direction: column;
+
+        gap: 13px;
+
+        margin-bottom: 21px;
+
+    }
+
+
+    .stackly-finance-forgot-password {
+
+        font-size: 12px;
+
+    }
+
+
+    .stackly-finance-terms {
+
+        font-size: 11px;
+
+    }
+
+
+    .stackly-finance-auth-submit {
+
+        min-height: 54px;
+
+        padding-left: 18px;
+
+        padding-right: 16px;
+
+        font-size: 13px;
+
+    }
+
+
+    .stackly-finance-auth-submit i {
+
+        width: 32px;
+        height: 32px;
+
+    }
+
+
+    .stackly-finance-auth-bottom-text {
+
+        font-size: 12px;
+
+    }
+
+
+    .stackly-finance-auth-copyright {
+
+        font-size: 10px;
+
+    }
+
+}
+
+
+/* =========================================================
+   EXTRA SMALL DEVICES
+========================================================= */
+
+@media (max-width: 380px) {
+
+    .stackly-finance-auth-page {
+
+        padding-left: 9px;
+        padding-right: 9px;
+
+    }
+
+
+    .stackly-finance-auth-intro {
+
+        padding:
+            30px 17px;
+
+    }
+
+
+    .stackly-finance-auth-heading {
+
+        font-size: 34px;
+
+    }
+
+
+    .stackly-finance-auth-form-panel {
+
+        padding:
+            27px 15px
+            32px;
+
+    }
+
+
+    .stackly-finance-auth-form-header h2 {
+
+        font-size: 18px;
+
+    }
+
+
+    .stackly-finance-auth-description {
+
+        font-size: 13px;
+
+    }
+
+
+    .stackly-finance-auth-submit {
+
+        font-size: 12px;
+
+    }
+
+}
+
+
+/* =========================================================
+   REDUCED MOTION
+========================================================= */
+
+@media (prefers-reduced-motion: reduce) {
+
+    html {
+        scroll-behavior: auto;
+    }
+
+
+    .stackly-finance-auth-glow-one,
+    .stackly-finance-auth-glow-two,
+    .stackly-finance-auth-intro::before {
+
+        animation: none;
+
+    }
+
+
+    .stackly-finance-auth-form {
+
+        animation: none;
+
+    }
+
+
+    .stackly-finance-auth-logo,
+    .stackly-finance-auth-home-button,
+    .stackly-finance-auth-benefit,
+    .stackly-finance-auth-submit,
+    .stackly-finance-auth-input,
+    .stackly-finance-role-option {
+
+        transition: none;
+
+    }
+
+}
+
+/* ============================================================
+   STACKLY FINANCE
+   JAVASCRIPT VALIDATION STATES
+============================================================ */
+
+.stackly-finance-input-error {
+    border-color: #ff6464 !important;
+    box-shadow: 0 0 0 3px rgba(255, 100, 100, 0.10) !important;
+}
+
+.stackly-finance-auth-input:has(
+    .stackly-finance-input-error
+) {
+    border-color: #ff6464 !important;
+}
+
+.stackly-finance-role-dropdown.stackly-finance-input-error {
+    border-color: #ff6464 !important;
+    box-shadow: 0 0 0 3px rgba(255, 100, 100, 0.10);
+}
+
+.stackly-finance-auth-message {
+    display: none;
+    margin-top: 14px;
+    padding: 12px 15px;
+    border-radius: 10px;
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 1.5;
+}
+
+.stackly-finance-auth-message.error {
+    display: block;
+    color: #ff8585;
+    background: rgba(255, 80, 80, 0.08);
+    border: 1px solid rgba(255, 100, 100, 0.20);
+}
+
+.stackly-finance-auth-message.success {
+    display: block;
+    color: #b8f25a;
+    background: rgba(184, 242, 90, 0.08);
+    border: 1px solid rgba(184, 242, 90, 0.20);
+}
+
+.stackly-finance-auth-message.success::before {
+    content: "✓";
+    margin-right: 8px;
+}
+
+.stackly-finance-auth-message.error::before {
+    content: "!";
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 17px;
+    height: 17px;
+    margin-right: 8px;
+    border-radius: 50%;
+    background: rgba(255, 100, 100, 0.18);
+}

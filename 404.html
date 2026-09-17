@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+>
+
+<title>404 | Page Not Found</title>
+
+<!-- Google Fonts -->
+<link
+    href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap"
+    rel="stylesheet"
+>
+
+<!-- Font Awesome -->
+<link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+>
+
+<!-- 404 CSS -->
+<link
+    rel="stylesheet"
+    href="404.css"
+>
+
+
+</head>
+
+<body>
+
+
+<!-- ============================================================
+     404 PAGE
+============================================================= -->
+
+<main class="stackly-finance-404-page">
+
+
+    <!-- Background Decorative Elements -->
+
+    <div class="stackly-finance-404-shape stackly-finance-404-shape-one"></div>
+
+    <div class="stackly-finance-404-shape stackly-finance-404-shape-two"></div>
+
+    <div class="stackly-finance-404-grid"></div>
+
+
+    <!-- ========================================================
+         404 CONTENT
+    ========================================================= -->
+
+    <div class="stackly-finance-404-content">
+
+        <!-- 404 Number -->
+
+        <div
+            class="stackly-finance-404-number"
+            data-aos="zoom-in"
+        >
+
+            <span>4</span>
+
+            <div class="stackly-finance-404-circle">
+
+                <i class="fa-solid fa-chart-line"></i>
+
+            </div>
+
+            <span>4</span>
+
+        </div>
+
+
+        <!-- Small Label -->
+
+        <span
+            class="stackly-finance-404-label"
+            data-aos="fade-up"
+        >
+            PAGE NOT FOUND
+        </span>
+
+
+        <!-- Heading -->
+
+        <h1
+            data-aos="fade-up"
+            data-aos-delay="100"
+        >
+            Your financial destination
+            <br>
+            <span>couldn't be found.</span>
+        </h1>
+
+
+        <!-- Description -->
+
+        <p
+            class="stackly-finance-404-description"
+            data-aos="fade-up"
+            data-aos-delay="200"
+        >
+            The page you are looking for may have been moved,
+            removed, or is temporarily unavailable. Let's get
+            you back on track.
+        </p>
+
+
+        <!-- ====================================================
+             ACTION BUTTONS
+        ===================================================== -->
+
+        <div
+            class="stackly-finance-404-actions"
+            data-aos="fade-up"
+            data-aos-delay="300"
+        >
+
+
+            <!-- Go Home -->
+
+            <a
+                href="index.html"
+                class="stackly-finance-404-home-btn"
+            >
+
+                <i class="fa-solid fa-house"></i>
+
+                <span>
+                    Go Home
+                </span>
+
+            </a>
+
+
+            <!-- Go Back -->
+
+            <button
+                type="button"
+                class="stackly-finance-404-back-btn"
+                onclick="window.history.back();"
+            >
+
+                <i class="fa-solid fa-arrow-left"></i>
+
+                <span>
+                    Go Back
+                </span>
+
+            </button>
+
+        </div>
+
+
+        <!-- Bottom Message -->
+
+        <div
+            class="stackly-finance-404-bottom"
+            data-aos="fade-up"
+            data-aos-delay="400"
+        >
+
+            <span class="stackly-finance-404-line"></span>
+
+            <p>
+                Let's get your financial journey back on track.
+            </p>
+
+            <span class="stackly-finance-404-line"></span>
+
+        </div>
+
+    </div>
+
+</main>
+
+
+<!-- ============================================================
+     AOS
+============================================================= -->
+
+<link
+    href="https://unpkg.com/aos@2.3.4/dist/aos.css"
+    rel="stylesheet"
+>
+
+<script
+    src="https://unpkg.com/aos@2.3.4/dist/aos.js"
+></script>
+
+
+<!-- ============================================================
+     404 JAVASCRIPT
+============================================================= -->
+
+<script>
+
+    document.addEventListener("DOMContentLoaded", function () {
+
+        AOS.init({
+            duration: 850,
+            once: true,
+            offset: 80,
+            easing: "ease-out-cubic"
+        });
+
+    });
+
+
+    /* ==========================================================
+       GO BACK FALLBACK
+    ========================================================== */
+
+    function goBack() {
+
+        if (window.history.length > 1) {
+
+            window.history.back();
+
+        } else {
+
+            window.location.href = "index.html";
+
+        }
+
+    }
+
+</script>
+
+
+</body>
+
+</html>

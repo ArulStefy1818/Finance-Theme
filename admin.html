@@ -1,0 +1,1386 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <!-- =========================================================
+         STACKLY FINANCE ADMIN DASHBOARD
+    ========================================================== -->
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <meta
+        name="description"
+        content="Stackly Finance Admin Dashboard"
+    >
+
+    <title>Stackly Finance | Admin Dashboard</title>
+
+
+    <!-- =========================================================
+         GOOGLE FONTS
+    ========================================================== -->
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+
+    <link
+        rel="preconnect"
+        href="https://fonts.gstatic.com"
+        crossorigin
+    >
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap"
+        rel="stylesheet"
+    >
+
+
+    <!-- =========================================================
+         FONT AWESOME
+    ========================================================== -->
+
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+    >
+
+
+    <!-- =========================================================
+         AOS
+    ========================================================== -->
+
+    <link
+        rel="stylesheet"
+        href="https://unpkg.com/aos@2.3.4/dist/aos.css"
+    >
+
+
+    <!-- =========================================================
+         ADMIN CSS
+    ========================================================== -->
+
+    <link
+        rel="stylesheet"
+        href="admin.css"
+    >
+
+</head>
+
+
+<body>
+
+
+    <!-- =========================================================
+         MOBILE SIDEBAR OVERLAY
+    ========================================================== -->
+
+    <div
+        class="stackly-finance-admin-overlay"
+        id="stacklyFinanceAdminOverlay"
+    ></div>
+
+
+    <!-- =========================================================
+         SIDEBAR
+    ========================================================== -->
+
+    <aside
+        class="stackly-finance-admin-sidebar"
+        id="stacklyFinanceAdminSidebar"
+    >
+
+
+        <!-- =====================================================
+             SIDEBAR TOP
+        ====================================================== -->
+
+        <div class="stackly-finance-admin-sidebar-top">
+
+
+            <!-- =================================================
+                 LOGO
+            ================================================== -->
+
+            <a
+                href="admin.html"
+                class="stackly-finance-admin-logo"
+                aria-label="Stackly Finance Home"
+            >
+
+                <img
+                    src="Stackly-logo-Blue.webp"
+                    alt="Stackly Finance Logo"
+                >
+
+            </a>
+
+
+            <!-- =================================================
+                 MOBILE CLOSE BUTTON
+            ================================================== -->
+
+            <button
+                type="button"
+                class="stackly-finance-admin-close"
+                id="stacklyFinanceAdminClose"
+                aria-label="Close menu"
+            >
+
+                <i class="fa-solid fa-xmark"></i>
+
+            </button>
+
+        </div>
+
+
+        <!-- =====================================================
+             ADMIN PROFILE
+        ====================================================== -->
+
+        <div class="stackly-finance-admin-profile">
+
+            <div class="stackly-finance-admin-profile-icon">
+
+                <i class="fa-solid fa-user-shield"></i>
+
+            </div>
+
+            <div class="stackly-finance-admin-profile-info">
+
+                <span
+    class="stackly-finance-admin-profile-label"
+    id="stacklyFinanceAdminProfileLabel"
+>
+    Dashboard
+</span>
+
+                <strong>
+                    Administrator
+                </strong>
+
+            </div>
+
+        </div>
+
+
+        <!-- =====================================================
+             SIDEBAR NAVIGATION
+        ====================================================== -->
+
+        <nav
+            class="stackly-finance-admin-navigation"
+            aria-label="Admin Navigation"
+        >
+
+
+            <!-- Dashboard -->
+
+            <a
+                href="admin.html"
+                class="stackly-finance-admin-nav-link active"
+            >
+
+                <span class="stackly-finance-admin-nav-icon">
+
+                    <i class="fa-solid fa-chart-pie"></i>
+
+                </span>
+
+                <span>
+                    Dashboard
+                </span>
+
+            </a>
+
+
+            <!-- Users -->
+
+            <a
+                href="admin-users.html"
+                class="stackly-finance-admin-nav-link"
+            >
+
+                <span class="stackly-finance-admin-nav-icon">
+
+                    <i class="fa-solid fa-users"></i>
+
+                </span>
+
+                <span>
+                    Users
+                </span>
+
+            </a>
+
+
+            <!-- Transactions -->
+
+            <a
+                href="admin-transactions.html"
+                class="stackly-finance-admin-nav-link"
+            >
+
+                <span class="stackly-finance-admin-nav-icon">
+
+                    <i class="fa-solid fa-arrow-right-arrow-left"></i>
+
+                </span>
+
+                <span>
+                    Transactions
+                </span>
+
+            </a>
+
+
+            <!-- Investments -->
+
+            <a
+                href="admin-investments.html"
+                class="stackly-finance-admin-nav-link"
+            >
+
+                <span class="stackly-finance-admin-nav-icon">
+
+                    <i class="fa-solid fa-chart-line"></i>
+
+                </span>
+
+                <span>
+                    Investments
+                </span>
+
+            </a>
+
+
+            <!-- Accounts -->
+
+            <a
+                href="admin-accounts.html"
+                class="stackly-finance-admin-nav-link"
+            >
+
+                <span class="stackly-finance-admin-nav-icon">
+
+                    <i class="fa-solid fa-wallet"></i>
+
+                </span>
+
+                <span>
+                    Accounts
+                </span>
+
+            </a>
+
+
+
+            <!-- Messages -->
+
+            <a
+                href="admin-messages.html"
+                class="stackly-finance-admin-nav-link"
+            >
+
+                <span class="stackly-finance-admin-nav-icon">
+
+                    <i class="fa-solid fa-envelope"></i>
+
+                </span>
+
+                <span>
+                    Messages
+                </span>
+
+                <span class="stackly-finance-admin-nav-badge">
+                    4
+                </span>
+
+            </a>
+
+
+            <!-- Settings -->
+
+            <a
+                href="admin-settings.html"
+                class="stackly-finance-admin-nav-link"
+            >
+
+                <span class="stackly-finance-admin-nav-icon">
+
+                    <i class="fa-solid fa-gear"></i>
+
+                </span>
+
+                <span>
+                    Settings
+                </span>
+
+            </a>
+
+        </nav>
+
+
+        <!-- =====================================================
+             SIDEBAR BOTTOM
+        ====================================================== -->
+
+        <div class="stackly-finance-admin-sidebar-bottom">
+
+
+            <!-- Logout -->
+
+            <a
+                href="index.html"
+                class="stackly-finance-admin-logout"
+                id="stacklyFinanceAdminLogout"
+            >
+
+                <i class="fa-solid fa-right-from-bracket"></i>
+
+                <span>
+                    Logout
+                </span>
+
+            </a>
+
+        </div>
+
+    </aside>
+
+
+    <!-- =========================================================
+         MAIN AREA
+    ========================================================== -->
+
+    <main class="stackly-finance-admin-main">
+
+
+        <!-- =====================================================
+             TOP HEADER
+        ====================================================== -->
+
+        <header class="stackly-finance-admin-header">
+
+
+            <!-- =================================================
+                 MOBILE HAMBURGER
+            ================================================== -->
+
+            <button
+                type="button"
+                class="stackly-finance-admin-menu"
+                id="stacklyFinanceAdminMenu"
+                aria-label="Open menu"
+                aria-expanded="false"
+            >
+
+                <i class="fa-solid fa-bars"></i>
+
+            </button>
+
+
+            <!-- =================================================
+                 PAGE TITLE
+            ================================================== -->
+
+            <div class="stackly-finance-admin-header-title">
+
+                <span>
+                    FINANCE ADMIN
+                </span>
+
+                <h1>
+                    Admin Dashboard
+                </h1>
+
+            </div>
+
+
+            <!-- =================================================
+                 HEADER RIGHT
+            ================================================== -->
+
+            <div class="stackly-finance-admin-header-right">
+
+
+                <!-- Notification -->
+
+                <a href="404-admin.html"><button
+                    type="button"
+                    class="stackly-finance-admin-notification"
+                    aria-label="Notifications"
+                >
+
+                    <i class="fa-regular fa-bell"></i>
+
+                    <span>
+                        3
+                    </span>
+
+                </button></a>
+
+
+                <!-- Divider -->
+
+                <div class="stackly-finance-admin-header-divider"></div>
+
+
+                <!-- User Email -->
+
+                <div class="stackly-finance-admin-user">
+
+                    <div class="stackly-finance-admin-user-avatar">
+
+                        <i class="fa-solid fa-user"></i>
+
+                    </div>
+
+                    <div class="stackly-finance-admin-user-details">
+
+                        <span>
+                            Signed in as
+                        </span>
+
+                        <strong
+                            id="stacklyFinanceAdminEmail"
+                        >
+                            admin@stackly.com
+                        </strong>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </header>
+
+
+        <!-- =====================================================
+             DASHBOARD CONTENT
+        ====================================================== -->
+
+        <section class="stackly-finance-admin-content">
+
+
+            <!-- =================================================
+                 WELCOME
+            ================================================== -->
+
+            <div
+                class="stackly-finance-admin-welcome"
+                data-aos="fade-up"
+            >
+
+                <div>
+
+                    <span class="stackly-finance-admin-eyebrow">
+                        OVERVIEW
+                    </span>
+
+                    <h2 id="stacklyFinanceAdminWelcome">
+    Welcome back, Admin
+</h2>
+
+                    <p>
+                        Here's what's happening across your
+                        financial platform today.
+                    </p>
+
+                </div>
+
+
+                <div class="stackly-finance-admin-date">
+
+                    <i class="fa-regular fa-calendar"></i>
+
+                    <span id="stacklyFinanceAdminDate">
+                        Today
+                    </span>
+
+                </div>
+
+            </div>
+
+
+            <!-- =================================================
+                 STAT CARDS
+            ================================================== -->
+
+            <div class="stackly-finance-admin-stats">
+
+
+                <!-- Total Revenue -->
+
+                <article
+                    class="stackly-finance-admin-stat-card"
+                    data-aos="fade-up"
+                    data-aos-delay="100"
+                >
+
+                    <div class="stackly-finance-admin-stat-top">
+
+                        <div class="stackly-finance-admin-stat-icon">
+
+                            <i class="fa-solid fa-indian-rupee-sign"></i>
+
+                        </div>
+
+                        <span class="stackly-finance-admin-stat-growth positive">
+
+                            <i class="fa-solid fa-arrow-up"></i>
+
+                            12.8%
+
+                        </span>
+
+                    </div>
+
+                    <span class="stackly-finance-admin-stat-label">
+                        Total Revenue
+                    </span>
+
+                    <strong class="stackly-finance-admin-stat-value">
+                        ₹24.68L
+                    </strong>
+
+                    <span class="stackly-finance-admin-stat-note">
+                        Compared with last month
+                    </span>
+
+                </article>
+
+
+                <!-- Total Clients -->
+
+                <article
+                    class="stackly-finance-admin-stat-card"
+                    data-aos="fade-up"
+                    data-aos-delay="200"
+                >
+
+                    <div class="stackly-finance-admin-stat-top">
+
+                        <div class="stackly-finance-admin-stat-icon">
+
+                            <i class="fa-solid fa-users"></i>
+
+                        </div>
+
+                        <span class="stackly-finance-admin-stat-growth positive">
+
+                            <i class="fa-solid fa-arrow-up"></i>
+
+                            8.4%
+
+                        </span>
+
+                    </div>
+
+                    <span class="stackly-finance-admin-stat-label">
+                        Total Clients
+                    </span>
+
+                    <strong class="stackly-finance-admin-stat-value">
+                        8,426
+                    </strong>
+
+                    <span class="stackly-finance-admin-stat-note">
+                        Active financial clients
+                    </span>
+
+                </article>
+
+
+                <!-- Investments -->
+
+                <article
+                    class="stackly-finance-admin-stat-card"
+                    data-aos="fade-up"
+                    data-aos-delay="300"
+                >
+
+                    <div class="stackly-finance-admin-stat-top">
+
+                        <div class="stackly-finance-admin-stat-icon">
+
+                            <i class="fa-solid fa-chart-line"></i>
+
+                        </div>
+
+                        <span class="stackly-finance-admin-stat-growth positive">
+
+                            <i class="fa-solid fa-arrow-up"></i>
+
+                            18.2%
+
+                        </span>
+
+                    </div>
+
+                    <span class="stackly-finance-admin-stat-label">
+                        Investments
+                    </span>
+
+                    <strong class="stackly-finance-admin-stat-value">
+                        ₹18.42Cr
+                    </strong>
+
+                    <span class="stackly-finance-admin-stat-note">
+                        Assets under management
+                    </span>
+
+                </article>
+
+
+                <!-- Pending Requests -->
+
+                <article
+                    class="stackly-finance-admin-stat-card"
+                    data-aos="fade-up"
+                    data-aos-delay="400"
+                >
+
+                    <div class="stackly-finance-admin-stat-top">
+
+                        <div class="stackly-finance-admin-stat-icon">
+
+                            <i class="fa-solid fa-clock"></i>
+
+                        </div>
+
+                        <span class="stackly-finance-admin-stat-growth neutral">
+
+                            14
+
+                        </span>
+
+                    </div>
+
+                    <span class="stackly-finance-admin-stat-label">
+                        Pending Requests
+                    </span>
+
+                    <strong class="stackly-finance-admin-stat-value">
+                        14
+                    </strong>
+
+                    <span class="stackly-finance-admin-stat-note">
+                        Require admin attention
+                    </span>
+
+                </article>
+
+            </div>
+
+
+            <!-- =================================================
+                 DASHBOARD GRID
+            ================================================== -->
+
+            <div class="stackly-finance-admin-dashboard-grid">
+
+
+                <!-- =================================================
+                     RECENT TRANSACTIONS
+                ================================================== -->
+
+                <section
+                    class="stackly-finance-admin-panel transactions-panel"
+                    data-aos="fade-up"
+                    data-aos-delay="100"
+                >
+
+                    <div class="stackly-finance-admin-panel-header">
+
+                        <div>
+
+                            <span>
+                                FINANCIAL ACTIVITY
+                            </span>
+
+                            <h3>
+                                Recent Transactions
+                            </h3>
+
+                        </div>
+
+                        <a
+                            href="404-admin.html"
+                            class="stackly-finance-admin-view-link"
+                        >
+                            View All
+                            <i class="fa-solid fa-arrow-right"></i>
+                        </a>
+
+                    </div>
+
+
+                    <div class="stackly-finance-admin-table-wrapper">
+
+                        <table class="stackly-finance-admin-table">
+
+                            <thead>
+
+                                <tr>
+
+                                    <th>
+                                        Client
+                                    </th>
+
+                                    <th>
+                                        Type
+                                    </th>
+
+                                    <th>
+                                        Amount
+                                    </th>
+
+                                    <th>
+                                        Status
+                                    </th>
+
+                                    <th>
+                                        Date
+                                    </th>
+
+                                </tr>
+
+                            </thead>
+
+                            <tbody>
+
+
+                                <tr>
+
+                                    <td>
+
+                                        <div class="stackly-finance-admin-client">
+
+                                            <div class="stackly-finance-admin-client-avatar">
+                                                AS
+                                            </div>
+
+                                            <div>
+                                                <strong>
+                                                    Arjun Sharma
+                                                </strong>
+
+                                                <span>
+                                                    arjun@example.com
+                                                </span>
+                                            </div>
+
+                                        </div>
+
+                                    </td>
+
+                                    <td>
+                                        Investment
+                                    </td>
+
+                                    <td>
+                                        <strong>
+                                            ₹85,000
+                                        </strong>
+                                    </td>
+
+                                    <td>
+                                        <span class="stackly-finance-admin-status completed">
+                                            Completed
+                                        </span>
+                                    </td>
+
+                                    <td>
+                                        16 Sep 2026
+                                    </td>
+
+                                </tr>
+
+
+                                <tr>
+
+                                    <td>
+
+                                        <div class="stackly-finance-admin-client">
+
+                                            <div class="stackly-finance-admin-client-avatar">
+                                                PK
+                                            </div>
+
+                                            <div>
+                                                <strong>
+                                                    Priya Kumar
+                                                </strong>
+
+                                                <span>
+                                                    priya@example.com
+                                                </span>
+                                            </div>
+
+                                        </div>
+
+                                    </td>
+
+                                    <td>
+                                        Withdrawal
+                                    </td>
+
+                                    <td>
+                                        <strong>
+                                            ₹42,500
+                                        </strong>
+                                    </td>
+
+                                    <td>
+                                        <span class="stackly-finance-admin-status pending">
+                                            Pending
+                                        </span>
+                                    </td>
+
+                                    <td>
+                                        16 Sep 2026
+                                    </td>
+
+                                </tr>
+
+
+                                <tr>
+
+                                    <td>
+
+                                        <div class="stackly-finance-admin-client">
+
+                                            <div class="stackly-finance-admin-client-avatar">
+                                                RK
+                                            </div>
+
+                                            <div>
+                                                <strong>
+                                                    Rahul Kumar
+                                                </strong>
+
+                                                <span>
+                                                    rahul@example.com
+                                                </span>
+                                            </div>
+
+                                        </div>
+
+                                    </td>
+
+                                    <td>
+                                        Deposit
+                                    </td>
+
+                                    <td>
+                                        <strong>
+                                            ₹1,20,000
+                                        </strong>
+                                    </td>
+
+                                    <td>
+                                        <span class="stackly-finance-admin-status completed">
+                                            Completed
+                                        </span>
+                                    </td>
+
+                                    <td>
+                                        15 Sep 2026
+                                    </td>
+
+                                </tr>
+
+
+                                <tr>
+
+                                    <td>
+
+                                        <div class="stackly-finance-admin-client">
+
+                                            <div class="stackly-finance-admin-client-avatar">
+                                                NM
+                                            </div>
+
+                                            <div>
+                                                <strong>
+                                                    Neha Menon
+                                                </strong>
+
+                                                <span>
+                                                    neha@example.com
+                                                </span>
+                                            </div>
+
+                                        </div>
+
+                                    </td>
+
+                                    <td>
+                                        Investment
+                                    </td>
+
+                                    <td>
+                                        <strong>
+                                            ₹65,000
+                                        </strong>
+                                    </td>
+
+                                    <td>
+                                        <span class="stackly-finance-admin-status review">
+                                            In Review
+                                        </span>
+                                    </td>
+
+                                    <td>
+                                        15 Sep 2026
+                                    </td>
+
+                                </tr>
+
+                            </tbody>
+
+                        </table>
+
+                    </div>
+
+                </section>
+
+
+                <!-- =================================================
+                     QUICK ACTIONS
+                ================================================== -->
+
+                <section
+                    class="stackly-finance-admin-panel quick-panel"
+                    data-aos="fade-up"
+                    data-aos-delay="200"
+                >
+
+                    <div class="stackly-finance-admin-panel-header">
+
+                        <div>
+
+                            <span>
+                                ADMIN TOOLS
+                            </span>
+
+                            <h3>
+                                Quick Actions
+                            </h3>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="stackly-finance-admin-quick-actions">
+
+
+                        <a
+                            href="404-admin.html"
+                            class="stackly-finance-admin-action-card"
+                        >
+
+                            <span>
+
+                                <i class="fa-solid fa-user-plus"></i>
+
+                            </span>
+
+                            <div>
+
+                                <strong>
+                                    Manage Users
+                                </strong>
+
+                                <small>
+                                    View and manage clients
+                                </small>
+
+                            </div>
+
+                            <i class="fa-solid fa-arrow-right"></i>
+
+                        </a>
+
+
+                        <a
+                            href="404-admin.html"
+                            class="stackly-finance-admin-action-card"
+                        >
+
+                            <span>
+
+                                <i class="fa-solid fa-money-bill-transfer"></i>
+
+                            </span>
+
+                            <div>
+
+                                <strong>
+                                    Transactions
+                                </strong>
+
+                                <small>
+                                    Review financial activity
+                                </small>
+
+                            </div>
+
+                            <i class="fa-solid fa-arrow-right"></i>
+
+                        </a>
+
+
+                        <a
+                            href="404-admin.html"
+                            class="stackly-finance-admin-action-card"
+                        >
+
+                            <span>
+
+                                <i class="fa-solid fa-file-chart-column"></i>
+
+                            </span>
+
+                            <div>
+
+                                <strong>
+                                    Generate Report
+                                </strong>
+
+                                <small>
+                                    Create financial reports
+                                </small>
+
+                            </div>
+
+                            <i class="fa-solid fa-arrow-right"></i>
+
+                        </a>
+
+
+                        <a
+                            href="404-admin.html"
+                            class="stackly-finance-admin-action-card"
+                        >
+
+                            <span>
+
+                                <i class="fa-solid fa-sliders"></i>
+
+                            </span>
+
+                            <div>
+
+                                <strong>
+                                    Settings
+                                </strong>
+
+                                <small>
+                                    Configure dashboard
+                                </small>
+
+                            </div>
+
+                            <i class="fa-solid fa-arrow-right"></i>
+
+                        </a>
+
+                    </div>
+
+                </section>
+
+            </div>
+
+
+            <!-- =================================================
+                 BOTTOM GRID
+            ================================================== -->
+
+            <div class="stackly-finance-admin-bottom-grid">
+
+
+                <!-- =================================================
+                     FINANCIAL SUMMARY
+                ================================================== -->
+
+                <section
+                    class="stackly-finance-admin-panel summary-panel"
+                    data-aos="fade-up"
+                >
+
+                    <div class="stackly-finance-admin-panel-header">
+
+                        <div>
+
+                            <span>
+                                PERFORMANCE
+                            </span>
+
+                            <h3>
+                                Financial Summary
+                            </h3>
+
+                        </div>
+
+                        <!-- ============================================================
+     CUSTOM PERIOD DROPDOWN
+============================================================ -->
+
+<div class="stackly-finance-admin-period-dropdown">
+
+    <button
+        type="button"
+        class="stackly-finance-admin-period-trigger"
+        id="stacklyFinancePeriodTrigger"
+        aria-haspopup="listbox"
+        aria-expanded="false"
+    >
+        <span id="stacklyFinancePeriodValue">This Year</span>
+
+        <i class="fa-solid fa-chevron-down"></i>
+    </button>
+
+
+    <div
+        class="stackly-finance-admin-period-menu"
+        id="stacklyFinancePeriodMenu"
+        role="listbox"
+    >
+
+        <button
+            type="button"
+            class="stackly-finance-admin-period-option active"
+            data-value="This Year"
+            role="option"
+            aria-selected="true"
+        >
+            This Year
+        </button>
+
+        <button
+            type="button"
+            class="stackly-finance-admin-period-option"
+            data-value="This Month"
+            role="option"
+            aria-selected="false"
+        >
+            This Month
+        </button>
+
+        <button
+            type="button"
+            class="stackly-finance-admin-period-option"
+            data-value="Last Month"
+            role="option"
+            aria-selected="false"
+        >
+            Last Month
+        </button>
+
+    </div>
+
+</div>
+
+                    </div>
+
+
+                    <div class="stackly-finance-admin-summary-content">
+
+
+                        <div class="stackly-finance-admin-summary-value">
+
+                            <span>
+                                Total Portfolio
+                            </span>
+
+                            <strong>
+                                ₹18.42 Cr
+                            </strong>
+
+                            <small>
+                                <i class="fa-solid fa-arrow-up"></i>
+                                18.2% from last year
+                            </small>
+
+                        </div>
+
+
+                        <div class="stackly-finance-admin-chart">
+
+                            <div class="stackly-finance-admin-chart-line">
+
+                                <span style="height: 35%;"></span>
+                                <span style="height: 48%;"></span>
+                                <span style="height: 42%;"></span>
+                                <span style="height: 62%;"></span>
+                                <span style="height: 55%;"></span>
+                                <span style="height: 72%;"></span>
+                                <span style="height: 68%;"></span>
+                                <span style="height: 84%;"></span>
+                                <span style="height: 76%;"></span>
+                                <span style="height: 91%;"></span>
+                                <span style="height: 86%;"></span>
+                                <span style="height: 96%;"></span>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </section>
+
+
+                <!-- =================================================
+                     NOTIFICATIONS
+                ================================================== -->
+
+                <section
+                    class="stackly-finance-admin-panel notification-panel"
+                    data-aos="fade-up"
+                    data-aos-delay="100"
+                >
+
+                    <div class="stackly-finance-admin-panel-header">
+
+                        <div>
+
+                            <span>
+                                UPDATES
+                            </span>
+
+                            <h3>
+                                Notifications
+                            </h3>
+
+                        </div>
+
+                        <a
+                            href="404-admin.html"
+                            class="stackly-finance-admin-view-link"
+                        >
+                            View All
+                        </a>
+
+                    </div>
+
+
+                    <div class="stackly-finance-admin-notification-list">
+
+
+                        <div class="stackly-finance-admin-notification-item">
+
+                            <div class="notification-icon green">
+
+                                <i class="fa-solid fa-check"></i>
+
+                            </div>
+
+                            <div>
+
+                                <strong>
+                                    Payment completed
+                                </strong>
+
+                                <span>
+                                    Transaction #STK48291 was completed.
+                                </span>
+
+                                <small>
+                                    12 minutes ago
+                                </small>
+
+                            </div>
+
+                        </div>
+
+
+                        <div class="stackly-finance-admin-notification-item">
+
+                            <div class="notification-icon orange">
+
+                                <i class="fa-solid fa-clock"></i>
+
+                            </div>
+
+                            <div>
+
+                                <strong>
+                                    Withdrawal pending
+                                </strong>
+
+                                <span>
+                                    A withdrawal requires review.
+                                </span>
+
+                                <small>
+                                    38 minutes ago
+                                </small>
+
+                            </div>
+
+                        </div>
+
+
+                        <div class="stackly-finance-admin-notification-item">
+
+                            <div class="notification-icon blue">
+
+                                <i class="fa-solid fa-user-plus"></i>
+
+                            </div>
+
+                            <div>
+
+                                <strong>
+                                    New client registered
+                                </strong>
+
+                                <span>
+                                    A new client joined Stackly Finance.
+                                </span>
+
+                                <small>
+                                    1 hour ago
+                                </small>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </section>
+
+            </div>
+
+
+        </section>
+
+    </main>
+
+
+    <!-- =========================================================
+         AOS JS
+    ========================================================== -->
+
+    <script
+        src="https://unpkg.com/aos@2.3.4/dist/aos.js"
+    ></script>
+
+
+    <!-- =========================================================
+         ADMIN DASHBOARD JS
+    ========================================================== -->
+
+    <script src="admin.js"></script>
+
+</body>
+</html>

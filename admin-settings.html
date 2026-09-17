@@ -1,0 +1,1258 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <!-- =========================================================
+         STACKLY FINANCE ADMIN DASHBOARD
+    ========================================================== -->
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <meta
+        name="description"
+        content="Stackly Finance Admin Dashboard"
+    >
+
+    <title>Stackly Finance | Admin Dashboard</title>
+
+
+    <!-- =========================================================
+         GOOGLE FONTS
+    ========================================================== -->
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+
+    <link
+        rel="preconnect"
+        href="https://fonts.gstatic.com"
+        crossorigin
+    >
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap"
+        rel="stylesheet"
+    >
+
+
+    <!-- =========================================================
+         FONT AWESOME
+    ========================================================== -->
+
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+    >
+
+
+    <!-- =========================================================
+         AOS
+    ========================================================== -->
+
+    <link
+        rel="stylesheet"
+        href="https://unpkg.com/aos@2.3.4/dist/aos.css"
+    >
+
+
+    <!-- =========================================================
+         ADMIN CSS
+    ========================================================== -->
+
+    <link
+        rel="stylesheet"
+        href="admin.css"
+    >
+
+</head>
+
+
+<body>
+
+
+    <!-- =========================================================
+         MOBILE SIDEBAR OVERLAY
+    ========================================================== -->
+
+    <div
+        class="stackly-finance-admin-overlay"
+        id="stacklyFinanceAdminOverlay"
+    ></div>
+
+
+    <!-- =========================================================
+         SIDEBAR
+    ========================================================== -->
+
+    <aside
+        class="stackly-finance-admin-sidebar"
+        id="stacklyFinanceAdminSidebar"
+    >
+
+
+        <!-- =====================================================
+             SIDEBAR TOP
+        ====================================================== -->
+
+        <div class="stackly-finance-admin-sidebar-top">
+
+
+            <!-- =================================================
+                 LOGO
+            ================================================== -->
+
+            <a
+                href="admin.html"
+                class="stackly-finance-admin-logo"
+                aria-label="Stackly Finance Home"
+            >
+
+                <img
+                    src="Stackly-logo-Blue.webp"
+                    alt="Stackly Finance Logo"
+                >
+
+            </a>
+
+
+            <!-- =================================================
+                 MOBILE CLOSE BUTTON
+            ================================================== -->
+
+            <button
+                type="button"
+                class="stackly-finance-admin-close"
+                id="stacklyFinanceAdminClose"
+                aria-label="Close menu"
+            >
+
+                <i class="fa-solid fa-xmark"></i>
+
+            </button>
+
+        </div>
+
+
+        <!-- =====================================================
+             ADMIN PROFILE
+        ====================================================== -->
+
+        <div class="stackly-finance-admin-profile">
+
+            <div class="stackly-finance-admin-profile-icon">
+
+                <i class="fa-solid fa-user-shield"></i>
+
+            </div>
+
+            <div class="stackly-finance-admin-profile-info">
+
+                
+                <span
+    class="stackly-finance-admin-profile-label"
+    id="stacklyFinanceAdminProfileLabel"
+>
+    Dashboard
+</span>
+
+                <strong>
+                    Administrator
+                </strong>
+
+            </div>
+
+        </div>
+
+
+        <!-- =====================================================
+             SIDEBAR NAVIGATION
+        ====================================================== -->
+
+        <nav
+            class="stackly-finance-admin-navigation"
+            aria-label="Admin Navigation"
+        >
+
+
+            <!-- Dashboard -->
+
+            <a
+                href="admin.html"
+                class="stackly-finance-admin-nav-link"
+            >
+
+                <span class="stackly-finance-admin-nav-icon">
+
+                    <i class="fa-solid fa-chart-pie"></i>
+
+                </span>
+
+                <span>
+                    Dashboard
+                </span>
+
+            </a>
+
+
+            <!-- Users -->
+
+            <a
+                href="admin-users.html"
+                class="stackly-finance-admin-nav-link"
+            >
+
+                <span class="stackly-finance-admin-nav-icon">
+
+                    <i class="fa-solid fa-users"></i>
+
+                </span>
+
+                <span>
+                    Users
+                </span>
+
+            </a>
+
+
+            <!-- Transactions -->
+
+            <a
+                href="admin-transactions.html"
+                class="stackly-finance-admin-nav-link"
+            >
+
+                <span class="stackly-finance-admin-nav-icon">
+
+                    <i class="fa-solid fa-arrow-right-arrow-left"></i>
+
+                </span>
+
+                <span>
+                    Transactions
+                </span>
+
+            </a>
+
+
+            <!-- Investments -->
+
+            <a
+                href="admin-investments.html"
+                class="stackly-finance-admin-nav-link"
+            >
+
+                <span class="stackly-finance-admin-nav-icon">
+
+                    <i class="fa-solid fa-chart-line"></i>
+
+                </span>
+
+                <span>
+                    Investments
+                </span>
+
+            </a>
+
+
+            <!-- Accounts -->
+
+            <a
+                href="admin-accounts.html"
+                class="stackly-finance-admin-nav-link"
+            >
+
+                <span class="stackly-finance-admin-nav-icon">
+
+                    <i class="fa-solid fa-wallet"></i>
+
+                </span>
+
+                <span>
+                    Accounts
+                </span>
+
+            </a>
+
+
+
+            <!-- Messages -->
+
+            <a
+                href="admin-messages.html"
+                class="stackly-finance-admin-nav-link"
+            >
+
+                <span class="stackly-finance-admin-nav-icon">
+
+                    <i class="fa-solid fa-envelope"></i>
+
+                </span>
+
+                <span>
+                    Messages
+                </span>
+
+                <span class="stackly-finance-admin-nav-badge">
+                    4
+                </span>
+
+            </a>
+
+
+            <!-- Settings -->
+
+            <a
+                href="admin-settings.html"
+                class="stackly-finance-admin-nav-link active"
+            >
+
+                <span class="stackly-finance-admin-nav-icon">
+
+                    <i class="fa-solid fa-gear"></i>
+
+                </span>
+
+                <span>
+                    Settings
+                </span>
+
+            </a>
+
+        </nav>
+
+
+        <!-- =====================================================
+             SIDEBAR BOTTOM
+        ====================================================== -->
+
+        <div class="stackly-finance-admin-sidebar-bottom">
+
+
+            <!-- Logout -->
+
+            <a
+                href="index.html"
+                class="stackly-finance-admin-logout"
+                id="stacklyFinanceAdminLogout"
+            >
+
+                <i class="fa-solid fa-right-from-bracket"></i>
+
+                <span>
+                    Logout
+                </span>
+
+            </a>
+
+        </div>
+
+    </aside>
+
+
+    <!-- =========================================================
+         MAIN AREA
+    ========================================================== -->
+
+    <main class="stackly-finance-admin-main">
+
+
+        <!-- =====================================================
+             TOP HEADER
+        ====================================================== -->
+
+        <header class="stackly-finance-admin-header">
+
+
+            <!-- =================================================
+                 MOBILE HAMBURGER
+            ================================================== -->
+
+            <button
+                type="button"
+                class="stackly-finance-admin-menu"
+                id="stacklyFinanceAdminMenu"
+                aria-label="Open menu"
+                aria-expanded="false"
+            >
+
+                <i class="fa-solid fa-bars"></i>
+
+            </button>
+
+
+            <!-- =================================================
+                 PAGE TITLE
+            ================================================== -->
+
+            <div class="stackly-finance-admin-header-title">
+
+                <span>
+                    FINANCE ADMIN
+                </span>
+
+                <h1>
+                    Admin Dashboard
+                </h1>
+
+            </div>
+
+
+            <!-- =================================================
+                 HEADER RIGHT
+            ================================================== -->
+
+            <div class="stackly-finance-admin-header-right">
+
+
+                <!-- Notification -->
+
+                <a href="404-admin.html"><button
+                    type="button"
+                    class="stackly-finance-admin-notification"
+                    aria-label="Notifications"
+                >
+
+                    <i class="fa-regular fa-bell"></i>
+
+                    <span>
+                        3
+                    </span>
+
+                </button></a>
+
+
+                <!-- Divider -->
+
+                <div class="stackly-finance-admin-header-divider"></div>
+
+
+                <!-- User Email -->
+
+                <div class="stackly-finance-admin-user">
+
+                    <div class="stackly-finance-admin-user-avatar">
+
+                        <i class="fa-solid fa-user"></i>
+
+                    </div>
+
+                    <div class="stackly-finance-admin-user-details">
+
+                        <span>
+                            Signed in as
+                        </span>
+
+                        <strong
+                            id="stacklyFinanceAdminEmail"
+                        >
+                            admin@stackly.com
+                        </strong>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </header>
+
+
+<!-- =========================================================
+     STACKLY FINANCE SETTINGS PAGE
+========================================================== -->
+
+<section class="stackly-finance-settings-page">
+
+
+    <!-- =====================================================
+         SETTINGS HERO
+    ====================================================== -->
+
+    <div
+        class="stackly-finance-settings-hero"
+        data-aos="fade-up"
+    >
+
+        <div class="stackly-finance-settings-hero-content">
+
+            <span class="stackly-finance-settings-eyebrow">
+                ACCOUNT CONTROL
+            </span>
+
+            <h2>
+                Settings & Preferences
+            </h2>
+
+            <p>
+                Manage your administrator profile, security,
+                notifications and finance dashboard preferences.
+            </p>
+
+        </div>
+
+        <div class="stackly-finance-settings-hero-icon">
+
+            <i class="fa-solid fa-sliders"></i>
+
+        </div>
+
+    </div>
+
+
+
+    <!-- =====================================================
+         SETTINGS LAYOUT
+    ====================================================== -->
+
+    <div class="stackly-finance-settings-layout">
+
+
+        <!-- =================================================
+             SETTINGS NAVIGATION
+        ================================================== -->
+
+        <aside
+            class="stackly-finance-settings-nav"
+            data-aos="fade-right"
+        >
+
+            <div class="stackly-finance-settings-nav-title">
+                SETTINGS
+            </div>
+
+
+            <button
+                type="button"
+                class="stackly-finance-settings-tab active"
+                data-setting-tab="profile"
+            >
+
+                <i class="fa-solid fa-user"></i>
+
+                <span>
+                    Profile
+                </span>
+
+            </button>
+
+
+            <button
+                type="button"
+                class="stackly-finance-settings-tab"
+                data-setting-tab="security"
+            >
+
+                <i class="fa-solid fa-shield-halved"></i>
+
+                <span>
+                    Security
+                </span>
+
+            </button>
+
+
+            <button
+                type="button"
+                class="stackly-finance-settings-tab"
+                data-setting-tab="notifications"
+            >
+
+                <i class="fa-solid fa-bell"></i>
+
+                <span>
+                    Notifications
+                </span>
+
+            </button>
+
+
+            <button
+                type="button"
+                class="stackly-finance-settings-tab"
+                data-setting-tab="preferences"
+            >
+
+                <i class="fa-solid fa-sliders"></i>
+
+                <span>
+                    Preferences
+                </span>
+
+            </button>
+
+
+             
+
+        </aside>
+
+
+
+        <!-- =================================================
+             SETTINGS CONTENT
+        ================================================== -->
+
+        <div class="stackly-finance-settings-content">
+
+
+            <!-- =================================================
+                 PROFILE SETTINGS
+            ================================================== -->
+
+            <section
+                class="stackly-finance-settings-panel active"
+                data-setting-panel="profile"
+                data-aos="fade-up"
+            >
+
+                <div class="stackly-finance-settings-panel-header">
+
+                    <div>
+
+                        <span>
+                            ADMIN PROFILE
+                        </span>
+
+                        <h3>
+                            Personal Information
+                        </h3>
+
+                    </div>
+
+                    <div class="stackly-finance-settings-panel-icon">
+
+                        <i class="fa-solid fa-user"></i>
+
+                    </div>
+
+                </div>
+
+
+                <div class="stackly-finance-profile-box">
+
+                    <div class="stackly-finance-profile-avatar">
+
+                        <i class="fa-solid fa-user-shield"></i>
+
+                    </div>
+
+                    <div class="stackly-finance-profile-info">
+
+                        <h4 id="stacklyFinanceAdminName">
+                            Administrator
+                        </h4>
+
+                        <p>
+                            Finance System Administrator
+                        </p>
+
+                        <button
+                            type="button"
+                            class="stackly-finance-upload-photo"
+                        >
+
+                            <i class="fa-solid fa-camera"></i>
+
+                            Change Photo
+
+                        </button>
+
+                    </div>
+
+                </div>
+
+
+                <div class="stackly-finance-settings-form-grid">
+
+                    <div class="stackly-finance-settings-field">
+
+    <label for="stacklyFinanceProfileName">
+        Full Name
+    </label>
+
+    <input
+        type="text"
+        id="stacklyFinanceProfileName"
+        value=""
+        autocomplete="name"
+    >
+
+</div>
+
+
+                    <div class="stackly-finance-settings-field">
+
+    <label for="stacklyFinanceProfileEmail">
+        Email Address
+    </label>
+
+    <input
+        type="email"
+        id="stacklyFinanceProfileEmail"
+        value=""
+    >
+
+</div>
+
+
+                    <div class="stackly-finance-settings-field">
+
+                        <label>
+                            Phone Number
+                        </label>
+
+                        <input
+                            type="tel"
+                            value="+91 98765 43210"
+                        >
+
+                    </div>
+
+
+                    <div class="stackly-finance-settings-field">
+
+                        <label>
+                            Role
+                        </label>
+
+                        <input
+                            type="text"
+                            value="Administrator"
+                            readonly
+                        >
+
+                    </div>
+
+                </div>
+
+
+                <div class="stackly-finance-settings-actions">
+
+                    <button
+                        type="button"
+                        class="stackly-finance-settings-save"
+                    >
+
+                        <i class="fa-solid fa-check"></i>
+
+                        Save Changes
+
+                    </button>
+
+                </div>
+
+            </section>
+
+
+
+            <!-- =================================================
+                 SECURITY SETTINGS
+            ================================================== -->
+
+            <section
+                class="stackly-finance-settings-panel"
+                data-setting-panel="security"
+            >
+
+                <div class="stackly-finance-settings-panel-header">
+
+                    <div>
+
+                        <span>
+                            ACCOUNT SECURITY
+                        </span>
+
+                        <h3>
+                            Security Settings
+                        </h3>
+
+                    </div>
+
+                    <div class="stackly-finance-settings-panel-icon">
+
+                        <i class="fa-solid fa-shield-halved"></i>
+
+                    </div>
+
+                </div>
+
+
+                <div class="stackly-finance-security-list">
+
+
+                    <div class="stackly-finance-security-item">
+
+                        <div class="stackly-finance-security-icon">
+
+                            <i class="fa-solid fa-lock"></i>
+
+                        </div>
+
+                        <div class="stackly-finance-security-info">
+
+                            <h4>
+                                Password
+                            </h4>
+
+                            <p>
+                                Last changed 30 days ago
+                            </p>
+
+                        </div>
+
+                        <a href="404-admin.html"><button
+                            type="button"
+                            class="stackly-finance-outline-button"
+                        >
+                            Change
+                        </button></a>
+
+                    </div>
+
+
+                    <div class="stackly-finance-security-item">
+
+                        <div class="stackly-finance-security-icon">
+
+                            <i class="fa-solid fa-mobile-screen-button"></i>
+
+                        </div>
+
+                        <div class="stackly-finance-security-info">
+
+                            <h4>
+                                Two-Factor Authentication
+                            </h4>
+
+                            <p>
+                                Add an extra layer of account protection
+                            </p>
+
+                        </div>
+
+                        <label class="stackly-finance-toggle">
+
+                            <input
+                                type="checkbox"
+                                checked
+                            >
+
+                            <span></span>
+
+                        </label>
+
+                    </div>
+
+
+                    <div class="stackly-finance-security-item">
+
+                        <div class="stackly-finance-security-icon">
+
+                            <i class="fa-solid fa-laptop"></i>
+
+                        </div>
+
+                        <div class="stackly-finance-security-info">
+
+                            <h4>
+                                Active Sessions
+                            </h4>
+
+                            <p>
+                                2 devices are currently signed in
+                            </p>
+
+                        </div>
+
+                        <a href="404-admin.html"><button
+                            type="button"
+                            class="stackly-finance-outline-button"
+                        >
+                            Manage
+                        </button></a>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+
+
+            <!-- =================================================
+                 NOTIFICATION SETTINGS
+            ================================================== -->
+
+            <section
+                class="stackly-finance-settings-panel"
+                data-setting-panel="notifications"
+            >
+
+                <div class="stackly-finance-settings-panel-header">
+
+                    <div>
+
+                        <span>
+                            COMMUNICATION
+                        </span>
+
+                        <h3>
+                            Notification Preferences
+                        </h3>
+
+                    </div>
+
+                    <div class="stackly-finance-settings-panel-icon">
+
+                        <i class="fa-solid fa-bell"></i>
+
+                    </div>
+
+                </div>
+
+
+                <div class="stackly-finance-notification-list">
+
+
+                    <div class="stackly-finance-notification-row">
+
+                        <div>
+
+                            <h4>
+                                New Transactions
+                            </h4>
+
+                            <p>
+                                Receive alerts when new transactions are created.
+                            </p>
+
+                        </div>
+
+                        <label class="stackly-finance-toggle">
+
+                            <input
+                                type="checkbox"
+                                checked
+                            >
+
+                            <span></span>
+
+                        </label>
+
+                    </div>
+
+
+                    <div class="stackly-finance-notification-row">
+
+                        <div>
+
+                            <h4>
+                                New Messages
+                            </h4>
+
+                            <p>
+                                Get notified when customers send new messages.
+                            </p>
+
+                        </div>
+
+                        <label class="stackly-finance-toggle">
+
+                            <input
+                                type="checkbox"
+                                checked
+                            >
+
+                            <span></span>
+
+                        </label>
+
+                    </div>
+
+
+                    <div class="stackly-finance-notification-row">
+
+                        <div>
+
+                            <h4>
+                                Investment Alerts
+                            </h4>
+
+                            <p>
+                                Receive important investment activity updates.
+                            </p>
+
+                        </div>
+
+                        <label class="stackly-finance-toggle">
+
+                            <input
+                                type="checkbox"
+                            >
+
+                            <span></span>
+
+                        </label>
+
+                    </div>
+
+
+                    <div class="stackly-finance-notification-row">
+
+                        <div>
+
+                            <h4>
+                                Weekly Reports
+                            </h4>
+
+                            <p>
+                                Receive weekly financial dashboard summaries.
+                            </p>
+
+                        </div>
+
+                        <label class="stackly-finance-toggle">
+
+                            <input
+                                type="checkbox"
+                                checked
+                            >
+
+                            <span></span>
+
+                        </label>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+
+
+            <!-- =================================================
+                 PREFERENCES
+            ================================================== -->
+
+            <section
+                class="stackly-finance-settings-panel"
+                data-setting-panel="preferences"
+            >
+
+                <div class="stackly-finance-settings-panel-header">
+
+                    <div>
+
+                        <span>
+                            FINANCE DASHBOARD
+                        </span>
+
+                        <h3>
+                            Dashboard Preferences
+                        </h3>
+
+                    </div>
+
+                    <div class="stackly-finance-settings-panel-icon">
+
+                        <i class="fa-solid fa-sliders"></i>
+
+                    </div>
+
+                </div>
+
+
+                <div class="stackly-finance-preference-grid">
+
+
+                    <div class="stackly-finance-preference-card">
+
+                        <div class="stackly-finance-preference-icon">
+
+                            <i class="fa-solid fa-coins"></i>
+
+                        </div>
+
+                        <div>
+
+                            <h4>
+                                Default Currency
+                            </h4>
+
+                            <p>
+                                Choose your dashboard currency.
+                            </p>
+
+                            <select>
+
+                                <option selected>
+                                    INR - Indian Rupee
+                                </option>
+
+                                <option>
+                                    USD - US Dollar
+                                </option>
+
+                                <option>
+                                    EUR - Euro
+                                </option>
+
+                            </select>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="stackly-finance-preference-card">
+
+                        <div class="stackly-finance-preference-icon">
+
+                            <i class="fa-solid fa-calendar-days"></i>
+
+                        </div>
+
+                        <div>
+
+                            <h4>
+                                Date Format
+                            </h4>
+
+                            <p>
+                                Select how dates are displayed.
+                            </p>
+
+                            <select>
+
+                                <option selected>
+                                    DD/MM/YYYY
+                                </option>
+
+                                <option>
+                                    MM/DD/YYYY
+                                </option>
+
+                                <option>
+                                    YYYY-MM-DD
+                                </option>
+
+                            </select>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="stackly-finance-preference-card">
+
+                        <div class="stackly-finance-preference-icon">
+
+                            <i class="fa-solid fa-chart-column"></i>
+
+                        </div>
+
+                        <div>
+
+                            <h4>
+                                Dashboard View
+                            </h4>
+
+                            <p>
+                                Choose your preferred overview.
+                            </p>
+
+                            <select>
+
+                                <option selected>
+                                    Detailed
+                                </option>
+
+                                <option>
+                                    Compact
+                                </option>
+
+                                <option>
+                                    Minimal
+                                </option>
+
+                            </select>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="stackly-finance-preference-card">
+
+                        <div class="stackly-finance-preference-icon">
+
+                            <i class="fa-solid fa-language"></i>
+
+                        </div>
+
+                        <div>
+
+                            <h4>
+                                Language
+                            </h4>
+
+                            <p>
+                                Select dashboard language.
+                            </p>
+
+                            <select>
+
+                                <option selected>
+                                    English
+                                </option>
+
+                                <option>
+                                    Tamil
+                                </option>
+
+                                <option>
+                                    Hindi
+                                </option>
+
+                            </select>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+    </main>
+
+
+    <!-- =========================================================
+         AOS JS
+    ========================================================== -->
+
+    <script
+        src="https://unpkg.com/aos@2.3.4/dist/aos.js"
+    ></script>
+
+
+    <!-- =========================================================
+         ADMIN DASHBOARD JS
+    ========================================================== -->
+
+    <script src="admin.js"></script>
+
+</body>
+</html>

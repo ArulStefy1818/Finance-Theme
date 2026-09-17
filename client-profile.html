@@ -1,0 +1,1538 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <!-- =========================================================
+         STACKLY FINANCE CLIENT DASHBOARD
+    ========================================================== -->
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <meta
+        name="description"
+        content="Stackly Finance Client Dashboard - Manage accounts, transactions, investments and financial goals."
+    >
+
+    <meta
+        name="theme-color"
+        content="#061713"
+    >
+
+    <title>Stackly Finance | Client Dashboard</title>
+
+
+    <!-- =========================================================
+         GOOGLE FONTS
+    ========================================================== -->
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+
+    <link
+        rel="preconnect"
+        href="https://fonts.gstatic.com"
+        crossorigin
+    >
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap"
+        rel="stylesheet"
+    >
+
+
+    <!-- =========================================================
+         FONT AWESOME
+    ========================================================== -->
+
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+    >
+
+
+    <!-- =========================================================
+         AOS ANIMATION
+    ========================================================== -->
+
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css"
+    >
+
+
+    <!-- =========================================================
+         CLIENT DASHBOARD CSS
+    ========================================================== -->
+
+    <link
+        rel="stylesheet"
+        href="client.css"
+    >
+
+</head>
+
+
+<body>
+
+
+    <!-- =========================================================
+         CLIENT DASHBOARD WRAPPER
+    ========================================================== -->
+
+    <div class="stackly-finance-client-dashboard">
+
+
+        <!-- =====================================================
+             MOBILE SIDEBAR OVERLAY
+        ====================================================== -->
+
+        <div
+            class="stackly-finance-client-overlay"
+            id="stacklyFinanceClientOverlay"
+            aria-hidden="true"
+        ></div>
+
+
+        <!-- =====================================================
+             SIDEBAR
+        ====================================================== -->
+
+        <aside
+            class="stackly-finance-client-sidebar"
+            id="stacklyFinanceClientSidebar"
+            aria-label="Client dashboard sidebar"
+        >
+
+
+            <!-- =================================================
+                 SIDEBAR BRAND
+            ================================================== -->
+
+            <div class="stackly-finance-client-brand">
+
+                <a
+                    href="client.html"
+                    class="stackly-finance-client-logo"
+                    aria-label="Stackly Finance Home"
+                >
+
+                    <img
+                        src="Stackly-logo-Blue.webp"
+                        alt="Stackly Finance"
+                    >
+
+                </a>
+
+
+                <!-- MOBILE CLOSE BUTTON -->
+
+                <button
+                    type="button"
+                    class="stackly-finance-client-sidebar-close"
+                    id="stacklyFinanceClientSidebarClose"
+                    aria-label="Close navigation"
+                    aria-controls="stacklyFinanceClientSidebar"
+                >
+
+                    <i class="fa-solid fa-xmark"></i>
+
+                </button>
+
+            </div>
+
+
+            <!-- =================================================
+                 CLIENT PROFILE
+            ================================================== -->
+
+            <div
+                class="stackly-finance-client-sidebar-profile"
+                data-aos="fade-right"
+            >
+
+                <div
+                    class="stackly-finance-client-avatar"
+                    aria-hidden="true"
+                >
+
+                    <i class="fa-solid fa-user"></i>
+
+                </div>
+
+
+                <div class="stackly-finance-client-profile-info">
+
+                    <strong id="stacklyFinanceClientSidebarName">
+                        Client
+                    </strong>
+
+                    <span>
+                        Finance Client
+                    </span>
+
+                </div>
+
+            </div>
+
+
+            <!-- =================================================
+                 SIDEBAR NAVIGATION
+            ================================================== -->
+
+            <nav
+                class="stackly-finance-client-navigation"
+                aria-label="Client Dashboard Navigation"
+            >
+
+                <!-- DASHBOARD -->
+
+                <a
+                    href="client.html"
+                    class="stackly-finance-client-nav-link active"
+                    aria-current="page"
+                >
+
+                    <span
+                        class="stackly-finance-client-nav-icon"
+                        aria-hidden="true"
+                    >
+
+                        <i class="fa-solid fa-chart-pie"></i>
+
+                    </span>
+
+                    <span>
+                        Dashboard
+                    </span>
+
+                </a>
+
+
+                <!-- MY ACCOUNTS -->
+
+                <a
+                    href="client-accounts.html"
+                    class="stackly-finance-client-nav-link"
+                >
+
+                    <span
+                        class="stackly-finance-client-nav-icon"
+                        aria-hidden="true"
+                    >
+
+                        <i class="fa-solid fa-wallet"></i>
+
+                    </span>
+
+                    <span>
+                        My Accounts
+                    </span>
+
+                </a>
+
+
+                <!-- TRANSACTIONS -->
+
+                <a
+                    href="client-transactions.html"
+                    class="stackly-finance-client-nav-link"
+                >
+
+                    <span
+                        class="stackly-finance-client-nav-icon"
+                        aria-hidden="true"
+                    >
+
+                        <i class="fa-solid fa-arrow-right-arrow-left"></i>
+
+                    </span>
+
+                    <span>
+                        Transactions
+                    </span>
+
+                </a>
+
+
+                <!-- PAYMENTS -->
+
+                <a
+                    href="client-payments.html"
+                    class="stackly-finance-client-nav-link"
+                >
+
+                    <span
+                        class="stackly-finance-client-nav-icon"
+                        aria-hidden="true"
+                    >
+
+                        <i class="fa-solid fa-credit-card"></i>
+
+                    </span>
+
+                    <span>
+                        Payments
+                    </span>
+
+                </a>
+
+
+                <!-- INVESTMENTS -->
+
+                <a
+                    href="client-investments.html"
+                    class="stackly-finance-client-nav-link"
+                >
+
+                    <span
+                        class="stackly-finance-client-nav-icon"
+                        aria-hidden="true"
+                    >
+
+                        <i class="fa-solid fa-chart-line"></i>
+
+                    </span>
+
+                    <span>
+                        Investments
+                    </span>
+
+                </a>
+
+
+                <!-- FINANCIAL PLANNING -->
+
+                <a
+                    href="client-planning.html"
+                    class="stackly-finance-client-nav-link"
+                >
+
+                    <span
+                        class="stackly-finance-client-nav-icon"
+                        aria-hidden="true"
+                    >
+
+                        <i class="fa-solid fa-bullseye"></i>
+
+                    </span>
+
+                    <span>
+                        Financial Planning
+                    </span>
+
+                </a>
+
+
+                <!-- MY PROFILE -->
+
+                <a
+                    href="client-profile.html"
+                    class="stackly-finance-client-nav-link"
+                >
+
+                    <span
+                        class="stackly-finance-client-nav-icon"
+                        aria-hidden="true"
+                    >
+
+                        <i class="fa-solid fa-user"></i>
+
+                    </span>
+
+                    <span>
+                        My Profile
+                    </span>
+
+                </a>
+
+            </nav>
+
+
+            <!-- =================================================
+                 SIDEBAR BOTTOM
+            ================================================== -->
+
+            <div class="stackly-finance-client-sidebar-bottom">
+
+                <a
+                    href="index.html"
+                    class="stackly-finance-client-logout"
+                    id="stacklyFinanceClientLogout"
+                >
+
+                    <i
+                        class="fa-solid fa-right-from-bracket"
+                        aria-hidden="true"
+                    ></i>
+
+                    <span>
+                        Logout
+                    </span>
+
+                </a>
+
+            </div>
+
+        </aside>
+
+
+        <!-- =====================================================
+             MAIN AREA
+        ====================================================== -->
+
+        <main class="stackly-finance-client-main">
+
+
+            <!-- =================================================
+                 TOP HEADER
+            ================================================== -->
+
+            <header class="stackly-finance-client-header">
+
+
+                <!-- MOBILE MENU BUTTON -->
+
+                <button
+                    type="button"
+                    class="stackly-finance-client-menu-toggle"
+                    id="stacklyFinanceClientMenuToggle"
+                    aria-label="Open navigation"
+                    aria-controls="stacklyFinanceClientSidebar"
+                    aria-expanded="false"
+                >
+
+                    <span></span>
+                    <span></span>
+                    <span></span>
+
+                </button>
+
+
+                <!-- HEADER TITLE -->
+
+                <div
+                    class="stackly-finance-client-header-title"
+                    data-aos="fade-down"
+                >
+
+                    <span class="stackly-finance-client-header-label">
+                        CLIENT PORTAL
+                    </span>
+
+                    <h1>
+                        Financial Dashboard
+                    </h1>
+
+                </div>
+
+
+                <!-- HEADER ACTIONS -->
+
+                <div class="stackly-finance-client-header-actions">
+
+
+                    <!-- NOTIFICATION -->
+
+                    <a
+                        href="404-client.html"
+                        class="stackly-finance-client-notification"
+                        aria-label="View notifications, 4 unread"
+                    >
+
+                        <i
+                            class="fa-regular fa-bell"
+                            aria-hidden="true"
+                        ></i>
+
+                        <span>
+                            4
+                        </span>
+
+                    </a>
+
+
+                    <!-- EMAIL / USER -->
+
+                    <div class="stackly-finance-client-email-box">
+
+                        <div
+                            class="stackly-finance-client-email-icon"
+                            aria-hidden="true"
+                        >
+
+                            <i class="fa-solid fa-user"></i>
+
+                        </div>
+
+
+                        <div class="stackly-finance-client-email-content">
+
+                            <span>
+                                Signed in as
+                            </span>
+
+                            <strong id="stacklyFinanceClientEmail">
+                                client@example.com
+                            </strong>
+
+                        </div>
+
+
+                        <i
+                            class="fa-solid fa-chevron-down stackly-finance-client-email-arrow"
+                            aria-hidden="true"
+                        ></i>
+
+                    </div>
+
+                </div>
+
+            </header>
+
+<!-- =========================================================
+     STACKLY FINANCE
+     MY PROFILE PAGE CONTENT
+========================================================== -->
+
+<section class="stkprofile-page">
+
+
+    <!-- =====================================================
+         PROFILE HERO
+    ====================================================== -->
+
+    <section
+        class="stkprofile-hero"
+        data-aos="fade-up"
+    >
+
+        <div class="stkprofile-hero-avatar">
+
+            <div class="stkprofile-avatar-circle">
+
+                <i class="fa-solid fa-user"></i>
+
+            </div>
+
+            <span class="stkprofile-online-dot"></span>
+
+        </div>
+
+
+        <div class="stkprofile-hero-content">
+
+            <span class="stkprofile-eyebrow">
+                <i class="fa-solid fa-user"></i>
+                MY PROFILE
+            </span>
+
+            <h2>
+    Welcome back,
+    <span id="stkprofileHeroName">
+        Client
+    </span>
+</h2>
+
+            <p>
+                Manage your personal information, account preferences,
+                security settings and financial profile from one place.
+            </p>
+
+        </div>
+
+
+        <div class="stkprofile-hero-action">
+
+            <a
+                href="404-client.html"
+                class="stkprofile-edit-btn"
+            >
+
+                <i class="fa-solid fa-pen"></i>
+
+                Edit Profile
+
+            </a>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =====================================================
+         PROFILE OVERVIEW
+    ====================================================== -->
+
+    <section class="stkprofile-overview">
+
+        <div
+            class="stkprofile-section-heading"
+            data-aos="fade-up"
+        >
+
+            <div>
+
+                <span>
+                    ACCOUNT SUMMARY
+                </span>
+
+                <h2>
+                    Profile Overview
+                </h2>
+
+            </div>
+
+        </div>
+
+
+        <div class="stkprofile-overview-grid">
+
+
+            <!-- ACCOUNT STATUS -->
+
+            <article
+                class="stkprofile-overview-card"
+                data-aos="fade-up"
+                data-aos-delay="100"
+            >
+
+                <div class="stkprofile-overview-icon">
+
+                    <i class="fa-solid fa-circle-check"></i>
+
+                </div>
+
+                <span>
+                    Account Status
+                </span>
+
+                <strong>
+                    Active
+                </strong>
+
+                <small>
+                    Your account is currently active
+                </small>
+
+            </article>
+
+
+            <!-- MEMBER SINCE -->
+
+            <article
+                class="stkprofile-overview-card"
+                data-aos="fade-up"
+                data-aos-delay="150"
+            >
+
+                <div class="stkprofile-overview-icon">
+
+                    <i class="fa-solid fa-calendar"></i>
+
+                </div>
+
+                <span>
+                    Member Since
+                </span>
+
+                <strong>
+                    Jan 2025
+                </strong>
+
+                <small>
+                    Stackly Finance member
+                </small>
+
+            </article>
+
+
+            <!-- PROFILE COMPLETION -->
+
+            <article
+                class="stkprofile-overview-card"
+                data-aos="fade-up"
+                data-aos-delay="200"
+            >
+
+                <div class="stkprofile-overview-icon">
+
+                    <i class="fa-solid fa-user-check"></i>
+
+                </div>
+
+                <span>
+                    Profile Completion
+                </span>
+
+                <strong>
+                    92%
+                </strong>
+
+                <small>
+                    Almost completely updated
+                </small>
+
+            </article>
+
+
+            <!-- SECURITY -->
+
+            <article
+                class="stkprofile-overview-card"
+                data-aos="fade-up"
+                data-aos-delay="250"
+            >
+
+                <div class="stkprofile-overview-icon">
+
+                    <i class="fa-solid fa-shield-halved"></i>
+
+                </div>
+
+                <span>
+                    Security Level
+                </span>
+
+                <strong>
+                    Strong
+                </strong>
+
+                <small>
+                    Your account is protected
+                </small>
+
+            </article>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =====================================================
+         PERSONAL INFORMATION
+    ====================================================== -->
+
+    <section
+        class="stkprofile-information-section"
+        data-aos="fade-up"
+    >
+
+        <div class="stkprofile-panel-header">
+
+            <div>
+
+                <span>
+                    PERSONAL DETAILS
+                </span>
+
+                <h2>
+                    Personal Information
+                </h2>
+
+            </div>
+
+
+            <a href="404-client.html">
+
+                <i class="fa-solid fa-pen"></i>
+
+                Edit
+
+            </a>
+
+        </div>
+
+
+        <div class="stkprofile-information-grid">
+
+
+            <!-- FULL NAME -->
+
+            <div class="stkprofile-info-item">
+
+                <div class="stkprofile-info-icon">
+
+                    <i class="fa-solid fa-user"></i>
+
+                </div>
+
+                <div>
+
+                    <span>
+                        Full Name
+                    </span>
+
+                     <strong id="stkprofileFullName">
+    Client
+</strong>
+
+                </div>
+
+            </div>
+
+
+            <!-- EMAIL -->
+
+            <div class="stkprofile-info-item">
+
+                <div class="stkprofile-info-icon">
+
+                    <i class="fa-solid fa-envelope"></i>
+
+                </div>
+
+                
+<div>
+    <span>
+        Email Address
+    </span>
+
+    <strong id="stkprofileEmailAddress">
+            client@example.com
+        </strong>
+</div>
+
+
+            </div>
+
+
+            <!-- PHONE -->
+
+            <div class="stkprofile-info-item">
+
+                <div class="stkprofile-info-icon">
+
+                    <i class="fa-solid fa-phone"></i>
+
+                </div>
+
+                <div>
+
+                    <span>
+                        Phone Number
+                    </span>
+
+                    <strong>
+                        +91 98765 43210
+                    </strong>
+
+                </div>
+
+            </div>
+
+
+            <!-- DATE OF BIRTH -->
+
+            <div class="stkprofile-info-item">
+
+                <div class="stkprofile-info-icon">
+
+                    <i class="fa-solid fa-calendar-days"></i>
+
+                </div>
+
+                <div>
+
+                    <span>
+                        Date of Birth
+                    </span>
+
+                    <strong>
+                        15 August 1998
+                    </strong>
+
+                </div>
+
+            </div>
+
+
+            <!-- LOCATION -->
+
+            <div class="stkprofile-info-item">
+
+                <div class="stkprofile-info-icon">
+
+                    <i class="fa-solid fa-location-dot"></i>
+
+                </div>
+
+                <div>
+
+                    <span>
+                        Location
+                    </span>
+
+                    <strong>
+                        Chennai, India
+                    </strong>
+
+                </div>
+
+            </div>
+
+
+            <!-- CUSTOMER TYPE -->
+
+            <div class="stkprofile-info-item">
+
+                <div class="stkprofile-info-icon">
+
+                    <i class="fa-solid fa-id-badge"></i>
+
+                </div>
+
+                <div>
+
+                    <span>
+                        Account Type
+                    </span>
+
+                    <strong>
+                        Finance Client
+                    </strong>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =====================================================
+         CONTACT INFORMATION
+    ====================================================== -->
+
+    <section
+        class="stkprofile-contact-section"
+        data-aos="fade-up"
+    >
+
+        <div class="stkprofile-panel-header">
+
+            <div>
+
+                <span>
+                    CONTACT DETAILS
+                </span>
+
+                <h2>
+                    Contact Information
+                </h2>
+
+            </div>
+
+        </div>
+
+
+        <div class="stkprofile-contact-grid">
+
+
+            <div class="stkprofile-contact-card">
+
+                <div class="stkprofile-contact-icon">
+
+                    <i class="fa-solid fa-envelope"></i>
+
+                </div>
+
+                <div>
+
+                    <span>
+    Primary Email
+</span>
+
+<strong id="stkprofilePrimaryEmail">
+    client@example.com
+</strong>
+
+                    <small>
+                        Verified email address
+                    </small>
+
+                </div>
+
+                <i class="fa-solid fa-circle-check stkprofile-verified"></i>
+
+            </div>
+
+
+            <div class="stkprofile-contact-card">
+
+                <div class="stkprofile-contact-icon">
+
+                    <i class="fa-solid fa-mobile-screen-button"></i>
+
+                </div>
+
+                <div>
+
+                    <span>
+                        Mobile Number
+                    </span>
+
+                    <strong>
+                        +91 98765 43210
+                    </strong>
+
+                    <small>
+                        Verified phone number
+                    </small>
+
+                </div>
+
+                <i class="fa-solid fa-circle-check stkprofile-verified"></i>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =====================================================
+         ACCOUNT PREFERENCES
+    ====================================================== -->
+
+    <section
+        class="stkprofile-preferences-section"
+        data-aos="fade-up"
+    >
+
+        <div class="stkprofile-panel-header">
+
+            <div>
+
+                <span>
+                    ACCOUNT SETTINGS
+                </span>
+
+                <h2>
+                    Preferences
+                </h2>
+
+            </div>
+
+        </div>
+
+
+        <div class="stkprofile-preferences-list">
+
+
+            <!-- EMAIL NOTIFICATIONS -->
+
+            <div class="stkprofile-preference-item">
+
+                <div class="stkprofile-preference-icon">
+
+                    <i class="fa-solid fa-envelope-open-text"></i>
+
+                </div>
+
+                <div class="stkprofile-preference-content">
+
+                    <strong>
+                        Email Notifications
+                    </strong>
+
+                    <span>
+                        Receive important account and financial updates
+                    </span>
+
+                </div>
+
+                <label class="stkprofile-switch">
+
+                    <input
+                        type="checkbox"
+                        checked
+                    >
+
+                    <span></span>
+
+                </label>
+
+            </div>
+
+
+            <!-- TRANSACTION ALERTS -->
+
+            <div class="stkprofile-preference-item">
+
+                <div class="stkprofile-preference-icon">
+
+                    <i class="fa-solid fa-bell"></i>
+
+                </div>
+
+                <div class="stkprofile-preference-content">
+
+                    <strong>
+                        Transaction Alerts
+                    </strong>
+
+                    <span>
+                        Get notified about account transactions
+                    </span>
+
+                </div>
+
+                <label class="stkprofile-switch">
+
+                    <input
+                        type="checkbox"
+                        checked
+                    >
+
+                    <span></span>
+
+                </label>
+
+            </div>
+
+
+            <!-- SECURITY ALERTS -->
+
+            <div class="stkprofile-preference-item">
+
+                <div class="stkprofile-preference-icon">
+
+                    <i class="fa-solid fa-shield-halved"></i>
+
+                </div>
+
+                <div class="stkprofile-preference-content">
+
+                    <strong>
+                        Security Alerts
+                    </strong>
+
+                    <span>
+                        Receive notifications about security activity
+                    </span>
+
+                </div>
+
+                <label class="stkprofile-switch">
+
+                    <input
+                        type="checkbox"
+                        checked
+                    >
+
+                    <span></span>
+
+                </label>
+
+            </div>
+
+
+            <!-- MARKETING -->
+
+            <div class="stkprofile-preference-item">
+
+                <div class="stkprofile-preference-icon">
+
+                    <i class="fa-solid fa-bullhorn"></i>
+
+                </div>
+
+                <div class="stkprofile-preference-content">
+
+                    <strong>
+                        Financial Updates
+                    </strong>
+
+                    <span>
+                        Receive financial tips and educational updates
+                    </span>
+
+                </div>
+
+                <label class="stkprofile-switch">
+
+                    <input type="checkbox">
+
+                    <span></span>
+
+                </label>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =====================================================
+         SECURITY
+    ====================================================== -->
+
+    <section
+        class="stkprofile-security-section"
+        data-aos="fade-up"
+    >
+
+        <div class="stkprofile-panel-header">
+
+            <div>
+
+                <span>
+                    ACCOUNT PROTECTION
+                </span>
+
+                <h2>
+                    Security & Privacy
+                </h2>
+
+            </div>
+
+        </div>
+
+
+        <div class="stkprofile-security-grid">
+
+
+            <!-- PASSWORD -->
+
+            <div class="stkprofile-security-card">
+
+                <div class="stkprofile-security-icon">
+
+                    <i class="fa-solid fa-lock"></i>
+
+                </div>
+
+                <div>
+
+                    <strong>
+                        Password
+                    </strong>
+
+                    <span>
+                        Last changed 30 days ago
+                    </span>
+
+                </div>
+
+                <a href="404-client.html">
+
+                    Change
+
+                </a>
+
+            </div>
+
+
+            <!-- TWO FACTOR -->
+
+            <div class="stkprofile-security-card">
+
+                <div class="stkprofile-security-icon">
+
+                    <i class="fa-solid fa-mobile-screen"></i>
+
+                </div>
+
+                <div>
+
+                    <strong>
+                        Two-Factor Authentication
+                    </strong>
+
+                    <span>
+                        Add an extra layer of account protection
+                    </span>
+
+                </div>
+
+                <a href="404-client.html">
+
+                    Enable
+
+                </a>
+
+            </div>
+
+
+            <!-- LOGIN ACTIVITY -->
+
+            <div class="stkprofile-security-card">
+
+                <div class="stkprofile-security-icon">
+
+                    <i class="fa-solid fa-clock-rotate-left"></i>
+
+                </div>
+
+                <div>
+
+                    <strong>
+                        Login Activity
+                    </strong>
+
+                    <span>
+                        Review recent account access
+                    </span>
+
+                </div>
+
+                <a href="404-client.html">
+
+                    View
+
+                </a>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =====================================================
+         RECENT LOGIN ACTIVITY
+    ====================================================== -->
+
+    <section
+        class="stkprofile-activity-section"
+        data-aos="fade-up"
+    >
+
+        <div class="stkprofile-panel-header">
+
+            <div>
+
+                <span>
+                    ACCOUNT ACTIVITY
+                </span>
+
+                <h2>
+                    Recent Login Activity
+                </h2>
+
+            </div>
+
+            <a href="404-client.html">
+                View All
+            </a>
+
+        </div>
+
+
+        <div class="stkprofile-activity-list">
+
+
+            <!-- LOGIN 1 -->
+
+            <div class="stkprofile-activity-item">
+
+                <div class="stkprofile-activity-icon">
+
+                    <i class="fa-solid fa-desktop"></i>
+
+                </div>
+
+                <div class="stkprofile-activity-content">
+
+                    <strong>
+                        Desktop Login
+                    </strong>
+
+                    <span>
+                        Chrome · Windows
+                    </span>
+
+                </div>
+
+                <div class="stkprofile-activity-meta">
+
+                    <strong>
+                        Today
+                    </strong>
+
+                    <span>
+                        09:42 PM
+                    </span>
+
+                </div>
+
+            </div>
+
+
+            <!-- LOGIN 2 -->
+
+            <div class="stkprofile-activity-item">
+
+                <div class="stkprofile-activity-icon">
+
+                    <i class="fa-solid fa-mobile-screen-button"></i>
+
+                </div>
+
+                <div class="stkprofile-activity-content">
+
+                    <strong>
+                        Mobile Login
+                    </strong>
+
+                    <span>
+                        Finance Mobile App
+                    </span>
+
+                </div>
+
+                <div class="stkprofile-activity-meta">
+
+                    <strong>
+                        Yesterday
+                    </strong>
+
+                    <span>
+                        07:18 PM
+                    </span>
+
+                </div>
+
+            </div>
+
+
+            <!-- LOGIN 3 -->
+
+            <div class="stkprofile-activity-item">
+
+                <div class="stkprofile-activity-icon">
+
+                    <i class="fa-solid fa-laptop"></i>
+
+                </div>
+
+                <div class="stkprofile-activity-content">
+
+                    <strong>
+                        Laptop Login
+                    </strong>
+
+                    <span>
+                        Edge · Windows
+                    </span>
+
+                </div>
+
+                <div class="stkprofile-activity-meta">
+
+                    <strong>
+                        12 Sep 2026
+                    </strong>
+
+                    <span>
+                        10:25 AM
+                    </span>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =====================================================
+         PROFILE COMPLETION
+    ====================================================== -->
+
+    <section
+        class="stkprofile-completion-section"
+        data-aos="fade-up"
+    >
+
+        <div class="stkprofile-completion-icon">
+
+            <i class="fa-solid fa-user-check"></i>
+
+        </div>
+
+
+        <div class="stkprofile-completion-content">
+
+            <span>
+                PROFILE COMPLETION
+            </span>
+
+            <h2>
+                Your profile is 92% complete
+            </h2>
+
+            <p>
+                Add the remaining information to keep your
+                financial profile up to date.
+            </p>
+
+
+            <div class="stkprofile-completion-progress">
+
+                <span style="width:92%;"></span>
+
+            </div>
+
+        </div>
+
+
+        <a
+            href="404-client.html"
+            class="stkprofile-completion-btn"
+        >
+
+            Complete Profile
+
+            <i class="fa-solid fa-arrow-right"></i>
+
+        </a>
+
+    </section>
+
+
+
+    
+
+
+</section>
+
+</main>
+
+    </div>
+
+
+    <!-- =========================================================
+         AOS JS
+    ========================================================== -->
+
+    <script
+        src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"
+    ></script>
+
+
+    <!-- =========================================================
+         CLIENT DASHBOARD JS
+    ========================================================== -->
+
+    <script src="client.js"></script>
+
+
+</body>
+
+</html>

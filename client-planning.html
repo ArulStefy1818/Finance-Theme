@@ -1,0 +1,1321 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <!-- =========================================================
+         STACKLY FINANCE CLIENT DASHBOARD
+    ========================================================== -->
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <meta
+        name="description"
+        content="Stackly Finance Client Dashboard - Manage accounts, transactions, investments and financial goals."
+    >
+
+    <meta
+        name="theme-color"
+        content="#061713"
+    >
+
+    <title>Stackly Finance | Client Dashboard</title>
+
+
+    <!-- =========================================================
+         GOOGLE FONTS
+    ========================================================== -->
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+
+    <link
+        rel="preconnect"
+        href="https://fonts.gstatic.com"
+        crossorigin
+    >
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap"
+        rel="stylesheet"
+    >
+
+
+    <!-- =========================================================
+         FONT AWESOME
+    ========================================================== -->
+
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+    >
+
+
+    <!-- =========================================================
+         AOS ANIMATION
+    ========================================================== -->
+
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css"
+    >
+
+
+    <!-- =========================================================
+         CLIENT DASHBOARD CSS
+    ========================================================== -->
+
+    <link
+        rel="stylesheet"
+        href="client.css"
+    >
+
+</head>
+
+
+<body>
+
+
+    <!-- =========================================================
+         CLIENT DASHBOARD WRAPPER
+    ========================================================== -->
+
+    <div class="stackly-finance-client-dashboard">
+
+
+        <!-- =====================================================
+             MOBILE SIDEBAR OVERLAY
+        ====================================================== -->
+
+        <div
+            class="stackly-finance-client-overlay"
+            id="stacklyFinanceClientOverlay"
+            aria-hidden="true"
+        ></div>
+
+
+        <!-- =====================================================
+             SIDEBAR
+        ====================================================== -->
+
+        <aside
+            class="stackly-finance-client-sidebar"
+            id="stacklyFinanceClientSidebar"
+            aria-label="Client dashboard sidebar"
+        >
+
+
+            <!-- =================================================
+                 SIDEBAR BRAND
+            ================================================== -->
+
+            <div class="stackly-finance-client-brand">
+
+                <a
+                    href="client.html"
+                    class="stackly-finance-client-logo"
+                    aria-label="Stackly Finance Home"
+                >
+
+                    <img
+                        src="Stackly-logo-Blue.webp"
+                        alt="Stackly Finance"
+                    >
+
+                </a>
+
+
+                <!-- MOBILE CLOSE BUTTON -->
+
+                <button
+                    type="button"
+                    class="stackly-finance-client-sidebar-close"
+                    id="stacklyFinanceClientSidebarClose"
+                    aria-label="Close navigation"
+                    aria-controls="stacklyFinanceClientSidebar"
+                >
+
+                    <i class="fa-solid fa-xmark"></i>
+
+                </button>
+
+            </div>
+
+
+            <!-- =================================================
+                 CLIENT PROFILE
+            ================================================== -->
+
+            <div
+                class="stackly-finance-client-sidebar-profile"
+                data-aos="fade-right"
+            >
+
+                <div
+                    class="stackly-finance-client-avatar"
+                    aria-hidden="true"
+                >
+
+                    <i class="fa-solid fa-user"></i>
+
+                </div>
+
+
+                <div class="stackly-finance-client-profile-info">
+
+                    <strong id="stacklyFinanceClientSidebarName">
+                        Client
+                    </strong>
+
+                    <span>
+                        Finance Client
+                    </span>
+
+                </div>
+
+            </div>
+
+
+            <!-- =================================================
+                 SIDEBAR NAVIGATION
+            ================================================== -->
+
+            <nav
+                class="stackly-finance-client-navigation"
+                aria-label="Client Dashboard Navigation"
+            >
+
+                <!-- DASHBOARD -->
+
+                <a
+                    href="client.html"
+                    class="stackly-finance-client-nav-link active"
+                    aria-current="page"
+                >
+
+                    <span
+                        class="stackly-finance-client-nav-icon"
+                        aria-hidden="true"
+                    >
+
+                        <i class="fa-solid fa-chart-pie"></i>
+
+                    </span>
+
+                    <span>
+                        Dashboard
+                    </span>
+
+                </a>
+
+
+                <!-- MY ACCOUNTS -->
+
+                <a
+                    href="client-accounts.html"
+                    class="stackly-finance-client-nav-link"
+                >
+
+                    <span
+                        class="stackly-finance-client-nav-icon"
+                        aria-hidden="true"
+                    >
+
+                        <i class="fa-solid fa-wallet"></i>
+
+                    </span>
+
+                    <span>
+                        My Accounts
+                    </span>
+
+                </a>
+
+
+                <!-- TRANSACTIONS -->
+
+                <a
+                    href="client-transactions.html"
+                    class="stackly-finance-client-nav-link"
+                >
+
+                    <span
+                        class="stackly-finance-client-nav-icon"
+                        aria-hidden="true"
+                    >
+
+                        <i class="fa-solid fa-arrow-right-arrow-left"></i>
+
+                    </span>
+
+                    <span>
+                        Transactions
+                    </span>
+
+                </a>
+
+
+                <!-- PAYMENTS -->
+
+                <a
+                    href="client-payments.html"
+                    class="stackly-finance-client-nav-link"
+                >
+
+                    <span
+                        class="stackly-finance-client-nav-icon"
+                        aria-hidden="true"
+                    >
+
+                        <i class="fa-solid fa-credit-card"></i>
+
+                    </span>
+
+                    <span>
+                        Payments
+                    </span>
+
+                </a>
+
+
+                <!-- INVESTMENTS -->
+
+                <a
+                    href="client-investments.html"
+                    class="stackly-finance-client-nav-link"
+                >
+
+                    <span
+                        class="stackly-finance-client-nav-icon"
+                        aria-hidden="true"
+                    >
+
+                        <i class="fa-solid fa-chart-line"></i>
+
+                    </span>
+
+                    <span>
+                        Investments
+                    </span>
+
+                </a>
+
+
+                <!-- FINANCIAL PLANNING -->
+
+                <a
+                    href="client-planning.html"
+                    class="stackly-finance-client-nav-link"
+                >
+
+                    <span
+                        class="stackly-finance-client-nav-icon"
+                        aria-hidden="true"
+                    >
+
+                        <i class="fa-solid fa-bullseye"></i>
+
+                    </span>
+
+                    <span>
+                        Financial Planning
+                    </span>
+
+                </a>
+
+
+                <!-- MY PROFILE -->
+
+                <a
+                    href="client-profile.html"
+                    class="stackly-finance-client-nav-link"
+                >
+
+                    <span
+                        class="stackly-finance-client-nav-icon"
+                        aria-hidden="true"
+                    >
+
+                        <i class="fa-solid fa-user"></i>
+
+                    </span>
+
+                    <span>
+                        My Profile
+                    </span>
+
+                </a>
+
+            </nav>
+
+
+            <!-- =================================================
+                 SIDEBAR BOTTOM
+            ================================================== -->
+
+            <div class="stackly-finance-client-sidebar-bottom">
+
+                <a
+                    href="index.html"
+                    class="stackly-finance-client-logout"
+                    id="stacklyFinanceClientLogout"
+                >
+
+                    <i
+                        class="fa-solid fa-right-from-bracket"
+                        aria-hidden="true"
+                    ></i>
+
+                    <span>
+                        Logout
+                    </span>
+
+                </a>
+
+            </div>
+
+        </aside>
+
+
+        <!-- =====================================================
+             MAIN AREA
+        ====================================================== -->
+
+        <main class="stackly-finance-client-main">
+
+
+            <!-- =================================================
+                 TOP HEADER
+            ================================================== -->
+
+            <header class="stackly-finance-client-header">
+
+
+                <!-- MOBILE MENU BUTTON -->
+
+                <button
+                    type="button"
+                    class="stackly-finance-client-menu-toggle"
+                    id="stacklyFinanceClientMenuToggle"
+                    aria-label="Open navigation"
+                    aria-controls="stacklyFinanceClientSidebar"
+                    aria-expanded="false"
+                >
+
+                    <span></span>
+                    <span></span>
+                    <span></span>
+
+                </button>
+
+
+                <!-- HEADER TITLE -->
+
+                <div
+                    class="stackly-finance-client-header-title"
+                    data-aos="fade-down"
+                >
+
+                    <span class="stackly-finance-client-header-label">
+                        CLIENT PORTAL
+                    </span>
+
+                    <h1>
+                        Financial Dashboard
+                    </h1>
+
+                </div>
+
+
+                <!-- HEADER ACTIONS -->
+
+                <div class="stackly-finance-client-header-actions">
+
+
+                    <!-- NOTIFICATION -->
+
+                    <a
+                        href="404-client.html"
+                        class="stackly-finance-client-notification"
+                        aria-label="View notifications, 4 unread"
+                    >
+
+                        <i
+                            class="fa-regular fa-bell"
+                            aria-hidden="true"
+                        ></i>
+
+                        <span>
+                            4
+                        </span>
+
+                    </a>
+
+
+                    <!-- EMAIL / USER -->
+
+                    <div class="stackly-finance-client-email-box">
+
+                        <div
+                            class="stackly-finance-client-email-icon"
+                            aria-hidden="true"
+                        >
+
+                            <i class="fa-solid fa-user"></i>
+
+                        </div>
+
+
+                        <div class="stackly-finance-client-email-content">
+
+                            <span>
+                                Signed in as
+                            </span>
+
+                            <strong id="stacklyFinanceClientEmail">
+                                client@example.com
+                            </strong>
+
+                        </div>
+
+
+                        <i
+                            class="fa-solid fa-chevron-down stackly-finance-client-email-arrow"
+                            aria-hidden="true"
+                        ></i>
+
+                    </div>
+
+                </div>
+
+            </header>
+
+<!-- =========================================================
+     FINANCIAL PLANNING PAGE CONTENT
+========================================================== -->
+
+<section class="stkinv-planning-page">
+
+
+    <!-- =====================================================
+         PLANNING HERO
+    ====================================================== -->
+
+    <section
+        class="stkinv-planning-hero"
+        data-aos="fade-up"
+    >
+
+        <div class="stkinv-planning-hero-content">
+
+            <span class="stkinv-planning-eyebrow">
+                <i class="fa-solid fa-bullseye"></i>
+                FINANCIAL PLANNING
+            </span>
+
+            <h2>
+                Build a Smarter
+                <span>Financial Future</span>
+            </h2>
+
+            <p>
+                Organize your finances, track your goals and create
+                a clear path toward your long-term financial plans.
+            </p>
+
+            <a
+                href="404-client.html"
+                class="stkinv-planning-primary-btn"
+            >
+                Create Financial Plan
+                <i class="fa-solid fa-arrow-right"></i>
+            </a>
+
+        </div>
+
+
+        <div class="stkinv-planning-hero-icon">
+
+            <i class="fa-solid fa-chart-line"></i>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =====================================================
+         FINANCIAL OVERVIEW
+    ====================================================== -->
+
+    <section class="stkinv-planning-overview">
+
+        <div
+            class="stkinv-planning-section-heading"
+            data-aos="fade-up"
+        >
+
+            <div>
+
+                <span>
+                    YOUR FINANCIAL HEALTH
+                </span>
+
+                <h2>
+                    Planning Overview
+                </h2>
+
+            </div>
+
+        </div>
+
+
+        <div class="stkinv-planning-overview-grid">
+
+
+            <!-- CARD 1 -->
+
+            <article
+                class="stkinv-planning-overview-card"
+                data-aos="fade-up"
+                data-aos-delay="100"
+            >
+
+                <div class="stkinv-planning-card-icon">
+
+                    <i class="fa-solid fa-wallet"></i>
+
+                </div>
+
+                <span>
+                    Monthly Income
+                </span>
+
+                <strong>
+                    ₹85,000
+                </strong>
+
+                <small>
+                    Available monthly income
+                </small>
+
+            </article>
+
+
+            <!-- CARD 2 -->
+
+            <article
+                class="stkinv-planning-overview-card"
+                data-aos="fade-up"
+                data-aos-delay="150"
+            >
+
+                <div class="stkinv-planning-card-icon">
+
+                    <i class="fa-solid fa-receipt"></i>
+
+                </div>
+
+                <span>
+                    Monthly Expenses
+                </span>
+
+                <strong>
+                    ₹48,500
+                </strong>
+
+                <small>
+                    Average monthly expenses
+                </small>
+
+            </article>
+
+
+            <!-- CARD 3 -->
+
+            <article
+                class="stkinv-planning-overview-card"
+                data-aos="fade-up"
+                data-aos-delay="200"
+            >
+
+                <div class="stkinv-planning-card-icon">
+
+                    <i class="fa-solid fa-piggy-bank"></i>
+
+                </div>
+
+                <span>
+                    Monthly Savings
+                </span>
+
+                <strong>
+                    ₹36,500
+                </strong>
+
+                <small>
+                    Current monthly savings
+                </small>
+
+            </article>
+
+
+            <!-- CARD 4 -->
+
+            <article
+                class="stkinv-planning-overview-card"
+                data-aos="fade-up"
+                data-aos-delay="250"
+            >
+
+                <div class="stkinv-planning-card-icon">
+
+                    <i class="fa-solid fa-chart-pie"></i>
+
+                </div>
+
+                <span>
+                    Savings Rate
+                </span>
+
+                <strong>
+                    42.9%
+                </strong>
+
+                <small>
+                    Percentage of income saved
+                </small>
+
+            </article>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =====================================================
+         FINANCIAL GOALS
+    ====================================================== -->
+
+    <section
+        class="stkinv-planning-goals-section"
+        data-aos="fade-up"
+    >
+
+        <div class="stkinv-planning-panel-header">
+
+            <div>
+
+                <span>
+                    YOUR TARGETS
+                </span>
+
+                <h2>
+                    Financial Goals
+                </h2>
+
+            </div>
+
+            <a href="404-client.html">
+                View All
+                <i class="fa-solid fa-arrow-right"></i>
+            </a>
+
+        </div>
+
+
+        <div class="stkinv-planning-goals-grid">
+
+
+            <!-- GOAL 1 -->
+
+            <article class="stkinv-planning-goal-card">
+
+                <div class="stkinv-planning-goal-top">
+
+                    <div class="stkinv-planning-goal-icon">
+
+                        <i class="fa-solid fa-house"></i>
+
+                    </div>
+
+                    <span>
+                        68%
+                    </span>
+
+                </div>
+
+                <h3>
+                    Home Purchase
+                </h3>
+
+                <p>
+                    Building your down payment fund.
+                </p>
+
+                <div class="stkinv-planning-progress">
+
+                    <span style="width:68%;"></span>
+
+                </div>
+
+                <div class="stkinv-planning-goal-values">
+
+                    <span>
+                        ₹13.6L saved
+                    </span>
+
+                    <strong>
+                        ₹20L
+                    </strong>
+
+                </div>
+
+            </article>
+
+
+
+            <!-- GOAL 2 -->
+
+            <article class="stkinv-planning-goal-card">
+
+                <div class="stkinv-planning-goal-top">
+
+                    <div class="stkinv-planning-goal-icon">
+
+                        <i class="fa-solid fa-plane"></i>
+
+                    </div>
+
+                    <span>
+                        45%
+                    </span>
+
+                </div>
+
+                <h3>
+                    Travel Fund
+                </h3>
+
+                <p>
+                    Savings for your upcoming travel plans.
+                </p>
+
+                <div class="stkinv-planning-progress">
+
+                    <span style="width:45%;"></span>
+
+                </div>
+
+                <div class="stkinv-planning-goal-values">
+
+                    <span>
+                        ₹90,000 saved
+                    </span>
+
+                    <strong>
+                        ₹2L
+                    </strong>
+
+                </div>
+
+            </article>
+
+
+
+            <!-- GOAL 3 -->
+
+            <article class="stkinv-planning-goal-card">
+
+                <div class="stkinv-planning-goal-top">
+
+                    <div class="stkinv-planning-goal-icon">
+
+                        <i class="fa-solid fa-graduation-cap"></i>
+
+                    </div>
+
+                    <span>
+                        72%
+                    </span>
+
+                </div>
+
+                <h3>
+                    Education Fund
+                </h3>
+
+                <p>
+                    Long-term education savings goal.
+                </p>
+
+                <div class="stkinv-planning-progress">
+
+                    <span style="width:72%;"></span>
+
+                </div>
+
+                <div class="stkinv-planning-goal-values">
+
+                    <span>
+                        ₹3.6L saved
+                    </span>
+
+                    <strong>
+                        ₹5L
+                    </strong>
+
+                </div>
+
+            </article>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =====================================================
+         FINANCIAL PLAN
+    ====================================================== -->
+
+    <section
+        class="stkinv-planning-plan-section"
+        data-aos="fade-up"
+    >
+
+        <div class="stkinv-planning-panel-header">
+
+            <div>
+
+                <span>
+                    YOUR STRATEGY
+                </span>
+
+                <h2>
+                    Current Financial Plan
+                </h2>
+
+            </div>
+
+        </div>
+
+
+        <div class="stkinv-planning-plan-grid">
+
+
+            <div class="stkinv-planning-plan-item">
+
+                <div class="stkinv-planning-plan-icon">
+
+                    <i class="fa-solid fa-shield-halved"></i>
+
+                </div>
+
+                <div>
+
+                    <strong>
+                        Emergency Fund
+                    </strong>
+
+                    <span>
+                        6 months of expenses
+                    </span>
+
+                </div>
+
+                <b>
+                    85%
+                </b>
+
+            </div>
+
+
+            <div class="stkinv-planning-plan-item">
+
+                <div class="stkinv-planning-plan-icon">
+
+                    <i class="fa-solid fa-chart-line"></i>
+
+                </div>
+
+                <div>
+
+                    <strong>
+                        Investments
+                    </strong>
+
+                    <span>
+                        Long-term wealth building
+                    </span>
+
+                </div>
+
+                <b>
+                    70%
+                </b>
+
+            </div>
+
+
+            <div class="stkinv-planning-plan-item">
+
+                <div class="stkinv-planning-plan-icon">
+
+                    <i class="fa-solid fa-house"></i>
+
+                </div>
+
+                <div>
+
+                    <strong>
+                        Home Planning
+                    </strong>
+
+                    <span>
+                        Down payment preparation
+                    </span>
+
+                </div>
+
+                <b>
+                    68%
+                </b>
+
+            </div>
+
+
+            <div class="stkinv-planning-plan-item">
+
+                <div class="stkinv-planning-plan-icon">
+
+                    <i class="fa-solid fa-umbrella"></i>
+
+                </div>
+
+                <div>
+
+                    <strong>
+                        Retirement
+                    </strong>
+
+                    <span>
+                        Long-term retirement savings
+                    </span>
+
+                </div>
+
+                <b>
+                    54%
+                </b>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =====================================================
+         UPCOMING MILESTONES
+    ====================================================== -->
+
+    <section
+        class="stkinv-planning-milestones-section"
+        data-aos="fade-up"
+    >
+
+        <div class="stkinv-planning-panel-header">
+
+            <div>
+
+                <span>
+                    FINANCIAL JOURNEY
+                </span>
+
+                <h2>
+                    Upcoming Milestones
+                </h2>
+
+            </div>
+
+        </div>
+
+
+        <div class="stkinv-planning-milestones">
+
+
+            <div class="stkinv-planning-milestone">
+
+                <div class="stkinv-planning-milestone-date">
+
+                    <strong>
+                        SEP
+                    </strong>
+
+                    <span>
+                        2026
+                    </span>
+
+                </div>
+
+                <div>
+
+                    <strong>
+                        Emergency Fund Complete
+                    </strong>
+
+                    <p>
+                        Reach your planned emergency savings target.
+                    </p>
+
+                </div>
+
+                <span class="stkinv-planning-milestone-status">
+                    On Track
+                </span>
+
+            </div>
+
+
+            <div class="stkinv-planning-milestone">
+
+                <div class="stkinv-planning-milestone-date">
+
+                    <strong>
+                        DEC
+                    </strong>
+
+                    <span>
+                        2026
+                    </span>
+
+                </div>
+
+                <div>
+
+                    <strong>
+                        Investment Review
+                    </strong>
+
+                    <p>
+                        Review portfolio allocation and investment progress.
+                    </p>
+
+                </div>
+
+                <span class="stkinv-planning-milestone-status">
+                    Planned
+                </span>
+
+            </div>
+
+
+            <div class="stkinv-planning-milestone">
+
+                <div class="stkinv-planning-milestone-date">
+
+                    <strong>
+                        MAR
+                    </strong>
+
+                    <span>
+                        2027
+                    </span>
+
+                </div>
+
+                <div>
+
+                    <strong>
+                        Home Fund Review
+                    </strong>
+
+                    <p>
+                        Evaluate progress toward your home purchase target.
+                    </p>
+
+                </div>
+
+                <span class="stkinv-planning-milestone-status">
+                    Upcoming
+                </span>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =====================================================
+         PLANNING TIPS
+    ====================================================== -->
+
+    <section
+        class="stkinv-planning-tips-section"
+        data-aos="fade-up"
+    >
+
+        <div class="stkinv-planning-tip-icon">
+
+            <i class="fa-solid fa-lightbulb"></i>
+
+        </div>
+
+        <div>
+
+            <span>
+                PLANNING TIP
+            </span>
+
+            <h2>
+                Review your financial goals regularly.
+            </h2>
+
+            <p>
+                Updating your plan as your income, expenses and
+                priorities change can help keep your financial strategy
+                aligned with your goals.
+            </p>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =====================================================
+         QUICK ACTIONS
+    ====================================================== -->
+
+    <section class="stkinv-planning-actions-section">
+
+        <div
+            class="stkinv-planning-section-heading"
+            data-aos="fade-up"
+        >
+
+            <div>
+
+                <span>
+                    QUICK ACCESS
+                </span>
+
+                <h2>
+                    Planning Actions
+                </h2>
+
+            </div>
+
+        </div>
+
+
+        <div class="stkinv-planning-actions-grid">
+
+
+            <a
+                href="404-client.html"
+                class="stkinv-planning-action-card"
+                data-aos="fade-up"
+                data-aos-delay="100"
+            >
+
+                <span>
+                    <i class="fa-solid fa-plus"></i>
+                </span>
+
+                <strong>
+                    Create New Goal
+                </strong>
+
+                <small>
+                    Add a new financial target
+                </small>
+
+            </a>
+
+
+            <a
+                href="404-client.html"
+                class="stkinv-planning-action-card"
+                data-aos="fade-up"
+                data-aos-delay="150"
+            >
+
+                <span>
+                    <i class="fa-solid fa-calculator"></i>
+                </span>
+
+                <strong>
+                    Financial Calculator
+                </strong>
+
+                <small>
+                    Estimate your future savings
+                </small>
+
+            </a>
+
+
+            <a
+                href="404-client.html"
+                class="stkinv-planning-action-card"
+                data-aos="fade-up"
+                data-aos-delay="200"
+            >
+
+                <span>
+                    <i class="fa-solid fa-file-lines"></i>
+                </span>
+
+                <strong>
+                    Planning Report
+                </strong>
+
+                <small>
+                    View your financial summary
+                </small>
+
+            </a>
+
+        </div>
+
+    </section>
+
+ 
+
+
+</section>
+
+</main>
+
+    </div>
+
+
+    <!-- =========================================================
+         AOS JS
+    ========================================================== -->
+
+    <script
+        src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"
+    ></script>
+
+
+    <!-- =========================================================
+         CLIENT DASHBOARD JS
+    ========================================================== -->
+
+    <script src="client.js"></script>
+
+
+</body>
+
+</html>
