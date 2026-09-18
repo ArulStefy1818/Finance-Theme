@@ -4280,20 +4280,12 @@ span:nth-child(3) {
 ============================================================ */
 
 .finance-trusted-strip {
-
     position: relative;
-
     width: 100%;
-
     padding: 34px 0;
-
     background: #ffffff;
-
     overflow: hidden;
-
-    border-bottom:
-        1px solid rgba(6, 23, 19, 0.10);
-
+    border-bottom: 1px solid rgba(6, 23, 19, 0.10);
     isolation: isolate;
 }
 
@@ -4303,29 +4295,25 @@ span:nth-child(3) {
 ============================================================ */
 
 .finance-trusted-strip::before {
-
     content: "";
 
     position: absolute;
-
     top: 50%;
     left: 50%;
 
     width: 80%;
     height: 180px;
 
-    transform:
-        translate(-50%, -50%);
+    transform: translate(-50%, -50%);
 
     background:
         radial-gradient(
             circle,
-            rgba(184, 242, 90, 0.07) 0%,
+            rgba(184, 242, 90, 0.09) 0%,
             rgba(184, 242, 90, 0) 70%
         );
 
     pointer-events: none;
-
     z-index: -1;
 }
 
@@ -4335,18 +4323,13 @@ span:nth-child(3) {
 ============================================================ */
 
 .finance-trusted-wrapper {
-
-    width:
-        min(1450px, calc(100% - 100px));
-
+    width: min(1450px, calc(100% - 100px));
     min-height: 82px;
 
     margin: 0 auto;
 
     display: flex;
-
     align-items: center;
-
     justify-content: space-between;
 
     gap: 35px;
@@ -4358,14 +4341,10 @@ span:nth-child(3) {
 ============================================================ */
 
 .finance-trusted-intro {
-
-    flex:
-        0 0 auto;
+    flex: 0 0 auto;
 
     display: flex;
-
     align-items: center;
-
     justify-content: center;
 
     min-width: 175px;
@@ -4377,7 +4356,6 @@ span:nth-child(3) {
 ============================================================ */
 
 .finance-trusted-small-text {
-
     display: inline-block;
 
     color: #09261f;
@@ -4387,13 +4365,11 @@ span:nth-child(3) {
         sans-serif;
 
     font-size: 15px;
-
     font-weight: 700;
 
     line-height: 1.5;
 
-    letter-spacing:
-        -0.15px;
+    letter-spacing: -0.15px;
 
     white-space: nowrap;
 
@@ -4411,12 +4387,10 @@ span:nth-child(3) {
 
 .finance-trusted-intro:hover
 .finance-trusted-small-text {
-
-    color:
-        #5f8421;
+    color: #4f7217;
 
     transform:
-        translateX(3px);
+        translateX(4px);
 }
 
 
@@ -4425,19 +4399,15 @@ span:nth-child(3) {
 ============================================================ */
 
 .finance-trusted-divider {
-
     width: 1px;
-
     height: 70px;
 
-    flex:
-        0 0 1px;
+    flex: 0 0 1px;
 
     background:
-        rgba(6, 32, 25, 0.28);
+        rgba(6, 32, 25, 0.32);
 
-    transform-origin:
-        center;
+    transform-origin: center;
 
     transition:
         height 0.4s ease,
@@ -4452,14 +4422,13 @@ span:nth-child(3) {
 
 .finance-trusted-wrapper:hover
 .finance-trusted-divider {
-
     height: 76px;
 
     background:
-        rgba(80, 110, 25, 0.55);
+        rgba(86, 129, 5, 0.65);
 
     transform:
-        scaleX(1.2);
+        scaleX(1.3);
 }
 
 
@@ -4468,7 +4437,6 @@ span:nth-child(3) {
 ============================================================ */
 
 .finance-trusted-companies {
-
     flex: 1;
 
     min-width: 0;
@@ -4479,7 +4447,6 @@ span:nth-child(3) {
         repeat(5, minmax(130px, 1fr));
 
     align-items: center;
-
     justify-items: center;
 
     gap: 28px;
@@ -4491,49 +4458,41 @@ span:nth-child(3) {
 ============================================================ */
 
 .finance-trusted-company {
-
     width: 100%;
-
     min-height: 68px;
 
     display: flex;
-
     align-items: center;
-
     justify-content: center;
 
-    padding:
-        10px 15px;
+    padding: 10px 15px;
 
     border-radius: 12px;
 
     position: relative;
-
     overflow: hidden;
 
     cursor: pointer;
 
+    border:
+        1px solid transparent;
+
+    background:
+        rgba(6, 23, 19, 0.015);
+
     transition:
-        transform 0.35s
-        cubic-bezier(
-            0.22,
-            1,
-            0.36,
-            1
-        ),
-
+        transform 0.4s cubic-bezier(0.22, 1, 0.36, 1),
         background 0.35s ease,
-
+        border-color 0.35s ease,
         box-shadow 0.35s ease;
 }
 
 
 /* ============================================================
-   LOGO HOVER GLOW
+   GREEN GLOW
 ============================================================ */
 
 .finance-trusted-company::before {
-
     content: "";
 
     position: absolute;
@@ -4547,24 +4506,49 @@ span:nth-child(3) {
     border-radius: 50%;
 
     background:
-        rgba(184, 242, 90, 0.10);
+        rgba(184, 242, 90, 0.14);
 
     transform:
         translate(-50%, -50%);
 
     transition:
-        width 0.5s ease,
-        height 0.5s ease;
+        width 0.55s ease,
+        height 0.55s ease;
 
     pointer-events: none;
 }
 
 
-.finance-trusted-company:hover::before {
+/* ============================================================
+   SHINE EFFECT
+============================================================ */
 
-    width: 180px;
+.finance-trusted-company::after {
+    content: "";
 
-    height: 180px;
+    position: absolute;
+
+    top: 0;
+    left: -130%;
+
+    width: 65%;
+    height: 100%;
+
+    background:
+        linear-gradient(
+            110deg,
+            transparent 0%,
+            rgba(255, 255, 255, 0.18) 50%,
+            transparent 100%
+        );
+
+    transform:
+        skewX(-20deg);
+
+    transition:
+        left 0.7s ease;
+
+    pointer-events: none;
 }
 
 
@@ -4573,68 +4557,83 @@ span:nth-child(3) {
 ============================================================ */
 
 .finance-trusted-company:hover {
-
     transform:
-        translateY(-5px);
+        translateY(-6px)
+        scale(1.025);
 
     background:
-        rgba(184, 242, 90, 0.06);
+        rgba(184, 242, 90, 0.075);
+
+    border-color:
+        rgba(54, 82, 3, 0.38);
 
     box-shadow:
-        0 12px 30px
-        rgba(6, 23, 19, 0.08);
+        0 15px 32px
+        rgba(6, 23, 19, 0.12),
+
+        0 0 22px
+        rgba(184, 242, 90, 0.12);
+}
+
+
+/* ============================================================
+   GLOW EXPANSION
+============================================================ */
+
+.finance-trusted-company:hover::before {
+    width: 190px;
+    height: 190px;
+}
+
+
+/* ============================================================
+   SHINE
+============================================================ */
+
+.finance-trusted-company:hover::after {
+    left: 145%;
 }
 
 
 /* ============================================================
    COMPANY LOGO
-   DARKER DEFAULT COLOR
+   DARK DEFAULT APPEARANCE
 ============================================================ */
 
 .finance-trusted-logo {
     display: block;
 
     width: auto;
+
     max-width: 175px;
     max-height: 55px;
 
     object-fit: contain;
 
-     filter: brightness(0) !important;
-    opacity: 1 !important;
-
     position: relative;
+
     z-index: 2;
-
-    transform: scale(1);
-
-    transition:
-        opacity 0.4s ease,
-        filter 0.4s ease,
-        transform 0.4s
-        cubic-bezier(
-            0.22,
-            1,
-            0.36,
-            1
-        );
-}
-
-
-/* ============================================================
-   BLACK LOGO HOVER
-============================================================ */
-
-.finance-trusted-company:hover
-.finance-trusted-logo {
 
     opacity: 1;
 
-    /* Keep logo black */
-    filter: brightness(0);
+    /*
+       Strong dark logo.
+       Brightness(0) converts the logo to black.
+       Contrast makes the logo visually stronger.
+    */
+    filter:
+        brightness(0)
+        contrast(1.25);
 
-    transform: scale(1.08);
+    transform:
+        scale(1);
+
+    transition:
+        transform 0.4s cubic-bezier(0.22, 1, 0.36, 1),
+        filter 0.4s ease,
+        opacity 0.4s ease;
 }
+
 
 /* ============================================================
    LOGO HOVER
@@ -4642,15 +4641,42 @@ span:nth-child(3) {
 
 .finance-trusted-company:hover
 .finance-trusted-logo {
-
     opacity: 1;
 
+    /*
+       Slightly softer dark-green hover appearance
+       instead of making the logo too bright.
+    */
     filter:
-        grayscale(0%)
-        contrast(1.05);
+        brightness(0)
+        contrast(1.35);
 
     transform:
         scale(1.08);
+}
+
+
+/* ============================================================
+   OPTIONAL COMPANY TEXT
+============================================================ */
+
+.finance-trusted-company span {
+    position: relative;
+    z-index: 2;
+
+    color: #17251f;
+
+    transition:
+        color 0.3s ease,
+        transform 0.3s ease;
+}
+
+
+.finance-trusted-company:hover span {
+    color: #3d6103;
+
+    transform:
+        translateY(-1px);
 }
 
 
@@ -4659,12 +4685,11 @@ span:nth-child(3) {
 ============================================================ */
 
 .finance-trusted-company:focus-within {
-
     outline:
-        2px solid
-        rgba(120, 159, 41, 0.65);
+        4px solid
+        rgba(91, 126, 29, 0.70);
 
-    outline-offset: 3px;
+    outline-offset: 5px;
 }
 
 
@@ -4676,13 +4701,11 @@ span:nth-child(3) {
 
     0%,
     100% {
-
         transform:
             translateY(0);
     }
 
     50% {
-
         transform:
             translateY(-2px);
     }
@@ -4691,7 +4714,6 @@ span:nth-child(3) {
 
 .finance-trusted-company:nth-child(odd)
 .finance-trusted-logo {
-
     animation:
         financeLogoFloat 5s ease-in-out infinite;
 }
@@ -4699,7 +4721,6 @@ span:nth-child(3) {
 
 .finance-trusted-company:nth-child(even)
 .finance-trusted-logo {
-
     animation:
         financeLogoFloat 5.5s ease-in-out infinite;
 }
@@ -4712,7 +4733,6 @@ span:nth-child(3) {
 @media (max-width: 1350px) {
 
     .finance-trusted-wrapper {
-
         width:
             calc(100% - 70px);
 
@@ -4721,19 +4741,16 @@ span:nth-child(3) {
 
 
     .finance-trusted-intro {
-
         min-width: 165px;
     }
 
 
     .finance-trusted-small-text {
-
         font-size: 14.5px;
     }
 
 
     .finance-trusted-companies {
-
         gap: 18px;
 
         grid-template-columns:
@@ -4742,15 +4759,16 @@ span:nth-child(3) {
 
 
     .finance-trusted-logo {
-
         max-width: 155px;
-
         max-height: 44px;
 
-        opacity: 0.84;
+        /*
+           Keep the logos dark.
+        */
+        opacity: 1;
 
         filter:
-            grayscale(100%)
+            brightness(0)
             contrast(1.25);
     }
 }
@@ -4763,13 +4781,11 @@ span:nth-child(3) {
 @media (max-width: 1100px) {
 
     .finance-trusted-strip {
-
         padding: 30px 0;
     }
 
 
     .finance-trusted-wrapper {
-
         width:
             calc(100% - 60px);
 
@@ -4780,7 +4796,6 @@ span:nth-child(3) {
 
 
     .finance-trusted-intro {
-
         min-width: auto;
 
         flex:
@@ -4791,19 +4806,16 @@ span:nth-child(3) {
 
 
     .finance-trusted-small-text {
-
         font-size: 15px;
     }
 
 
     .finance-trusted-divider {
-
         height: 50px;
     }
 
 
     .finance-trusted-companies {
-
         width: 100%;
 
         flex:
@@ -4817,7 +4829,6 @@ span:nth-child(3) {
 
 
     .finance-trusted-company {
-
         min-height: 62px;
 
         padding:
@@ -4826,16 +4837,14 @@ span:nth-child(3) {
 
 
     .finance-trusted-logo {
-
         max-width: 135px;
-
         max-height: 40px;
 
-        opacity: 0.85;
+        opacity: 1;
 
         filter:
-            grayscale(100%)
-            contrast(1.3);
+            brightness(0)
+            contrast(1.25);
     }
 }
 
@@ -4847,13 +4856,11 @@ span:nth-child(3) {
 @media (max-width: 768px) {
 
     .finance-trusted-strip {
-
         padding: 35px 0;
     }
 
 
     .finance-trusted-wrapper {
-
         width:
             calc(100% - 40px);
 
@@ -4864,7 +4871,6 @@ span:nth-child(3) {
     /* INTRO */
 
     .finance-trusted-intro {
-
         width: 100%;
 
         min-height: auto;
@@ -4878,7 +4884,6 @@ span:nth-child(3) {
 
 
     .finance-trusted-small-text {
-
         font-size: 17px;
 
         line-height: 1.5;
@@ -4888,7 +4893,6 @@ span:nth-child(3) {
     /* DIVIDER */
 
     .finance-trusted-divider {
-
         width: 70px;
 
         height: 1px;
@@ -4897,13 +4901,12 @@ span:nth-child(3) {
             0 auto 25px;
 
         background:
-            rgba(6, 32, 25, 0.28);
+            rgba(6, 32, 25, 0.32);
     }
 
 
     .finance-trusted-wrapper:hover
     .finance-trusted-divider {
-
         width: 90px;
 
         height: 1px;
@@ -4913,7 +4916,6 @@ span:nth-child(3) {
     /* LOGOS */
 
     .finance-trusted-companies {
-
         width: 100%;
 
         display: grid;
@@ -4926,7 +4928,6 @@ span:nth-child(3) {
 
 
     .finance-trusted-company {
-
         min-height: 70px;
 
         padding:
@@ -4935,16 +4936,21 @@ span:nth-child(3) {
 
 
     .finance-trusted-logo {
-
         max-width: 145px;
-
         max-height: 42px;
 
-        opacity: 0.86;
+        opacity: 1;
 
         filter:
-            grayscale(100%)
-            contrast(1.3);
+            brightness(0)
+            contrast(1.25);
+    }
+
+
+    .finance-trusted-company:hover {
+        transform:
+            translateY(-4px)
+            scale(1.015);
     }
 }
 
@@ -4956,27 +4962,23 @@ span:nth-child(3) {
 @media (max-width: 560px) {
 
     .finance-trusted-strip {
-
         padding:
             32px 0;
     }
 
 
     .finance-trusted-wrapper {
-
         width:
             calc(100% - 30px);
     }
 
 
     .finance-trusted-intro {
-
         margin-bottom: 18px;
     }
 
 
     .finance-trusted-small-text {
-
         font-size: 17px;
 
         font-weight: 700;
@@ -4984,13 +4986,11 @@ span:nth-child(3) {
 
 
     .finance-trusted-divider {
-
         margin-bottom: 22px;
     }
 
 
     .finance-trusted-companies {
-
         grid-template-columns:
             repeat(2, 1fr);
 
@@ -4999,7 +4999,6 @@ span:nth-child(3) {
 
 
     .finance-trusted-company {
-
         min-height: 72px;
 
         padding:
@@ -5010,31 +5009,28 @@ span:nth-child(3) {
 
 
     .finance-trusted-logo {
-
         max-width: 135px;
-
         max-height: 42px;
 
-        opacity: 0.88;
+        opacity: 1;
 
         filter:
-            grayscale(100%)
-            contrast(1.3);
+            brightness(0)
+            contrast(1.25);
     }
 
 
     .finance-trusted-company:hover {
-
         transform:
-            translateY(-3px);
+            translateY(-4px)
+            scale(1.015);
     }
 
 
     .finance-trusted-company:hover
     .finance-trusted-logo {
-
         transform:
-            scale(1.05);
+            scale(1.06);
     }
 }
 
@@ -5046,33 +5042,28 @@ span:nth-child(3) {
 @media (max-width: 380px) {
 
     .finance-trusted-strip {
-
         padding:
             28px 0;
     }
 
 
     .finance-trusted-wrapper {
-
         width:
             calc(100% - 24px);
     }
 
 
     .finance-trusted-small-text {
-
         font-size: 15px;
     }
 
 
     .finance-trusted-companies {
-
         gap: 9px;
     }
 
 
     .finance-trusted-company {
-
         min-height: 65px;
 
         padding:
@@ -5081,16 +5072,14 @@ span:nth-child(3) {
 
 
     .finance-trusted-logo {
-
         max-width: 120px;
-
         max-height: 37px;
 
-        opacity: 0.88;
+        opacity: 1;
 
         filter:
-            grayscale(100%)
-            contrast(1.3);
+            brightness(0)
+            contrast(1.25);
     }
 }
 
@@ -5102,23 +5091,22 @@ span:nth-child(3) {
 @media (prefers-reduced-motion: reduce) {
 
     .finance-trusted-logo {
-
         animation: none !important;
-
         transition: none !important;
     }
 
 
-    .finance-trusted-company {
-
+    .finance-trusted-company,
+    .finance-trusted-company::before,
+    .finance-trusted-company::after {
         transition: none !important;
     }
 
 
-    .finance-trusted-company::before {
-
-        transition: none !important;
+    .finance-trusted-company:hover {
+        transform: none;
     }
+
 }
 
 /* =========================================================
